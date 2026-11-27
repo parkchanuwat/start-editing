@@ -1,0 +1,56 @@
+<p class="crumb">After Effects</p>
+<h1>Composition และ Layer</h1>
+<p class="lead">ใน After Effects งานหนึ่งชิ้นเรียกว่า <b>composition</b> มีขนาดภาพ frame rate และความยาวของตัวเอง ข้างในประกอบด้วย <b>layer</b> ที่ซ้อนกันเหมือนแผ่นใส layer ที่อยู่บนจะบังของที่อยู่ข้างล่าง</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ต่างจาก Premiere ตรงนี้:</b> track ใน Premiere วางได้หลายคลิปต่อกัน แต่ layer ใน After Effects มีต้นฉบับได้แค่ชิ้นเดียว งานหนึ่งจึงมักมี layer หลายสิบชั้น</p></div>
+<div class="demo" data-demo="ae-comp-layers"></div>
+
+<h2 id="comp">สร้าง composition</h2>
+<ol class="steps">
+<li><h3>สร้างจากฟุตเทจ (ง่ายสุด)</h3><p>ลากไฟล์วิดีโอจาก Project panel ไปวางบนไอคอน New Composition ด้านล่างของพาเนล composition จะได้ขนาดและ frame rate ตามไฟล์นั้น</p></li>
+<li><h3>หรือสร้างเอง</h3><p>เลือก <span class="ui">Composition › New Composition</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd> / <kbd>Cmd</kbd>+<kbd>N</kbd>) เลือก Preset หรือพิมพ์ Width, Height, Frame Rate และ Duration เอง</p></li>
+<li><h3>แก้ค่าทีหลังได้</h3><p>เลือก <span class="ui">Composition › Composition Settings</span> (<kbd>Ctrl</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>K</kbd>) เปลี่ยนความยาวหรือขนาดได้ตลอด</p></li>
+</ol>
+
+<h2 id="types">ชนิดของ layer</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Layer</th><th>คืออะไร</th><th>สร้างจาก</th></tr></thead>
+<tbody>
+<tr><td>Footage</td><td>วิดีโอ ภาพนิ่ง หรือเสียงที่ import มา</td><td>ลากจาก Project panel</td></tr>
+<tr><td>Text</td><td>ตัวหนังสือที่แก้และ animate ได้</td><td><span class="ui">Layer › New › Text</span></td></tr>
+<tr><td>Shape</td><td>รูปทรงเวกเตอร์ คมทุกขนาด</td><td>Shape tools หรือ Pen tool</td></tr>
+<tr><td>Solid</td><td>พื้นสีเรียบ ใช้เป็นพื้นหลังหรือที่ใส่เอฟเฟกต์</td><td><kbd>Ctrl</kbd>+<kbd>Y</kbd> / <kbd>Cmd</kbd>+<kbd>Y</kbd></td></tr>
+<tr><td>Adjustment</td><td>ใส่เอฟเฟกต์แล้วมีผลกับทุก layer ข้างล่าง</td><td><span class="ui">Layer › New › Adjustment Layer</span></td></tr>
+<tr><td>Null Object</td><td>layer ที่มองไม่เห็น ใช้คุมการเคลื่อนไหวของ layer อื่น</td><td><span class="ui">Layer › New › Null Object</span></td></tr>
+<tr><td>Precomp</td><td>composition ที่ถูกวางเป็น layer ในอีก composition</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
+</tbody></table></div>
+
+<h2 id="transform">Transform: ห้าค่าที่ทุก layer มี</h2>
+<p>กดตัวอักษรเพื่อเปิดดูค่านั้นของ layer ที่เลือก: <kbd>A</kbd> Anchor Point · <kbd>P</kbd> Position · <kbd>S</kbd> Scale · <kbd>R</kbd> Rotation · <kbd>T</kbd> Opacity กด <kbd>Shift</kbd> ค้างแล้วกดตัวอื่นเพื่อเปิดหลายค่าพร้อมกัน</p>
+
+<h2 id="preview">ดูผลงาน</h2>
+<ul class="check">
+<li><span><b>กด Spacebar เพื่อ preview</b> แถบสีเขียวบน timeline คือช่วงที่ cache ไว้แล้ว จะเล่นลื่น</span></li>
+<li><span><b>ลด Resolution ของ Composition panel</b> เลือก Half หรือ Quarter ตอนทำงานเพื่อให้ preview เร็วขึ้น ค่านี้ไม่ได้เปลี่ยนขนาดของ composition</span></li>
+<li><span><b>ตั้ง work area</b> กด <kbd>B</kbd> และ <kbd>N</kbd> เพื่อตั้งจุดเริ่มและจุดจบของช่วงที่จะ preview</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>ใส่ของแล้วมองไม่เห็น</b>layer อาจอยู่ล่าง layer พื้นทึบ ลาก layer ขึ้นไปข้างบนใน Timeline</li>
+<li><b>งงระหว่าง Resolution กับขนาด composition</b>Resolution ใน Composition panel คือคุณภาพตอน preview ส่วนขนาดจริงอยู่ใน Composition Settings</li>
+<li><b>composition สั้นกว่าที่ต้องการ</b>เปลี่ยน Duration ใน Composition Settings ไม่ใช่ลากปลาย layer</li>
+<li><b>แก้ผิด composition</b>ดูชื่อแท็บด้านบนของ Timeline ก่อนแก้ทุกครั้ง โดยเฉพาะเมื่อมี precomp หลายชั้น</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>การสร้าง composition และ layer เหมือนเดิมทั้งหมด</li>
+<li>Adobe Stock panel และ AI Assistant เพิ่มเข้ามาใน 27.0</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+</ul>

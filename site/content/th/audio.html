@@ -1,0 +1,57 @@
+<p class="crumb">Premiere › สี เสียง และซับไตเติล</p>
+<h1>เสียงและเพลง</h1>
+<p class="lead">คนดูให้อภัยภาพไม่สวยได้มากกว่าเสียงที่ฟังไม่รู้เรื่อง หลักง่าย ๆ คือเสียงพูดต้องชัด เพลงอยู่ข้างหลัง และไม่มีจุดไหนดังเกิน 0 dB งานส่วนใหญ่ทำได้จาก Essential Sound panel</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>บอก Premiere ก่อนว่าคลิปไหนเป็นเสียงอะไร</b> เลือกคลิปแล้วกด Dialogue, Music, SFX หรือ Ambience ใน Essential Sound panel ตัวเลือกที่เหลือจะปรับตามประเภทที่เลือก</p></div>
+<div class="demo" data-demo="audio"></div>
+
+<h2 id="types">ประเภทเสียงใน Essential Sound</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ประเภท</th><th>ใช้กับ</th><th>ตัวเลือกที่ใช้บ่อย</th></tr></thead>
+<tbody>
+<tr><td>Dialogue</td><td>เสียงพูด สัมภาษณ์ voice-over</td><td>Loudness Auto-Match, Enhance Speech, Repair, Clarity</td></tr>
+<tr><td>Music</td><td>เพลงประกอบ</td><td>Loudness Auto-Match, Ducking</td></tr>
+<tr><td>SFX</td><td>เสียงเอฟเฟกต์ เช่นเสียงประตู เสียง whoosh</td><td>Loudness, ปรับตำแหน่งซ้ายขวา</td></tr>
+<tr><td>Ambience</td><td>เสียงบรรยากาศ เช่นเสียงคน เสียงลม</td><td>Loudness, Reverb</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">ขั้นตอนมิกซ์เสียงพื้นฐาน</h2>
+<ol class="steps">
+<li><h3>แยก track ให้เป็นระเบียบ</h3><p>วางเสียงพูดไว้ A1–A2 เพลงไว้ A3 เสียงเอฟเฟกต์ไว้ A4 จะเลือกคลิปประเภทเดียวกันได้ทีเดียว ถ้าอยากทำงานในเลย์เอาต์ที่เหมาะ เลือก workspace <span class="ui">Audio</span></p></li>
+<li><h3>ตั้งประเภทและกด Auto-Match</h3><p>เลือกคลิปเสียงพูดทั้งหมด กด <span class="ui">Dialogue</span> แล้วกด <span class="ui">Auto-Match</span> ในส่วน Loudness ทุกคลิปจะดังใกล้เคียงกัน ทำแบบเดียวกันกับเพลงโดยเลือก <span class="ui">Music</span></p></li>
+<li><h3>ทำเสียงพูดให้ชัดด้วย Enhance Speech</h3><p>ในแท็บ Dialogue กด <span class="ui">Enhance</span> ใต้ Enhance Speech รอประมวลผลเสร็จแล้วปรับ <span class="ui">Mix Amount</span> ถ้าเสียงฟังดูไม่เป็นธรรมชาติ ให้ลดลงเพื่อผสมเสียงต้นฉบับกลับเข้าไป</p>
+<p class="note">Enhance Speech ใช้กับเสียงพูดเท่านั้น ไม่เหมาะกับเพลงหรือเสียงเอฟเฟกต์</p></li>
+<li><h3>ให้เพลงหลบเสียงพูดด้วย Ducking</h3><p>เลือกคลิปเพลง เปิด <span class="ui">Ducking</span> เลือกประเภทเสียงที่จะให้เพลงหลบ (เช่น Dialogue) ตั้ง Sensitivity, Reduce By และ Fades แล้วกด <span class="ui">Generate Keyframes</span> Premiere จะใส่ keyframe ลดเสียงเพลงตรงที่มีคนพูด</p>
+<p class="note">กด Generate Keyframes ซ้ำได้ทุกเมื่อ keyframe เดิมจะถูกแทนด้วยชุดใหม่ตามค่าที่ตั้ง</p></li>
+<li><h3>ดู Audio Meter ตอนเล่นทั้งเรื่อง</h3><p>เล่นตั้งแต่ต้นจนจบแล้วดูแถบ Audio Meter ข้าง timeline ห้ามแตะสีแดงด้านบน (0 dB) ถ้าแตะ ให้ลดความดังของคลิปนั้นด้วย <span class="ui">Audio Gain</span> (<kbd>G</kbd>)</p></li>
+</ol>
+
+<h2 id="tips">เคล็ดลับเพิ่มเติม</h2>
+<ul class="check">
+<li><span><b>ฟังทั้งหูฟังและลำโพง</b> หูฟังช่วยจับเสียงรบกวน ลำโพงช่วยบอกว่าเพลงดังเกินไหม</span></li>
+<li><span><b>ปรับความดังเป็นช่วงด้วย keyframe</b> กด <kbd>Ctrl</kbd> (Windows) หรือ <kbd>Cmd</kbd> (Mac) แล้วคลิกบนเส้นระดับเสียงของคลิปใน timeline เพื่อเพิ่ม keyframe</span></li>
+<li><span><b>สร้างเพลงหรือเสียงเอฟเฟกต์ได้ใน 27.0</b> Premiere 27.0 สร้างเพลง เสียงเอฟเฟกต์ และเสียงบรรยากาศด้วย AI ได้ ควรเช็กเงื่อนไขการใช้งานและเครดิตที่ใช้ก่อน</span></li>
+<li><span><b>ใช้เพลงที่มีสิทธิ์</b> เพลงจากแอปฟังเพลงหรือ YouTube อาจทำให้วิดีโอโดนลิขสิทธิ์ ใช้เพลงจากคลังที่มีใบอนุญาต เช่น Adobe Stock</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>เพลงกลบเสียงพูด</b>เปิด Ducking หรือลดระดับเพลงลงอีก ช่วงที่มีคนพูดเพลงควรเบากว่าเสียงพูดชัดเจน</li>
+<li><b>เสียงแตก</b>ระดับเสียงรวมเกิน 0 dB ลด Audio Gain ของคลิปที่ดังที่สุด ไม่ใช่ลดเสียงลำโพงของตัวเอง</li>
+<li><b>ปรับความดังทีละคลิปด้วยมือ</b>ใช้ Auto-Match กับคลิปประเภทเดียวกันพร้อมกันจะเร็วและสม่ำเสมอกว่า</li>
+<li><b>ใช้ Enhance Speech แรงเกิน</b>เสียงอาจฟังเหมือนหุ่นยนต์หรือคำเพี้ยน ลด Mix Amount ลงและฟังซ้ำ</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Essential Sound, Auto-Match, Ducking และ Enhance Speech ใช้แบบเดียวกัน</li>
+<li>การสร้างเพลง เสียงเอฟเฟกต์ และเสียงบรรยากาศด้วย AI ยังไม่มี</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/premiere-essential-sound-panel.html">Edit, repair, and improve audio using Essential Sound panel</a></li>
+<li><a href="https://www.adobe.com/learn/premiere-pro/web/automatic-audio-ducking">Automatic audio ducking</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/enhance-speech.html">Enhance Speech</a></li>
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere release notes</a></li>
+</ul>

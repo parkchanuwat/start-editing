@@ -1,0 +1,57 @@
+<p class="crumb">Premiere › Color, audio and captions</p>
+<h1>Audio and music</h1>
+<p class="lead">Viewers forgive rough pictures far more easily than sound they can't follow. The basics: dialogue clear, music underneath, and nothing over 0 dB. You can do most of it from the Essential Sound panel.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Tell Premiere what each clip is first.</b> Select clips and click Dialogue, Music, SFX or Ambience in the Essential Sound panel. The rest of the panel adapts to the type you choose.</p></div>
+<div class="demo" data-demo="audio"></div>
+
+<h2 id="types">Audio types in Essential Sound</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Type</th><th>Use for</th><th>Common options</th></tr></thead>
+<tbody>
+<tr><td>Dialogue</td><td>Speech, interviews, voice-over</td><td>Loudness Auto-Match, Enhance Speech, Repair, Clarity</td></tr>
+<tr><td>Music</td><td>Background music</td><td>Loudness Auto-Match, Ducking</td></tr>
+<tr><td>SFX</td><td>Sound effects such as doors or whooshes</td><td>Loudness, left/right position</td></tr>
+<tr><td>Ambience</td><td>Room tone, crowds, wind</td><td>Loudness, Reverb</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">A basic mix, step by step</h2>
+<ol class="steps">
+<li><h3>Keep tracks tidy</h3><p>Dialogue on A1–A2, music on A3, effects on A4, so you can select each type at once. For a layout suited to sound, switch to the <span class="ui">Audio</span> workspace.</p></li>
+<li><h3>Set the type and Auto-Match</h3><p>Select all dialogue clips, click <span class="ui">Dialogue</span>, then <span class="ui">Auto-Match</span> under Loudness so every clip sits at a similar level. Do the same for music with <span class="ui">Music</span>.</p></li>
+<li><h3>Clean up speech with Enhance Speech</h3><p>On the Dialogue tab, click <span class="ui">Enhance</span> under Enhance Speech. When processing finishes, adjust <span class="ui">Mix Amount</span>; if the voice sounds unnatural, lower it to blend some of the original back in.</p>
+<p class="note">Enhance Speech is for speech only, not music or sound effects.</p></li>
+<li><h3>Duck the music under dialogue</h3><p>Select the music, turn on <span class="ui">Ducking</span>, choose which audio types should trigger it (for example Dialogue), set Sensitivity, Reduce By and Fades, then click <span class="ui">Generate Keyframes</span>. Premiere adds keyframes that lower the music where people speak.</p>
+<p class="note">You can click Generate Keyframes again any time; the old keyframes are replaced with a new set based on the current settings.</p></li>
+<li><h3>Watch the Audio Meters through the whole piece</h3><p>Play from start to finish and watch the meters beside the timeline. Never touch the red at the top (0 dB). If you do, lower that clip with <span class="ui">Audio Gain</span> (<kbd>G</kbd>).</p></li>
+</ol>
+
+<h2 id="tips">More tips</h2>
+<ul class="check">
+<li><span><b>Check on headphones and speakers.</b> Headphones catch noise; speakers show whether the music is too loud.</span></li>
+<li><span><b>Change volume over time with keyframes.</b> <kbd>Ctrl</kbd>-click (Windows) or <kbd>Cmd</kbd>-click (Mac) the volume line on a clip in the timeline to add a keyframe.</span></li>
+<li><span><b>Generate music or sound effects in 27.0.</b> Premiere 27.0 can generate music, sound effects and soundscapes with AI. Check the usage terms and the credits it uses first.</span></li>
+<li><span><b>Use music you have rights to.</b> Songs from music apps or YouTube can trigger copyright claims. Use a licensed library such as Adobe Stock.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Music drowns out the dialogue</b>Turn on Ducking or bring the music down further; under speech it should be clearly quieter than the voice.</li>
+<li><b>Distorted sound</b>The mix goes over 0 dB. Lower the Audio Gain of the loudest clip, not your computer's volume.</li>
+<li><b>Adjusting every clip by hand</b>Auto-Match on all clips of one type at once is faster and more consistent.</li>
+<li><b>Too much Enhance Speech</b>Voices can sound robotic or words can change. Lower Mix Amount and listen again.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Essential Sound, Auto-Match, Ducking and Enhance Speech work the same way.</li>
+<li>AI generation of music, sound effects and soundscapes isn't available.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/premiere-essential-sound-panel.html">Edit, repair, and improve audio using Essential Sound panel</a></li>
+<li><a href="https://www.adobe.com/learn/premiere-pro/web/automatic-audio-ducking">Automatic audio ducking</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/enhance-speech.html">Enhance Speech</a></li>
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere release notes</a></li>
+</ul>

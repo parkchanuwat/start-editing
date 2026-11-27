@@ -1,0 +1,59 @@
+<p class="crumb">Premiere › ส่งออก</p>
+<h1>Export วิดีโอ</h1>
+<p class="lead">Export คือการเปลี่ยน sequence ให้เป็นไฟล์วิดีโอที่เปิดดูได้ทุกที่ ใน Premiere ให้เริ่มจากถามตัวเองว่าจะเอาไฟล์ไปไว้ที่ไหน แล้วเลือก preset ที่เหมาะกับปลายทางนั้น</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ดู Range ทุกครั้ง</b> ถ้ามีจุด In/Out ค้างอยู่ใน sequence Premiere อาจ export แค่ช่วงนั้น ตั้ง Range เป็น <span class="ui">Entire Source</span> ถ้าต้องการทั้งเรื่อง</p></div>
+<div class="demo" data-demo="export"></div>
+
+<h2 id="ways">สามทางในการ export</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>วิธี</th><th>เหมาะกับ</th><th>อยู่ตรงไหน</th></tr></thead>
+<tbody>
+<tr><td>Export mode</td><td>งานทั่วไป ตั้งค่าได้ครบ</td><td>แท็บ Export บน header bar หรือ <kbd>Ctrl</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>M</kbd></td></tr>
+<tr><td>Quick Export</td><td>ส่งไฟล์ด่วนด้วย preset สำเร็จรูป</td><td>ปุ่มมุมขวาบนของ header bar</td></tr>
+<tr><td>Send to Media Encoder</td><td>หลายไฟล์ หลายสเปก หรืออยากตัดต่อต่อระหว่าง export</td><td>ปุ่มล่างขวาของ Export mode</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">ขั้นตอนใน Export mode</h2>
+<ol class="steps">
+<li><h3>เลือก sequence แล้วเข้า Export mode</h3><p>คลิกที่ timeline หรือ sequence ใน Project panel ก่อน แล้วกดแท็บ <span class="ui">Export</span></p></li>
+<li><h3>เลือกปลายทาง</h3><p>ด้านซ้ายมี <span class="ui">Media File</span> สำหรับไฟล์ทั่วไป และปลายทางโซเชียลบางแห่งที่อัปโหลดให้ได้เลย</p></li>
+<li><h3>ตั้งชื่อไฟล์ ที่เก็บ และ preset</h3><p>ตั้ง File Name และ Location ให้หาเจอง่าย แล้วเลือก Preset เช่น <span class="ui">Match Source – Adaptive High Bitrate</span> ซึ่งใช้ codec H.264 ขนาดและ frame rate ตาม sequence</p></li>
+<li><h3>เช็ก Range และ Captions</h3><p>Range ใต้ภาพตัวอย่างมี Entire Source, Source In/Out, Work Area และ Custom ถ้ามีซับ ให้เลือกในส่วน <span class="ui">Captions</span> ว่าจะไม่ใส่ ส่งเป็นไฟล์แยก (sidecar) หรือฝังลงในภาพ</p></li>
+<li><h3>ดูขนาดไฟล์โดยประมาณแล้วกด Export</h3><p>ด้านล่างขวาบอก Estimated File Size ถ้าใหญ่เกินที่ส่งได้ ลอง preset Medium Bitrate กด <span class="ui">Export</span> แล้วรอจนเสร็จ</p></li>
+<li><h3>เปิดดูไฟล์ที่ได้</h3><p>เปิดไฟล์จริงดูตั้งแต่ต้นจนจบ เช็กภาพ เสียง ซับ และช่วงท้ายว่าไม่มีภาพดำเกิน</p></li>
+</ol>
+
+<h2 id="settings">ค่าที่ควรรู้จัก</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ค่า</th><th>ความหมาย</th></tr></thead>
+<tbody>
+<tr><td>Format</td><td>ชนิดไฟล์และ codec เช่น H.264 (MP4), HEVC, QuickTime (ProRes)</td></tr>
+<tr><td>Match Source</td><td>ใช้ขนาดภาพและ frame rate ตามต้นฉบับอัตโนมัติ</td></tr>
+<tr><td>Bitrate</td><td>ปริมาณข้อมูลต่อวินาที ยิ่งสูงยิ่งคมแต่ไฟล์ใหญ่ VBR ปรับตามความซับซ้อนของภาพ ส่วน CBR คงที่ตลอด</td></tr>
+<tr><td>Use Maximum Render Quality</td><td>ช่วยคุณภาพตอนย่อขนาดภาพ แต่ใช้เวลานานขึ้น</td></tr>
+<tr><td>Content Credentials</td><td>แนบข้อมูลว่าใครสร้างและแก้ไขไฟล์ไว้ในไฟล์ (เลือกเปิดได้)</td></tr>
+</tbody></table></div>
+<p class="note">ขนาดภาพและ preset สำหรับปลายทางต่าง ๆ ดูเพิ่มที่หน้า <a href="#th-presets-resolution">Preset และ Resolution ที่ใช้บ่อย</a></p>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>ได้วิดีโอแค่บางช่วง</b>Range ถูกตั้งเป็น Source In/Out จากจุด In/Out ที่ค้างไว้ เปลี่ยนเป็น Entire Source</li>
+<li><b>หาไฟล์ไม่เจอ</b>ดู Location ก่อนกด Export และตั้งชื่อไฟล์ให้มีวันที่หรือเวอร์ชัน</li>
+<li><b>ซับหายในไฟล์ที่ได้</b>เปิดส่วน Captions แล้วเลือกฝังลงภาพหรือส่งเป็นไฟล์แยก ถ้าเลือก None จะไม่มีซับ</li>
+<li><b>ภาพดำหรือภาพค้างตอนท้าย</b>มีคลิปหรือกราฟิกเกินจุดจบของเรื่อง ลบออกหรือตั้ง Range ให้ตรง</li>
+<li><b>ไฟล์ใหญ่เกินส่งไม่ได้</b>ลด bitrate ด้วย preset Medium หรือ Low อย่าลดขนาดภาพจนเล็กกว่าที่ปลายทางต้องการ</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Export mode และ Quick Export ใช้แบบเดียวกัน</li>
+<li>ตัวเลือก Content Credentials ตอน export เพิ่มเข้ามาในเวอร์ชัน 26.2</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/workflow-overview-exporting.html">Export workflow overview</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/export-settings-reference-premiere-pro.html">Overview of export settings</a></li>
+<li><a href="https://helpx.adobe.com/uk/premiere/desktop/render-and-export/export-files/quickly-export-a-video-file.html">Quickly export a video file</a></li>
+</ul>

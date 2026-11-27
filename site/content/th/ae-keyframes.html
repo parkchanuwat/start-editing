@@ -1,0 +1,69 @@
+<p class="crumb">After Effects</p>
+<h1>Keyframe ใน After Effects</h1>
+<p class="lead">keyframe คือจุดที่บอกว่า ณ เวลานี้ค่านี้ต้องเป็นเท่าไร After Effects จะเติมค่าระหว่าง keyframe ให้เอง สิ่งที่ทำให้งานดูเป็นมืออาชีพคือ <b>จังหวะ</b> ระหว่าง keyframe ซึ่งคุมได้ด้วย Easy Ease และ Graph Editor</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>เลือก keyframe แล้วกด <kbd>F9</kbd></b> การเคลื่อนไหวจะค่อย ๆ เร่งออกและค่อย ๆ ช้าลงก่อนหยุด แทนที่จะพุ่งแล้วหยุดทันที ลองเทียบในเดโมด้านล่าง</p></div>
+<div class="demo" data-demo="ae-keyframes"></div>
+
+<h2 id="steps">ขั้นตอนทำ keyframe แรก</h2>
+<ol class="steps">
+<li><h3>เปิดค่าที่จะขยับ</h3><p>เลือก layer แล้วกด <kbd>P</kbd> เพื่อเปิด Position (หรือ <kbd>S</kbd> Scale, <kbd>R</kbd> Rotation, <kbd>T</kbd> Opacity)</p></li>
+<li><h3>กดนาฬิกาจับเวลา</h3><p>เลื่อน playhead ไปที่จุดเริ่ม แล้วคลิกไอคอนนาฬิกา (stopwatch) หน้าชื่อค่า จะได้ keyframe แรก</p>
+<p class="note">คีย์ลัดเพิ่ม keyframe Position: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows) หรือ <kbd>Option</kbd>+<kbd>P</kbd> (Mac)</p></li>
+<li><h3>เลื่อนเวลาแล้วเปลี่ยนค่า</h3><p>เลื่อน playhead ไปข้างหน้า แล้วลาก layer ใน Composition panel หรือพิมพ์ค่าใหม่ After Effects สร้าง keyframe ที่สองให้เอง</p></li>
+<li><h3>ใส่ Easy Ease</h3><p>ลากคลุม keyframe ทั้งสองแล้วกด <kbd>F9</kbd> ไอคอน keyframe จะเปลี่ยนจากสี่เหลี่ยมขนมเปียกปูนเป็นรูปนาฬิกาทราย</p></li>
+<li><h3>ปรับจังหวะใน Graph Editor</h3><p>กด <kbd>Shift</kbd>+<kbd>F3</kbd> เพื่อเปิด Graph Editor ลากด้ามจับ (handle) ของ keyframe ออกห่างเพื่อเพิ่ม influence การเร่งและชะลอจะชัดขึ้น</p></li>
+</ol>
+
+<h2 id="graphs">Value graph กับ Speed graph</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>กราฟ</th><th>แสดงอะไร</th><th>ใช้ตอนไหน</th></tr></thead>
+<tbody>
+<tr><td>Value Graph</td><td>ค่าจริงของ property ในแต่ละเวลา (X สีแดง, Y สีเขียว)</td><td>อยากเห็นว่าค่าวิ่งไปถึงไหน หรือทำ overshoot</td></tr>
+<tr><td>Speed Graph</td><td>ความเร็วของการเปลี่ยนค่า</td><td>อยากคุมความเร็ว เช่นให้เร่งแรงตอนออกตัว</td></tr>
+</tbody></table></div>
+<p>ใน Composition panel เส้นทางการเคลื่อนที่ (motion path) มีจุดเล็ก ๆ หนึ่งจุดต่อหนึ่งเฟรม จุดห่างกันแปลว่าเร็ว จุดชิดกันแปลว่าช้า</p>
+
+<h2 id="types">ชนิดของ interpolation</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ชนิด</th><th>ผลลัพธ์</th></tr></thead>
+<tbody>
+<tr><td>Linear</td><td>ความเร็วคงที่ เปลี่ยนจังหวะทันทีที่ keyframe ดูแข็ง</td></tr>
+<tr><td>Bezier / Easy Ease</td><td>เร่งและชะลออย่างนุ่มนวล Easy Ease ใช้ influence 33.33% เป็นค่าเริ่มต้น</td></tr>
+<tr><td>Auto Bezier</td><td>ค่าเริ่มต้นของเส้นทางการเคลื่อนที่ ทำให้ทางโค้งนุ่ม</td></tr>
+<tr><td>Hold</td><td>ค่าคงที่จนถึง keyframe ถัดไปแล้วกระโดดเปลี่ยน ใช้ทำเอฟเฟกต์กระตุกหรือข้อความเปลี่ยนทันที</td></tr>
+</tbody></table></div>
+<p class="note">เปลี่ยนชนิดได้โดยคลิกขวาที่ keyframe › <span class="ui">Keyframe Interpolation</span></p>
+
+<h2 id="keys">คีย์ลัดที่ใช้บ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>คีย์</th><th>ทำอะไร</th></tr></thead>
+<tbody>
+<tr><td><kbd>J</kbd> / <kbd>K</kbd></td><td>ไป keyframe (หรือ marker) ก่อนหน้า / ถัดไป</td></tr>
+<tr><td><kbd>U</kbd></td><td>แสดงเฉพาะค่าที่มี keyframe</td></tr>
+<tr><td><kbd>F9</kbd></td><td>Easy Ease</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>F9</kbd></td><td>Easy Ease In</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F9</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F9</kbd></td><td>Easy Ease Out</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>F3</kbd></td><td>เปิดปิด Graph Editor</td></tr>
+<tr><td><kbd>Alt</kbd>+<kbd>←</kbd>/<kbd>→</kbd> / <kbd>Option</kbd>+<kbd>←</kbd>/<kbd>→</kbd></td><td>เลื่อน keyframe ที่เลือกทีละ 1 เฟรม</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>เปลี่ยนค่าแล้วมันเปลี่ยนทั้ง layer</b>ยังไม่ได้กด stopwatch ค่านั้นจึงไม่มี keyframe กด stopwatch ก่อนแล้วค่อยเปลี่ยนค่า</li>
+<li><b>การเคลื่อนไหวเร็วหรือช้าเกิน</b>ลาก keyframe ให้ห่างกันเพื่อให้ช้าลง หรือชิดกันเพื่อให้เร็วขึ้น</li>
+<li><b>ใส่ Easy Ease แล้วดูยืด</b>ลด influence ใน Graph Editor หรือใช้ Ease Out ที่ keyframe แรก Ease In ที่ keyframe สุดท้ายเท่านั้น</li>
+<li><b>ลาก handle ใน Graph Editor ไม่ได้ผล</b>ดูว่าเปิด Speed Graph หรือ Value Graph อยู่ ทั้งสองแบบลาก handle แล้วได้ผลต่างกัน</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>keyframe, Easy Ease และ Graph Editor ใช้แบบเดียวกันทุกเวอร์ชัน</li>
+<li>Effect Controls panel ถูกออกแบบใหม่ใน 26.5 หน้าตาจึงอาจต่างจากเวอร์ชันก่อนหน้า</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/en/after-effects/using/keyframe-interpolation.html">Keyframe interpolation</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/speed.html">Speed</a></li>
+</ul>

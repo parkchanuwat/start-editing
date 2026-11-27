@@ -2,7 +2,7 @@ import re, pathlib, sys
 
 ROOT = pathlib.Path(__file__).parent
 OUT = ROOT.parent / "docs" / "index.html"
-PAGES = ["first-video", "project-media", "sequence", "monitors", "timeline", "markers", "effects-keyframes", "mogrt", "object-mask", "color-mode", "captions", "presets-resolution"]
+PAGES = ["first-video", "project-media", "premiere-vs-ae", "system-requirements", "workspace-tour", "sequence", "monitors", "timeline", "markers", "effects-keyframes", "mogrt", "object-mask", "color-mode", "captions", "audio", "presets-resolution", "export", "ae-comp-layers", "ae-keyframes", "ae-text", "ae-render", "whats-new", "shortcuts", "glossary"]
 LANGS = ["th", "en"]
 NOWRAP_TH = ["โปรเจกต์", "เอฟเฟกต์", "เฟรมเรต", "พิกเซล", "แอนิเมชัน", "เวอร์ชัน", "ทรานซิชัน", "เทมเพลต", "คีย์ลัด"]
 
@@ -23,7 +23,7 @@ def main():
     shell = (ROOT / "shell.html").read_text(encoding="utf-8")
     css = (ROOT / "style.css").read_text(encoding="utf-8")
     js = (ROOT / "app.js").read_text(encoding="utf-8")
-    demos2 = (ROOT / "demos2.js").read_text(encoding="utf-8")
+    demos2 = (ROOT / "demos2.js").read_text(encoding="utf-8") + "\n" + (ROOT / "demos3.js").read_text(encoding="utf-8")
     marker = "/* ---------- shell ---------- */"
     assert marker in js
     js = js.replace(marker, demos2 + "\n" + marker)

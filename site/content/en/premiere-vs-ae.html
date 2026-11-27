@@ -1,0 +1,55 @@
+<p class="crumb">Start here</p>
+<h1>Premiere vs After Effects</h1>
+<p class="lead">Premiere is for <b>editing</b>: arranging long footage into a story, with sound, captions and colour. After Effects is for <b>motion graphics and visual effects</b>: detailed work on short shots. Most projects start in Premiere and send a few shots to After Effects.</p>
+<ul class="meta"><li class="ver">Premiere &amp; After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Rule of thumb:</b> minutes of footage with many clips belongs in Premiere. A few seconds where everything has to move just right belongs in After Effects.</p></div>
+<div class="demo" data-demo="premiere-vs-ae"></div>
+
+<h2 id="compare">Side by side</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Topic</th><th>Premiere</th><th>After Effects</th></tr></thead>
+<tbody>
+<tr><td>Main job</td><td>Editing, story, audio, captions, colour</td><td>Motion graphics, compositing, visual effects</td></tr>
+<tr><td>Unit of work</td><td>Sequence</td><td>Composition</td></tr>
+<tr><td>Timeline</td><td>A track holds many clips in a row</td><td>Each layer has exactly one source</td></tr>
+<tr><td>Typical length</td><td>Minutes to hours</td><td>Seconds to a few minutes</td></tr>
+<tr><td>Project file</td><td><code>.prproj</code></td><td><code>.aep</code></td></tr>
+<tr><td>Output</td><td>Export mode or Media Encoder</td><td>Render Queue or Media Encoder</td></tr>
+</tbody></table></div>
+
+<h2 id="together">Using both together</h2>
+<ol class="steps">
+<li><h3>Dynamic Link: send a clip to After Effects</h3><p>In Premiere, right-click a clip in the timeline and choose <span class="ui">Replace With After Effects Composition</span>. After Effects opens with a new composition containing that clip. Changes you make there show up in Premiere without rendering.</p>
+<p class="note">Premiere and After Effects must be the same version, or Dynamic Link won't work.</p></li>
+<li><h3>Create an empty composition from Premiere</h3><p>Choose <span class="ui">File › Adobe Dynamic Link › New After Effects Composition</span>. The new comp matches the Premiere project's frame size and frame rate and is 30 seconds long by default.</p></li>
+<li><h3>MOGRT: design once, reuse across the team</h3><p>Design a graphic in After Effects and export it as a <code>.mogrt</code>. Editors use it in Premiere and change only the fields you exposed, such as names and colours. See <a href="#en-mogrt">MOGRT</a>.</p></li>
+<li><h3>Media Encoder: let it export for you</h3><p>Both apps can queue jobs in Adobe Media Encoder, so you can keep working while files export.</p></li>
+</ol>
+
+<h2 id="which">Which app for which job</h2>
+<ul class="check">
+<li><span><b>Vlogs, interviews, event videos</b> start and finish in Premiere, using ready-made MOGRTs for name straps.</span></li>
+<li><span><b>Logo intros, film titles, animated infographics</b> build them in After Effects and render or Dynamic Link them in.</span></li>
+<li><span><b>Removing objects, tracking signs, replacing skies</b> detailed compositing happens in After Effects. For simple cases, try <a href="#en-object-mask">Object Mask</a> in Premiere first.</span></li>
+<li><span><b>Captions, sound, grading the whole film</b> do these in Premiere, where you see the whole story in order.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Editing a whole film in After Effects</b>It isn't built for arranging long footage, so previews get slow and changes get painful. Cut in Premiere and send only effects shots over.</li>
+<li><b>Building complex animation with Premiere keyframes</b>It works up to a point, but when many elements move together After Effects' Graph Editor and text animators give far more control.</li>
+<li><b>Dynamic Link not showing up</b>Check that both apps are the same version, for example 27.0 in both.</li>
+<li><b>Rendering an MP4 from After Effects to overlay in Premiere</b>MP4 (H.264) can't store transparency. Use Dynamic Link, or render ProRes 4444 with RGB + Alpha.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere Pro 25.x and Premiere 26.x</summary><ul>
+<li>Before 26.0 the app was called Adobe Premiere Pro. Its role and how it works with After Effects are the same.</li>
+<li>Dynamic Link and MOGRTs work the same way; the two apps' versions still need to match.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/using/dynamic-link-effects.html">Dynamic Link and After Effects</a></li>
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers (After Effects)</a></li>
+</ul>

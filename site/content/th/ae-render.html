@@ -1,0 +1,53 @@
+<p class="crumb">After Effects</p>
+<h1>Render และส่งออก</h1>
+<p class="lead">After Effects ส่งงานออกเป็นไฟล์ผ่าน <b>Render Queue</b> ถ้าต้องการ MP4 ใช้ H.264 ได้ในตัว ถ้าต้องการพื้นหลังโปร่งใสหรือหลายไฟล์พร้อมกัน ก็มีทางเลือกของมัน</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ค่าเริ่มต้นคือ H.264</b> ถ้าติดตั้งใหม่หรือล้างค่า Output Module ไว้ After Effects จะใช้ preset <span class="ui">H.264 – Match Render Settings – 15 Mbps</span> เป็นค่าเริ่มต้น</p></div>
+<div class="demo" data-demo="ae-render"></div>
+
+<h2 id="steps">ขั้นตอน render เป็น MP4</h2>
+<ol class="steps">
+<li><h3>เพิ่ม composition เข้าคิว</h3><p>เลือก composition แล้วไปที่ <span class="ui">File › Export › Add to Render Queue</span> (<kbd>Ctrl</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>M</kbd>) Render Queue panel จะเปิดขึ้น</p></li>
+<li><h3>เช็ก Render Settings</h3><p>ปกติใช้ <span class="ui">Best Settings</span> ดูช่อง Time Span ด้วยว่าจะ render ทั้ง composition หรือแค่ work area</p></li>
+<li><h3>เลือก Output Module</h3><p>คลิกชื่อ Output Module แล้วเลือก Format เป็น H.264 จะมี preset 5, 15 และ 40 Mbps ให้เลือกตามความละเอียดและคุณภาพที่ต้องการ</p></li>
+<li><h3>ตั้งชื่อและที่เก็บไฟล์</h3><p>คลิกชื่อไฟล์ที่ช่อง <span class="ui">Output To</span> แล้วเลือกโฟลเดอร์</p></li>
+<li><h3>กด Render</h3><p>กดปุ่ม Render ด้านขวาของ Render Queue panel รอจนแถบเสร็จ แล้วเปิดดูไฟล์ที่ได้</p></li>
+</ol>
+
+<h2 id="formats">เลือก format ตามการใช้งาน</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ต้องการ</th><th>Format</th><th>Channels</th></tr></thead>
+<tbody>
+<tr><td>ไฟล์สำหรับเว็บหรือโซเชียล</td><td>H.264</td><td>RGB</td></tr>
+<tr><td>วิดีโอพื้นหลังใสไปวางทับใน Premiere</td><td>QuickTime, codec Apple ProRes 4444</td><td>RGB + Alpha</td></tr>
+<tr><td>ภาพนิ่งเรียงเฟรม</td><td>PNG Sequence</td><td>RGB หรือ RGB + Alpha</td></tr>
+<tr><td>ไฟล์ master คุณภาพสูง</td><td>QuickTime, codec Apple ProRes 422 HQ</td><td>RGB</td></tr>
+</tbody></table></div>
+<p class="note">ตั้งค่าเริ่มต้นของ Output Module เองได้ที่ <span class="ui">Edit › Templates › Output Module</span></p>
+
+<h2 id="ame">ส่งให้ Media Encoder หรือ Premiere</h2>
+<ul class="check">
+<li><span><b>Adobe Media Encoder</b> เลือก <span class="ui">File › Export › Add to Adobe Media Encoder Queue</span> เหมาะเมื่อต้องการหลายไฟล์หลายสเปก และอยากทำงานใน After Effects ต่อระหว่าง render</span></li>
+<li><span><b>Dynamic Link ไป Premiere</b> import composition เข้า Premiere ได้เลยโดยไม่ต้อง render แก้ใน After Effects แล้ว Premiere อัปเดตตาม ต้องใช้เวอร์ชันเดียวกัน</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>ได้ไฟล์สั้นกว่าที่คิด</b>Time Span ใน Render Settings ตั้งเป็น work area อยู่ เปลี่ยนเป็นความยาวทั้ง composition หรือขยาย work area</li>
+<li><b>MP4 พื้นหลังเป็นสีดำ</b>H.264 เก็บความโปร่งใสไม่ได้ ใช้ QuickTime ProRes 4444 และตั้ง Channels เป็น RGB + Alpha</li>
+<li><b>ไม่รู้ว่าไฟล์ไปอยู่ไหน</b>ดูช่อง Output To ก่อนกด Render ทุกครั้ง</li>
+<li><b>render ช้ามาก</b>ปิด layer ที่ไม่ใช้ และเช็กว่าเปิด Multi-Frame Rendering ไว้ใน Preferences</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>Render Queue และ H.264 ในตัวใช้แบบเดียวกัน</li>
+<li>27.0 เพิ่มแถบปรับระดับการบีบอัดของ PNG (ยังไม่สูญเสียคุณภาพ) และปรับปรุง Auto-Save ให้กู้งานได้ง่ายขึ้น</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/desktop/render-and-export/export-h-264-from-the-after-effects/exporting-h264-from-the-after-effects-render-queue.html">Exporting H.264 from the After Effects Render Queue</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/dynamic-link-effects.html">Dynamic Link and After Effects</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+</ul>
