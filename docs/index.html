@@ -221,7 +221,12 @@ footer p{margin:0 0 6px}
 .yt{font:500 13px/1.5 "IBM Plex Mono",monospace;white-space:pre-wrap;background:#151517;border-radius:8px;padding:10px;margin:0;color:var(--stink);min-height:44px}
 
 /* object mask demo */
-.om svg{cursor:pointer;touch-action:none}
+.om svg{cursor:pointer}
+.om .hl{opacity:.75;animation:omp 1.6s ease-in-out infinite}.om .hl.on{opacity:1;animation:none;stroke-dasharray:none}
+@keyframes omp{50%{opacity:.25}}
+.chip:disabled{opacity:.45;cursor:default}
+.stage input:disabled{opacity:.45;cursor:default}
+.chk:has(input:disabled){color:var(--stmute)}
 
 /* resolution demo */
 .resfig{background:#0b0b0c;border-radius:8px;padding:12px;display:flex;align-items:center;min-height:200px}
@@ -332,7 +337,7 @@ footer p{margin:0 0 6px}
 @media(max-width:700px){.cm{grid-template-columns:minmax(0,1fr);grid-template-areas:"h" "m" "s" "c" "t";grid-template-rows:auto}.cm .ctrl{display:grid;grid-template-columns:160px minmax(0,1fr);gap:10px 14px;align-items:start}.cm .ctrl .seg,.cm .ctrl .btns,.cm .ctrl .chk{grid-column:1/-1}.two{grid-template-columns:minmax(0,1fr)}.seqbox{height:240px}}
 @media(max-width:600px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}table{font-size:14px}th,td{padding:6px 4px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:block;border:0;padding:2px 0;white-space:normal}.stack td::before{content:attr(data-l);display:block;font-size:13px;color:var(--mute)}.stack td:first-child::before{display:none}.pn{grid-template-columns:1fr}.pn>:last-child{text-align:left}.mons{gap:8px}.brand{font-size:16px}.search input{width:30vw}}
 @media(max-width:350px){.cm .ctrl{grid-template-columns:minmax(0,1fr)}}
-@media(prefers-reduced-motion:reduce){.lt.in{animation:none}.scr{transition:none}}
+@media(prefers-reduced-motion:reduce){.om .hl{animation:none}.lt.in{animation:none}.scr{transition:none}}
 
 </style>
 </head>
@@ -3711,27 +3716,30 @@ D.markers=(root,L)=>{
 };
 
 D['object-mask']=(root,L)=>{
- const T={th:{h:'ลอง Object Mask: ชี้ที่คน คลิกเพื่อสร้าง mask แล้วใส่เอฟเฟกต์',t:'เลื่อนเวลาในคลิป',track:'Track mask',fx:'เอฟเฟกต์ที่ผูกกับ mask',fxs:{none:'ไม่มี',blur:'Gaussian Blur',bw:'Black & White',bright:'Brightness'},inv:'Inverted (ใช้เอฟเฟกต์นอก mask)',fe:'Feather',ex:'Expansion',desel:'ยกเลิกการเลือก mask เพื่อดูผล',
-   s0:'ชี้เมาส์ที่คนในภาพ จะมีเส้นไฮไลต์ขึ้น แล้วคลิกเพื่อสร้าง mask',s1:'ได้ mask แล้ว ลองเลื่อนเวลาดู: mask ยังไม่วิ่งตามคน เพราะยังไม่ได้ track',s2:'Track แล้ว mask วิ่งตามคนตลอดคลิป ลองใส่ Gaussian Blur แล้วติ๊ก Inverted เพื่อเบลอพื้นหลัง',s3:'ระหว่างที่ mask ถูกเลือก Premiere จะแสดงสีแดงทับ ให้ยกเลิกการเลือกก่อนดูผลจริง',cap:'เดโมจำลองหลักการ ใน Premiere เครื่องมือนี้อยู่ในแถบเครื่องมือ และค่าต่าง ๆ อยู่ใน Effect Controls'},
-  en:{h:'Try Object Mask: point at the person, click to create a mask, then add an effect',t:'Move through the clip',track:'Track mask',fx:'Effect the mask is attached to',fxs:{none:'None',blur:'Gaussian Blur',bw:'Black & White',bright:'Brightness'},inv:'Inverted (apply the effect outside the mask)',fe:'Feather',ex:'Expansion',desel:'Deselect the mask to see the result',
-   s0:'Point at the person to see the highlight, then click to create a mask',s1:'Mask created. Move through the clip: the mask does not follow yet because it has not been tracked.',s2:'Tracked: the mask now follows the person through the clip. Add Gaussian Blur and tick Inverted to blur the background.',s3:'While a mask is selected, Premiere shows a red overlay. Deselect it to see the real result.',cap:'A simulation of the idea. In Premiere the tool is in the toolbar and these values are in Effect Controls.'}}[L];
+ const T={th:{h:'ลอง Object Mask: เลือกคนในภาพ, track แล้วใส่เอฟเฟกต์',t:'เลื่อนเวลาในคลิป',pick:'① เลือกคนในภาพ',picked:'① สร้าง mask แล้ว ✓',track:'② Track mask',tracked:'② Track แล้ว ✓',fx:'③ เอฟเฟกต์ที่ผูกกับ mask',fxs:{none:'ไม่มี',blur:'Gaussian Blur',bw:'Black & White',bright:'Brightness'},inv:'Inverted (ใช้เอฟเฟกต์นอก mask)',fe:'Feather',ex:'Expansion',desel:'④ ยกเลิกการเลือก mask เพื่อดูผล',reset:'เริ่มใหม่',
+   s0:'กดปุ่ม ① หรือคลิกที่ตัวคนในภาพ (เส้นประสีฟ้า) เพื่อสร้าง mask',s1:'ได้ mask แล้ว (สีแดงคือ mask ที่ถูกเลือก) ลองเลื่อนเวลาดู: mask ยังไม่วิ่งตามคนเพราะยังไม่ได้ track กด ②',s2:'Track แล้ว mask วิ่งตามคนตลอดคลิป ต่อไปเลือกเอฟเฟกต์ที่ ③ เช่น Gaussian Blur แล้วติ๊ก Inverted เพื่อเบลอพื้นหลัง',s3:'ระหว่างที่ mask ถูกเลือก Premiere จะแสดงสีแดงทับ กด ④ เพื่อยกเลิกการเลือกแล้วดูผลจริง',s4:'นี่คือผลจริง ลองเลื่อนเวลา เปลี่ยนเอฟเฟกต์ หรือปรับ Feather และ Expansion ดู คลิกที่คนอีกครั้งเพื่อเลือก mask กลับ',cap:'เดโมจำลองหลักการ ใน Premiere เครื่องมือนี้อยู่ในแถบเครื่องมือ และค่าต่าง ๆ อยู่ใน Effect Controls'},
+  en:{h:'Try Object Mask: select the person, track, then add an effect',t:'Move through the clip',pick:'① Select the person',picked:'① Mask created ✓',track:'② Track mask',tracked:'② Tracked ✓',fx:'③ Effect the mask is attached to',fxs:{none:'None',blur:'Gaussian Blur',bw:'Black & White',bright:'Brightness'},inv:'Inverted (apply the effect outside the mask)',fe:'Feather',ex:'Expansion',desel:'④ Deselect the mask to see the result',reset:'Start over',
+   s0:'Press ① or click the person in the picture (blue dashed outline) to create a mask',s1:'Mask created (red shows the selected mask). Move through the clip: it does not follow the person yet because it has not been tracked. Press ②.',s2:'Tracked: the mask now follows the person through the clip. Next pick an effect in ③, such as Gaussian Blur, and tick Inverted to blur the background.',s3:'While a mask is selected, Premiere shows a red overlay. Press ④ to deselect it and see the real result.',s4:'This is the real result. Move through the clip, change the effect, or adjust Feather and Expansion. Click the person again to reselect the mask.',cap:'A simulation of the idea. In Premiere the tool is in the toolbar and these values are in Effect Controls.'}}[L];
  let t=0,hasMask=false,tracked=false,maskT=0,fx='none',inv=false,fe=4,ex=4,sel=false,hover=false;
  const px=tt=>200+tt*200;
+ const SHAPE='<circle cx="0" cy="130" r="25"/><path d="M-9 146 L9 146 L9 160 L16 160 Q30 162 30 176 L42 248 L34 256 L18 340 L-18 340 L-34 256 L-42 248 L-30 176 Q-30 162 -16 160 L-9 160Z"/>';
  root.className='stage om';
  root.innerHTML=`<h3>${T.h}</h3><div class="two"><div class="col"><div class="mon"><svg viewBox="0 0 640 360" role="img" aria-label="${T.h}">
  <defs><filter id="omBlur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="7"/></filter><filter id="omBW"><feColorMatrix type="saturate" values="0"/></filter><filter id="omBr" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="1.35" intercept=".04"/><feFuncG type="linear" slope="1.35" intercept=".04"/><feFuncB type="linear" slope="1.35" intercept=".04"/></feComponentTransfer></filter><filter id="omFe" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur class="feb" stdDeviation="4"/></filter>
- <mask id="omM" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="360"><rect class="mbg" width="640" height="360" fill="black"/><g filter="url(#omFe)"><use class="mshape" href="#omShape" fill="white" stroke="white" stroke-width="8" stroke-linejoin="round"/></g></mask></defs>
+ <mask id="omM" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="360"><rect class="mbg" width="640" height="360" fill="black"/><g filter="url(#omFe)"><g class="mshape" fill="white" stroke="white" stroke-width="8" stroke-linejoin="round">${SHAPE}</g></g></mask></defs>
  <g class="base"><use href="#omBg"/><use class="pers" href="#omPerson"/></g>
  <g class="fxl" mask="url(#omM)"><use href="#omBg"/><use class="pers2" href="#omPerson"/></g>
- <use class="red" href="#omShape" fill="#ff2a2a" fill-opacity=".38" stroke="#ff2a2a" stroke-width="2" style="display:none"/>
- <use class="hl" href="#omShape" fill="none" stroke="#5fd0ff" stroke-width="3" stroke-dasharray="7 5" style="display:none"/></svg></div><p class="st" aria-live="polite">${T.s0}</p></div>
+ <g class="red" fill="#ff2a2a" fill-opacity=".38" stroke="#ff2a2a" stroke-width="2" style="display:none">${SHAPE}</g>
+ <g class="hl" fill="none" stroke="#5fd0ff" stroke-width="3" stroke-dasharray="7 5" style="display:none">${SHAPE}</g></svg></div><p class="st" aria-live="polite">${T.s0}</p></div>
  <div class="col"><label class="rng"><span>${T.t}<code class="tv"></code></span><input type="range" class="sc" min="0" max="1" step="0.01" value="0"></label>
+ <button class="btn pri pick" type="button">${T.pick}</button>
  <button class="btn trk" type="button" disabled>${T.track}</button>
  <p class="mlabel">${T.fx}</p><div class="chips fxc" role="group">${Object.keys(T.fxs).map(k=>`<button class="chip" type="button" data-f="${k}">${T.fxs[k]}</button>`).join('')}</div>
  <label class="chk"><input type="checkbox" class="inv"> ${T.inv}</label>
  <label class="rng"><span>${T.fe}<code class="fv"></code></span><input type="range" class="fe" min="0" max="14" step="1" value="4"></label>
  <label class="rng"><span>${T.ex}<code class="xv"></code></span><input type="range" class="ex" min="-6" max="16" step="1" value="4"></label>
- <button class="btn ds" type="button" disabled>${T.desel}</button></div></div>`;
+ <button class="btn ds" type="button" disabled>${T.desel}</button>
+ <button class="btn rs" type="button">${T.reset}</button></div></div>`;
  const cap=document.createElement('p');cap.className='cap';cap.textContent=T.cap;root.after(cap);
  const svg=$('svg',root),st=$('.st',root);
  const FX={none:'',blur:'url(#omBlur)',bw:'url(#omBW)',bright:'url(#omBr)'};
@@ -3741,23 +3749,29 @@ D['object-mask']=(root,L)=>{
   m.setAttribute('stroke-width',Math.abs(ex)*2);
   $('.mbg',root).setAttribute('fill',inv?'white':'black');m.setAttribute('fill',inv?'black':'white');m.setAttribute('stroke',(ex<0)!==inv?'black':'white');
   $('.feb',root).setAttribute('stdDeviation',fe);
-  const fl=$('.fxl',root);fl.style.display=hasMask&&fx!=='none'?'':'none';fl.setAttribute('filter',FX[fx]);
+  const fl=$('.fxl',root);fl.style.display=hasMask&&fx!=='none'?'':'none';if(FX[fx])fl.setAttribute('filter',FX[fx]);else fl.removeAttribute('filter');
   $('.red',root).style.display=hasMask&&sel?'':'none';$('.red',root).setAttribute('transform',`translate(${mx} 0)`);
-  $('.hl',root).style.display=!hasMask&&hover?'':'none';$('.hl',root).setAttribute('transform',`translate(${x} 0)`);
+  const hl=$('.hl',root);hl.style.display=!hasMask?'':'none';hl.setAttribute('transform',`translate(${x} 0)`);hl.classList.toggle('on',hover);
   $('.tv',root).textContent=(t*5).toFixed(1)+' s';$('.fv',root).textContent=fe;$('.xv',root).textContent=ex;
-  $('.trk',root).disabled=!hasMask||tracked;$('.ds',root).disabled=!sel;
+  const pk=$('.pick',root);pk.disabled=hasMask;pk.textContent=hasMask?T.picked:T.pick;pk.classList.toggle('pri',!hasMask);
+  const tk=$('.trk',root);tk.disabled=!hasMask||tracked;tk.textContent=tracked?T.tracked:T.track;tk.classList.toggle('pri',hasMask&&!tracked);
+  $('.ds',root).disabled=!sel;$('.ds',root).classList.toggle('pri',sel&&tracked&&fx!=='none');
+  for(const c of ['.inv','.fe','.ex'])$(c,root).disabled=!hasMask;
   $$('.fxc .chip',root).forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.f===fx));b.disabled=!hasMask});};
  const pt=e=>{const r=svg.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*640,y:(e.clientY-r.top)/r.height*360}};
- const onP=p=>p.x>px(t)-40&&p.x<px(t)+40&&p.y>110&&p.y<345;
+ const onP=p=>p.x>px(t)-55&&p.x<px(t)+55&&p.y>95&&p.y<350;
+ const make=()=>{hasMask=true;sel=true;maskT=t;st.textContent=T.s1;draw()};
  svg.addEventListener('pointermove',e=>{const h=onP(pt(e));if(h!==hover){hover=h;draw()}});
  svg.addEventListener('pointerleave',()=>{hover=false;draw()});
- svg.addEventListener('click',e=>{if(!hasMask&&onP(pt(e))){hasMask=true;sel=true;maskT=t;st.textContent=T.s1;draw()}});
+ svg.addEventListener('click',e=>{if(!onP(pt(e)))return;if(!hasMask)make();else if(!sel){sel=true;st.textContent=fx!=='none'?T.s3:(tracked?T.s2:T.s1);draw()}});
+ $('.pick',root).onclick=make;
  $('.sc',root).oninput=e=>{t=+e.target.value;draw()};
  $('.trk',root).onclick=()=>{tracked=true;st.textContent=T.s2;draw()};
- $('.fxc',root).addEventListener('click',e=>{const b=e.target.closest('.chip');if(b&&hasMask){fx=b.dataset.f;if(sel)st.textContent=T.s3;draw()}});
+ $('.fxc',root).addEventListener('click',e=>{const b=e.target.closest('.chip');if(b&&hasMask){fx=b.dataset.f;st.textContent=sel?T.s3:T.s4;draw()}});
  $('.inv',root).onchange=e=>{inv=e.target.checked;draw()};
  $('.fe',root).oninput=e=>{fe=+e.target.value;draw()};$('.ex',root).oninput=e=>{ex=+e.target.value;draw()};
- $('.ds',root).onclick=()=>{sel=false;draw()};
+ $('.ds',root).onclick=()=>{sel=false;st.textContent=T.s4;draw()};
+ $('.rs',root).onclick=()=>{t=0;hasMask=tracked=sel=inv=false;maskT=0;fx='none';fe=4;ex=4;$('.sc',root).value=0;$('.inv',root).checked=false;$('.fe',root).value=4;$('.ex',root).value=4;st.textContent=T.s0;draw()};
  draw();
 };
 
