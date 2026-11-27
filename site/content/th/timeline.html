@@ -1,0 +1,61 @@
+<p class="crumb">Premiere › พื้นฐาน</p>
+<h1>ตัดต่อบน Timeline</h1>
+<p class="lead">Timeline คือที่เรียงคลิปภาพไว้บน track วิดีโอ (V1, V2 …) และเสียงไว้บน track เสียง (A1, A2 …) เครื่องมือที่ใช้จริงทุกวันมีไม่กี่ตัว รู้จักตัด ลบ ripple และแยกภาพกับเสียง ก็ตัดต่องานส่วนใหญ่ได้แล้ว</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>รู้ไว้:</b> ใน 26.3 มีตัวเลือกใหม่ใน Timeline preferences ให้เลือกได้ว่าจะให้ Premiere สร้าง track เพิ่มเองหรือไม่ ตอนวางคลิปลง sequence ถ้า track งอกมาเองเยอะ ลองดูที่ตัวเลือกนี้</p></div>
+<div class="demo" data-demo="timeline"></div>
+
+<h2 id="tools">เครื่องมือที่ใช้บ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>เครื่องมือ</th><th>ปุ่ม</th><th>ทำอะไร</th></tr></thead>
+<tbody>
+<tr><td>Selection</td><td><kbd>V</kbd></td><td>เลือก ลาก และย้ายคลิป ใช้เป็นหลักแทบตลอดเวลา</td></tr>
+<tr><td>Razor</td><td><kbd>C</kbd></td><td>ตัดคลิปเป็นสองท่อนตรงจุดที่คลิก กด <kbd>Shift</kbd> ค้างเพื่อตัดทุก track พร้อมกัน</td></tr>
+<tr><td>Ripple Edit</td><td><kbd>B</kbd></td><td>ลากขอบคลิปให้สั้นหรือยาวขึ้น คลิปถัดไปขยับตามโดยไม่เกิดช่องว่าง</td></tr>
+<tr><td>Rolling Edit</td><td><kbd>N</kbd></td><td>เลื่อนจุดต่อระหว่างสองคลิป ความยาวรวมไม่เปลี่ยน</td></tr>
+<tr><td>Rate Stretch</td><td><kbd>R</kbd></td><td>ลากขอบคลิปเพื่อเปลี่ยนความเร็วให้พอดีช่วงเวลา</td></tr>
+<tr><td>Track Select Forward</td><td><kbd>A</kbd></td><td>เลือกทุกคลิปที่อยู่ถัดจากจุดที่คลิกไปทางขวา ใช้ย้ายทั้งก้อน</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">ขั้นตอนพื้นฐาน</h2>
+<ol class="steps">
+<li><h3>ตัดคลิป</h3><p>ใช้ Razor คลิกตรงจุดที่จะตัด หรือวาง playhead แล้วกด <kbd>Ctrl</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>K</kbd> (Add Edit) ตัดเฉพาะ track ที่เลือกไว้ตรง playhead</p></li>
+<li><h3>ลบแบบปกติหรือแบบ ripple</h3><p>เลือกคลิปแล้วกด <kbd>Delete</kbd> จะเหลือช่องว่าง ถ้าอยากให้คลิปถัดไปเลื่อนมาปิด ใช้ <span class="ui">Edit › Ripple Delete</span> (<kbd>Shift</kbd>+<kbd>Delete</kbd> บน Windows, <kbd>Shift</kbd>+<kbd>Forward Delete</kbd> บน Mac) หรือคลิกขวาที่ช่องว่างแล้วเลือก <span class="ui">Ripple Delete</span></p></li>
+<li><h3>เล็มหัวท้ายให้กระชับ</h3><p>วาง playhead ตรงจุดที่ต้องการ กด <kbd>Q</kbd> เพื่อตัดส่วนหน้าของคลิปออกถึง playhead หรือ <kbd>W</kbd> ตัดส่วนท้ายออก คลิปที่เหลือเลื่อนมาชิดเอง</p></li>
+<li><h3>แยกและรวมภาพกับเสียง</h3><p>คลิปจากกล้องมีภาพกับเสียงผูกกันอยู่ (link) เลือกคลิปแล้วกด <kbd>Ctrl</kbd>+<kbd>L</kbd> / <kbd>Cmd</kbd>+<kbd>L</kbd> เพื่อแยกหรือรวม ถ้าจะแยกชั่วคราว กด <kbd>Alt</kbd> / <kbd>Option</kbd> ค้างตอนคลิก</p></li>
+<li><h3>ทำ J-cut และ L-cut</h3><p>ให้เสียงของช็อตถัดไปเริ่มก่อนภาพ (J-cut) หรือเสียงช็อตเดิมยังต่อไปทับภาพใหม่ (L-cut) กด <kbd>Alt</kbd> / <kbd>Option</kbd> ค้างแล้วลากขอบเฉพาะส่วนเสียง การตัดจะดูลื่นขึ้นมาก</p></li>
+<li><h3>เปลี่ยนความเร็ว</h3><p>คลิกขวาที่คลิปเลือก <span class="ui">Speed/Duration</span> (<kbd>Ctrl</kbd>+<kbd>R</kbd> / <kbd>Cmd</kbd>+<kbd>R</kbd>) ใส่ % ความเร็ว ถ้าไม่อยากให้เกิดช่องว่าง ติ๊ก Ripple Edit, Shifting Trailing Clips</p></li>
+</ol>
+
+<h2 id="keys">คีย์ลัดที่ใช้บ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ปุ่ม</th><th>ทำอะไร</th></tr></thead>
+<tbody>
+<tr><td><kbd>Space</kbd></td><td>เล่น / หยุด</td></tr>
+<tr><td><kbd>S</kbd></td><td>เปิดปิด Snap ให้คลิปเกาะ playhead marker และขอบคลิปอื่น</td></tr>
+<tr><td><kbd>+</kbd> / <kbd>-</kbd></td><td>ซูมเข้าออก timeline</td></tr>
+<tr><td><kbd>\</kbd></td><td>ซูมให้เห็นทั้ง sequence</td></tr>
+<tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>กระโดดไปจุดตัดก่อนหน้า / ถัดไป</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Cmd</kbd>+<kbd>Z</kbd></td><td>ย้อนกลับ</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>มีช่องว่างดำเล็ก ๆ ระหว่างคลิป</b>เกิดจากการ Delete ธรรมดา เปิด Snap ไว้ และใช้ Ripple Delete กับช่องว่าง</li>
+<li><b>ภาพกับเสียงไม่ตรงกัน</b>เกิดจากลากภาพหรือเสียงแยกกันตอนที่ unlink อยู่ Premiere จะแสดงตัวเลขสีแดงบนคลิปบอกว่าคลาดกันกี่เฟรม คลิกขวาที่ตัวเลขเพื่อดึงกลับให้ตรง</li>
+<li><b>Razor ตัดแค่ track เดียว</b>คลิปไม่ได้ link กัน ใช้ <kbd>Shift</kbd> กับ Razor เพื่อตัดทุก track</li>
+<li><b>คลิปลงผิด track</b>ดู track targeting และ source patching ทางซ้ายของ timeline</li>
+<li><b>ลืมเปลี่ยนกลับเป็น Selection</b>ค้างอยู่ที่ Razor แล้วเผลอคลิกตัดคลิป กด <kbd>V</kbd> ทุกครั้งหลังตัดเสร็จ</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>เครื่องมือและคีย์ลัดเหมือนเดิมทั้งหมด</li>
+<li>ตัวเลือกควบคุมการสร้าง track อัตโนมัติใน Timeline preferences มีตั้งแต่ 26.3</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/mena_en/premiere-pro/using/default-keyboard-shortcuts.html">Default keyboard shortcuts in Premiere</a></li>
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere desktop release notes</a></li>
+</ul>

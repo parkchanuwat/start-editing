@@ -1,0 +1,68 @@
+<p class="crumb">Premiere › พื้นฐาน</p>
+<h1>Marker: ปักหมุดบน timeline</h1>
+<p class="lead">Marker คือหมุดที่ปักไว้บนเวลา ใช้จดโน้ตว่าต้องแก้อะไร แบ่งตอนของวิดีโอ หรือมาร์กจังหวะเพลงไว้ตัดตาม กด <kbd>M</kbd> ครั้งเดียวก็ปักได้</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>เปิด Markers panel ไว้ด้วย</b> ที่ <span class="ui">Window › Markers</span> จะเห็น marker ทั้งหมดเป็นรายการ ดับเบิลคลิกเพื่อดูรายละเอียด และรุ่นล่าสุดยังแสดงตำแหน่งจุด In/Out ปนอยู่ในรายการด้วย</p></div>
+<div class="demo" data-demo="markers"></div>
+
+<h2 id="types">ประเภทของ marker</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ประเภท</th><th>ใช้ทำอะไร</th><th>ตัวอย่าง</th></tr></thead>
+<tbody>
+<tr><td>Comment</td><td>จดโน้ตตรงจุดนั้นของ timeline</td><td>"ตัดเสียงไอออก" "ลูกค้าขอเปลี่ยนเพลงตรงนี้"</td></tr>
+<tr><td>Chapter</td><td>จุดแบ่งตอนให้คนดูกระโดดไปได้ในวิดีโอที่เสร็จแล้ว</td><td>เปิดเรื่อง วิธีทำ สรุป</td></tr>
+<tr><td>Segmentation</td><td>กำหนดช่วงเวลาสำหรับงานอัตโนมัติ เช่น ช่วงพักโฆษณา</td><td>ช่วงโฆษณา 30 วินาที</td></tr>
+<tr><td>Web Link</td><td>แนบ URL ที่ให้ข้อมูลเพิ่มเติมของช่วงนั้น</td><td>ลิงก์สินค้าที่พูดถึง</td></tr>
+<tr><td>Flash Cue Point</td><td>ข้อมูลเวลาสำหรับงาน Adobe Animate รุ่นเก่า</td><td>มือใหม่ไม่ต้องใช้</td></tr>
+</tbody></table></div>
+
+<h2 id="kinds">Clip marker กับ Sequence marker</h2>
+<p><b>Clip marker</b> ปักใน Source Monitor จะติดไปกับคลิปนั้น เอาคลิปไปวางที่ไหนก็เห็น marker ตามไปด้วย เหมาะกับการมาร์กช่วงดีในฟุตเทจ</p>
+<p><b>Sequence marker</b> ปักใน Program Monitor หรือบน timeline จะอยู่บนเวลาของ sequence เหมาะกับโน้ตงานตัดต่อและ chapter</p>
+
+<h2 id="steps">ขั้นตอน</h2>
+<ol class="steps">
+<li><h3>วาง playhead แล้วกด M</h3><p>ย้าย playhead ไปจุดที่ต้องการ กด <kbd>M</kbd> หรือคลิกปุ่ม <span class="ui">Add Marker</span> ใต้จอ จะได้ marker บนแถบเวลา</p>
+<p class="note">กด <kbd>M</kbd> ระหว่างเล่นเพลงได้เลย ปักตามจังหวะกลองแล้วค่อยตัดคลิปให้ตรงหมุด คลิปจะ snap เข้าหา marker เอง</p></li>
+<li><h3>ดับเบิลคลิก marker เพื่อแก้รายละเอียด</h3><p>ตั้งชื่อ ใส่คอมเมนต์ เปลี่ยนสี เลือกประเภท และใส่ Duration ถ้าอยากให้ marker เป็นช่วงเวลาแทนจุดเดียว</p></li>
+<li><h3>กระโดดไปมาระหว่าง marker</h3><p>กด <kbd>Shift</kbd>+<kbd>M</kbd> ไป marker ถัดไป และ <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> ย้อนกลับ หรือคลิกในรายการของ Markers panel</p></li>
+<li><h3>จัดการหลาย marker พร้อมกัน</h3><p>ใน Markers panel เลือก track item ตั้งแต่สองอันขึ้นไปจะเห็น marker ของทุกอันรวมกัน และลบหลาย marker ที่เลือกได้ในครั้งเดียว</p></li>
+</ol>
+
+<h2 id="uses">เอา marker ไปใช้ทำอะไรได้บ้าง</h2>
+<ul class="check">
+<li><span><b>รับคอมเมนต์จากลูกค้า</b> ปัก Comment ตามจุดที่ต้องแก้ แล้วไล่ทีละหมุดด้วย <kbd>Shift</kbd>+<kbd>M</kbd></span></li>
+<li><span><b>ตัดตามจังหวะเพลง</b> ปักตามบีตก่อน แล้วลากคลิปให้ snap กับหมุด</span></li>
+<li><span><b>ทำ chapter ให้ YouTube</b> ใช้เวลาของ Chapter marker ไปเขียนเป็นรายการเวลาในคำอธิบายวิดีโอ (ทำตามกติกา chapter ของ YouTube) เดโมด้านบนแสดงตัวอย่างข้อความ</span></li>
+<li><span><b>แบ่งช่วงโฆษณา</b> ใช้ Segmentation marker ทำเป็นช่วงเวลา ให้คนรับไฟล์รู้ว่าตรงไหนแทรกโฆษณาได้</span></li>
+</ul>
+
+<h2 id="keys">คีย์ลัด</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ปุ่ม</th><th>ทำอะไร</th></tr></thead>
+<tbody>
+<tr><td><kbd>M</kbd></td><td>เพิ่ม marker ตรง playhead</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>M</kbd></td><td>ไป marker ถัดไป</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd></td><td>ไป marker ก่อนหน้า</td></tr>
+<tr><td>ดับเบิลคลิก marker</td><td>เปิดหน้าต่างแก้ชื่อ คอมเมนต์ สี และประเภท</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>ปัก marker แล้วหาไม่เจอใน timeline</b>เพราะไปปักใน Source Monitor มันเลยกลายเป็น clip marker อยู่บนคลิป ไม่ใช่บนแถบเวลาของ sequence</li>
+<li><b>ลบช่วงใน timeline แล้ว marker ไม่ขยับตาม</b>sequence marker อยู่กับเวลา ไม่ได้อยู่กับคลิป เมื่อ ripple delete ให้เปิดตัวเลือก Ripple Sequence Markers ในเมนู Markers ถ้าต้องการให้ขยับตาม</li>
+<li><b>ใช้สีมั่วจนทีมงง</b>ตกลงความหมายของสีในทีมก่อน เช่น แดงคือต้องแก้ เขียวคือผ่าน และตั้งสีเริ่มต้นของ marker ได้ในการตั้งค่า</li>
+<li><b>คิดว่า Chapter marker จะไปขึ้นเป็น chapter ใน YouTube เอง</b>YouTube ทำ chapter จากรายการเวลาในคำอธิบายวิดีโอ ต้องคัดลอกไปใส่เอง</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>การปักและแก้ marker เหมือนเดิมทั้งหมด</li>
+<li>Markers panel ในเวอร์ชันเก่าอาจไม่มีตัวกรองและไม่แสดงจุด In/Out ในรายการ</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/markers.html">Overview of markers</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/source-monitor-program-monitor.html">Overview of Source Monitor and Program Monitor</a></li>
+</ul>

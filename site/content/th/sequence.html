@@ -1,0 +1,78 @@
+<p class="crumb">Premiere › พื้นฐาน</p>
+<h1>Sequence คืออะไร และควรตั้งค่าแบบไหน</h1>
+<p class="lead">Sequence คือไทม์ไลน์ของงานหนึ่งชิ้น เก็บลำดับคลิป เสียง เอฟเฟกต์ และกำหนดขนาดภาพกับเฟรมเรตของงาน ตั้งให้ตรงกับปลายทางตั้งแต่ต้น ภาพจะไม่ยืด ไม่กระตุก และ export ง่าย</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ไม่แน่ใจว่าจะตั้งค่าอะไร?</b> ลากคลิปหลักไปวางบนไอคอน <span class="ui">New Item</span> ที่มุมล่างของ Project panel Premiere จะสร้าง sequence ที่ขนาดภาพและเฟรมเรตตรงกับคลิปนั้นให้ทันที</p></div>
+<div class="demo" data-demo="sequence"></div>
+
+<h2 id="what">Sequence คืออะไร</h2>
+<ul class="check">
+<li><span>โปรเจกต์หนึ่งมีได้หลาย sequence เช่น ตัวเต็มแนวนอนสำหรับ YouTube กับตัวสั้นแนวตั้งสำหรับ Reels ใช้ฟุตเทจชุดเดียวกัน</span></li>
+<li><span>Sequence เก็บสองอย่าง คือ <b>สิ่งที่ตัดต่อ</b> (คลิปบน track วิดีโอและเสียง เอฟเฟกต์ กราฟิก) กับ <b>settings</b> (ขนาดภาพ เฟรมเรต รูปแบบเสียง)</span></li>
+<li><span>Editing Mode ใน settings ไม่ได้กำหนดไฟล์สุดท้าย ไฟล์ที่ได้จริงเลือกตอน export</span></li>
+</ul>
+
+<h2 id="create">สร้าง sequence 3 วิธี</h2>
+<ol class="steps">
+<li><h3>สร้างจากคลิป (ง่ายที่สุด)</h3>
+<p>ลากคลิปจาก Project panel ไปวางบนไอคอน <span class="ui">New Item</span> หรือคลิกขวาที่คลิปแล้วเลือก <span class="ui">New Sequence From Clip</span> ได้ sequence ที่ตรงกับคลิปทันที</p>
+<p class="note">เหมาะเมื่อปลายทางเหมือนกับที่กล้องถ่ายมา เช่น ถ่าย 1920×1080 25p และจะลง YouTube แนวนอน</p></li>
+<li><h3>สร้างจากเมนู แล้วตั้งเอง</h3>
+<p>ไปที่ <span class="ui">File › New › Sequence</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd> / <kbd>Cmd</kbd>+<kbd>N</kbd>) เลือก preset ที่ใกล้เคียง หรือไปแท็บ <span class="ui">Settings</span> เลือก Editing Mode เป็น <span class="ui">Custom</span> แล้วกรอกค่าเอง</p>
+<p class="note">ตั้งเสร็จแล้วกด <span class="ui">Save Preset</span> ตั้งชื่อเช่น "Reels 1080x1920 25p" ครั้งหน้าเลือกได้เลย</p></li>
+<li><h3>ลากคลิปแรกลง sequence ว่าง</h3>
+<p>ถ้า settings ของคลิปไม่ตรงกับ sequence Premiere จะถามว่าจะเปลี่ยน sequence ให้ตรงกับคลิป หรือคง settings เดิมไว้ ถ้าตั้ง sequence ตามปลายทางไว้แล้ว (เช่น แนวตั้ง) ให้เลือกคงค่าเดิม</p></li>
+</ol>
+
+<h2 id="settings">ค่าสำคัญใน Sequence Settings</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Setting</th><th>คืออะไร</th><th>มือใหม่ตั้งยังไง</th></tr></thead>
+<tbody>
+<tr><td>Timebase</td><td>หน่วยเวลาของ sequence ก็คือเฟรมเรต</td><td>ให้ตรงกับกล้อง โดยทั่วไป 24 สำหรับลุคฟิล์ม 25 สำหรับระบบ PAL และ 29.97 สำหรับ NTSC</td></tr>
+<tr><td>Frame Size</td><td>ขนาดภาพเป็นพิกเซล</td><td>ตั้งตามปลายทาง เช่น 1920×1080 หรือ 1080×1920 ตั้งได้สูงสุด 10,240×8,192</td></tr>
+<tr><td>Pixel Aspect Ratio</td><td>รูปทรงของแต่ละพิกเซล</td><td><span class="ui">Square Pixels (1.0)</span> ถ้าเลือกไม่ตรงกับไฟล์ ภาพจะยืดหรือบีบ</td></tr>
+<tr><td>Fields</td><td>ภาพแบบ interlaced หรือ progressive</td><td><span class="ui">No Fields (Progressive Scan)</span> สำหรับกล้องและมือถือปัจจุบัน</td></tr>
+<tr><td>Working color space / Auto Tone Map Media</td><td>การจัดการสีของ sequence</td><td>ใช้ค่าเริ่มต้นไปก่อน Auto Tone Map Media ช่วยให้ใส่ฟุตเทจ Log, HLG จาก iPhone หรือ HDR ปนกันใน sequence เดียวได้ง่ายขึ้น</td></tr>
+<tr><td>Audio Sample Rate</td><td>ความละเอียดเสียง</td><td>48000 Hz ซึ่งเป็นมาตรฐานงานวิดีโอ</td></tr>
+<tr><td>Video Previews</td><td>รูปแบบไฟล์ preview ตอนเรนเดอร์ดูในโปรแกรม</td><td>ใช้ค่าเริ่มต้น (หลาย preset ใช้ Apple ProRes 422 LT)</td></tr>
+<tr><td>Maximum Bit Depth / Maximum Render Quality</td><td>คุณภาพการประมวลผลสูงสุด</td><td>เปิดเมื่อจำเป็น เพราะใช้ RAM และเวลามากขึ้น</td></tr>
+</tbody></table></div>
+
+<h2 id="jobs">ตั้งค่าตามประเภทงาน</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>งาน</th><th>Frame Size</th><th>Timebase</th><th>เหตุผล / ข้อควรรู้</th></tr></thead>
+<tbody>
+<tr><td>YouTube แนวนอน</td><td class="n">1920 × 1080<br>หรือ 3840 × 2160</td><td>ตามที่ถ่าย</td><td>YouTube แนะนำให้อัปโหลดด้วยเฟรมเรตเดียวกับที่ถ่าย และ 16:9 คือสัดส่วนมาตรฐานบนคอมพิวเตอร์</td></tr>
+<tr><td>Shorts / Reels / TikTok</td><td class="n">1080 × 1920</td><td>ตามที่ถ่าย</td><td>ถ้าถ่ายแนวนอนมา ใช้ <span class="ui">Sequence › Auto Reframe Sequence</span> ช่วยครอปตามวัตถุในภาพ</td></tr>
+<tr><td>Instagram feed</td><td class="n">1080 × 1350</td><td>ตามที่ถ่าย</td><td>สัดส่วน 4:5 กินพื้นที่จอมือถือมากกว่าแนวนอน เช็กสเปกล่าสุดของแพลตฟอร์มก่อนส่ง</td></tr>
+<tr><td>อีเวนต์ / งานในอาคาร</td><td class="n">1920 × 1080</td><td>ตามไฟฟ้าของประเทศ</td><td>ประเทศที่ใช้ไฟ 50Hz เช่น ไทยและจีน ถ่ายและตัดที่ 25 หรือ 50 ส่วนประเทศที่ใช้ไฟ 60Hz เช่น เกาหลี ใช้ 29.97/30 หรือ 59.94/60 ช่วยลดอาการไฟกะพริบ</td></tr>
+<tr><td>ส่งสถานีทีวี</td><td class="n">1920 × 1080</td><td>ตามสเปกสถานี</td><td>ไทยและจีนใช้ระบบ 50Hz (25/50) เกาหลีใช้ระบบ 60Hz (29.97/59.94) ทำตามสเปกที่สถานีส่งมาเสมอ</td></tr>
+<tr><td>หนังสั้น / ส่งประกวด</td><td class="n">1920 × 1080<br>หรือ 4096 × 2160</td><td>24 หรือ 23.976</td><td>4096×2160 คือ 4K มาตรฐานโรงภาพยนตร์ ดูสเปกของเทศกาลก่อน</td></tr>
+</tbody></table></div>
+
+<h2 id="change">เปลี่ยน settings ทีหลัง</h2>
+<p>ไปที่ <span class="ui">Sequence › Sequence Settings</span> หรือคลิกขวาที่ sequence ใน Project panel แล้วเลือก <span class="ui">Sequence Settings</span> ถ้าเปลี่ยน Frame Size ให้ติ๊ก <span class="ui">Scale motion effects proportionally when changing frame size</span> เพื่อให้ตำแหน่งและขนาดของคลิปปรับตามสัดส่วน</p>
+<p>อย่าลด Frame Size เพื่อแก้เครื่องเล่นกระตุก ให้ลดความละเอียดตอนเล่น (playback resolution) ที่ Program Monitor แทน</p>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>ใส่คลิป 4K ใน sequence 1080 แล้วภาพซูมเข้า</b>คลิกขวาที่คลิปใน timeline เลือก <span class="ui">Set to Frame Size</span> ภาพจะพอดีเฟรมและยังซูมกลับได้คมเพราะไฟล์ต้นฉบับใหญ่กว่า</li>
+<li><b>เฟรมเรตของ sequence ไม่ตรงกับกล้อง</b>ภาพจะกระตุกหรือเฟรมซ้ำ ใช้วิธีสร้าง sequence จากคลิปหลักจะไม่พลาดเรื่องนี้</li>
+<li><b>ตัดคลิปแนวตั้งใน sequence แนวนอน</b>จะมีขอบดำสองข้าง ทำ sequence แนวตั้งแยกไว้ต่างหาก</li>
+<li><b>ตั้ง Fields หรือ Pixel Aspect Ratio ผิด</b>ภาพมีเส้นหวีหรือยืด เลือก No Fields และ Square Pixels สำหรับฟุตเทจทั่วไป</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>ขั้นตอนในหน้านี้ใช้ได้เกือบทั้งหมด ชื่อเมนูหลักไม่เปลี่ยน</li>
+<li>ตัวเลือกด้านการจัดการสี เช่น Auto Tone Map Media อาจไม่มี หรืออยู่คนละที่ในเวอร์ชันเก่า</li>
+<li>Mac ที่ใช้ชิป Intel ใช้ได้ถึงเวอร์ชัน 26.x เพราะ Premiere 27.0 เลิกรองรับแล้ว</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/edit-projects/change-clip-sequence/sequence-settings-reference.html">Sequence settings reference</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/edit-projects/change-clip-sequence/create-a-sequence.html">Create a sequence</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/change-sequence-settings.html">Change sequence settings</a></li>
+<li><a href="https://support.google.com/youtube/answer/1722171">YouTube recommended upload encoding settings</a></li>
+</ul>

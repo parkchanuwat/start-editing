@@ -1,0 +1,64 @@
+<p class="crumb">Premiere › Effects and graphics</p>
+<h1>Object Mask: select a person or object in one click</h1>
+<p class="lead">Object Mask uses AI to find people and objects in your shot. One click gives you a mask, tracking keeps it on the subject through the shot, and then you apply effects inside or outside it. No rotoscoping in After Effects.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>The first use takes a moment.</b> Premiere downloads its AI models first and Object Masking is unavailable until they finish. Watch progress in the Progress panel.</p></div>
+<div class="demo" data-demo="object-mask"></div>
+
+<h2 id="why">What it is good for</h2>
+<ul class="check">
+<li><span><b>Blurring faces, licence plates or logos</b> you don't have permission to show, which protects people's privacy.</span></li>
+<li><span><b>Blurring the background or making it black and white</b> so the subject stands out, using Inverted.</span></li>
+<li><span><b>Fixing light or colour on the subject only,</b> such as a backlit face, without touching the background.</span></li>
+<li><span><b>Putting text behind a person.</b> Duplicate the clip onto a higher track, change its mask to an Opacity Mask, and place the text between the two tracks.</span></li>
+</ul>
+
+<h2 id="steps">Steps: blur the background behind a person</h2>
+<ol class="steps">
+<li><h3>Choose the Object Mask Tool</h3><p>In the toolbar, click and hold the mask tools group. Object Mask sits with the Ellipse, Rectangle and Pen tools.</p></li>
+<li><h3>Hover, then click the subject</h3><p>Select the clip in the timeline and move the pointer over the Program Monitor. Detected objects highlight; click to select one.</p>
+<p class="note">Start from the frame where the subject is most clearly visible for the best mask.</p></li>
+<li><h3>If nothing highlights, draw roughly</h3><p>Switch to Rectangle or Lasso from the menu at the bottom of the Program Monitor and draw around the subject. Use the <span class="ui">+</span> and <span class="ui">−</span> buttons to add or subtract parts; hold <kbd>Alt</kbd> / <kbd>Option</kbd> to switch temporarily.</p></li>
+<li><h3>Track the mask</h3><p>The new mask appears under Unassigned Masks in Effect Controls. Use the forward and backward track buttons so it follows the subject through the clip. Tracking quality can be <span class="ui">Faster</span> or <span class="ui">Better</span>.</p></li>
+<li><h3>Add the effect</h3><p>Open the Effects panel and drag <span class="ui">Gaussian Blur</span> onto the clip. The mask attaches to that effect, so the blur applies only inside the mask.</p></li>
+<li><h3>Invert and soften</h3><p>Tick <span class="ui">Inverted</span> to blur everything outside the mask, the background. Then adjust <span class="ui">Feather</span> for softer edges and <span class="ui">Expansion</span> to grow or shrink the mask.</p></li>
+<li><h3>Deselect the mask before reviewing</h3><p>While the mask is selected you see a red overlay. Click elsewhere in Effect Controls before playing back.</p></li>
+</ol>
+
+<h2 id="modes">Settings worth knowing</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Setting</th><th>What it does</th><th>Use it when</th></tr></thead>
+<tbody>
+<tr><td>Sharp / Smooth</td><td>Sharp gives crisp edges; Smooth gives soft edges</td><td>Use Smooth for hair, fur, thin fabric or semi-transparent things</td></tr>
+<tr><td>Sharpness</td><td>How much of Smooth mode's soft fringe is kept, adjusted with S-Curve or Levels</td><td>Recovering flyaway hair, or trimming background that crept in</td></tr>
+<tr><td>Feather</td><td>Softens the mask edge</td><td>Blending the effect into the shot</td></tr>
+<tr><td>Expansion</td><td>Negative values shrink the mask; positive values grow it</td><td>The mask is slightly too small or too big</td></tr>
+<tr><td>Opacity</td><td>How strong the mask is</td><td>Toning the effect down</td></tr>
+<tr><td>Inverted</td><td>Applies the effect outside the mask instead</td><td>Blurring or grading the background</td></tr>
+</tbody></table></div>
+
+<h2 id="storage">Where mask files live</h2>
+<p>Mask data is saved in a folder named <code>&lt;Project Name&gt; Masks</code> next to the project file. Move that folder whenever you move the project. If Premiere can't find it, Object Masks show as offline in Effect Controls; click <span class="ui">Locate</span> and point to the folder. Other kinds of masks are not affected.</p>
+<p class="note">Premiere removes unused Object Mask files when you close the project, which saves disk space.</p>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Masks disappear when someone else opens the project</b>The Masks folder wasn't sent with it.</li>
+<li><b>The picture turns red, so the effect seems wrong</b>That is the overlay shown while the mask is selected. Deselect it first.</li>
+<li><b>The mask doesn't follow the subject</b>It hasn't been tracked, or tracking started on a frame where the subject is blocked. Start from a clear frame and track in both directions.</li>
+<li><b>The mask is stuck under Unassigned Masks</b>It isn't attached to an effect yet. Drag an effect onto the clip, or apply the effect first and then create the mask.</li>
+<li><b>Hair edges look blocky</b>Switch to Smooth mode and adjust Sharpness.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Object Mask version history</summary><ul>
+<li>Object Mask first shipped in Premiere 26.0 (January 2026). 25.x doesn't have it; you draw masks by hand and track them.</li>
+<li>Smooth mode arrived later in early 2026, and 26.5 detects more objects with more accurate edges.</li>
+<li>Intel Macs and Windows PCs with older AMD graphics drivers fall back to the previous model, and Premiere 27.0 no longer supports Intel Macs.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/add-video-effects/work-with-masks/object-masking.html">Object masking in Premiere</a></li>
+<li><a href="https://www.adobe.com/learn/premiere-pro/web/track-mask-blur-effect">Track a mask and blur a face (Adobe tutorial)</a></li>
+</ul>

@@ -1,0 +1,63 @@
+<p class="crumb">Premiere › พื้นฐาน</p>
+<h1>Source Monitor กับ Program Monitor ต่างกันยังไง</h1>
+<p class="lead">Source Monitor ใช้ดูและเลือกช่วงจากคลิปดิบทีละคลิป ส่วน Program Monitor แสดงผลงานที่กำลังตัดอยู่ใน sequence จำง่าย ๆ ว่าจอซ้ายคือวัตถุดิบ จอขวาคือสิ่งที่คนดูจะเห็น</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2 21 19H1Z" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linejoin="round"/><path d="M11 8v5" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="16" r="1.2" fill="var(--acc)"/></svg>
+<p><b>มีอะไรเปลี่ยนใน 27.0:</b> Clip Match และโหมดเทียบภาพ (Comparison Mode) ใน monitor ของ Edit mode ถูกถอดออกแล้ว การเทียบภาพเพื่อแต่งสีย้ายไปอยู่ใน Color Mode</p></div>
+<div class="demo" data-demo="monitors"></div>
+
+<h2 id="compare">เทียบกันชัด ๆ</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>หัวข้อ</th><th>Source Monitor</th><th>Program Monitor</th></tr></thead>
+<tbody>
+<tr><td>แสดงอะไร</td><td>คลิปเดี่ยว ๆ ที่เปิดจาก Project panel หรือจาก timeline</td><td>sequence ที่เปิดอยู่ใน Timeline panel</td></tr>
+<tr><td>จุด In / Out</td><td>เลือกช่วงของคลิปที่จะเอาไปใช้</td><td>เลือกช่วงใน sequence ที่จะเพิ่มหรือเอาออก</td></tr>
+<tr><td>Marker</td><td>clip marker ติดไปกับคลิป</td><td>sequence marker ติดอยู่กับ timeline</td></tr>
+<tr><td>ปุ่มหลัก</td><td><span class="ui">Insert</span> และ <span class="ui">Overwrite</span></td><td><span class="ui">Lift</span> และ <span class="ui">Extract</span></td></tr>
+<tr><td>ใช้ตอน</td><td>คัดฟุตเทจ เลือกเฉพาะภาพหรือเฉพาะเสียง</td><td>ดูผลงาน ย่อขยายหรือจัดตำแหน่งภาพ วางกราฟิก</td></tr>
+</tbody></table></div>
+<p class="note">ทั้งสองจอมีปุ่ม <span class="ui">Export Frame</span> ไว้เซฟภาพนิ่งจากเฟรมที่อยู่</p>
+
+<h2 id="steps">ขั้นตอน: คัดคลิปจาก Source ไปลง timeline</h2>
+<ol class="steps">
+<li><h3>เปิดคลิปใน Source Monitor</h3><p>ดับเบิลคลิกคลิปใน Project panel คลิปจะขึ้นที่ Source Monitor โดยยังไม่ไปอยู่ใน sequence</p></li>
+<li><h3>เลือกช่วงที่จะใช้</h3><p>เล่นหาจุดเริ่ม กด <kbd>I</kbd> เพื่อตั้ง In แล้วหาจุดจบ กด <kbd>O</kbd> เพื่อตั้ง Out ช่วงระหว่างสองจุดคือส่วนที่จะถูกวาง</p></li>
+<li><h3>เลือกว่าจะเอาภาพ เสียง หรือทั้งคู่</h3><p>ลากไอคอน <span class="ui">Drag video</span> หรือ <span class="ui">Drag audio</span> ใต้จอ ไปวางใน timeline ถ้าต้องการแค่อย่างเดียว</p></li>
+<li><h3>วาง playhead ใน timeline</h3><p>ย้าย playhead ไปจุดที่จะวางคลิป และเช็กว่า track ที่จะรับคลิปถูกเปิด target ไว้</p></li>
+<li><h3>กด Insert หรือ Overwrite</h3>
+<ul><li><span class="ui">Insert</span> <kbd>,</kbd> แทรกคลิปตรง playhead คลิปที่อยู่หลังจากนั้นถูกดันไปทางขวา sequence ยาวขึ้น</li>
+<li><span class="ui">Overwrite</span> <kbd>.</kbd> วางทับของเดิมเท่าความยาวคลิป sequence ไม่ยาวขึ้นถ้าวางในช่วงที่มีคลิปอยู่แล้ว</li></ul></li>
+<li><h3>ดูผลและเอาช่วงที่ไม่ใช้ออกใน Program Monitor</h3><p>ตั้ง In/Out ใน Program Monitor แล้วกด <span class="ui">Lift</span> <kbd>;</kbd> เพื่อยกออกโดยเหลือช่องว่าง หรือ <span class="ui">Extract</span> <kbd>'</kbd> เพื่อเอาออกแล้วปิดช่องว่างให้</p></li>
+</ol>
+
+<h2 id="keys">คีย์ลัดที่ใช้บ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ปุ่ม</th><th>ทำอะไร</th></tr></thead>
+<tbody>
+<tr><td><kbd>I</kbd> / <kbd>O</kbd></td><td>ตั้งจุด In / Out ในจอที่เลือกอยู่</td></tr>
+<tr><td><kbd>,</kbd></td><td>Insert จาก Source ลง timeline</td></tr>
+<tr><td><kbd>.</kbd></td><td>Overwrite จาก Source ลง timeline</td></tr>
+<tr><td><kbd>;</kbd> / <kbd>'</kbd></td><td>Lift / Extract ช่วง In–Out ใน sequence</td></tr>
+<tr><td><kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd></td><td>เล่นถอยหลัง / หยุด / เล่นไปข้างหน้า กดซ้ำเพื่อเร่งความเร็ว</td></tr>
+<tr><td><kbd>F</kbd></td><td>Match Frame: เปิดคลิปต้นฉบับของเฟรมที่อยู่ใน timeline ขึ้นมาใน Source Monitor</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>กด Overwrite แล้วคลิปเดิมหายไป</b>Overwrite วางทับจริง ๆ กด <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Cmd</kbd>+<kbd>Z</kbd> แล้วใช้ Insert แทนถ้าต้องการแทรก</li>
+<li><b>Insert แล้วเสียงหลุด sync</b>ถ้าบาง track ถูกปิด Sync Lock ไว้ track นั้นจะไม่ถูกดันตาม เปิด Sync Lock ให้ทุก track ที่ต้องเลื่อนไปด้วยกัน</li>
+<li><b>คลิปไปลง track ที่ไม่ได้ตั้งใจ</b>ดูปุ่ม source patching และ track targeting ทางซ้ายของ timeline ว่าเปิดไว้ที่ track ไหน</li>
+<li><b>ภาพใน Program Monitor แตก เลยคิดว่าไฟล์เสีย</b>อาจเป็นเพราะตั้ง Resolution ของจอไว้ที่ 1/2 หรือ 1/4 เพื่อให้เล่นลื่น ไฟล์ที่ export ไม่เป็นไปด้วย</li>
+<li><b>ใส่ marker ผิดที่</b>marker ที่ปักใน Source Monitor จะติดไปกับคลิป ถ้าอยากได้หมุดบน timeline ให้ปักใน Program Monitor หรือ timeline</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 26.x และเก่ากว่า</summary><ul>
+<li>Program Monitor ยังมีโหมด Comparison และ Clip Match สำหรับเทียบสีระหว่างคลิป ซึ่ง 27.0 ย้ายไปไว้ใน Color Mode</li>
+<li>ปุ่มและคีย์ลัด Insert, Overwrite, Lift, Extract ใช้เหมือนเดิม</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/source-monitor-program-monitor.html">Overview of Source Monitor and Program Monitor</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/color-mode-basics.html">Color Mode in Premiere (หัวข้อ Changes to Lumetri Color)</a></li>
+</ul>

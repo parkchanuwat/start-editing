@@ -1,0 +1,53 @@
+<p class="crumb">เริ่มที่นี่</p>
+<h1>ทำคลิปแรกตั้งแต่ต้นจนจบ</h1>
+<p class="lead">หน้านี้พาทำวิดีโอสั้นหนึ่งชิ้นใน Premiere ตั้งแต่เตรียมไฟล์จนได้ไฟล์ MP4 ทำตามลำดับทีละขั้น แต่ละขั้นมีลิงก์ไปหน้าที่อธิบายละเอียด ทำจบหนึ่งรอบแล้วจะเห็นภาพรวมของทั้งโปรแกรม</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ใช้ Premiere ภาษาเกาหลีหรือจีนตัวย่ออยู่?</b> เว็บนี้ใช้ชื่อเมนูภาษาอังกฤษ ถ้าจะเปลี่ยนภาษาของโปรแกรม ไปที่ Creative Cloud desktop › Preferences แล้วเลือก Default install language (อยู่ในหัวข้อ Apps หรือ Language แล้วแต่เวอร์ชัน) จากนั้นถอนการติดตั้ง Premiere แล้วติดตั้งใหม่ ภาษาจึงจะเปลี่ยน</p></div>
+<div class="demo" data-demo="first-video"></div>
+
+<h2 id="before">ก่อนเริ่ม</h2>
+<ul class="check">
+<li><span>ฟุตเทจ 3–10 คลิปจากมือถือหรือกล้อง และเพลงหนึ่งเพลงที่มีสิทธิ์ใช้</span></li>
+<li><span>พื้นที่ว่างในดิสก์พอสมควร Premiere จะสร้างไฟล์ cache และ preview เพิ่มระหว่างทำงาน</span></li>
+<li><span>ตัดสินใจก่อนว่าจะลงที่ไหน แนวนอนสำหรับ YouTube หรือแนวตั้งสำหรับ Shorts / Reels เพราะกำหนดขนาด sequence</span></li>
+</ul>
+
+<h2 id="steps">8 ขั้นตอน</h2>
+<ol class="steps">
+<li><h3>เตรียมโฟลเดอร์และ import</h3><p>สร้างโฟลเดอร์งาน เช่น <code>MyVlog</code> ข้างในมี <code>Footage</code> และ <code>Music</code> สร้างโปรเจกต์ใหม่ไว้ในโฟลเดอร์นี้ แล้วลากไฟล์เข้า Project panel ห้ามย้ายหรือเปลี่ยนชื่อไฟล์หลัง import</p><p class="note"><a href="#th-project-media">จัดการไฟล์และโปรเจกต์ →</a></p></li>
+<li><h3>สร้าง sequence</h3><p>ลากคลิปหลักไปที่ไอคอน <span class="ui">New Item</span> ถ้าจะทำแนวตั้ง สร้าง sequence 1080×1920 เอง</p><p class="note"><a href="#th-sequence">Sequence และ Sequence Settings →</a></p></li>
+<li><h3>คัดฟุตเทจ</h3><p>ดับเบิลคลิกคลิปเพื่อเปิดใน Source Monitor กด <kbd>I</kbd> และ <kbd>O</kbd> เลือกช่วงที่ดีที่สุด แล้วกด <kbd>,</kbd> เพื่อ Insert ลง timeline ทำทีละคลิปตามลำดับเรื่อง</p><p class="note"><a href="#th-monitors">Source Monitor กับ Program Monitor →</a></p></li>
+<li><h3>ตัดต่อบน timeline</h3><p>วางเพลงลง track เสียง ปักหมุดจังหวะด้วย <kbd>M</kbd> ตัดคลิปให้ลงจังหวะด้วย Razor แล้วปิดช่องว่างด้วย Ripple Delete เล่นดูทั้งเรื่องบ่อย ๆ</p><p class="note"><a href="#th-timeline">ตัดต่อบน Timeline →</a> · <a href="#th-markers">Marker →</a></p></li>
+<li><h3>ใส่ title และกราฟิก</h3><p>เปิด <span class="ui">Window › Graphics Templates</span> ลาก template ชื่อเรื่องไปไว้ track V2 แล้วแก้ข้อความใน Properties panel</p><p class="note"><a href="#th-mogrt">MOGRT →</a> · <a href="#th-effects-keyframes">Effects และ Keyframe →</a></p></li>
+<li><h3>แต่งสี</h3><p>คลิกแท็บ <span class="ui">Color</span> กด Auto Color ทีละคลิป แล้วปรับ Contrast, Exposure และ Temperature ให้ทุกคลิปดูไปทางเดียวกัน</p><p class="note"><a href="#th-color-mode">แต่งสีด้วย Color Mode →</a></p></li>
+<li><h3>ใส่ซับ</h3><p>ถ้ามีเสียงพูด ใช้ Speech to Text ถอดเสียง สร้าง captions แล้วตรวจคำผิดและความยาวบรรทัด</p><p class="note"><a href="#th-captions">ซับไตเติลภาษาเกาหลีและจีนตัวย่อ →</a></p></li>
+<li><h3>Export</h3><p>คลิกแท็บ <span class="ui">Export</span> เลือก Format <span class="ui">H.264</span> และ Preset <span class="ui">Match Source – Adaptive High Bitrate</span> เช็กขนาดภาพกับ frame rate แล้วกด Export</p><p class="note"><a href="#th-presets-resolution">Preset และ Resolution →</a></p></li>
+</ol>
+
+<h2 id="habits">นิสัยที่ช่วยให้งานไม่พัง</h2>
+<ul class="check">
+<li><span><b>กด <kbd>Ctrl</kbd>+<kbd>S</kbd> / <kbd>Cmd</kbd>+<kbd>S</kbd> บ่อย ๆ</b> และเปิด Auto Save ไว้เสมอ</span></li>
+<li><span><b>ตัดเรื่องให้เสร็จก่อนแต่ง</b> แต่งสี ใส่เอฟเฟกต์ และทำซับหลังจากลำดับคลิปนิ่งแล้ว จะไม่ต้องทำซ้ำ</span></li>
+<li><span><b>ดูบนจอปลายทาง</b> งานแนวตั้งให้ส่งไฟล์เข้ามือถือดูก่อนโพสต์จริง</span></li>
+<li><span><b>workspace หน้าตาเพี้ยน</b> ไปที่ <span class="ui">Window › Workspaces › Reset to Saved Layout</span> พาเนลจะกลับที่เดิม</span></li>
+</ul>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>import จากโฟลเดอร์ Downloads หรือเดสก์ท็อปแล้วลบทิ้งทีหลัง</b>คลิปจะขึ้น Media Offline ย้ายไฟล์เข้าโฟลเดอร์งานก่อน import</li>
+<li><b>ตั้ง sequence ผิดแนว</b>รู้ตัวตอนจะ export ว่าต้องการแนวตั้ง ตั้งให้ถูกตั้งแต่ขั้นที่ 2</li>
+<li><b>แต่งสีหรือทำซับก่อนตัดเสร็จ</b>ตัดคลิปเพิ่มทีหลังต้องทำซ้ำหลายรอบ</li>
+<li><b>ใช้เพลงที่ไม่มีสิทธิ์</b>วิดีโออาจโดนปิดเสียงหรือติด claim บนแพลตฟอร์ม เลือกเพลงที่ใช้ได้ตั้งแต่แรก</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>ทุกขั้นเหมือนเดิม ยกเว้นขั้นแต่งสีที่รุ่นเก่ายังใช้ Lumetri Color panel แทน Color Mode</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/creative-cloud/help/change-install-language.html">Change language for Creative Cloud apps</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/edit-projects/change-clip-sequence/create-a-sequence.html">Create a sequence</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/whats-new.html">What's new in Adobe Premiere on desktop</a></li>
+</ul>

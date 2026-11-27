@@ -1,0 +1,56 @@
+<p class="crumb">Premiere › Color, audio and captions</p>
+<h1>Korean and Simplified Chinese captions</h1>
+<p class="lead">Premiere can transcribe speech with Speech to Text and turn it into captions on the timeline, and both Korean and Simplified Chinese are supported. CJK languages need different line lengths from English, though, and a font that actually contains their characters.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe and Netflix guidelines</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Install the language pack first.</b> Premiere includes an English language pack; Korean and Simplified Chinese (Mandarin) are separate downloads. Once installed, transcription works without an internet connection.</p></div>
+<div class="demo" data-demo="captions"></div>
+
+<h2 id="steps">Steps</h2>
+<ol class="steps">
+<li><h3>Open the Text panel and transcribe</h3><p>Choose <span class="ui">Window › Text</span>, go to the <span class="ui">Transcript</span> tab, pick the spoken language (Korean or Simplified Chinese), and click <span class="ui">Transcribe</span>.</p></li>
+<li><h3>Clean up the transcript first</h3><p>Read it through and fix mistakes, names, product names and jargon in the Transcript tab. Fixing it once here beats fixing every caption later.</p></li>
+<li><h3>Create captions and set the line length</h3><p>Open the menu (three-line icon) in the Transcript tab and choose <span class="ui">Create Captions</span>. <span class="ui">Maximum length in characters</span> defaults to 42, which suits English; for Korean and Simplified Chinese, lower it to about 16 (see the table below). Then choose single or double lines.</p>
+<p class="note">Other settings, such as Minimum duration in seconds (default 3) and Gap between captions, depend on the job.</p></li>
+<li><h3>Choose a font that supports the language</h3><p>Select the caption track and set a font in the Properties panel that has Korean or Chinese characters, such as the Source Han Sans family. Fonts without them show boxes instead.</p></li>
+<li><h3>Translate (optional)</h3><p>In the <span class="ui">Captions</span> tab of the Text panel, click <span class="ui">Translate Captions</span> at the top, choose the target languages, and click Translate. Have someone who reads that language review the result.</p></li>
+<li><h3>Export the captions</h3><p>In the Captions section of Export, choose whether to burn them into the picture (<span class="ui">Burn Captions Into Video</span>) or deliver a separate file (<span class="ui">Create Sidecar File</span>) such as SRT, which viewers can switch on and off on most platforms.</p></li>
+</ol>
+
+<h2 id="limits">Line length and reading speed</h2>
+<p>These values come from Netflix's Timed Text Style Guides, a standard many subtitlers reference. They make a good starting point even if your work isn't going to Netflix.</p>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Language</th><th>Characters per line</th><th>Max reading speed (adult)</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Korean</td><td class="n">16</td><td class="n">12 chars/s</td><td>Latin letters, spaces and punctuation count as 0.5 character</td></tr>
+<tr><td>Simplified Chinese</td><td class="n">16</td><td class="n">9 chars/s</td><td>Usually one line; if it must be two, make the bottom line the longer one</td></tr>
+<tr><td>English (for comparison)</td><td class="n">42</td><td>–</td><td>Applies to most Latin-script languages</td></tr>
+</tbody></table></div>
+<p class="note">Netflix's automated QC enforces a hard ceiling of 23 characters per line for Korean and Chinese; files above it fail. 16 is the value the guides ask for.</p>
+
+<h2 id="import">Already have a caption file?</h2>
+<p>If a translator or another transcription service gives you an SRT file, import it into the Project panel and drag it into the sequence as a caption track. Then set the font and check timing just as you would for captions made in Premiere.</p>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Characters show as boxes</b>The font has no Korean or Chinese glyphs. Switch to a font with CJK support.</li>
+<li><b>Keeping the 42-character setting for Korean or Chinese</b>Lines run off screen or go by too fast to read. Lower it to about 16 in Create Captions.</li>
+<li><b>Wrong language at transcription</b>The result is gibberish. Check the language in Transcript before clicking Transcribe, and make sure the language pack is installed.</li>
+<li><b>Line breaks don't match the settings</b>Premiere also splits captions by speech rhythm, so some come out longer or shorter. Always review them.</li>
+<li><b>Burning in captions, then finding a typo</b>You have to export the whole video again. If the platform supports it, a separate SRT is easier to fix.</li>
+</ul>
+
+<h2 id="older">Using an older version</h2>
+<details class="old"><summary>About supported languages</summary><ul>
+<li>The languages available for Speech to Text and Translate Captions change between versions. Check Adobe's "Languages supported by Speech-to-Text" page before starting a job.</li>
+<li>Since Premiere 22.2, transcription works offline once the language pack is installed.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://www.adobe.com/qa_en/products/premiere/speech-to-text.html">Adobe Premiere Speech to Text</a></li>
+<li><a href="https://helpx.adobe.com/sea/premiere-pro/using/speech-to-text-faq.html">Speech to Text in Premiere FAQ</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/render-and-export/export-files/overview-of-export-settings.html">Overview of export settings (Captions)</a></li>
+<li><a href="https://backlothelp.netflix.com/hc/en-us/articles/216001127">Netflix Korean Timed Text Style Guide</a></li>
+<li><a href="https://backlothelp.netflix.com/hc/en-us/articles/215986007-Chinese-Simplified-Timed-Text-Style-Guide">Netflix Simplified Chinese Timed Text Style Guide</a></li>
+<li><a href="https://backlothelp.netflix.com/hc/en-us/articles/215274938-What-is-the-maximum-number-of-characters-per-line-allowed-in-Timed-Text-assets">Netflix: maximum characters per line</a></li>
+</ul>

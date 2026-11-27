@@ -1,0 +1,56 @@
+<p class="crumb">Premiere › สี เสียง และซับไตเติล</p>
+<h1>ซับไตเติลภาษาเกาหลีและจีนตัวย่อ</h1>
+<p class="lead">Premiere ถอดเสียงเป็นข้อความด้วย Speech to Text แล้วสร้างเป็น captions บน timeline ได้ ใช้กับภาษาเกาหลีและจีนตัวย่อได้ทั้งคู่ แต่ภาษากลุ่ม CJK ต้องตั้งความยาวบรรทัดคนละแบบกับภาษาอังกฤษ และต้องใช้ฟอนต์ที่มีตัวอักษรของภาษานั้น</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe และ Netflix</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ติดตั้ง language pack ก่อน</b> Premiere มี language pack ภาษาอังกฤษมาให้ ส่วนภาษาเกาหลี (Korean) และจีนกลางตัวย่อ (Simplified Chinese, Mandarin) ต้องดาวน์โหลดแยก ติดตั้งแล้วถอดเสียงได้โดยไม่ต้องต่ออินเทอร์เน็ต</p></div>
+<div class="demo" data-demo="captions"></div>
+
+<h2 id="steps">ขั้นตอน</h2>
+<ol class="steps">
+<li><h3>เปิด Text panel และถอดเสียง</h3><p>ไปที่ <span class="ui">Window › Text</span> แท็บ <span class="ui">Transcript</span> เลือกภาษาให้ตรงกับเสียงพูด (Korean หรือ Simplified Chinese) แล้วกด <span class="ui">Transcribe</span></p></li>
+<li><h3>ตรวจ transcript ก่อน</h3><p>อ่านทวนและแก้คำผิด ชื่อคน ชื่อสินค้า ศัพท์เฉพาะ ในแท็บ Transcript ให้เรียบร้อย แก้ตรงนี้ครั้งเดียวดีกว่าไปแก้ทีละซับ</p></li>
+<li><h3>สร้าง captions และตั้งความยาวบรรทัด</h3><p>เปิดเมนู (ไอคอนสามขีด) ในแท็บ Transcript เลือก <span class="ui">Create Captions</span> ช่อง <span class="ui">Maximum length in characters</span> มีค่าเริ่มต้น 42 ซึ่งเหมาะกับภาษาอังกฤษ สำหรับเกาหลีและจีนตัวย่อให้ลดลงประมาณ 16 (ดูตารางด้านล่าง) แล้วเลือกบรรทัดเดียวหรือสองบรรทัด</p>
+<p class="note">ค่าอื่นในหน้าต่างนี้ เช่น Minimum duration in seconds (ค่าเริ่มต้น 3) และ Gap between captions ปรับตามงาน</p></li>
+<li><h3>เลือกฟอนต์ที่รองรับภาษา</h3><p>เลือก caption track แล้วตั้งฟอนต์ใน Properties panel ให้เป็นฟอนต์ที่มีตัวอักษรเกาหลีหรือจีน เช่น ตระกูล Source Han Sans ถ้าฟอนต์ไม่มีตัวอักษร จะขึ้นเป็นกล่องสี่เหลี่ยมแทน</p></li>
+<li><h3>แปลซับ (ถ้าต้องการ)</h3><p>ในแท็บ <span class="ui">Captions</span> ของ Text panel กดปุ่ม <span class="ui">Translate Captions</span> ด้านบน เลือกภาษาปลายทางแล้วกด Translate ซับที่แปลแล้วต้องให้คนที่อ่านภาษานั้นได้ตรวจอีกรอบ</p></li>
+<li><h3>Export ซับ</h3><p>ในหน้า Export ส่วน Captions เลือกว่าจะฝังซับลงภาพ (<span class="ui">Burn Captions Into Video</span>) หรือส่งเป็นไฟล์แยก (<span class="ui">Create Sidecar File</span>) เช่น SRT สำหรับอัปโหลดขึ้นแพลตฟอร์มให้คนดูเปิดปิดเองได้</p></li>
+</ol>
+
+<h2 id="limits">ความยาวบรรทัดและความเร็วในการอ่าน</h2>
+<p>ค่าด้านล่างมาจาก Timed Text Style Guide ของ Netflix ซึ่งเป็นมาตรฐานที่คนทำซับใช้อ้างอิงกันมาก แม้งานจะไม่ได้ส่ง Netflix ก็ใช้เป็นจุดเริ่มได้</p>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ภาษา</th><th>ตัวอักษรต่อบรรทัด</th><th>ความเร็วอ่านสูงสุด (ผู้ใหญ่)</th><th>หมายเหตุ</th></tr></thead>
+<tbody>
+<tr><td>เกาหลี</td><td class="n">16</td><td class="n">12 ตัว/วินาที</td><td>อักษรละติน เว้นวรรค และเครื่องหมายวรรคตอนนับเป็น 0.5 ตัว</td></tr>
+<tr><td>จีนตัวย่อ</td><td class="n">16</td><td class="n">9 ตัว/วินาที</td><td>ปกติให้อยู่บรรทัดเดียว ถ้าต้องขึ้นสองบรรทัด ให้บรรทัดล่างยาวกว่าบรรทัดบน</td></tr>
+<tr><td>อังกฤษ (เทียบ)</td><td class="n">42</td><td>–</td><td>ใช้กับภาษาที่เขียนด้วยอักษรละตินส่วนใหญ่</td></tr>
+</tbody></table></div>
+<p class="note">ระบบตรวจอัตโนมัติของ Netflix บังคับเพดานไว้ที่ 23 ตัวต่อบรรทัดสำหรับเกาหลีและจีน ถ้าเกินนี้ไฟล์จะไม่ผ่าน ส่วน 16 คือค่าที่ควรใช้ตามคู่มือ</p>
+
+<h2 id="import">มีไฟล์ซับจากที่อื่นอยู่แล้ว</h2>
+<p>ถ้าได้ไฟล์ SRT จากนักแปลหรือบริการถอดเสียงอื่น import เข้า Project panel ได้เลย แล้วลากลง sequence เป็น caption track จากนั้นตั้งฟอนต์และตรวจเวลาเหมือนซับที่สร้างใน Premiere</p>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>ตัวอักษรเป็นกล่องสี่เหลี่ยม</b>ฟอนต์ไม่มีตัวอักษรเกาหลีหรือจีน เปลี่ยนเป็นฟอนต์ที่รองรับ CJK</li>
+<li><b>ใช้ค่า 42 ตัวกับภาษาเกาหลีหรือจีน</b>บรรทัดยาวจนล้นจอหรืออ่านไม่ทัน ลดลงประมาณ 16 ตอน Create Captions</li>
+<li><b>เลือกภาษาผิดตอนถอดเสียง</b>ผลออกมาเป็นคำมั่ว ๆ เช็กภาษาใน Transcript ก่อนกด Transcribe และติดตั้ง language pack ให้ครบ</li>
+<li><b>ผลการแบ่งบรรทัดไม่ตรงกับค่าที่ตั้ง</b>Premiere แบ่งซับตามจังหวะการพูดด้วย บางซับอาจยาวหรือสั้นกว่าที่ตั้ง ต้องไล่ตรวจเองเสมอ</li>
+<li><b>ฝังซับลงภาพแล้วต้องแก้คำผิด</b>ต้อง export ใหม่ทั้งไฟล์ ถ้าแพลตฟอร์มรองรับ ส่งเป็นไฟล์ SRT แยกจะแก้ง่ายกว่า</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่า</h2>
+<details class="old"><summary>เรื่องภาษาที่รองรับ</summary><ul>
+<li>รายการภาษาของ Speech to Text และ Translate Captions เปลี่ยนตามเวอร์ชัน เช็กหน้า Languages supported by Speech-to-Text ของ Adobe ก่อนเริ่มงาน</li>
+<li>ตั้งแต่ Premiere 22.2 ถอดเสียงแบบออฟไลน์ได้เมื่อติดตั้ง language pack แล้ว</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://www.adobe.com/qa_en/products/premiere/speech-to-text.html">Adobe Premiere Speech to Text</a></li>
+<li><a href="https://helpx.adobe.com/sea/premiere-pro/using/speech-to-text-faq.html">Speech to Text in Premiere FAQ</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/render-and-export/export-files/overview-of-export-settings.html">Overview of export settings (Captions)</a></li>
+<li><a href="https://backlothelp.netflix.com/hc/en-us/articles/216001127">Netflix Korean Timed Text Style Guide</a></li>
+<li><a href="https://backlothelp.netflix.com/hc/en-us/articles/215986007-Chinese-Simplified-Timed-Text-Style-Guide">Netflix Simplified Chinese Timed Text Style Guide</a></li>
+<li><a href="https://backlothelp.netflix.com/hc/en-us/articles/215274938-What-is-the-maximum-number-of-characters-per-line-allowed-in-Timed-Text-assets">Netflix: maximum characters per line</a></li>
+</ul>

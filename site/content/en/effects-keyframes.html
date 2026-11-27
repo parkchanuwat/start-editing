@@ -1,0 +1,68 @@
+<p class="crumb">Premiere › Effects and graphics</p>
+<h1>Effects and keyframes</h1>
+<p class="lead">An effect changes how a clip looks, such as a blur, a distortion or a colour shift. A keyframe says when a value should change. Together they make things move: a title sliding in, or a shot slowly coming into focus.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>New to try:</b> Premiere now includes more than 90 modern effects, transitions and animations at no extra cost. All of them are GPU-accelerated, so they play back in real time without rendering, and a <span class="ui">Surprise Me</span> button generates a new variation each time you click it.</p></div>
+<div class="demo" data-demo="effects-keyframes"></div>
+
+<h2 id="panels">Three panels to know</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Panel</th><th>What it is for</th><th>Open it from</th></tr></thead>
+<tbody>
+<tr><td>Effects</td><td>The library of effects and transitions. Search by name and drag onto a clip.</td><td><span class="ui">Window › Effects</span></td></tr>
+<tr><td>Effect Controls</td><td>Adjusts the effects on the selected clip and creates keyframes</td><td><span class="ui">Window › Effect Controls</span></td></tr>
+<tr><td>Properties</td><td>Common settings for the selected clip, such as position, scale and opacity, in one place</td><td><span class="ui">Window › Properties</span></td></tr>
+</tbody></table></div>
+<p class="note">Every clip already has the built-in Motion (position, scale, rotation), Opacity and Time Remapping effects. You don't need to find them in the Effects panel.</p>
+
+<h2 id="apply">Adding an effect</h2>
+<ol class="steps">
+<li><h3>Find the effect</h3><p>Open the Effects panel and type its name, such as <span class="ui">Gaussian Blur</span>.</p></li>
+<li><h3>Apply it</h3><p>Drag it onto a clip in the timeline, or select the clip first and double-click the effect.</p></li>
+<li><h3>Adjust it</h3><p>Select the clip and change values in Effect Controls. Click the <span class="ui">fx</span> icon next to the effect name to toggle it and compare before and after.</p></li>
+<li><h3>Reuse it</h3><p>Right-click the effect name in Effect Controls and choose <span class="ui">Save Preset</span>, or copy all effects to another clip with <span class="ui">Paste Attributes</span> (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>V</kbd>).</p></li>
+</ol>
+
+<h2 id="keyframes">Creating keyframes</h2>
+<p>You need at least two keyframes for a change: the first holds the starting value, the second the end value. Premiere fills in everything between them.</p>
+<ol class="steps">
+<li><h3>Select the clip and open Effect Controls</h3><p>Expand the effect you want to animate, for example Motion › Position.</p></li>
+<li><h3>Park the playhead at the start and click the stopwatch</h3><p>Click the <span class="ui">Toggle Animation</span> stopwatch next to the property. That creates the first keyframe at the playhead.</p></li>
+<li><h3>Move the playhead and change the value</h3><p>Move to the end point and type a new value; the second keyframe is created for you. You can also click <span class="ui">Add/Remove Keyframe</span>.</p></li>
+<li><h3>See and edit keyframes in the timeline</h3><p>Click the wrench icon in the timeline and choose <span class="ui">Show Video Keyframes</span>, then pick the property from the effect menu next to the clip name.</p></li>
+</ol>
+
+<h2 id="interp">Interpolation: the speed between keyframes</h2>
+<p>Right-click a keyframe in Effect Controls or the timeline and choose <span class="ui">Temporal Interpolation</span>. Compare the types in the demo above.</p>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Type</th><th>What happens</th><th>Use it for</th></tr></thead>
+<tbody>
+<tr><td>Linear</td><td>Changes at a constant speed (the default)</td><td>Graphics that should move evenly</td></tr>
+<tr><td>Ease In / Ease Out</td><td>Slows down into a keyframe / speeds up out of it</td><td>Natural-looking motion; the one beginners use most</td></tr>
+<tr><td>Bezier</td><td>Drag handles to shape the speed curve yourself</td><td>Precise control of timing</td></tr>
+<tr><td>Auto Bezier / Continuous Bezier</td><td>A smooth curve through the keyframe, automatic / with adjustable handles</td><td>Several keyframes in a row</td></tr>
+<tr><td>Hold</td><td>Keeps the value, then jumps at the next keyframe</td><td>Stepped or sudden changes</td></tr>
+</tbody></table></div>
+<p class="note">Ease In and Ease Out are Bezier curves, so the menu shows Bezier after you pick them. You didn't do anything wrong.</p>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Clicking the stopwatch again deleted every keyframe</b>Turning Toggle Animation off removes all keyframes for that property. Use Add/Remove Keyframe to add more.</li>
+<li><b>Changing a value didn't make a new keyframe</b>The playhead was still on the old keyframe, so you edited it. Move the playhead first.</li>
+<li><b>Mixing up Effects and Effect Controls</b>Effects is where you choose; Effect Controls is where you adjust. They are different panels.</li>
+<li><b>Several heavy effects make playback stutter</b>Lower the Program Monitor's Resolution or render that section. The new GPU-accelerated effects play back more smoothly.</li>
+<li><b>Trimming a clip broke the animation</b>Keyframes live on the clip; trimming away part of the animation changes what is left. Animate after the edit is locked.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Keyframes and interpolation work the same.</li>
+<li>The modern effects and transitions arrived during 26.x, and some replace older ones (Gradient replaces Ramp, for example, and a new Channel Blur replaces the legacy one). If you can't find one, check your version.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/adding-navigating-setting-keyframes.html">Add keyframes</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/add-video-effects/control-effects-and-transitions-using-keyframes/control-effect-changes-using-bezier-keyframe-interpolation.html">Control change using Bezier keyframe interpolation</a></li>
+<li><a href="https://helpx.adobe.com/ie/premiere/desktop/add-video-effects/types-of-effects/effects.html">Modern effects in Premiere</a></li>
+</ul>
