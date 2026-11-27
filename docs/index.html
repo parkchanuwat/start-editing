@@ -122,7 +122,7 @@ footer p{margin:0 0 6px}
 .seg button[aria-pressed=true]{background:#f1f1f2;color:#111}
 .st{margin:0;font-size:14px;line-height:1.5;color:var(--stink);background:var(--st2);padding:10px 12px;border-radius:8px}
 .chk{display:flex;align-items:center;gap:8px;font-size:14px;min-height:40px;cursor:pointer}
-.chk input{width:20px;height:20px;accent-color:var(--hot);margin:0}
+.chk input{width:20px;height:20px;accent-color:var(--hot);margin:0;flex:none}
 .rng{display:grid;gap:2px;font-size:14px}
 .rng span{display:flex;justify-content:space-between;gap:8px;color:var(--stmute)}
 .rng code,.stage code{font:500 14px/1.4 "IBM Plex Mono",monospace;color:var(--stink);white-space:nowrap}
@@ -270,6 +270,62 @@ footer p{margin:0 0 6px}
 .stage textarea{font:16px/1.5 "Noto Sans KR","Noto Sans SC","IBM Plex Sans Thai",sans-serif;width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--st3);background:#151517;color:var(--stink);resize:vertical}
 .meter{background:#151517;border-radius:8px;padding:10px 12px}
 .meter dd.bad{color:#ff8a8a}.meter dd.okk{color:#9be3a8}
+/* batch 3 demos */
+.two.even{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.btn.sm{min-height:36px;padding:2px 10px;font-size:13px}
+.quiz{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.quiz li{background:#151517;border-radius:10px;padding:10px 12px;display:grid;gap:8px;align-content:start;border:2px solid transparent}
+.quiz li.ok{border-color:#4fc36b}.quiz li.no{border-color:#ff7a45}
+.quiz .chips .chip{flex:1}
+.quiz .why{font-size:14px;color:var(--stmute)}.quiz .why b{color:var(--stink)}
+.verdict{background:#151517;border-radius:10px;padding:12px 14px;display:grid;gap:2px;border-left:4px solid var(--st3)}
+.verdict span{font:600 17px/1.4 Anuphan,"IBM Plex Sans Thai",sans-serif}
+.verdict small{font-size:13px;color:var(--stmute)}
+.v-rec{border-left-color:#4fc36b}.v-rec span{color:#9be3a8}
+.v-min{border-left-color:#f2c14e}.v-min span{color:#f6d78a}
+.v-no,.v-low{border-left-color:#ff4d4d}.v-no span,.v-low span{color:#ff8a8a}
+.gpurow[hidden]{display:none}
+.wsmap{position:relative;aspect-ratio:16/10;background:#0e0e10;border-radius:8px}
+.wsp{position:absolute;margin:0;border:1px solid #2c2c31;background:#1a1a1d;color:var(--stmute);border-radius:5px;cursor:pointer;display:flex;align-items:flex-start;justify-content:flex-start;padding:4px 6px;font:500 12px/1.25 "IBM Plex Sans Thai",sans-serif;text-align:left;overflow:hidden;box-sizing:border-box}
+.wsp:hover{border-color:#55555c;color:var(--stink)}
+.wsp[aria-pressed=true]{border:2px solid var(--hot);color:var(--stink);background:#241a16}
+.card .ck kbd{font:500 13px/1 "IBM Plex Mono",monospace;background:var(--st2);border-radius:5px;padding:4px 7px}
+.atl{position:relative;background:#151517;border-radius:8px;padding:10px;display:grid;gap:6px}
+.arow{display:grid;grid-template-columns:56px minmax(0,1fr);gap:10px;align-items:center;font-size:13px;color:var(--stmute)}
+.alane{position:relative;height:40px;background:#222226;border-radius:4px;overflow:hidden}
+.alane.va i{position:absolute;top:4px;bottom:4px;background:#3d7fd9;border-radius:3px}
+.alane svg{position:absolute;inset:0;width:100%;height:100%}
+.aph{position:absolute;top:4px;bottom:4px;width:2px;margin-left:-1px;background:#fff;pointer-events:none}
+.meterbar{height:14px;border-radius:7px;background:linear-gradient(90deg,#4fc36b 0 70%,#f2c14e 70% 88.9%,#ff4d4d 88.9%);position:relative;overflow:hidden}
+.meterbar b{position:absolute;right:0;top:0;bottom:0;background:#26262a}
+.meterbar i{position:absolute;left:88.9%;top:0;bottom:0;width:2px;background:#fff;opacity:.8}
+.meterbar.hot{box-shadow:0 0 0 2px #ff4d4d}
+.cklist{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.layers{list-style:none;margin:0;padding:0;display:grid;gap:6px;align-content:start}
+.layers li{display:grid;grid-template-columns:24px minmax(0,1fr) auto auto auto;gap:6px;align-items:center;background:#151517;border-radius:8px;padding:6px 8px;font-size:14px}
+.layers li b{font:600 13px/1 "IBM Plex Mono",monospace;color:var(--stmute)}
+.layers li.off span{opacity:.45;text-decoration:line-through}
+.comp{display:block;width:100%;height:auto}
+.atx{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:#151517;overflow:hidden}
+.atx .line{font:700 clamp(26px,5.5vw,48px)/1.2 Anuphan,"IBM Plex Sans Thai",sans-serif;color:#fff;white-space:pre;padding:0 4%}
+.atx .line span{display:inline-block;transition:opacity .12s,transform .12s}
+.atx .line .sp{white-space:pre}
+.rel{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;position:relative}
+.rel button{width:100%;min-height:56px;display:grid;justify-items:center;align-content:center;gap:0;border:0;border-radius:8px;background:var(--st2);color:var(--stink);cursor:pointer;font:500 13px/1.3 "IBM Plex Sans Thai",sans-serif}
+.rel button b{font:600 17px/1.2 Anuphan,sans-serif}
+.rel button[aria-pressed=true]{background:#f1f1f2;color:#111}
+.cl2{margin:0;padding-left:20px;display:grid;gap:4px;font-size:15px}
+.kb{display:grid;gap:6px;justify-items:center}
+.kr{display:flex;gap:5px;justify-content:center;width:100%}
+.key{flex:1;max-width:52px;min-height:44px;border:0;border-radius:7px;background:#151517;color:#6b6b72;font:600 15px/1 "IBM Plex Mono",monospace;cursor:pointer;padding:0}
+.key.has{background:var(--st2);color:var(--stink)}
+.key.space{max-width:260px;flex:6}
+.key[aria-pressed=true]{background:var(--hot);color:#111}
+.gl{margin:0;display:grid;gap:6px;max-height:460px;overflow:auto;padding-right:4px}
+.gl>div{background:#151517;border-radius:8px;padding:8px 12px}
+.gl dt{font:600 15px/1.4 "IBM Plex Mono",monospace;color:var(--stink)}
+.gl dd{margin:2px 0 0;font-size:14px;color:var(--stmute)}
+@media(max-width:700px){.wsmap{aspect-ratio:4/3}.quiz{grid-template-columns:minmax(0,1fr)}.two.even{grid-template-columns:minmax(0,1fr)}.rel{grid-template-columns:repeat(3,minmax(0,1fr))}.layers li{grid-template-columns:20px minmax(0,1fr) auto auto auto}}
 @media(max-width:700px){.route{grid-template-columns:repeat(2,minmax(0,1fr))}.pm3{grid-template-columns:minmax(0,1fr)}.tl2 .ruler{left:76px}.tl2 .row{grid-template-columns:56px minmax(0,1fr)}}
 @media(max-width:1199px){.wrap{grid-template-columns:230px minmax(0,1fr);gap:36px}.toc{display:none}.onpage{display:flex}}
 @media(max-width:899px){.wrap{grid-template-columns:minmax(0,1fr);gap:0}.navd{border-bottom:1px solid var(--line);margin:0 calc(-1*max(16px,3vw));padding:0 max(16px,3vw)}.navd summary{display:flex;align-items:center;min-height:48px;cursor:pointer;font-weight:600}.navd{position:static;max-height:none;overflow:visible}.side{padding:4px 0 18px}.brand small{display:none}}
@@ -487,6 +543,182 @@ footer p{margin:0 0 6px}
 <li><a href="https://helpx.adobe.com/ro/premiere-pro/how-to/relink-offline-media.html">Relink offline media</a></li>
 <li><a href="https://helpx.adobe.com/premiere/desktop/add-video-effects/work-with-masks/object-masking.html">Object masking in Premiere (mask data storage)</a></li>
 <li><a href="https://helpx.adobe.com/dk/media-encoder/desktop/encoding-and-exporting/media-cache-database.html">Managing the media cache database</a></li>
+</ul>
+</template>
+<template id="t-th-premiere-vs-ae">
+<p class="crumb">เริ่มที่นี่</p>
+<h1>Premiere กับ After Effects ใช้ต่างกันยังไง</h1>
+<p class="lead">Premiere ใช้ <b>ตัดต่อ</b> คือเรียงคลิปยาว ๆ ให้เป็นเรื่อง ใส่เสียง ซับ และสี ส่วน After Effects ใช้ <b>สร้างภาพเคลื่อนไหวและ<span class="nw">เอฟเฟกต์</span></b> ที่ละเอียดในช่วงสั้น ๆ งานส่วนใหญ่เริ่มใน Premiere แล้วค่อยส่งบางช็อตไปทำต่อใน After Effects</p>
+<ul class="meta"><li class="ver">Premiere และ After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>จำง่าย ๆ:</b> ถ้างานยาวเป็นนาทีและมีหลายคลิป ทำใน Premiere ถ้างานยาวไม่กี่วินาทีแต่ต้องขยับทุกอย่างอย่างละเอียด ทำใน After Effects</p></div>
+<div class="demo" data-demo="premiere-vs-ae"></div>
+
+<h2 id="compare">เทียบกันทีละเรื่อง</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>เรื่อง</th><th>Premiere</th><th>After Effects</th></tr></thead>
+<tbody>
+<tr><td>งานหลัก</td><td>ตัดต่อ เรียงเรื่อง เสียง ซับ แต่งสี</td><td>motion graphics, compositing, visual effects</td></tr>
+<tr><td>หน่วยของงาน</td><td>Sequence</td><td>Composition</td></tr>
+<tr><td>Timeline</td><td>track หนึ่งเส้นวางได้หลายคลิปต่อกัน</td><td>layer หนึ่งชั้นมีต้นฉบับได้แค่ชิ้นเดียว</td></tr>
+<tr><td>ความยาวที่เหมาะ</td><td>หลายนาทีถึงหลายชั่วโมง</td><td>ไม่กี่วินาทีถึงไม่กี่นาที</td></tr>
+<tr><td>ไฟล์<span class="nw">โปรเจกต์</span></td><td><code>.prproj</code></td><td><code>.aep</code></td></tr>
+<tr><td>ส่งออก</td><td>Export mode หรือ Media Encoder</td><td>Render Queue หรือ Media Encoder</td></tr>
+</tbody></table></div>
+
+<h2 id="together">ใช้สองโปรแกรมร่วมกัน</h2>
+<ol class="steps">
+<li><h3>Dynamic Link: ส่งคลิปไปทำใน After Effects</h3><p>ใน Premiere คลิกขวาที่คลิปบน timeline แล้วเลือก <span class="ui">Replace With After Effects Composition</span> After Effects จะเปิดขึ้นพร้อม composition ใหม่ที่มีคลิปนั้นอยู่ แก้ใน After Effects แล้วกลับมาดูใน Premiere ได้เลยโดยไม่ต้อง render</p>
+<p class="note">ต้องใช้ Premiere กับ After Effects <span class="nw">เวอร์ชัน</span>เดียวกัน ไม่อย่างนั้น Dynamic Link จะไม่ทำงาน</p></li>
+<li><h3>สร้าง composition เปล่าจาก Premiere</h3><p>เลือก <span class="ui">File › Adobe Dynamic Link › New After Effects Composition</span> composition ใหม่จะได้ขนาดภาพและ frame rate ตาม project ของ Premiere และยาว 30 วินาทีเป็นค่าเริ่มต้น</p></li>
+<li><h3>MOGRT: ออกแบบครั้งเดียวใช้ได้ทั้งทีม</h3><p>ออกแบบกราฟิกใน After Effects แล้ว export เป็น <code>.mogrt</code> คนตัดต่อเอาไปใช้ใน Premiere และแก้แค่ช่องที่เปิดไว้ เช่นชื่อและสี ดูเพิ่มที่หน้า <a href="#th-mogrt">MOGRT</a></p></li>
+<li><h3>Media Encoder: ให้เครื่องส่งออกไฟล์แทน</h3><p>ทั้งสองโปรแกรมส่งงานไปเข้าคิวใน Adobe Media Encoder ได้ จะได้ทำงานต่อระหว่างที่ไฟล์กำลัง export</p></li>
+</ol>
+
+<h2 id="which">งานแบบไหนใช้อะไร</h2>
+<ul class="check">
+<li><span><b>Vlog, สัมภาษณ์, คลิปงานอีเวนต์</b> เริ่มและจบใน Premiere ได้เลย ใช้ MOGRT สำเร็จรูปสำหรับชื่อคน</span></li>
+<li><span><b>Intro โลโก้, ไตเติลหนัง, infographic เคลื่อนไหว</b> ทำใน After Effects แล้ว render หรือส่งผ่าน Dynamic Link</span></li>
+<li><span><b>ลบวัตถุ, tracking ป้าย, แทนท้องฟ้า</b> งาน compositing ละเอียดทำใน After Effects ส่วนงานง่าย ๆ ลองใช้ <a href="#th-object-mask">Object Mask</a> ใน Premiere ก่อน</span></li>
+<li><span><b>ซับไตเติล, เสียง, แต่งสีทั้งเรื่อง</b> ทำใน Premiere เพราะต้องเห็นทั้งเรื่องต่อเนื่องกัน</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>ตัดต่อทั้งเรื่องใน After Effects</b>After Effects ไม่ได้ออกแบบมาให้เรียงคลิปยาว ๆ จะ preview ช้าและแก้ลำบาก ตัดใน Premiere แล้วส่งเฉพาะช็อตที่ต้องทำ<span class="nw">เอฟเฟกต์</span>ไป</li>
+<li><b>ทำ<span class="nw">แอนิเมชัน</span>ซับซ้อนด้วย keyframe ใน Premiere</b>ทำได้ระดับหนึ่ง แต่ถ้ามีหลายชิ้นขยับพร้อมกัน After Effects มี Graph Editor และ text animator ที่คุมได้ละเอียดกว่า</li>
+<li><b>Dynamic Link ไม่ขึ้น</b>เช็กว่าทั้งสองโปรแกรมเป็น<span class="nw">เวอร์ชัน</span>เดียวกัน เช่น 27.0 ทั้งคู่</li>
+<li><b>render จาก After Effects เป็น MP4 เพื่อวางทับใน Premiere</b>MP4 (H.264) เก็บพื้นหลังโปร่งใสไม่ได้ ถ้าต้องวางทับให้ใช้ Dynamic Link หรือ render เป็น ProRes 4444 แบบ RGB + Alpha</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere Pro 25.x และ Premiere 26.x</summary><ul>
+<li>ก่อน<span class="nw">เวอร์ชัน</span> 26.0 โปรแกรมชื่อ Adobe Premiere Pro หน้าที่และการใช้งานร่วมกับ After Effects เหมือนเดิม</li>
+<li>Dynamic Link และ MOGRT ใช้แบบเดียวกัน แต่ต้องให้<span class="nw">เวอร์ชัน</span>ของสองโปรแกรมตรงกันเสมอ</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/using/dynamic-link-effects.html">Dynamic Link and After Effects</a></li>
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers (After Effects)</a></li>
+</ul>
+</template>
+<template id="t-th-system-requirements">
+<p class="crumb">เริ่มที่นี่</p>
+<h1>สเปกเครื่องและการติดตั้ง</h1>
+<p class="lead">ก่อนติดตั้ง Premiere หรือ After Effects 27.0 ให้เช็กสามอย่าง คือระบบปฏิบัติการ RAM และการ์ดจอ <span class="nw">เวอร์ชัน</span> 27.0 ตัดการรองรับ Windows รุ่นเก่าและ Mac ชิป Intel ออกแล้ว</p>
+<ul class="meta"><li class="ver">Premiere และ After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Windows 11 <span class="nw">เวอร์ชัน</span> 23H2 ติดตั้ง 27.0 ไม่ได้</b> ต้องอัปเดตเป็น 24H2 ขึ้นไปก่อน ส่วน Mac ต้องเป็นชิป Apple silicon (M1 ขึ้นไป) และ macOS 15 ขึ้นไป</p></div>
+<div class="demo" data-demo="system-requirements"></div>
+
+<h2 id="specs">สเปกโดยสรุป</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>รายการ</th><th>Premiere 27.0</th><th>After Effects 27.0</th></tr></thead>
+<tbody>
+<tr><td>Windows</td><td>Windows 11 v24H2 ขึ้นไป</td><td>Windows 11 v24H2 ขึ้นไป</td></tr>
+<tr><td>Mac</td><td>Apple silicon (M1 ขึ้นไป), macOS 15 ขึ้นไป</td><td>Apple silicon (M1 ขึ้นไป), macOS 15 ขึ้นไป</td></tr>
+<tr><td>RAM</td><td>ขั้นต่ำ 8 GB, แนะนำ 16 GB สำหรับ HD และ 32 GB ขึ้นไปสำหรับ 4K</td><td>ขั้นต่ำ 16 GB, แนะนำ 32 GB ขึ้นไปสำหรับ 4K</td></tr>
+<tr><td>การ์ดจอ (Windows)</td><td>VRAM อย่างน้อย 4 GB ถ้าเป็น NVIDIA ต้องรุ่น Maxwell (2014) ขึ้นไป แนะนำ 8 GB</td><td>VRAM อย่างน้อย 4 GB</td></tr>
+<tr><td>จอ</td><td>1920×1080 ขึ้นไป</td><td>1920×1080 ขึ้นไป</td></tr>
+<tr><td>พื้นที่ดิสก์</td><td>ประมาณ 8 GB สำหรับติดตั้ง และควรมี SSD แยกสำหรับไฟล์งานและ cache</td><td>มีพื้นที่ว่างสำหรับติดตั้งและ disk cache บน SSD</td></tr>
+</tbody></table></div>
+<p class="note">ตัวเลขนี้สรุปจากหน้า Technical requirements ของ Adobe ณ วันที่อัปเดต รุ่น CPU ที่รองรับและรายละเอียดอื่นดูในหน้าต้นฉบับ</p>
+
+<h2 id="steps">ขั้นตอนติดตั้ง</h2>
+<ol class="steps">
+<li><h3>เช็ก<span class="nw">เวอร์ชัน</span>ระบบปฏิบัติการ</h3><p>Windows: <span class="ui">Settings › System › About</span> ดูที่ Version ต้องเป็น 24H2 ขึ้นไป · Mac: เมนู Apple › <span class="ui">About This Mac</span> ดูชิปและ<span class="nw">เวอร์ชัน</span> macOS</p></li>
+<li><h3>เช็ก VRAM ของการ์ดจอ (Windows)</h3><p>เปิด Task Manager › แท็บ <span class="ui">Performance</span> › เลือก GPU แล้วดู Dedicated GPU memory ถ้าต่ำกว่า 4 GB อาจเปิด Premiere ไม่ได้หรือใช้งานไม่ไหว</p></li>
+<li><h3>ติดตั้ง Creative Cloud desktop app</h3><p>ดาวน์โหลดจากเว็บ Adobe แล้วล็อกอินด้วย Adobe ID ต้องต่ออินเทอร์เน็ตเพื่อ activate</p></li>
+<li><h3>ตั้งภาษาก่อนกดติดตั้ง</h3><p>ใน Creative Cloud desktop app เปิด Preferences › <span class="ui">Apps</span> แล้วเลือก <span class="ui">Default install language</span> ทั้งสองโปรแกรมมีภาษา 한국어 และ 简体中文 ให้เลือก</p>
+<p class="note">ภาษาจะใช้กับโปรแกรมที่ติดตั้งหลังจากนี้ ถ้าอยากเปลี่ยนภาษาของโปรแกรมที่ติดตั้งไปแล้ว ต้องถอนการติดตั้งแล้วติดตั้งใหม่</p></li>
+<li><h3>ติดตั้ง Premiere และ After Effects <span class="nw">เวอร์ชัน</span>เดียวกัน</h3><p>กด Install ทั้งสองตัวจากรายการ Apps ถ้าจะใช้ Dynamic Link ต้องเป็น<span class="nw">เวอร์ชัน</span>เดียวกัน</p></li>
+</ol>
+
+<h2 id="buy">ถ้ากำลังจะซื้อเครื่องใหม่</h2>
+<ul class="check">
+<li><span><b>RAM 32 GB</b> ถ้าตั้งใจทำ 4K หรือใช้ After Effects เป็นประจำ</span></li>
+<li><span><b>การ์ดจอแยก VRAM 8 GB ขึ้นไป</b> บน Windows เพื่อ<span class="nw">เอฟเฟกต์</span>และฟีเจอร์ AI ที่ใช้ GPU</span></li>
+<li><span><b>SSD สองลูก</b> ลูกหนึ่งสำหรับระบบและโปรแกรม อีกลูกสำหรับไฟล์งานและ cache</span></li>
+<li><span><b>Mac ต้องเป็น Apple silicon</b> และเลือก unified memory ให้พอตั้งแต่ตอนซื้อ เพราะเพิ่มทีหลังไม่ได้</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>Windows 11 23H2 กดอัปเดตไม่ได้</b><span class="nw">เวอร์ชัน</span> 27.0 บล็อกการติดตั้งบน 23H2 อัปเดต Windows เป็น 24H2 ขึ้นไปก่อน</li>
+<li><b>Mac ชิป Intel ไม่เห็น 27.0</b>27.0 รองรับเฉพาะ Apple silicon Mac ชิป Intel ใช้ได้ถึง<span class="nw">เวอร์ชัน</span> 26.x</li>
+<li><b>ติดตั้งไปแล้วได้ภาษาที่ไม่ต้องการ</b>เปลี่ยน Default install language แล้วถอนติดตั้งและติดตั้งใหม่</li>
+<li><b>เก็บฟุตเทจบน HDD ภายนอกช้า ๆ</b>เล่นกระตุกได้แม้เครื่องแรง ย้ายไฟล์งานไปไว้บน SSD</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary><span class="nw">เวอร์ชัน</span> 26.x และ 25.x</summary><ul>
+<li>26.x ต้องใช้ Windows 11 v24H2 เหมือนกัน และยังรองรับ Mac ชิป Intel</li>
+<li>25.x ยังรองรับ Windows 10 v22H2</li>
+<li>Adobe แจ้งว่าตั้งแต่ 28.0 จะบล็อกการติดตั้งบนระบบที่ใช้พื้นฐาน Windows 10 ทั้งหมด รวมถึง Windows Server 2022</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/system-requirements.html">Adobe Premiere technical requirements</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/system-requirements.html">After Effects system requirements</a></li>
+<li><a href="https://community.adobe.com/announcements-727/important-notice-upcoming-system-requirement-changes-in-v27-0-1639157">Important Notice: Upcoming System Requirement Changes in v27.0</a></li>
+<li><a href="https://helpx.adobe.com/creative-cloud/help/change-install-language.html">Change language for Creative Cloud apps</a></li>
+</ul>
+</template>
+<template id="t-th-workspace-tour">
+<p class="crumb">เริ่มที่นี่</p>
+<h1>รู้จักหน้าจอและพาเนล</h1>
+<p class="lead">หน้าจอ Premiere แบ่งเป็นพาเนลหลายช่อง แต่ละช่องมีหน้าที่ของตัวเอง ด้านบนสุดคือ header bar สำหรับสลับโหมดทำงาน ถ้าพาเนลหายหรือเลย์เอาต์เละ กดรีเซ็ตกลับได้เสมอ</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>เลย์เอาต์เละ?</b> ไปที่ <span class="ui">Window › Workspaces › Reset to Saved Layout</span> หรือดับเบิลคลิกชื่อ workspace บน header bar พาเนลจะกลับไปอยู่ที่เดิม</p></div>
+<div class="demo" data-demo="workspace-tour"></div>
+
+<h2 id="header">Header bar และโหมดทำงาน</h2>
+<p>ตอนเปิดโปรแกรมจะเจอหน้า Home ก่อน เมื่อกด New Project โปรแกรมจะเปิดในโหมด <b>Import</b> พอสร้างหรือเปิด project แล้วจะเข้าโหมด <b>Edit</b> และเมื่อพร้อมส่งออกให้ไปที่โหมด <b>Export</b> <span class="nw">เวอร์ชัน</span> 27.0 มีโหมด <b>Color</b> สำหรับแต่งสีเพิ่มเข้ามาด้วย</p>
+<p>ด้านขวาของ header bar มีชื่อ project, เมนู Workspaces, ปุ่ม Quick Export และปุ่มขยายวิดีโอเต็มจอ</p>
+
+<h2 id="panels">พาเนลที่ใช้บ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>พาเนล</th><th>มีไว้ทำอะไร</th><th><span class="nw">คีย์ลัด</span></th></tr></thead>
+<tbody>
+<tr><td>Project</td><td>เก็บไฟล์ที่ import และ sequence จัดเป็น bin ได้</td><td><kbd>Shift</kbd>+<kbd>1</kbd></td></tr>
+<tr><td>Source Monitor</td><td>ดูคลิปดิบและตั้งจุด In/Out</td><td><kbd>Shift</kbd>+<kbd>2</kbd></td></tr>
+<tr><td>Timeline</td><td>ที่ตัดต่อจริง เรียงคลิปบน track</td><td><kbd>Shift</kbd>+<kbd>3</kbd></td></tr>
+<tr><td>Program Monitor</td><td>แสดงผลของ sequence</td><td><kbd>Shift</kbd>+<kbd>4</kbd></td></tr>
+<tr><td>Effect Controls</td><td>ค่าของ<span class="nw">เอฟเฟกต์</span>และ keyframe ของคลิปที่เลือก</td><td><kbd>Shift</kbd>+<kbd>5</kbd></td></tr>
+<tr><td>Effects</td><td>รายการ<span class="nw">เอฟเฟกต์</span>และ<span class="nw">ทรานซิชัน</span>ทั้งหมด</td><td><kbd>Shift</kbd>+<kbd>7</kbd></td></tr>
+<tr><td>Properties</td><td>ปรับค่าที่ใช้บ่อยของคลิปที่เลือกในที่เดียว เช่นขนาด ตำแหน่ง ความดังเสียง</td><td>เมนู Window</td></tr>
+<tr><td>Essential Sound</td><td>ตั้งประเภทเสียง ปรับความดัง ducking</td><td>เมนู Window</td></tr>
+</tbody></table></div>
+<p class="note">กด <kbd>`</kbd> (ปุ่มซ้ายของเลข 1) เพื่อขยายพาเนลที่เลือกเต็มหน้าจอ กดอีกครั้งเพื่อกลับ</p>
+
+<h2 id="steps">จัดหน้าจอให้ใช้ง่าย</h2>
+<ol class="steps">
+<li><h3>เลือก workspace ให้ตรงงาน</h3><p>เปิดเมนู Workspaces ทางขวาบน มี workspace สำเร็จรูปหลายแบบ เช่น Editing, Audio และ Captions and Graphics ซึ่งจัดพาเนลไว้ให้เหมาะกับงานนั้น</p></li>
+<li><h3>ลากพาเนลไปวางใหม่</h3><p>ลากแท็บชื่อพาเนลไปวางที่ขอบของพาเนลอื่น จะเห็นพื้นที่ไฮไลต์ว่าจะไปวางตรงไหน</p></li>
+<li><h3>บันทึกเลย์เอาต์ของตัวเอง</h3><p>เมื่อจัดเสร็จ เลือก <span class="ui">Window › Workspaces › Save as New Workspace</span> แล้วตั้งชื่อ</p></li>
+<li><h3>หาพาเนลที่หายไป</h3><p>ทุกพาเนลเปิดได้จากเมนู <span class="ui">Window</span> ถ้าปิดไปโดยไม่ตั้งใจ เปิดจากตรงนั้นได้เลย</p></li>
+</ol>
+
+<h2 id="ae">หน้าจอ After Effects ต่างกันตรงไหน</h2>
+<p>After Effects มีพาเนลคล้ายกัน แต่ใช้ชื่อต่าง: <b>Composition</b> แทน Program Monitor, <b>Timeline</b> แสดง layer ซ้อนกันแทน track และมี <b>Effects &amp; Presets</b> กับ <b>Properties</b> อยู่ด้านขวา ดูเพิ่มที่หน้า <a href="#th-ae-comp-layers">Composition และ Layer</a></p>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>เปิด project ของคนอื่นแล้วหน้าจอเปลี่ยน</b>ถ้าเปิด <span class="ui">Import Workspace From Projects</span> ไว้ Premiere จะใช้เลย์เอาต์ที่บันทึกมากับ project ปิดตัวเลือกนี้ในเมนู Window › Workspaces</li>
+<li><b>Reset แล้วไม่กลับเป็นค่าเริ่มต้น</b>Reset to Saved Layout จะกลับไปที่เลย์เอาต์ที่บันทึกล่าสุดของ workspace นั้น ถ้าเคยบันทึกทับไว้ ให้เปลี่ยนไปใช้ workspace อื่นที่ยังไม่ได้แก้</li>
+<li><b>พาเนลเล็กเกินจนอ่านไม่ออก</b>ใช้ <kbd>`</kbd> ขยายชั่วคราว หรือลากเส้นแบ่งระหว่างพาเนล</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>header bar มีเฉพาะ Import, Edit และ Export ยังไม่มีโหมด Color</li>
+<li>การแต่งสีใช้ Lumetri Color panel ใน workspace Color</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/ie/premiere-pro/using/workspaces.html">Workspaces and header bar</a></li>
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere release notes</a></li>
 </ul>
 </template>
 <template id="t-th-sequence">
@@ -965,7 +1197,7 @@ footer p{margin:0 0 6px}
 </ul>
 </template>
 <template id="t-th-color-mode">
-<p class="crumb">Premiere › สีและเสียง</p>
+<p class="crumb">Premiere › สี เสียง และซับไตเติล</p>
 <h1>แต่งสีคลิปด้วย Color Mode</h1>
 <p class="lead">แก้ภาพมืด ภาพจาง หรือภาพอมสี ให้ดูเป็นธรรมชาติ ด้วยหน้าแต่งสีใหม่ของ Premiere: เปิด Color Mode เลือกคลิป แล้วปรับทีละค่าตามลำดับ</p>
 <ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
@@ -1119,6 +1351,65 @@ footer p{margin:0 0 6px}
 <li><a href="https://backlothelp.netflix.com/hc/en-us/articles/215274938-What-is-the-maximum-number-of-characters-per-line-allowed-in-Timed-Text-assets">Netflix: maximum characters per line</a></li>
 </ul>
 </template>
+<template id="t-th-audio">
+<p class="crumb">Premiere › สี เสียง และซับไตเติล</p>
+<h1>เสียงและเพลง</h1>
+<p class="lead">คนดูให้อภัยภาพไม่สวยได้มากกว่าเสียงที่ฟังไม่รู้เรื่อง หลักง่าย ๆ คือเสียงพูดต้องชัด เพลงอยู่ข้างหลัง และไม่มีจุดไหนดังเกิน 0 dB งานส่วนใหญ่ทำได้จาก Essential Sound panel</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>บอก Premiere ก่อนว่าคลิปไหนเป็นเสียงอะไร</b> เลือกคลิปแล้วกด Dialogue, Music, SFX หรือ Ambience ใน Essential Sound panel ตัวเลือกที่เหลือจะปรับตามประเภทที่เลือก</p></div>
+<div class="demo" data-demo="audio"></div>
+
+<h2 id="types">ประเภทเสียงใน Essential Sound</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ประเภท</th><th>ใช้กับ</th><th>ตัวเลือกที่ใช้บ่อย</th></tr></thead>
+<tbody>
+<tr><td>Dialogue</td><td>เสียงพูด สัมภาษณ์ voice-over</td><td>Loudness Auto-Match, Enhance Speech, Repair, Clarity</td></tr>
+<tr><td>Music</td><td>เพลงประกอบ</td><td>Loudness Auto-Match, Ducking</td></tr>
+<tr><td>SFX</td><td>เสียง<span class="nw">เอฟเฟกต์</span> เช่นเสียงประตู เสียง whoosh</td><td>Loudness, ปรับตำแหน่งซ้ายขวา</td></tr>
+<tr><td>Ambience</td><td>เสียงบรรยากาศ เช่นเสียงคน เสียงลม</td><td>Loudness, Reverb</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">ขั้นตอนมิกซ์เสียงพื้นฐาน</h2>
+<ol class="steps">
+<li><h3>แยก track ให้เป็นระเบียบ</h3><p>วางเสียงพูดไว้ A1–A2 เพลงไว้ A3 เสียง<span class="nw">เอฟเฟกต์</span>ไว้ A4 จะเลือกคลิปประเภทเดียวกันได้ทีเดียว ถ้าอยากทำงานในเลย์เอาต์ที่เหมาะ เลือก workspace <span class="ui">Audio</span></p></li>
+<li><h3>ตั้งประเภทและกด Auto-Match</h3><p>เลือกคลิปเสียงพูดทั้งหมด กด <span class="ui">Dialogue</span> แล้วกด <span class="ui">Auto-Match</span> ในส่วน Loudness ทุกคลิปจะดังใกล้เคียงกัน ทำแบบเดียวกันกับเพลงโดยเลือก <span class="ui">Music</span></p></li>
+<li><h3>ทำเสียงพูดให้ชัดด้วย Enhance Speech</h3><p>ในแท็บ Dialogue กด <span class="ui">Enhance</span> ใต้ Enhance Speech รอประมวลผลเสร็จแล้วปรับ <span class="ui">Mix Amount</span> ถ้าเสียงฟังดูไม่เป็นธรรมชาติ ให้ลดลงเพื่อผสมเสียงต้นฉบับกลับเข้าไป</p>
+<p class="note">Enhance Speech ใช้กับเสียงพูดเท่านั้น ไม่เหมาะกับเพลงหรือเสียง<span class="nw">เอฟเฟกต์</span></p></li>
+<li><h3>ให้เพลงหลบเสียงพูดด้วย Ducking</h3><p>เลือกคลิปเพลง เปิด <span class="ui">Ducking</span> เลือกประเภทเสียงที่จะให้เพลงหลบ (เช่น Dialogue) ตั้ง Sensitivity, Reduce By และ Fades แล้วกด <span class="ui">Generate Keyframes</span> Premiere จะใส่ keyframe ลดเสียงเพลงตรงที่มีคนพูด</p>
+<p class="note">กด Generate Keyframes ซ้ำได้ทุกเมื่อ keyframe เดิมจะถูกแทนด้วยชุดใหม่ตามค่าที่ตั้ง</p></li>
+<li><h3>ดู Audio Meter ตอนเล่นทั้งเรื่อง</h3><p>เล่นตั้งแต่ต้นจนจบแล้วดูแถบ Audio Meter ข้าง timeline ห้ามแตะสีแดงด้านบน (0 dB) ถ้าแตะ ให้ลดความดังของคลิปนั้นด้วย <span class="ui">Audio Gain</span> (<kbd>G</kbd>)</p></li>
+</ol>
+
+<h2 id="tips">เคล็ดลับเพิ่มเติม</h2>
+<ul class="check">
+<li><span><b>ฟังทั้งหูฟังและลำโพง</b> หูฟังช่วยจับเสียงรบกวน ลำโพงช่วยบอกว่าเพลงดังเกินไหม</span></li>
+<li><span><b>ปรับความดังเป็นช่วงด้วย keyframe</b> กด <kbd>Ctrl</kbd> (Windows) หรือ <kbd>Cmd</kbd> (Mac) แล้วคลิกบนเส้นระดับเสียงของคลิปใน timeline เพื่อเพิ่ม keyframe</span></li>
+<li><span><b>สร้างเพลงหรือเสียง<span class="nw">เอฟเฟกต์</span>ได้ใน 27.0</b> Premiere 27.0 สร้างเพลง เสียง<span class="nw">เอฟเฟกต์</span> และเสียงบรรยากาศด้วย AI ได้ ควรเช็กเงื่อนไขการใช้งานและเครดิตที่ใช้ก่อน</span></li>
+<li><span><b>ใช้เพลงที่มีสิทธิ์</b> เพลงจากแอปฟังเพลงหรือ YouTube อาจทำให้วิดีโอโดนลิขสิทธิ์ ใช้เพลงจากคลังที่มีใบอนุญาต เช่น Adobe Stock</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>เพลงกลบเสียงพูด</b>เปิด Ducking หรือลดระดับเพลงลงอีก ช่วงที่มีคนพูดเพลงควรเบากว่าเสียงพูดชัดเจน</li>
+<li><b>เสียงแตก</b>ระดับเสียงรวมเกิน 0 dB ลด Audio Gain ของคลิปที่ดังที่สุด ไม่ใช่ลดเสียงลำโพงของตัวเอง</li>
+<li><b>ปรับความดังทีละคลิปด้วยมือ</b>ใช้ Auto-Match กับคลิปประเภทเดียวกันพร้อมกันจะเร็วและสม่ำเสมอกว่า</li>
+<li><b>ใช้ Enhance Speech แรงเกิน</b>เสียงอาจฟังเหมือนหุ่นยนต์หรือคำเพี้ยน ลด Mix Amount ลงและฟังซ้ำ</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Essential Sound, Auto-Match, Ducking และ Enhance Speech ใช้แบบเดียวกัน</li>
+<li>การสร้างเพลง เสียง<span class="nw">เอฟเฟกต์</span> และเสียงบรรยากาศด้วย AI ยังไม่มี</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/premiere-essential-sound-panel.html">Edit, repair, and improve audio using Essential Sound panel</a></li>
+<li><a href="https://www.adobe.com/learn/premiere-pro/web/automatic-audio-ducking">Automatic audio ducking</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/enhance-speech.html">Enhance Speech</a></li>
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere release notes</a></li>
+</ul>
+</template>
 <template id="t-th-presets-resolution">
 <p class="crumb">Premiere › ส่งออก</p>
 <h1>Preset และ Resolution ที่ใช้บ่อย</h1>
@@ -1193,6 +1484,467 @@ footer p{margin:0 0 6px}
 <li><a href="https://helpx.adobe.com/premiere/desktop/edit-projects/change-clip-sequence/sequence-settings-reference.html">Sequence settings reference</a></li>
 <li><a href="https://support.google.com/youtube/answer/1722171">YouTube recommended upload encoding settings</a></li>
 <li><a href="https://support.google.com/youtube/answer/4603579">YouTube video and audio formatting specifications</a></li>
+</ul>
+</template>
+<template id="t-th-export">
+<p class="crumb">Premiere › ส่งออก</p>
+<h1>Export วิดีโอ</h1>
+<p class="lead">Export คือการเปลี่ยน sequence ให้เป็นไฟล์วิดีโอที่เปิดดูได้ทุกที่ ใน Premiere ให้เริ่มจากถามตัวเองว่าจะเอาไฟล์ไปไว้ที่ไหน แล้วเลือก preset ที่เหมาะกับปลายทางนั้น</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ดู Range ทุกครั้ง</b> ถ้ามีจุด In/Out ค้างอยู่ใน sequence Premiere อาจ export แค่ช่วงนั้น ตั้ง Range เป็น <span class="ui">Entire Source</span> ถ้าต้องการทั้งเรื่อง</p></div>
+<div class="demo" data-demo="export"></div>
+
+<h2 id="ways">สามทางในการ export</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>วิธี</th><th>เหมาะกับ</th><th>อยู่ตรงไหน</th></tr></thead>
+<tbody>
+<tr><td>Export mode</td><td>งานทั่วไป ตั้งค่าได้ครบ</td><td>แท็บ Export บน header bar หรือ <kbd>Ctrl</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>M</kbd></td></tr>
+<tr><td>Quick Export</td><td>ส่งไฟล์ด่วนด้วย preset สำเร็จรูป</td><td>ปุ่มมุมขวาบนของ header bar</td></tr>
+<tr><td>Send to Media Encoder</td><td>หลายไฟล์ หลายสเปก หรืออยากตัดต่อต่อระหว่าง export</td><td>ปุ่มล่างขวาของ Export mode</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">ขั้นตอนใน Export mode</h2>
+<ol class="steps">
+<li><h3>เลือก sequence แล้วเข้า Export mode</h3><p>คลิกที่ timeline หรือ sequence ใน Project panel ก่อน แล้วกดแท็บ <span class="ui">Export</span></p></li>
+<li><h3>เลือกปลายทาง</h3><p>ด้านซ้ายมี <span class="ui">Media File</span> สำหรับไฟล์ทั่วไป และปลายทางโซเชียลบางแห่งที่อัปโหลดให้ได้เลย</p></li>
+<li><h3>ตั้งชื่อไฟล์ ที่เก็บ และ preset</h3><p>ตั้ง File Name และ Location ให้หาเจอง่าย แล้วเลือก Preset เช่น <span class="ui">Match Source – Adaptive High Bitrate</span> ซึ่งใช้ codec H.264 ขนาดและ frame rate ตาม sequence</p></li>
+<li><h3>เช็ก Range และ Captions</h3><p>Range ใต้ภาพตัวอย่างมี Entire Source, Source In/Out, Work Area และ Custom ถ้ามีซับ ให้เลือกในส่วน <span class="ui">Captions</span> ว่าจะไม่ใส่ ส่งเป็นไฟล์แยก (sidecar) หรือฝังลงในภาพ</p></li>
+<li><h3>ดูขนาดไฟล์โดยประมาณแล้วกด Export</h3><p>ด้านล่างขวาบอก Estimated File Size ถ้าใหญ่เกินที่ส่งได้ ลอง preset Medium Bitrate กด <span class="ui">Export</span> แล้วรอจนเสร็จ</p></li>
+<li><h3>เปิดดูไฟล์ที่ได้</h3><p>เปิดไฟล์จริงดูตั้งแต่ต้นจนจบ เช็กภาพ เสียง ซับ และช่วงท้ายว่าไม่มีภาพดำเกิน</p></li>
+</ol>
+
+<h2 id="settings">ค่าที่ควรรู้จัก</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ค่า</th><th>ความหมาย</th></tr></thead>
+<tbody>
+<tr><td>Format</td><td>ชนิดไฟล์และ codec เช่น H.264 (MP4), HEVC, QuickTime (ProRes)</td></tr>
+<tr><td>Match Source</td><td>ใช้ขนาดภาพและ frame rate ตามต้นฉบับอัตโนมัติ</td></tr>
+<tr><td>Bitrate</td><td>ปริมาณข้อมูลต่อวินาที ยิ่งสูงยิ่งคมแต่ไฟล์ใหญ่ VBR ปรับตามความซับซ้อนของภาพ ส่วน CBR คงที่ตลอด</td></tr>
+<tr><td>Use Maximum Render Quality</td><td>ช่วยคุณภาพตอนย่อขนาดภาพ แต่ใช้เวลานานขึ้น</td></tr>
+<tr><td>Content Credentials</td><td>แนบข้อมูลว่าใครสร้างและแก้ไขไฟล์ไว้ในไฟล์ (เลือกเปิดได้)</td></tr>
+</tbody></table></div>
+<p class="note">ขนาดภาพและ preset สำหรับปลายทางต่าง ๆ ดูเพิ่มที่หน้า <a href="#th-presets-resolution">Preset และ Resolution ที่ใช้บ่อย</a></p>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>ได้วิดีโอแค่บางช่วง</b>Range ถูกตั้งเป็น Source In/Out จากจุด In/Out ที่ค้างไว้ เปลี่ยนเป็น Entire Source</li>
+<li><b>หาไฟล์ไม่เจอ</b>ดู Location ก่อนกด Export และตั้งชื่อไฟล์ให้มีวันที่หรือ<span class="nw">เวอร์ชัน</span></li>
+<li><b>ซับหายในไฟล์ที่ได้</b>เปิดส่วน Captions แล้วเลือกฝังลงภาพหรือส่งเป็นไฟล์แยก ถ้าเลือก None จะไม่มีซับ</li>
+<li><b>ภาพดำหรือภาพค้างตอนท้าย</b>มีคลิปหรือกราฟิกเกินจุดจบของเรื่อง ลบออกหรือตั้ง Range ให้ตรง</li>
+<li><b>ไฟล์ใหญ่เกินส่งไม่ได้</b>ลด bitrate ด้วย preset Medium หรือ Low อย่าลดขนาดภาพจนเล็กกว่าที่ปลายทางต้องการ</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Export mode และ Quick Export ใช้แบบเดียวกัน</li>
+<li>ตัวเลือก Content Credentials ตอน export เพิ่มเข้ามาใน<span class="nw">เวอร์ชัน</span> 26.2</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/workflow-overview-exporting.html">Export workflow overview</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/export-settings-reference-premiere-pro.html">Overview of export settings</a></li>
+<li><a href="https://helpx.adobe.com/uk/premiere/desktop/render-and-export/export-files/quickly-export-a-video-file.html">Quickly export a video file</a></li>
+</ul>
+</template>
+<template id="t-th-ae-comp-layers">
+<p class="crumb">After Effects</p>
+<h1>Composition และ Layer</h1>
+<p class="lead">ใน After Effects งานหนึ่งชิ้นเรียกว่า <b>composition</b> มีขนาดภาพ frame rate และความยาวของตัวเอง ข้างในประกอบด้วย <b>layer</b> ที่ซ้อนกันเหมือนแผ่นใส layer ที่อยู่บนจะบังของที่อยู่ข้างล่าง</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ต่างจาก Premiere ตรงนี้:</b> track ใน Premiere วางได้หลายคลิปต่อกัน แต่ layer ใน After Effects มีต้นฉบับได้แค่ชิ้นเดียว งานหนึ่งจึงมักมี layer หลายสิบชั้น</p></div>
+<div class="demo" data-demo="ae-comp-layers"></div>
+
+<h2 id="comp">สร้าง composition</h2>
+<ol class="steps">
+<li><h3>สร้างจากฟุตเทจ (ง่ายสุด)</h3><p>ลากไฟล์วิดีโอจาก Project panel ไปวางบนไอคอน New Composition ด้านล่างของพาเนล composition จะได้ขนาดและ frame rate ตามไฟล์นั้น</p></li>
+<li><h3>หรือสร้างเอง</h3><p>เลือก <span class="ui">Composition › New Composition</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd> / <kbd>Cmd</kbd>+<kbd>N</kbd>) เลือก Preset หรือพิมพ์ Width, Height, Frame Rate และ Duration เอง</p></li>
+<li><h3>แก้ค่าทีหลังได้</h3><p>เลือก <span class="ui">Composition › Composition Settings</span> (<kbd>Ctrl</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>K</kbd>) เปลี่ยนความยาวหรือขนาดได้ตลอด</p></li>
+</ol>
+
+<h2 id="types">ชนิดของ layer</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Layer</th><th>คืออะไร</th><th>สร้างจาก</th></tr></thead>
+<tbody>
+<tr><td>Footage</td><td>วิดีโอ ภาพนิ่ง หรือเสียงที่ import มา</td><td>ลากจาก Project panel</td></tr>
+<tr><td>Text</td><td>ตัวหนังสือที่แก้และ animate ได้</td><td><span class="ui">Layer › New › Text</span></td></tr>
+<tr><td>Shape</td><td>รูปทรงเวกเตอร์ คมทุกขนาด</td><td>Shape tools หรือ Pen tool</td></tr>
+<tr><td>Solid</td><td>พื้นสีเรียบ ใช้เป็นพื้นหลังหรือที่ใส่<span class="nw">เอฟเฟกต์</span></td><td><kbd>Ctrl</kbd>+<kbd>Y</kbd> / <kbd>Cmd</kbd>+<kbd>Y</kbd></td></tr>
+<tr><td>Adjustment</td><td>ใส่<span class="nw">เอฟเฟกต์</span>แล้วมีผลกับทุก layer ข้างล่าง</td><td><span class="ui">Layer › New › Adjustment Layer</span></td></tr>
+<tr><td>Null Object</td><td>layer ที่มองไม่เห็น ใช้คุมการเคลื่อนไหวของ layer อื่น</td><td><span class="ui">Layer › New › Null Object</span></td></tr>
+<tr><td>Precomp</td><td>composition ที่ถูกวางเป็น layer ในอีก composition</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
+</tbody></table></div>
+
+<h2 id="transform">Transform: ห้าค่าที่ทุก layer มี</h2>
+<p>กดตัวอักษรเพื่อเปิดดูค่านั้นของ layer ที่เลือก: <kbd>A</kbd> Anchor Point · <kbd>P</kbd> Position · <kbd>S</kbd> Scale · <kbd>R</kbd> Rotation · <kbd>T</kbd> Opacity กด <kbd>Shift</kbd> ค้างแล้วกดตัวอื่นเพื่อเปิดหลายค่าพร้อมกัน</p>
+
+<h2 id="preview">ดูผลงาน</h2>
+<ul class="check">
+<li><span><b>กด Spacebar เพื่อ preview</b> แถบสีเขียวบน timeline คือช่วงที่ cache ไว้แล้ว จะเล่นลื่น</span></li>
+<li><span><b>ลด Resolution ของ Composition panel</b> เลือก Half หรือ Quarter ตอนทำงานเพื่อให้ preview เร็วขึ้น ค่านี้ไม่ได้เปลี่ยนขนาดของ composition</span></li>
+<li><span><b>ตั้ง work area</b> กด <kbd>B</kbd> และ <kbd>N</kbd> เพื่อตั้งจุดเริ่มและจุดจบของช่วงที่จะ preview</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>ใส่ของแล้วมองไม่เห็น</b>layer อาจอยู่ล่าง layer พื้นทึบ ลาก layer ขึ้นไปข้างบนใน Timeline</li>
+<li><b>งงระหว่าง Resolution กับขนาด composition</b>Resolution ใน Composition panel คือคุณภาพตอน preview ส่วนขนาดจริงอยู่ใน Composition Settings</li>
+<li><b>composition สั้นกว่าที่ต้องการ</b>เปลี่ยน Duration ใน Composition Settings ไม่ใช่ลากปลาย layer</li>
+<li><b>แก้ผิด composition</b>ดูชื่อแท็บด้านบนของ Timeline ก่อนแก้ทุกครั้ง โดยเฉพาะเมื่อมี precomp หลายชั้น</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>การสร้าง composition และ layer เหมือนเดิมทั้งหมด</li>
+<li>Adobe Stock panel และ AI Assistant เพิ่มเข้ามาใน 27.0</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+</ul>
+</template>
+<template id="t-th-ae-keyframes">
+<p class="crumb">After Effects</p>
+<h1>Keyframe ใน After Effects</h1>
+<p class="lead">keyframe คือจุดที่บอกว่า ณ เวลานี้ค่านี้ต้องเป็นเท่าไร After Effects จะเติมค่าระหว่าง keyframe ให้เอง สิ่งที่ทำให้งานดูเป็นมืออาชีพคือ <b>จังหวะ</b> ระหว่าง keyframe ซึ่งคุมได้ด้วย Easy Ease และ Graph Editor</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>เลือก keyframe แล้วกด <kbd>F9</kbd></b> การเคลื่อนไหวจะค่อย ๆ เร่งออกและค่อย ๆ ช้าลงก่อนหยุด แทนที่จะพุ่งแล้วหยุดทันที ลองเทียบในเดโมด้านล่าง</p></div>
+<div class="demo" data-demo="ae-keyframes"></div>
+
+<h2 id="steps">ขั้นตอนทำ keyframe แรก</h2>
+<ol class="steps">
+<li><h3>เปิดค่าที่จะขยับ</h3><p>เลือก layer แล้วกด <kbd>P</kbd> เพื่อเปิด Position (หรือ <kbd>S</kbd> Scale, <kbd>R</kbd> Rotation, <kbd>T</kbd> Opacity)</p></li>
+<li><h3>กดนาฬิกาจับเวลา</h3><p>เลื่อน playhead ไปที่จุดเริ่ม แล้วคลิกไอคอนนาฬิกา (stopwatch) หน้าชื่อค่า จะได้ keyframe แรก</p>
+<p class="note"><span class="nw">คีย์ลัด</span>เพิ่ม keyframe Position: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows) หรือ <kbd>Option</kbd>+<kbd>P</kbd> (Mac)</p></li>
+<li><h3>เลื่อนเวลาแล้วเปลี่ยนค่า</h3><p>เลื่อน playhead ไปข้างหน้า แล้วลาก layer ใน Composition panel หรือพิมพ์ค่าใหม่ After Effects สร้าง keyframe ที่สองให้เอง</p></li>
+<li><h3>ใส่ Easy Ease</h3><p>ลากคลุม keyframe ทั้งสองแล้วกด <kbd>F9</kbd> ไอคอน keyframe จะเปลี่ยนจากสี่เหลี่ยมขนมเปียกปูนเป็นรูปนาฬิกาทราย</p></li>
+<li><h3>ปรับจังหวะใน Graph Editor</h3><p>กด <kbd>Shift</kbd>+<kbd>F3</kbd> เพื่อเปิด Graph Editor ลากด้ามจับ (handle) ของ keyframe ออกห่างเพื่อเพิ่ม influence การเร่งและชะลอจะชัดขึ้น</p></li>
+</ol>
+
+<h2 id="graphs">Value graph กับ Speed graph</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>กราฟ</th><th>แสดงอะไร</th><th>ใช้ตอนไหน</th></tr></thead>
+<tbody>
+<tr><td>Value Graph</td><td>ค่าจริงของ property ในแต่ละเวลา (X สีแดง, Y สีเขียว)</td><td>อยากเห็นว่าค่าวิ่งไปถึงไหน หรือทำ overshoot</td></tr>
+<tr><td>Speed Graph</td><td>ความเร็วของการเปลี่ยนค่า</td><td>อยากคุมความเร็ว เช่นให้เร่งแรงตอนออกตัว</td></tr>
+</tbody></table></div>
+<p>ใน Composition panel เส้นทางการเคลื่อนที่ (motion path) มีจุดเล็ก ๆ หนึ่งจุดต่อหนึ่งเฟรม จุดห่างกันแปลว่าเร็ว จุดชิดกันแปลว่าช้า</p>
+
+<h2 id="types">ชนิดของ interpolation</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ชนิด</th><th>ผลลัพธ์</th></tr></thead>
+<tbody>
+<tr><td>Linear</td><td>ความเร็วคงที่ เปลี่ยนจังหวะทันทีที่ keyframe ดูแข็ง</td></tr>
+<tr><td>Bezier / Easy Ease</td><td>เร่งและชะลออย่างนุ่มนวล Easy Ease ใช้ influence 33.33% เป็นค่าเริ่มต้น</td></tr>
+<tr><td>Auto Bezier</td><td>ค่าเริ่มต้นของเส้นทางการเคลื่อนที่ ทำให้ทางโค้งนุ่ม</td></tr>
+<tr><td>Hold</td><td>ค่าคงที่จนถึง keyframe ถัดไปแล้วกระโดดเปลี่ยน ใช้ทำ<span class="nw">เอฟเฟกต์</span>กระตุกหรือข้อความเปลี่ยนทันที</td></tr>
+</tbody></table></div>
+<p class="note">เปลี่ยนชนิดได้โดยคลิกขวาที่ keyframe › <span class="ui">Keyframe Interpolation</span></p>
+
+<h2 id="keys"><span class="nw">คีย์ลัด</span>ที่ใช้บ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>คีย์</th><th>ทำอะไร</th></tr></thead>
+<tbody>
+<tr><td><kbd>J</kbd> / <kbd>K</kbd></td><td>ไป keyframe (หรือ marker) ก่อนหน้า / ถัดไป</td></tr>
+<tr><td><kbd>U</kbd></td><td>แสดงเฉพาะค่าที่มี keyframe</td></tr>
+<tr><td><kbd>F9</kbd></td><td>Easy Ease</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>F9</kbd></td><td>Easy Ease In</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F9</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F9</kbd></td><td>Easy Ease Out</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>F3</kbd></td><td>เปิดปิด Graph Editor</td></tr>
+<tr><td><kbd>Alt</kbd>+<kbd>←</kbd>/<kbd>→</kbd> / <kbd>Option</kbd>+<kbd>←</kbd>/<kbd>→</kbd></td><td>เลื่อน keyframe ที่เลือกทีละ 1 เฟรม</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>เปลี่ยนค่าแล้วมันเปลี่ยนทั้ง layer</b>ยังไม่ได้กด stopwatch ค่านั้นจึงไม่มี keyframe กด stopwatch ก่อนแล้วค่อยเปลี่ยนค่า</li>
+<li><b>การเคลื่อนไหวเร็วหรือช้าเกิน</b>ลาก keyframe ให้ห่างกันเพื่อให้ช้าลง หรือชิดกันเพื่อให้เร็วขึ้น</li>
+<li><b>ใส่ Easy Ease แล้วดูยืด</b>ลด influence ใน Graph Editor หรือใช้ Ease Out ที่ keyframe แรก Ease In ที่ keyframe สุดท้ายเท่านั้น</li>
+<li><b>ลาก handle ใน Graph Editor ไม่ได้ผล</b>ดูว่าเปิด Speed Graph หรือ Value Graph อยู่ ทั้งสองแบบลาก handle แล้วได้ผลต่างกัน</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>keyframe, Easy Ease และ Graph Editor ใช้แบบเดียวกันทุก<span class="nw">เวอร์ชัน</span></li>
+<li>Effect Controls panel ถูกออกแบบใหม่ใน 26.5 หน้าตาจึงอาจต่างจาก<span class="nw">เวอร์ชัน</span>ก่อนหน้า</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/en/after-effects/using/keyframe-interpolation.html">Keyframe interpolation</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/speed.html">Speed</a></li>
+</ul>
+</template>
+<template id="t-th-ae-text">
+<p class="crumb">After Effects</p>
+<h1>ทำตัวหนังสือเคลื่อนไหว</h1>
+<p class="lead">ตัวหนังสือใน After Effects ขยับได้ทั้ง layer หรือขยับทีละตัวอักษร ทีละคำ ทีละบรรทัด ด้วย <b>text animator</b> วิธีที่เร็วที่สุดคือเริ่มจาก animation preset แล้วค่อยแกะดูว่าข้างในตั้งค่าไว้อย่างไร</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>แกะสูตรจาก preset:</b> ใส่ animation preset ให้ text layer แล้วกด <kbd>U</kbd> หรือ <kbd>UU</kbd> จะเห็นเฉพาะค่าที่ preset นั้นขยับหรือแก้ไว้</p></div>
+<div class="demo" data-demo="ae-text"></div>
+
+<h2 id="create">สร้าง text layer</h2>
+<ol class="steps">
+<li><h3>เลือก Type tool</h3><p>กด <kbd>Ctrl</kbd>+<kbd>T</kbd> / <kbd>Cmd</kbd>+<kbd>T</kbd> คลิกหนึ่งครั้งใน Composition panel เพื่อพิมพ์แบบบรรทัดเดียว (point text) หรือลากเป็นกรอบเพื่อพิมพ์แบบย่อหน้า (paragraph text)</p></li>
+<li><h3>ตั้งฟอนต์และขนาด</h3><p>ใช้ Character panel หรือ Properties panel ถ้าพิมพ์ภาษาเกาหลีหรือจีน ต้องเลือกฟอนต์ที่มีตัวอักษรนั้น ไม่อย่างนั้นจะเห็นเป็นสี่เหลี่ยม</p></li>
+</ol>
+
+<h2 id="preset">วิธีที่ 1: ใช้ animation preset</h2>
+<ol class="steps">
+<li><h3>เปิด Effects &amp; Presets panel</h3><p>ไปที่ <span class="ui">Animation Presets › Text</span> จะเห็นหมวดเช่น Animate In, Animate Out, Blurs</p></li>
+<li><h3>ลาก preset ไปวางบน text layer</h3><p>preset จะเริ่มที่ตำแหน่ง playhead กด Spacebar เพื่อดูผล</p>
+<p class="note">ถ้าอยากเห็นตัวอย่างก่อนใช้ เลือก <span class="ui">Browse Presets</span> จากเมนูของ Effects &amp; Presets panel เพื่อเปิดใน Adobe Bridge</p></li>
+</ol>
+
+<h2 id="animator">วิธีที่ 2: ทำเองด้วย text animator</h2>
+<ol class="steps">
+<li><h3>เพิ่ม animator</h3><p>เปิด text layer ใน Timeline คลิก <span class="ui">Animate</span> แล้วเลือกค่าที่จะขยับ เช่น Opacity หรือ Position หรือใช้เมนู <span class="ui">Animation › Animate Text</span></p></li>
+<li><h3>ตั้งค่า "ปลายทาง" ของตัวอักษร</h3><p>เช่นตั้ง Opacity เป็น 0% ตัวอักษรที่อยู่ในช่วงของ Range Selector จะได้ค่านี้</p></li>
+<li><h3>animate ช่วงของ Range Selector</h3><p>เปิด <span class="ui">Range Selector 1</span> กด stopwatch ของ <span class="ui">Start</span> ที่ 0% แล้วเลื่อนเวลาไปข้างหน้าและตั้ง Start เป็น 100% ตัวอักษรจะค่อย ๆ ปรากฏทีละตัว</p></li>
+<li><h3>เลือกหน่วยใน Advanced</h3><p>ใน Range Selector › Advanced › <span class="ui">Based On</span> เลือกได้ว่าจะนับเป็นตัวอักษร คำ หรือบรรทัด</p></li>
+</ol>
+
+<h2 id="ideas">ไอเดียที่ทำได้ด้วย animator</h2>
+<ul class="check">
+<li><span><b>พิมพ์ดีด</b> Opacity 0% แล้ว animate Start จาก 0 ถึง 100%</span></li>
+<li><span><b>ลอยขึ้นทีละตัว</b> Position Y +30 และ Opacity 0% ด้วย Range Selector เดียวกัน</span></li>
+<li><span><b>ตัวสั่น</b> เพิ่ม Wiggly Selector แทน Range Selector</span></li>
+<li><span><b>น้ำหนักฟอนต์เปลี่ยน</b> ใช้ variable font แล้วเพิ่ม animator ของแกน Weight</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>animate ทั้ง layer แทนที่จะเป็นทีละตัว</b>ค่า Transform ของ layer ขยับทั้งก้อน ถ้าอยากให้ทีละตัวต้องใช้ animator</li>
+<li><b>Start กับ End สับสน</b>ตัวอักษรที่อยู่ระหว่าง Start และ End คือตัวที่ได้ค่าของ animator ลองดูแถบช่วงใน Composition panel ประกอบ</li>
+<li><b>ตัวอักษรเกาหลีหรือจีนเป็นสี่เหลี่ยม</b>ฟอนต์ไม่มีตัวอักษรนั้น เปลี่ยนเป็นฟอนต์ที่รองรับภาษานั้น</li>
+<li><b>ภาพตัวหนังสือดูกระตุก</b>เปิด motion blur ให้ text layer จะดูนุ่มขึ้น</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>text animator และ Range Selector ใช้แบบเดียวกัน</li>
+<li>การ animate แกนของ variable font มีตั้งแต่ 26.0</li>
+<li>ข้อความจาก Illustrator ที่แก้ต่อได้ใน After Effects เพิ่มเข้ามาใน 27.0</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/using/animating-text.html">Animating text</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/examples-resources-text-animation.html">Examples and resources for text animation</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/working-with-variable-font-axes.html">Working with Variable Font Axes</a></li>
+</ul>
+</template>
+<template id="t-th-ae-render">
+<p class="crumb">After Effects</p>
+<h1>Render และส่งออก</h1>
+<p class="lead">After Effects ส่งงานออกเป็นไฟล์ผ่าน <b>Render Queue</b> ถ้าต้องการ MP4 ใช้ H.264 ได้ในตัว ถ้าต้องการพื้นหลังโปร่งใสหรือหลายไฟล์พร้อมกัน ก็มีทางเลือกของมัน</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ค่าเริ่มต้นคือ H.264</b> ถ้าติดตั้งใหม่หรือล้างค่า Output Module ไว้ After Effects จะใช้ preset <span class="ui">H.264 – Match Render Settings – 15 Mbps</span> เป็นค่าเริ่มต้น</p></div>
+<div class="demo" data-demo="ae-render"></div>
+
+<h2 id="steps">ขั้นตอน render เป็น MP4</h2>
+<ol class="steps">
+<li><h3>เพิ่ม composition เข้าคิว</h3><p>เลือก composition แล้วไปที่ <span class="ui">File › Export › Add to Render Queue</span> (<kbd>Ctrl</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>M</kbd>) Render Queue panel จะเปิดขึ้น</p></li>
+<li><h3>เช็ก Render Settings</h3><p>ปกติใช้ <span class="ui">Best Settings</span> ดูช่อง Time Span ด้วยว่าจะ render ทั้ง composition หรือแค่ work area</p></li>
+<li><h3>เลือก Output Module</h3><p>คลิกชื่อ Output Module แล้วเลือก Format เป็น H.264 จะมี preset 5, 15 และ 40 Mbps ให้เลือกตามความละเอียดและคุณภาพที่ต้องการ</p></li>
+<li><h3>ตั้งชื่อและที่เก็บไฟล์</h3><p>คลิกชื่อไฟล์ที่ช่อง <span class="ui">Output To</span> แล้วเลือกโฟลเดอร์</p></li>
+<li><h3>กด Render</h3><p>กดปุ่ม Render ด้านขวาของ Render Queue panel รอจนแถบเสร็จ แล้วเปิดดูไฟล์ที่ได้</p></li>
+</ol>
+
+<h2 id="formats">เลือก format ตามการใช้งาน</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ต้องการ</th><th>Format</th><th>Channels</th></tr></thead>
+<tbody>
+<tr><td>ไฟล์สำหรับเว็บหรือโซเชียล</td><td>H.264</td><td>RGB</td></tr>
+<tr><td>วิดีโอพื้นหลังใสไปวางทับใน Premiere</td><td>QuickTime, codec Apple ProRes 4444</td><td>RGB + Alpha</td></tr>
+<tr><td>ภาพนิ่งเรียงเฟรม</td><td>PNG Sequence</td><td>RGB หรือ RGB + Alpha</td></tr>
+<tr><td>ไฟล์ master คุณภาพสูง</td><td>QuickTime, codec Apple ProRes 422 HQ</td><td>RGB</td></tr>
+</tbody></table></div>
+<p class="note">ตั้งค่าเริ่มต้นของ Output Module เองได้ที่ <span class="ui">Edit › Templates › Output Module</span></p>
+
+<h2 id="ame">ส่งให้ Media Encoder หรือ Premiere</h2>
+<ul class="check">
+<li><span><b>Adobe Media Encoder</b> เลือก <span class="ui">File › Export › Add to Adobe Media Encoder Queue</span> เหมาะเมื่อต้องการหลายไฟล์หลายสเปก และอยากทำงานใน After Effects ต่อระหว่าง render</span></li>
+<li><span><b>Dynamic Link ไป Premiere</b> import composition เข้า Premiere ได้เลยโดยไม่ต้อง render แก้ใน After Effects แล้ว Premiere อัปเดตตาม ต้องใช้<span class="nw">เวอร์ชัน</span>เดียวกัน</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>ได้ไฟล์สั้นกว่าที่คิด</b>Time Span ใน Render Settings ตั้งเป็น work area อยู่ เปลี่ยนเป็นความยาวทั้ง composition หรือขยาย work area</li>
+<li><b>MP4 พื้นหลังเป็นสีดำ</b>H.264 เก็บความโปร่งใสไม่ได้ ใช้ QuickTime ProRes 4444 และตั้ง Channels เป็น RGB + Alpha</li>
+<li><b>ไม่รู้ว่าไฟล์ไปอยู่ไหน</b>ดูช่อง Output To ก่อนกด Render ทุกครั้ง</li>
+<li><b>render ช้ามาก</b>ปิด layer ที่ไม่ใช้ และเช็กว่าเปิด Multi-Frame Rendering ไว้ใน Preferences</li>
+</ul>
+
+<h2 id="older">ถ้าใช้<span class="nw">เวอร์ชัน</span>เก่ากว่า 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>Render Queue และ H.264 ในตัวใช้แบบเดียวกัน</li>
+<li>27.0 เพิ่มแถบปรับระดับการบีบอัดของ PNG (ยังไม่สูญเสียคุณภาพ) และปรับปรุง Auto-Save ให้กู้งานได้ง่ายขึ้น</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/desktop/render-and-export/export-h-264-from-the-after-effects/exporting-h264-from-the-after-effects-render-queue.html">Exporting H.264 from the After Effects Render Queue</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/dynamic-link-effects.html">Dynamic Link and After Effects</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+</ul>
+</template>
+<template id="t-th-whats-new">
+<p class="crumb">อ้างอิง</p>
+<h1>มีอะไรใหม่ใน<span class="nw">เวอร์ชัน</span> 27.0</h1>
+<p class="lead">Premiere และ After Effects 27.0 ออกเดือนพฤศจิกายน 2569 เป็นรุ่นใหญ่ของปี การเปลี่ยนแปลงที่มือใหม่จะเห็นชัดที่สุดคือ Color Mode ที่มาแทน Lumetri Color panel, AI Assistant และสเปกเครื่องขั้นต่ำที่สูงขึ้น</p>
+<ul class="meta"><li class="ver">Premiere และ After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ทุกระดับ</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ก่อนกดอัปเดต:</b> 27.0 ต้องใช้ Windows 11 v24H2 ขึ้นไป หรือ Mac ชิป Apple silicon กับ macOS 15 ขึ้นไป ดูรายละเอียดที่หน้า <a href="#th-system-requirements">สเปกเครื่องและการติดตั้ง</a></p></div>
+<div class="demo" data-demo="whats-new"></div>
+
+<h2 id="premiere">Premiere 27.0</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ฟีเจอร์</th><th>คืออะไร</th></tr></thead>
+<tbody>
+<tr><td>Color Mode</td><td>โหมดแต่งสีใหม่บน header bar มาแทน Lumetri Color panel ดูที่หน้า <a href="#th-color-mode">แต่งสีด้วย Color Mode</a></td></tr>
+<tr><td>AI Assistant</td><td>พาเนลที่พิมพ์สั่งงานหรือถามวิธีใช้ได้ บางคำสั่งใช้ generative credits ของ Firefly</td></tr>
+<tr><td>สร้างเสียงด้วย AI</td><td>สร้างเพลง เสียง<span class="nw">เอฟเฟกต์</span> และเสียงบรรยากาศลง timeline ได้</td></tr>
+<tr><td>Generative Extend สำหรับ<span class="nw">ทรานซิชัน</span></td><td>เติมเฟรมให้คลิปที่สั้นเกินจะใส่<span class="nw">ทรานซิชัน</span></td></tr>
+<tr><td><span class="nw">เอฟเฟกต์</span>ใหม่ 8 ตัว</td><td>เช่น Bevel Alpha, Bevel &amp; Emboss, Posterize, Radial Blur และ Zoom Blur</td></tr>
+<tr><td>ปรับปรุงการใช้งาน</td><td>เห็น waveform ระหว่างอัดเสียง, Effects panel แสดงภาพตัวอย่างเคลื่อนไหว, Properties panel แบ่งเป็นการ์ด และมีตัวเลือก Live Ripple Edit ใน Preferences</td></tr>
+<tr><td>ประสิทธิภาพ</td><td>ฟีเจอร์ AI ทำงานเร็วขึ้นบนการ์ดจอ NVIDIA RTX</td></tr>
+</tbody></table></div>
+
+<h2 id="ae">After Effects 27.0</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ฟีเจอร์</th><th>คืออะไร</th></tr></thead>
+<tbody>
+<tr><td>AI Assistant</td><td>ถามวิธีใช้หรือสั่งงานด้วยข้อความ</td></tr>
+<tr><td>Auto-Save ที่กู้งานง่ายขึ้น</td><td>เปิดไฟล์ที่บันทึกอัตโนมัติไว้ได้สะดวกขึ้นเมื่อโปรแกรมปิดเอง</td></tr>
+<tr><td>Adobe Stock panel</td><td>ค้นและใช้สื่อจาก Adobe Stock ในโปรแกรม</td></tr>
+<tr><td>ข้อความ Illustrator แก้ต่อได้</td><td>ข้อความจากไฟล์ Illustrator ยังเป็นตัวหนังสือที่แก้ได้ใน After Effects</td></tr>
+<tr><td><span class="nw">เอฟเฟกต์</span>ใหม่</td><td>เช่น Contour Paint และ De-esser</td></tr>
+<tr><td>PNG</td><td>แถบปรับระดับการบีบอัดของ PNG ตอน render</td></tr>
+</tbody></table></div>
+
+<h2 id="year">ไทม์ไลน์ปี 2569</h2>
+<ul class="check">
+<li><span><b>26.0 (ม.ค.)</b> Premiere Pro เปลี่ยนชื่อเป็น Adobe Premiere, มี Object Mask และ Adobe Stock ในตัว · After Effects animate variable font ได้</span></li>
+<li><span><b>26.2 (เม.ย.)</b> Premiere ใส่ Content Credentials ตอน export ได้ และเปิดให้ลอง Color Mode ในแอป beta · After Effects มี Object Matte</span></li>
+<li><span><b>26.3 (มิ.ย.)</b> Premiere มี<span class="nw">เอฟเฟกต์</span> <span class="nw">ทรานซิชัน</span> และ<span class="nw">แอนิเมชัน</span>ใหม่กว่า 90 ตัว · After Effects มี Depth of Field ใน Advanced 3D</span></li>
+<li><span><b>26.5 (ก.ย.)</b> Premiere มี Generative Media Tool · After Effects ออกแบบ Effect Controls ใหม่และรองรับ ACES 2.0</span></li>
+<li><span><b>27.0 (พ.ย.)</b> รุ่นใหญ่ตามตารางด้านบน</span></li>
+</ul>
+
+<h2 id="update">ควรอัปเดตเลยไหม</h2>
+<ul class="mist">
+<li><b>กำลังทำงานที่ใกล้ส่ง</b>ทำให้จบใน<span class="nw">เวอร์ชัน</span>เดิมก่อน project ที่เปิดใน<span class="nw">เวอร์ชัน</span>ใหม่แล้วบันทึกจะเปิดกลับใน<span class="nw">เวอร์ชัน</span>เก่าไม่ได้</li>
+<li><b>ทำงานเป็นทีม</b>ตกลงกันให้ทุกคนอัปเดตพร้อมกัน และอัปเดต Premiere กับ After Effects คู่กันเพื่อให้ Dynamic Link ใช้ได้</li>
+<li><b>ใช้ plugin เสริม</b>เช็กว่าผู้พัฒนา plugin รองรับ 27.0 แล้ว</li>
+</ul>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere release notes</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+<li><a href="https://community.adobe.com/announcements-727/important-notice-upcoming-system-requirement-changes-in-v27-0-1639157">Important Notice: Upcoming System Requirement Changes in v27.0</a></li>
+</ul>
+</template>
+<template id="t-th-shortcuts">
+<p class="crumb">อ้างอิง</p>
+<h1><span class="nw">คีย์ลัด</span></h1>
+<p class="lead">ไม่ต้องจำทั้งหมด เริ่มจากคีย์เดี่ยวสิบกว่าตัวที่ใช้ทุกวัน แล้วค่อยเพิ่มทีละนิด <span class="nw">คีย์ลัด</span>หลายตัวใช้ตัวอักษรเดียวกันในสองโปรแกรมแต่ทำคนละอย่าง ลองกดดูในเดโม</p>
+<ul class="meta"><li class="ver">Premiere และ After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b><span class="nw">คีย์ลัด</span>ตัวอักษรไม่ทำงาน?</b> ถ้าเครื่องเปิด IME ภาษาเกาหลี จีน หรือไทยอยู่ ลองสลับ IME กลับเป็นภาษาอังกฤษก่อน แล้วกดใหม่</p></div>
+<div class="demo" data-demo="shortcuts"></div>
+
+<h2 id="premiere">Premiere: <span class="nw">คีย์ลัด</span>ที่ใช้บ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ทำอะไร</th><th>Windows</th><th>Mac</th></tr></thead>
+<tbody>
+<tr><td>บันทึก</td><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td><kbd>Cmd</kbd>+<kbd>S</kbd></td></tr>
+<tr><td>Undo / Redo</td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td><kbd>Cmd</kbd>+<kbd>Z</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td></tr>
+<tr><td>Import ไฟล์</td><td><kbd>Ctrl</kbd>+<kbd>I</kbd></td><td><kbd>Cmd</kbd>+<kbd>I</kbd></td></tr>
+<tr><td>Export (เข้า Export mode)</td><td><kbd>Ctrl</kbd>+<kbd>M</kbd></td><td><kbd>Cmd</kbd>+<kbd>M</kbd></td></tr>
+<tr><td>ตัดคลิปที่ playhead (Add Edit)</td><td><kbd>Ctrl</kbd>+<kbd>K</kbd></td><td><kbd>Cmd</kbd>+<kbd>K</kbd></td></tr>
+<tr><td>Ripple Delete</td><td><kbd>Shift</kbd>+<kbd>Delete</kbd></td><td><kbd>Shift</kbd>+<kbd>Delete</kbd></td></tr>
+<tr><td>ใส่<span class="nw">ทรานซิชัน</span>ภาพค่าเริ่มต้น</td><td><kbd>Ctrl</kbd>+<kbd>D</kbd></td><td><kbd>Cmd</kbd>+<kbd>D</kbd></td></tr>
+<tr><td>สร้าง bin ใหม่</td><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td><kbd>Cmd</kbd>+<kbd>B</kbd></td></tr>
+<tr><td>ซูม timeline เข้า / ออก</td><td><kbd>=</kbd> / <kbd>-</kbd></td><td><kbd>=</kbd> / <kbd>-</kbd></td></tr>
+<tr><td>ไปจุดตัดก่อนหน้า / ถัดไป</td><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td><kbd>↑</kbd> / <kbd>↓</kbd></td></tr>
+<tr><td>ขยายพาเนลเต็มจอ</td><td><kbd>`</kbd></td><td><kbd>`</kbd></td></tr>
+</tbody></table></div>
+
+<h2 id="ae">After Effects: <span class="nw">คีย์ลัด</span>ที่ใช้บ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ทำอะไร</th><th>Windows</th><th>Mac</th></tr></thead>
+<tbody>
+<tr><td>Composition ใหม่</td><td><kbd>Ctrl</kbd>+<kbd>N</kbd></td><td><kbd>Cmd</kbd>+<kbd>N</kbd></td></tr>
+<tr><td>Composition Settings</td><td><kbd>Ctrl</kbd>+<kbd>K</kbd></td><td><kbd>Cmd</kbd>+<kbd>K</kbd></td></tr>
+<tr><td>Solid layer ใหม่</td><td><kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td><kbd>Cmd</kbd>+<kbd>Y</kbd></td></tr>
+<tr><td>Duplicate layer</td><td><kbd>Ctrl</kbd>+<kbd>D</kbd></td><td><kbd>Cmd</kbd>+<kbd>D</kbd></td></tr>
+<tr><td>Precompose</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td><td><kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
+<tr><td>Add to Render Queue</td><td><kbd>Ctrl</kbd>+<kbd>M</kbd></td><td><kbd>Cmd</kbd>+<kbd>M</kbd></td></tr>
+<tr><td>เพิ่ม keyframe Position</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td><td><kbd>Option</kbd>+<kbd>P</kbd></td></tr>
+<tr><td>Easy Ease</td><td><kbd>F9</kbd></td><td><kbd>F9</kbd></td></tr>
+<tr><td>Graph Editor</td><td><kbd>Shift</kbd>+<kbd>F3</kbd></td><td><kbd>Shift</kbd>+<kbd>F3</kbd></td></tr>
+<tr><td>ตั้ง work area เริ่ม / จบ</td><td><kbd>B</kbd> / <kbd>N</kbd></td><td><kbd>B</kbd> / <kbd>N</kbd></td></tr>
+</tbody></table></div>
+<p class="note">บน Mac บางปุ่ม F อาจต้องกด <kbd>fn</kbd> ค้างไว้ด้วย ขึ้นอยู่กับการตั้งค่าคีย์บอร์ด</p>
+
+<h2 id="custom">ดูและแก้<span class="nw">คีย์ลัด</span>ในโปรแกรม</h2>
+<ol class="steps">
+<li><h3>Premiere</h3><p>Windows: <span class="ui">Edit › Keyboard Shortcuts</span> · Mac: <span class="ui">Premiere › Keyboard Shortcuts</span> จะเห็นแป้นพิมพ์ที่ระบายสีปุ่มที่มีคำสั่ง ค้นหาคำสั่งด้วยชื่อได้</p></li>
+<li><h3>After Effects</h3><p>เลือก <span class="ui">Edit › Keyboard Shortcuts</span> ค้นหาและเปลี่ยนคีย์ได้เหมือนกัน</p></li>
+<li><h3>บันทึกเป็นชุดของตัวเอง</h3><p>ถ้าแก้<span class="nw">คีย์ลัด</span> ให้บันทึกเป็นชุดใหม่ ไม่ทับชุดเริ่มต้น จะกลับไปใช้ค่าเริ่มต้นได้ง่าย</p></li>
+</ol>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>กด<span class="nw">คีย์ลัด</span>แล้วพิมพ์ตัวอักษรแทน</b>ช่องพิมพ์ข้อความยังโฟกัสอยู่ คลิกที่ timeline ก่อนแล้วกดใหม่</li>
+<li><b><span class="nw">คีย์ลัด</span>ใช้ไม่ได้ทั้งที่ถูก</b><span class="nw">คีย์ลัด</span>หลายตัวทำงานเฉพาะเมื่อพาเนลนั้นถูกเลือกอยู่ ดูว่ากรอบสีฟ้าอยู่ที่พาเนลไหน</li>
+<li><b><span class="nw">คีย์ลัด</span>จากวิดีโอสอนไม่ตรง</b>วิดีโอนั้นอาจใช้<span class="nw">เวอร์ชัน</span>เก่าหรือชุด<span class="nw">คีย์ลัด</span>ที่แก้ไว้ เช็กในหน้าต่าง Keyboard Shortcuts ของเครื่องตัวเอง</li>
+</ul>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/mena_en/premiere-pro/using/default-keyboard-shortcuts.html">Default keyboard shortcuts in Premiere</a></li>
+<li><a href="https://helpx.adobe.com/my_ms/after-effects/desktop/get-started/keyboard-shortcuts/keyboard-shortcuts-reference.html">After Effects keyboard shortcuts reference</a></li>
+</ul>
+</template>
+<template id="t-th-glossary">
+<p class="crumb">อ้างอิง</p>
+<h1>อภิธานศัพท์</h1>
+<p class="lead">รวมคำศัพท์ที่เจอบ่อยใน Premiere และ After Effects พร้อมคำอธิบายสั้น ๆ พิมพ์ค้นได้ทั้งคำภาษาอังกฤษและคำอธิบาย หรือกรองตามหมวด</p>
+<ul class="meta"><li class="ver">Premiere และ After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ทุกระดับ</li><li>รวบรวมจากหน้าอื่นในเว็บนี้</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ใช้โปรแกรมภาษาอื่นอยู่?</b> ชื่อเมนูและพาเนลในเว็บนี้เป็นภาษาอังกฤษ ถ้าโปรแกรมติดตั้งเป็นภาษาเกาหลีหรือจีนตัวย่อ ชื่อจะเป็นคำแปลของภาษานั้น</p></div>
+<div class="demo" data-demo="glossary"></div>
+
+<h2 id="pairs">คู่คำที่มือใหม่สับสนบ่อย</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>คู่คำ</th><th>ต่างกันยังไง</th></tr></thead>
+<tbody>
+<tr><td>Sequence / Composition</td><td>หน่วยของงานใน Premiere / ใน After Effects</td></tr>
+<tr><td>Render / Export</td><td>Render คือประมวลผลให้เล่นลื่นหรือสร้างภาพ ส่วน Export คือสร้างไฟล์ปลายทาง (ใน After Effects คำว่า render ใช้ทั้งสองความหมาย)</td></tr>
+<tr><td>Codec / Container</td><td>วิธีบีบอัด เช่น H.264 / ชนิดไฟล์ที่ห่อไว้ เช่น .mp4</td></tr>
+<tr><td>Frame size / Resolution ใน After Effects</td><td>ขนาดจริงของ composition / คุณภาพตอน preview ใน Composition panel</td></tr>
+<tr><td>Ripple / Rolling edit</td><td>แก้ความยาวแล้วดันคลิปถัดไป / ขยับจุดตัดระหว่างสองคลิปโดยความยาวรวมเท่าเดิม</td></tr>
+<tr><td>Insert / Overwrite</td><td>วางแล้วดันของเดิม / วางทับของเดิม</td></tr>
+<tr><td>Clip marker / Sequence marker</td><td>ติดไปกับคลิป / ติดอยู่กับเวลาของ sequence</td></tr>
+</tbody></table></div>
+
+<h2 id="more">อ่านต่อ</h2>
+<ul class="check">
+<li><span><a href="#th-sequence">Sequence และ Sequence Settings</a> สำหรับ frame size, frame rate และ aspect ratio</span></li>
+<li><span><a href="#th-timeline">ตัดต่อบน Timeline</a> สำหรับ ripple, razor และ link</span></li>
+<li><span><a href="#th-ae-keyframes">Keyframe ใน After Effects</a> สำหรับ interpolation และ Graph Editor</span></li>
+<li><span><a href="#th-export">Export วิดีโอ</a> สำหรับ codec, bitrate และ preset</span></li>
+</ul>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/export-settings-reference-premiere-pro.html">Overview of export settings (Premiere)</a></li>
+<li><a href="https://helpx.adobe.com/en/after-effects/using/keyframe-interpolation.html">Keyframe interpolation (After Effects)</a></li>
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers (After Effects)</a></li>
 </ul>
 </template>
 <template id="t-en-first-video">
@@ -1318,6 +2070,182 @@ footer p{margin:0 0 6px}
 <li><a href="https://helpx.adobe.com/ro/premiere-pro/how-to/relink-offline-media.html">Relink offline media</a></li>
 <li><a href="https://helpx.adobe.com/premiere/desktop/add-video-effects/work-with-masks/object-masking.html">Object masking in Premiere (mask data storage)</a></li>
 <li><a href="https://helpx.adobe.com/dk/media-encoder/desktop/encoding-and-exporting/media-cache-database.html">Managing the media cache database</a></li>
+</ul>
+</template>
+<template id="t-en-premiere-vs-ae">
+<p class="crumb">Start here</p>
+<h1>Premiere vs After Effects</h1>
+<p class="lead">Premiere is for <b>editing</b>: arranging long footage into a story, with sound, captions and colour. After Effects is for <b>motion graphics and visual effects</b>: detailed work on short shots. Most projects start in Premiere and send a few shots to After Effects.</p>
+<ul class="meta"><li class="ver">Premiere &amp; After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Rule of thumb:</b> minutes of footage with many clips belongs in Premiere. A few seconds where everything has to move just right belongs in After Effects.</p></div>
+<div class="demo" data-demo="premiere-vs-ae"></div>
+
+<h2 id="compare">Side by side</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Topic</th><th>Premiere</th><th>After Effects</th></tr></thead>
+<tbody>
+<tr><td>Main job</td><td>Editing, story, audio, captions, colour</td><td>Motion graphics, compositing, visual effects</td></tr>
+<tr><td>Unit of work</td><td>Sequence</td><td>Composition</td></tr>
+<tr><td>Timeline</td><td>A track holds many clips in a row</td><td>Each layer has exactly one source</td></tr>
+<tr><td>Typical length</td><td>Minutes to hours</td><td>Seconds to a few minutes</td></tr>
+<tr><td>Project file</td><td><code>.prproj</code></td><td><code>.aep</code></td></tr>
+<tr><td>Output</td><td>Export mode or Media Encoder</td><td>Render Queue or Media Encoder</td></tr>
+</tbody></table></div>
+
+<h2 id="together">Using both together</h2>
+<ol class="steps">
+<li><h3>Dynamic Link: send a clip to After Effects</h3><p>In Premiere, right-click a clip in the timeline and choose <span class="ui">Replace With After Effects Composition</span>. After Effects opens with a new composition containing that clip. Changes you make there show up in Premiere without rendering.</p>
+<p class="note">Premiere and After Effects must be the same version, or Dynamic Link won't work.</p></li>
+<li><h3>Create an empty composition from Premiere</h3><p>Choose <span class="ui">File › Adobe Dynamic Link › New After Effects Composition</span>. The new comp matches the Premiere project's frame size and frame rate and is 30 seconds long by default.</p></li>
+<li><h3>MOGRT: design once, reuse across the team</h3><p>Design a graphic in After Effects and export it as a <code>.mogrt</code>. Editors use it in Premiere and change only the fields you exposed, such as names and colours. See <a href="#en-mogrt">MOGRT</a>.</p></li>
+<li><h3>Media Encoder: let it export for you</h3><p>Both apps can queue jobs in Adobe Media Encoder, so you can keep working while files export.</p></li>
+</ol>
+
+<h2 id="which">Which app for which job</h2>
+<ul class="check">
+<li><span><b>Vlogs, interviews, event videos</b> start and finish in Premiere, using ready-made MOGRTs for name straps.</span></li>
+<li><span><b>Logo intros, film titles, animated infographics</b> build them in After Effects and render or Dynamic Link them in.</span></li>
+<li><span><b>Removing objects, tracking signs, replacing skies</b> detailed compositing happens in After Effects. For simple cases, try <a href="#en-object-mask">Object Mask</a> in Premiere first.</span></li>
+<li><span><b>Captions, sound, grading the whole film</b> do these in Premiere, where you see the whole story in order.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Editing a whole film in After Effects</b>It isn't built for arranging long footage, so previews get slow and changes get painful. Cut in Premiere and send only effects shots over.</li>
+<li><b>Building complex animation with Premiere keyframes</b>It works up to a point, but when many elements move together After Effects' Graph Editor and text animators give far more control.</li>
+<li><b>Dynamic Link not showing up</b>Check that both apps are the same version, for example 27.0 in both.</li>
+<li><b>Rendering an MP4 from After Effects to overlay in Premiere</b>MP4 (H.264) can't store transparency. Use Dynamic Link, or render ProRes 4444 with RGB + Alpha.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere Pro 25.x and Premiere 26.x</summary><ul>
+<li>Before 26.0 the app was called Adobe Premiere Pro. Its role and how it works with After Effects are the same.</li>
+<li>Dynamic Link and MOGRTs work the same way; the two apps' versions still need to match.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/using/dynamic-link-effects.html">Dynamic Link and After Effects</a></li>
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers (After Effects)</a></li>
+</ul>
+</template>
+<template id="t-en-system-requirements">
+<p class="crumb">Start here</p>
+<h1>System requirements and install</h1>
+<p class="lead">Before installing Premiere or After Effects 27.0, check three things: your operating system, RAM and graphics card. Version 27.0 drops older Windows versions and Intel Macs.</p>
+<ul class="meta"><li class="ver">Premiere &amp; After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Windows 11 version 23H2 can't install 27.0.</b> Update to 24H2 or later first. On Mac you need Apple silicon (M1 or newer) and macOS 15 or later.</p></div>
+<div class="demo" data-demo="system-requirements"></div>
+
+<h2 id="specs">Requirements at a glance</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Item</th><th>Premiere 27.0</th><th>After Effects 27.0</th></tr></thead>
+<tbody>
+<tr><td>Windows</td><td>Windows 11 v24H2 or later</td><td>Windows 11 v24H2 or later</td></tr>
+<tr><td>Mac</td><td>Apple silicon (M1 or newer), macOS 15 or later</td><td>Apple silicon (M1 or newer), macOS 15 or later</td></tr>
+<tr><td>RAM</td><td>8 GB minimum; 16 GB recommended for HD, 32 GB or more for 4K</td><td>16 GB minimum; 32 GB or more recommended for 4K</td></tr>
+<tr><td>GPU (Windows)</td><td>At least 4 GB VRAM; NVIDIA cards must be Maxwell (2014) or newer; 8 GB recommended</td><td>At least 4 GB VRAM</td></tr>
+<tr><td>Display</td><td>1920×1080 or higher</td><td>1920×1080 or higher</td></tr>
+<tr><td>Storage</td><td>About 8 GB to install, plus a fast SSD for media and cache</td><td>Space to install plus disk cache on an SSD</td></tr>
+</tbody></table></div>
+<p class="note">Summarised from Adobe's technical requirements pages on the update date. Supported CPU models and other details are on the original pages.</p>
+
+<h2 id="steps">Installing</h2>
+<ol class="steps">
+<li><h3>Check your OS version</h3><p>Windows: <span class="ui">Settings › System › About</span> and look at Version; it must be 24H2 or later. Mac: Apple menu › <span class="ui">About This Mac</span> to see the chip and macOS version.</p></li>
+<li><h3>Check your GPU memory (Windows)</h3><p>Open Task Manager › <span class="ui">Performance</span> › GPU and read Dedicated GPU memory. Below 4 GB, Premiere may not open or may be unusable.</p></li>
+<li><h3>Install the Creative Cloud desktop app</h3><p>Download it from Adobe and sign in with your Adobe ID. You need an internet connection to activate.</p></li>
+<li><h3>Set the language before installing</h3><p>In the Creative Cloud desktop app, open Preferences › <span class="ui">Apps</span> and choose a <span class="ui">Default install language</span>. Both apps offer 한국어 and 简体中文.</p>
+<p class="note">The setting applies to apps you install afterwards. To change the language of an app that's already installed, uninstall and reinstall it.</p></li>
+<li><h3>Install Premiere and After Effects at the same version</h3><p>Click Install for both in the Apps list. Dynamic Link needs matching versions.</p></li>
+</ol>
+
+<h2 id="buy">If you're buying a computer</h2>
+<ul class="check">
+<li><span><b>32 GB RAM</b> if you plan to work in 4K or use After Effects regularly.</span></li>
+<li><span><b>A dedicated GPU with 8 GB+ VRAM</b> on Windows, for GPU effects and AI features.</span></li>
+<li><span><b>Two SSDs</b>: one for the system and apps, one for media and cache.</span></li>
+<li><span><b>Apple silicon on Mac</b>, with enough unified memory from the start, because you can't add more later.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Can't update on Windows 11 23H2</b>27.0 blocks installation on 23H2. Update Windows to 24H2 or later.</li>
+<li><b>27.0 doesn't appear on an Intel Mac</b>27.0 supports only Apple silicon. Intel Macs stay on 26.x.</li>
+<li><b>The app installed in the wrong language</b>Change Default install language, then uninstall and reinstall.</li>
+<li><b>Footage on a slow external hard drive</b>Playback can stutter even on a fast computer. Move media to an SSD.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Versions 26.x and 25.x</summary><ul>
+<li>26.x also needs Windows 11 v24H2, and still supports Intel Macs.</li>
+<li>25.x still supports Windows 10 v22H2.</li>
+<li>Adobe says that from 28.0, installation will be blocked on all Windows 10-based systems, including Windows Server 2022.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/system-requirements.html">Adobe Premiere technical requirements</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/system-requirements.html">After Effects system requirements</a></li>
+<li><a href="https://community.adobe.com/announcements-727/important-notice-upcoming-system-requirement-changes-in-v27-0-1639157">Important Notice: Upcoming System Requirement Changes in v27.0</a></li>
+<li><a href="https://helpx.adobe.com/creative-cloud/help/change-install-language.html">Change language for Creative Cloud apps</a></li>
+</ul>
+</template>
+<template id="t-en-workspace-tour">
+<p class="crumb">Start here</p>
+<h1>Tour of the workspace</h1>
+<p class="lead">Premiere's screen is split into panels, each with its own job. The header bar at the top switches between modes. If a panel disappears or the layout gets messy, you can always reset it.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Layout in a mess?</b> Choose <span class="ui">Window › Workspaces › Reset to Saved Layout</span>, or double-click the workspace name in the header bar, and the panels go back where they were.</p></div>
+<div class="demo" data-demo="workspace-tour"></div>
+
+<h2 id="header">The header bar and modes</h2>
+<p>Premiere opens on the Home screen. Choose New Project and it opens in <b>Import</b> mode. Once a project is created or opened you're in <b>Edit</b> mode, and when you're ready to deliver you go to <b>Export</b> mode. Version 27.0 adds a <b>Color</b> mode for grading.</p>
+<p>On the right of the header bar are the project name, the Workspaces menu, the Quick Export button and the button that maximises video output.</p>
+
+<h2 id="panels">Panels you'll use most</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Panel</th><th>What it's for</th><th>Shortcut</th></tr></thead>
+<tbody>
+<tr><td>Project</td><td>Holds imported files and sequences, organised into bins</td><td><kbd>Shift</kbd>+<kbd>1</kbd></td></tr>
+<tr><td>Source Monitor</td><td>Watch raw clips and set In/Out</td><td><kbd>Shift</kbd>+<kbd>2</kbd></td></tr>
+<tr><td>Timeline</td><td>Where editing happens: clips on tracks</td><td><kbd>Shift</kbd>+<kbd>3</kbd></td></tr>
+<tr><td>Program Monitor</td><td>Shows the sequence</td><td><kbd>Shift</kbd>+<kbd>4</kbd></td></tr>
+<tr><td>Effect Controls</td><td>Effect values and keyframes for the selected clip</td><td><kbd>Shift</kbd>+<kbd>5</kbd></td></tr>
+<tr><td>Effects</td><td>Every effect and transition</td><td><kbd>Shift</kbd>+<kbd>7</kbd></td></tr>
+<tr><td>Properties</td><td>Common settings for the selected clip in one place, such as size, position and volume</td><td>Window menu</td></tr>
+<tr><td>Essential Sound</td><td>Audio types, loudness, ducking</td><td>Window menu</td></tr>
+</tbody></table></div>
+<p class="note">Press <kbd>`</kbd> (left of the 1 key) to maximise the selected panel; press it again to restore.</p>
+
+<h2 id="steps">Make the screen work for you</h2>
+<ol class="steps">
+<li><h3>Pick a workspace for the job</h3><p>Open the Workspaces menu at the top right. Ready-made layouts such as Editing, Audio and Captions and Graphics arrange panels for that kind of work.</p></li>
+<li><h3>Drag panels to new places</h3><p>Drag a panel's tab to the edge of another panel; a highlighted area shows where it will land.</p></li>
+<li><h3>Save your own layout</h3><p>When you're happy, choose <span class="ui">Window › Workspaces › Save as New Workspace</span> and give it a name.</p></li>
+<li><h3>Find a missing panel</h3><p>Every panel can be opened from the <span class="ui">Window</span> menu, so if you close one by accident, reopen it there.</p></li>
+</ol>
+
+<h2 id="ae">How After Effects differs</h2>
+<p>After Effects has similar panels with different names: the <b>Composition</b> panel instead of the Program Monitor, a <b>Timeline</b> of stacked layers instead of tracks, and <b>Effects &amp; Presets</b> and <b>Properties</b> on the right. See <a href="#en-ae-comp-layers">Compositions and layers</a>.</p>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Opening someone's project changes your screen</b>With <span class="ui">Import Workspace From Projects</span> on, Premiere uses the layout saved in the project. Turn it off under Window › Workspaces.</li>
+<li><b>Reset doesn't go back to the default</b>Reset to Saved Layout returns to the last saved version of that workspace. If you saved over it, switch to another workspace you haven't changed.</li>
+<li><b>Panels too small to read</b>Press <kbd>`</kbd> to maximise temporarily, or drag the dividers between panels.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>The header bar has only Import, Edit and Export; there's no Color mode.</li>
+<li>Grading uses the Lumetri Color panel in the Color workspace.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/ie/premiere-pro/using/workspaces.html">Workspaces and header bar</a></li>
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere release notes</a></li>
 </ul>
 </template>
 <template id="t-en-sequence">
@@ -1796,7 +2724,7 @@ footer p{margin:0 0 6px}
 </ul>
 </template>
 <template id="t-en-color-mode">
-<p class="crumb">Premiere › Color and audio</p>
+<p class="crumb">Premiere › Color, audio and captions</p>
 <h1>Color grading with Color Mode</h1>
 <p class="lead">Fix clips that look too dark, flat or tinted, using Premiere's new grading workspace: open Color Mode, pick a clip, then adjust one value at a time in order.</p>
 <ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
@@ -1950,6 +2878,65 @@ footer p{margin:0 0 6px}
 <li><a href="https://backlothelp.netflix.com/hc/en-us/articles/215274938-What-is-the-maximum-number-of-characters-per-line-allowed-in-Timed-Text-assets">Netflix: maximum characters per line</a></li>
 </ul>
 </template>
+<template id="t-en-audio">
+<p class="crumb">Premiere › Color, audio and captions</p>
+<h1>Audio and music</h1>
+<p class="lead">Viewers forgive rough pictures far more easily than sound they can't follow. The basics: dialogue clear, music underneath, and nothing over 0 dB. You can do most of it from the Essential Sound panel.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Tell Premiere what each clip is first.</b> Select clips and click Dialogue, Music, SFX or Ambience in the Essential Sound panel. The rest of the panel adapts to the type you choose.</p></div>
+<div class="demo" data-demo="audio"></div>
+
+<h2 id="types">Audio types in Essential Sound</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Type</th><th>Use for</th><th>Common options</th></tr></thead>
+<tbody>
+<tr><td>Dialogue</td><td>Speech, interviews, voice-over</td><td>Loudness Auto-Match, Enhance Speech, Repair, Clarity</td></tr>
+<tr><td>Music</td><td>Background music</td><td>Loudness Auto-Match, Ducking</td></tr>
+<tr><td>SFX</td><td>Sound effects such as doors or whooshes</td><td>Loudness, left/right position</td></tr>
+<tr><td>Ambience</td><td>Room tone, crowds, wind</td><td>Loudness, Reverb</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">A basic mix, step by step</h2>
+<ol class="steps">
+<li><h3>Keep tracks tidy</h3><p>Dialogue on A1–A2, music on A3, effects on A4, so you can select each type at once. For a layout suited to sound, switch to the <span class="ui">Audio</span> workspace.</p></li>
+<li><h3>Set the type and Auto-Match</h3><p>Select all dialogue clips, click <span class="ui">Dialogue</span>, then <span class="ui">Auto-Match</span> under Loudness so every clip sits at a similar level. Do the same for music with <span class="ui">Music</span>.</p></li>
+<li><h3>Clean up speech with Enhance Speech</h3><p>On the Dialogue tab, click <span class="ui">Enhance</span> under Enhance Speech. When processing finishes, adjust <span class="ui">Mix Amount</span>; if the voice sounds unnatural, lower it to blend some of the original back in.</p>
+<p class="note">Enhance Speech is for speech only, not music or sound effects.</p></li>
+<li><h3>Duck the music under dialogue</h3><p>Select the music, turn on <span class="ui">Ducking</span>, choose which audio types should trigger it (for example Dialogue), set Sensitivity, Reduce By and Fades, then click <span class="ui">Generate Keyframes</span>. Premiere adds keyframes that lower the music where people speak.</p>
+<p class="note">You can click Generate Keyframes again any time; the old keyframes are replaced with a new set based on the current settings.</p></li>
+<li><h3>Watch the Audio Meters through the whole piece</h3><p>Play from start to finish and watch the meters beside the timeline. Never touch the red at the top (0 dB). If you do, lower that clip with <span class="ui">Audio Gain</span> (<kbd>G</kbd>).</p></li>
+</ol>
+
+<h2 id="tips">More tips</h2>
+<ul class="check">
+<li><span><b>Check on headphones and speakers.</b> Headphones catch noise; speakers show whether the music is too loud.</span></li>
+<li><span><b>Change volume over time with keyframes.</b> <kbd>Ctrl</kbd>-click (Windows) or <kbd>Cmd</kbd>-click (Mac) the volume line on a clip in the timeline to add a keyframe.</span></li>
+<li><span><b>Generate music or sound effects in 27.0.</b> Premiere 27.0 can generate music, sound effects and soundscapes with AI. Check the usage terms and the credits it uses first.</span></li>
+<li><span><b>Use music you have rights to.</b> Songs from music apps or YouTube can trigger copyright claims. Use a licensed library such as Adobe Stock.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Music drowns out the dialogue</b>Turn on Ducking or bring the music down further; under speech it should be clearly quieter than the voice.</li>
+<li><b>Distorted sound</b>The mix goes over 0 dB. Lower the Audio Gain of the loudest clip, not your computer's volume.</li>
+<li><b>Adjusting every clip by hand</b>Auto-Match on all clips of one type at once is faster and more consistent.</li>
+<li><b>Too much Enhance Speech</b>Voices can sound robotic or words can change. Lower Mix Amount and listen again.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Essential Sound, Auto-Match, Ducking and Enhance Speech work the same way.</li>
+<li>AI generation of music, sound effects and soundscapes isn't available.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/premiere-essential-sound-panel.html">Edit, repair, and improve audio using Essential Sound panel</a></li>
+<li><a href="https://www.adobe.com/learn/premiere-pro/web/automatic-audio-ducking">Automatic audio ducking</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/enhance-speech.html">Enhance Speech</a></li>
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere release notes</a></li>
+</ul>
+</template>
 <template id="t-en-presets-resolution">
 <p class="crumb">Premiere › Export</p>
 <h1>Common presets and resolutions</h1>
@@ -2026,6 +3013,467 @@ footer p{margin:0 0 6px}
 <li><a href="https://support.google.com/youtube/answer/4603579">YouTube video and audio formatting specifications</a></li>
 </ul>
 </template>
+<template id="t-en-export">
+<p class="crumb">Premiere › Export</p>
+<h1>Exporting video</h1>
+<p class="lead">Exporting turns a sequence into a video file that plays anywhere. In Premiere, start by asking where the file is going, then pick the preset that suits that destination.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Always check Range.</b> If In/Out points are left on the sequence, Premiere may export only that part. Set Range to <span class="ui">Entire Source</span> when you want everything.</p></div>
+<div class="demo" data-demo="export"></div>
+
+<h2 id="ways">Three ways to export</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Way</th><th>Good for</th><th>Where</th></tr></thead>
+<tbody>
+<tr><td>Export mode</td><td>Everyday jobs, full control</td><td>The Export tab in the header bar, or <kbd>Ctrl</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>M</kbd></td></tr>
+<tr><td>Quick Export</td><td>A fast file with a ready-made preset</td><td>Button at the top right of the header bar</td></tr>
+<tr><td>Send to Media Encoder</td><td>Several files or specs, or editing while it exports</td><td>Button at the bottom right of Export mode</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">Steps in Export mode</h2>
+<ol class="steps">
+<li><h3>Select the sequence and open Export mode</h3><p>Click in the timeline or select the sequence in the Project panel, then click the <span class="ui">Export</span> tab.</p></li>
+<li><h3>Choose a destination</h3><p>On the left, <span class="ui">Media File</span> makes an ordinary file, and some social destinations can upload for you.</p></li>
+<li><h3>Set the file name, location and preset</h3><p>Give the file a name and location you'll find again, then choose a Preset such as <span class="ui">Match Source – Adaptive High Bitrate</span>, which uses H.264 at the sequence's frame size and frame rate.</p></li>
+<li><h3>Check Range and Captions</h3><p>Range, under the preview, offers Entire Source, Source In/Out, Work Area and Custom. If you have captions, choose in <span class="ui">Captions</span> whether to leave them out, export a sidecar file or burn them into the picture.</p></li>
+<li><h3>Check the estimated size and export</h3><p>Estimated File Size is at the bottom right. If it's too big to send, try a Medium Bitrate preset. Click <span class="ui">Export</span> and wait for it to finish.</p></li>
+<li><h3>Watch the file you made</h3><p>Open the actual file and watch it through: picture, sound, captions, and no extra black at the end.</p></li>
+</ol>
+
+<h2 id="settings">Settings worth knowing</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Setting</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Format</td><td>The file type and codec, such as H.264 (MP4), HEVC or QuickTime (ProRes)</td></tr>
+<tr><td>Match Source</td><td>Automatically uses the source's frame size and frame rate</td></tr>
+<tr><td>Bitrate</td><td>Data per second; higher is sharper but bigger. VBR adapts to how complex the picture is; CBR stays constant.</td></tr>
+<tr><td>Use Maximum Render Quality</td><td>Helps quality when scaling down, but takes longer</td></tr>
+<tr><td>Content Credentials</td><td>Optionally embeds who created and edited the file</td></tr>
+</tbody></table></div>
+<p class="note">For frame sizes and presets per destination, see <a href="#en-presets-resolution">Common presets and resolutions</a>.</p>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Only part of the video exported</b>Range was set to Source In/Out by leftover In/Out points. Switch to Entire Source.</li>
+<li><b>Can't find the file</b>Check Location before you click Export, and put a date or version in the file name.</li>
+<li><b>Captions missing from the file</b>Open Captions and choose to burn them in or export a sidecar file. With None there are no captions.</li>
+<li><b>Black or frozen frames at the end</b>A clip or graphic runs past the end of the edit. Remove it or set Range precisely.</li>
+<li><b>File too big to send</b>Lower the bitrate with a Medium or Low preset rather than shrinking the frame below what the destination needs.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Export mode and Quick Export work the same way.</li>
+<li>The Content Credentials option at export arrived in 26.2.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/workflow-overview-exporting.html">Export workflow overview</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/export-settings-reference-premiere-pro.html">Overview of export settings</a></li>
+<li><a href="https://helpx.adobe.com/uk/premiere/desktop/render-and-export/export-files/quickly-export-a-video-file.html">Quickly export a video file</a></li>
+</ul>
+</template>
+<template id="t-en-ae-comp-layers">
+<p class="crumb">After Effects</p>
+<h1>Compositions and layers</h1>
+<p class="lead">In After Effects a piece of work is a <b>composition</b>, with its own frame size, frame rate and duration. Inside it are <b>layers</b> stacked like sheets of acetate: higher layers cover what's below.</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>The big difference from Premiere:</b> a Premiere track holds many clips in a row, but an After Effects layer has only one source. That's why a single piece often has dozens of layers.</p></div>
+<div class="demo" data-demo="ae-comp-layers"></div>
+
+<h2 id="comp">Creating a composition</h2>
+<ol class="steps">
+<li><h3>From footage (easiest)</h3><p>Drag a video from the Project panel onto the New Composition icon at the bottom of the panel. The comp takes that file's size and frame rate.</p></li>
+<li><h3>Or set it up yourself</h3><p>Choose <span class="ui">Composition › New Composition</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd> / <kbd>Cmd</kbd>+<kbd>N</kbd>), pick a Preset or type Width, Height, Frame Rate and Duration.</p></li>
+<li><h3>Change it later</h3><p><span class="ui">Composition › Composition Settings</span> (<kbd>Ctrl</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>K</kbd>) lets you change duration or size at any time.</p></li>
+</ol>
+
+<h2 id="types">Kinds of layer</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Layer</th><th>What it is</th><th>Create it with</th></tr></thead>
+<tbody>
+<tr><td>Footage</td><td>Imported video, stills or audio</td><td>Drag from the Project panel</td></tr>
+<tr><td>Text</td><td>Editable, animatable type</td><td><span class="ui">Layer › New › Text</span></td></tr>
+<tr><td>Shape</td><td>Vector shapes that stay sharp at any size</td><td>Shape tools or the Pen tool</td></tr>
+<tr><td>Solid</td><td>A flat colour, for backgrounds or effects</td><td><kbd>Ctrl</kbd>+<kbd>Y</kbd> / <kbd>Cmd</kbd>+<kbd>Y</kbd></td></tr>
+<tr><td>Adjustment</td><td>Its effects apply to every layer below</td><td><span class="ui">Layer › New › Adjustment Layer</span></td></tr>
+<tr><td>Null Object</td><td>An invisible layer that drives other layers' motion</td><td><span class="ui">Layer › New › Null Object</span></td></tr>
+<tr><td>Precomp</td><td>A composition used as a layer in another</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
+</tbody></table></div>
+
+<h2 id="transform">Transform: five properties every layer has</h2>
+<p>Press a letter to reveal that property on the selected layer: <kbd>A</kbd> Anchor Point · <kbd>P</kbd> Position · <kbd>S</kbd> Scale · <kbd>R</kbd> Rotation · <kbd>T</kbd> Opacity. Hold <kbd>Shift</kbd> and press another to show several at once.</p>
+
+<h2 id="preview">Previewing</h2>
+<ul class="check">
+<li><span><b>Press Spacebar to preview.</b> The green bar on the timeline shows what's cached and will play smoothly.</span></li>
+<li><span><b>Lower the Composition panel's Resolution.</b> Half or Quarter makes previews faster while you work. It doesn't change the comp's frame size.</span></li>
+<li><span><b>Set a work area.</b> Press <kbd>B</kbd> and <kbd>N</kbd> to set the start and end of the range you preview.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>You added something but can't see it</b>It's probably under an opaque layer. Drag it higher in the Timeline.</li>
+<li><b>Mixing up Resolution and frame size</b>Resolution in the Composition panel is preview quality; the real size is in Composition Settings.</li>
+<li><b>The comp is shorter than you need</b>Change Duration in Composition Settings rather than dragging the end of a layer.</li>
+<li><b>Editing the wrong comp</b>Check the tab name above the Timeline before you change anything, especially with nested precomps.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>Creating compositions and layers works the same way.</li>
+<li>The Adobe Stock panel and AI Assistant arrived in 27.0.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+</ul>
+</template>
+<template id="t-en-ae-keyframes">
+<p class="crumb">After Effects</p>
+<h1>Keyframes in After Effects</h1>
+<p class="lead">A keyframe says "at this time, this property has this value", and After Effects fills in everything between. What makes motion look professional is the <b>timing</b> between keyframes, which you control with Easy Ease and the Graph Editor.</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Select keyframes and press <kbd>F9</kbd>.</b> Motion then eases out and slows down before it stops, instead of shooting off and halting dead. Compare the two in the demo.</p></div>
+<div class="demo" data-demo="ae-keyframes"></div>
+
+<h2 id="steps">Your first keyframes</h2>
+<ol class="steps">
+<li><h3>Reveal the property</h3><p>Select a layer and press <kbd>P</kbd> for Position (or <kbd>S</kbd> Scale, <kbd>R</kbd> Rotation, <kbd>T</kbd> Opacity).</p></li>
+<li><h3>Click the stopwatch</h3><p>Move the playhead to the start and click the stopwatch next to the property name. That's your first keyframe.</p>
+<p class="note">Shortcut to add a Position keyframe: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows) or <kbd>Option</kbd>+<kbd>P</kbd> (Mac).</p></li>
+<li><h3>Move in time and change the value</h3><p>Move the playhead forward, then drag the layer in the Composition panel or type a new value. After Effects adds the second keyframe for you.</p></li>
+<li><h3>Add Easy Ease</h3><p>Drag-select both keyframes and press <kbd>F9</kbd>. The keyframe icons change from diamonds to hourglass shapes.</p></li>
+<li><h3>Refine in the Graph Editor</h3><p>Press <kbd>Shift</kbd>+<kbd>F3</kbd> to open the Graph Editor. Drag a keyframe's handle further out to increase its influence, making the ease stronger.</p></li>
+</ol>
+
+<h2 id="graphs">Value graph vs speed graph</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Graph</th><th>Shows</th><th>Use it when</th></tr></thead>
+<tbody>
+<tr><td>Value Graph</td><td>The property's actual value over time (X red, Y green)</td><td>You want to see where a value goes, or build an overshoot</td></tr>
+<tr><td>Speed Graph</td><td>How fast the value changes</td><td>You want to shape speed, such as a hard start</td></tr>
+</tbody></table></div>
+<p>In the Composition panel, the motion path shows one dot per frame. Dots far apart mean fast; dots close together mean slow.</p>
+
+<h2 id="types">Interpolation types</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Type</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Linear</td><td>Constant speed with abrupt changes at keyframes; looks stiff</td></tr>
+<tr><td>Bezier / Easy Ease</td><td>Smooth acceleration and deceleration; Easy Ease uses 33.33% influence by default</td></tr>
+<tr><td>Auto Bezier</td><td>The default for motion paths, giving smooth curves</td></tr>
+<tr><td>Hold</td><td>Keeps the value until the next keyframe, then jumps; good for snappy changes</td></tr>
+</tbody></table></div>
+<p class="note">Change it by right-clicking a keyframe › <span class="ui">Keyframe Interpolation</span>.</p>
+
+<h2 id="keys">Handy shortcuts</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Key</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><kbd>J</kbd> / <kbd>K</kbd></td><td>Previous / next keyframe (or marker)</td></tr>
+<tr><td><kbd>U</kbd></td><td>Show only keyframed properties</td></tr>
+<tr><td><kbd>F9</kbd></td><td>Easy Ease</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>F9</kbd></td><td>Easy Ease In</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F9</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F9</kbd></td><td>Easy Ease Out</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>F3</kbd></td><td>Toggle the Graph Editor</td></tr>
+<tr><td><kbd>Alt</kbd>+<kbd>←</kbd>/<kbd>→</kbd> / <kbd>Option</kbd>+<kbd>←</kbd>/<kbd>→</kbd></td><td>Nudge selected keyframes by one frame</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Changing a value changes the whole layer</b>The stopwatch isn't on, so there are no keyframes. Turn it on first, then change values.</li>
+<li><b>Motion too fast or too slow</b>Drag keyframes further apart to slow down, or closer together to speed up.</li>
+<li><b>Easy Ease feels sluggish</b>Lower the influence in the Graph Editor, or use Ease Out on the first keyframe and Ease In on the last only.</li>
+<li><b>Dragging handles in the Graph Editor does nothing useful</b>Check whether you're in the Speed Graph or Value Graph; handles behave differently in each.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>Keyframes, Easy Ease and the Graph Editor work the same in every version.</li>
+<li>The Effect Controls panel was redesigned in 26.5, so it may look different in earlier versions.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/en/after-effects/using/keyframe-interpolation.html">Keyframe interpolation</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/speed.html">Speed</a></li>
+</ul>
+</template>
+<template id="t-en-ae-text">
+<p class="crumb">After Effects</p>
+<h1>Animating text</h1>
+<p class="lead">Text in After Effects can move as a whole layer, or character by character, word by word or line by line using <b>text animators</b>. The fastest way in is to apply an animation preset and then look at how it's built.</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Reverse-engineer a preset:</b> apply an animation preset to a text layer, then press <kbd>U</kbd> or <kbd>UU</kbd> to see only the properties it animates or changes.</p></div>
+<div class="demo" data-demo="ae-text"></div>
+
+<h2 id="create">Create a text layer</h2>
+<ol class="steps">
+<li><h3>Choose the Type tool</h3><p>Press <kbd>Ctrl</kbd>+<kbd>T</kbd> / <kbd>Cmd</kbd>+<kbd>T</kbd>. Click once in the Composition panel for single-line point text, or drag a box for paragraph text.</p></li>
+<li><h3>Set font and size</h3><p>Use the Character panel or the Properties panel. For Korean or Chinese, choose a font that contains those characters, or you'll see empty boxes.</p></li>
+</ol>
+
+<h2 id="preset">Method 1: an animation preset</h2>
+<ol class="steps">
+<li><h3>Open the Effects &amp; Presets panel</h3><p>Go to <span class="ui">Animation Presets › Text</span> for categories such as Animate In, Animate Out and Blurs.</p></li>
+<li><h3>Drag a preset onto the text layer</h3><p>It starts at the playhead. Press Spacebar to see it.</p>
+<p class="note">To preview presets before applying them, choose <span class="ui">Browse Presets</span> from the Effects &amp; Presets panel menu to open them in Adobe Bridge.</p></li>
+</ol>
+
+<h2 id="animator">Method 2: build it with a text animator</h2>
+<ol class="steps">
+<li><h3>Add an animator</h3><p>Expand the text layer in the Timeline, click <span class="ui">Animate</span> and choose a property such as Opacity or Position, or use <span class="ui">Animation › Animate Text</span>.</p></li>
+<li><h3>Set the characters' "target" value</h3><p>For example, set Opacity to 0%. Characters inside the Range Selector get this value.</p></li>
+<li><h3>Animate the Range Selector</h3><p>Expand <span class="ui">Range Selector 1</span>, turn on the stopwatch for <span class="ui">Start</span> at 0%, move forward in time and set Start to 100%. The characters appear one by one.</p></li>
+<li><h3>Choose the unit under Advanced</h3><p>In Range Selector › Advanced › <span class="ui">Based On</span>, choose whether it counts characters, words or lines.</p></li>
+</ol>
+
+<h2 id="ideas">Ideas to try</h2>
+<ul class="check">
+<li><span><b>Typewriter</b>: Opacity 0%, then animate Start from 0 to 100%.</span></li>
+<li><span><b>Rise in letter by letter</b>: Position Y +30 and Opacity 0% in the same animator.</span></li>
+<li><span><b>Jitter</b>: add a Wiggly Selector instead of a Range Selector.</span></li>
+<li><span><b>Changing weight</b>: use a variable font and add an animator for its Weight axis.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Animating the whole layer instead of each character</b>A layer's Transform moves the whole block. For per-character motion you need an animator.</li>
+<li><b>Mixing up Start and End</b>Characters between Start and End are the ones that get the animator's values. Watch the range bars in the Composition panel.</li>
+<li><b>Korean or Chinese shows as boxes</b>The font lacks those characters. Switch to a font that supports the language.</li>
+<li><b>Text motion looks choppy</b>Turn on motion blur for the text layer.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>Text animators and the Range Selector work the same way.</li>
+<li>Animating variable font axes arrived in 26.0.</li>
+<li>Editable text from Illustrator files arrived in 27.0.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/using/animating-text.html">Animating text</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/examples-resources-text-animation.html">Examples and resources for text animation</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/working-with-variable-font-axes.html">Working with Variable Font Axes</a></li>
+</ul>
+</template>
+<template id="t-en-ae-render">
+<p class="crumb">After Effects</p>
+<h1>Rendering and export</h1>
+<p class="lead">After Effects turns compositions into files through the <b>Render Queue</b>. For an MP4, H.264 is built in. For transparent video or many files at once, there are routes for those too.</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>H.264 is the default.</b> On a fresh install, or after clearing Output Module preferences, After Effects uses <span class="ui">H.264 – Match Render Settings – 15 Mbps</span> as the default output module.</p></div>
+<div class="demo" data-demo="ae-render"></div>
+
+<h2 id="steps">Rendering an MP4</h2>
+<ol class="steps">
+<li><h3>Add the comp to the queue</h3><p>Select the composition and choose <span class="ui">File › Export › Add to Render Queue</span> (<kbd>Ctrl</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>M</kbd>). The Render Queue panel opens.</p></li>
+<li><h3>Check Render Settings</h3><p><span class="ui">Best Settings</span> is the usual choice. Also check Time Span: the whole composition, or only the work area?</p></li>
+<li><h3>Choose an Output Module</h3><p>Click the Output Module name and set Format to H.264. There are 5, 15 and 40 Mbps presets depending on resolution and the quality you want.</p></li>
+<li><h3>Name the file and pick a folder</h3><p>Click the file name next to <span class="ui">Output To</span> and choose where it goes.</p></li>
+<li><h3>Click Render</h3><p>Click Render on the right of the Render Queue panel, wait for the bar to finish, then open the file.</p></li>
+</ol>
+
+<h2 id="formats">Pick a format for the job</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>You need</th><th>Format</th><th>Channels</th></tr></thead>
+<tbody>
+<tr><td>A file for the web or social</td><td>H.264</td><td>RGB</td></tr>
+<tr><td>Transparent video to overlay in Premiere</td><td>QuickTime, Apple ProRes 4444 codec</td><td>RGB + Alpha</td></tr>
+<tr><td>An image sequence</td><td>PNG Sequence</td><td>RGB or RGB + Alpha</td></tr>
+<tr><td>A high-quality master</td><td>QuickTime, Apple ProRes 422 HQ codec</td><td>RGB</td></tr>
+</tbody></table></div>
+<p class="note">Set your own default output modules under <span class="ui">Edit › Templates › Output Module</span>.</p>
+
+<h2 id="ame">Hand off to Media Encoder or Premiere</h2>
+<ul class="check">
+<li><span><b>Adobe Media Encoder</b>: choose <span class="ui">File › Export › Add to Adobe Media Encoder Queue</span>. Good for several files and specs, and you can keep working in After Effects while it renders.</span></li>
+<li><span><b>Dynamic Link to Premiere</b>: import the composition into Premiere without rendering. Changes in After Effects update in Premiere. Versions must match.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>The file is shorter than expected</b>Time Span in Render Settings is set to the work area. Change it to the composition length or widen the work area.</li>
+<li><b>MP4 has a black background</b>H.264 can't store transparency. Use QuickTime ProRes 4444 with Channels set to RGB + Alpha.</li>
+<li><b>Can't find the file</b>Check Output To every time before you click Render.</li>
+<li><b>Rendering is very slow</b>Turn off layers you don't need and make sure Multi-Frame Rendering is on in Preferences.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>The Render Queue and built-in H.264 work the same way.</li>
+<li>27.0 adds a PNG compression slider (still lossless) and better Auto-Save recovery.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/desktop/render-and-export/export-h-264-from-the-after-effects/exporting-h264-from-the-after-effects-render-queue.html">Exporting H.264 from the After Effects Render Queue</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/dynamic-link-effects.html">Dynamic Link and After Effects</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+</ul>
+</template>
+<template id="t-en-whats-new">
+<p class="crumb">Reference</p>
+<h1>What's new in 27.0</h1>
+<p class="lead">Premiere and After Effects 27.0 shipped in November 2026, the big release of the year. The changes beginners will notice most are Color Mode replacing the Lumetri Color panel, the AI Assistant, and higher minimum system requirements.</p>
+<ul class="meta"><li class="ver">Premiere &amp; After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>All levels</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Before you update:</b> 27.0 needs Windows 11 v24H2 or later, or an Apple silicon Mac with macOS 15 or later. See <a href="#en-system-requirements">System requirements and install</a>.</p></div>
+<div class="demo" data-demo="whats-new"></div>
+
+<h2 id="premiere">Premiere 27.0</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Feature</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td>Color Mode</td><td>A new grading mode in the header bar that replaces the Lumetri Color panel. See <a href="#en-color-mode">Color grading with Color Mode</a>.</td></tr>
+<tr><td>AI Assistant</td><td>A panel where you type requests or ask how to do things; some actions use Firefly generative credits</td></tr>
+<tr><td>Generated audio</td><td>Generate music, sound effects and soundscapes onto the timeline</td></tr>
+<tr><td>Generative Extend for transitions</td><td>Fills in frames when a clip is too short for a transition</td></tr>
+<tr><td>Eight new effects</td><td>Including Bevel Alpha, Bevel &amp; Emboss, Posterize, Radial Blur and Zoom Blur</td></tr>
+<tr><td>Usability</td><td>Waveforms while recording, animated thumbnails in the Effects panel, a card layout in the Properties panel, and a Live Ripple Edit preference</td></tr>
+<tr><td>Performance</td><td>AI features run faster on NVIDIA RTX GPUs</td></tr>
+</tbody></table></div>
+
+<h2 id="ae">After Effects 27.0</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Feature</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td>AI Assistant</td><td>Ask how to do things or give instructions in plain text</td></tr>
+<tr><td>Better Auto-Save recovery</td><td>Easier to open auto-saved work after a crash</td></tr>
+<tr><td>Adobe Stock panel</td><td>Search and use Adobe Stock media inside the app</td></tr>
+<tr><td>Editable Illustrator text</td><td>Text from Illustrator files stays editable type in After Effects</td></tr>
+<tr><td>New effects</td><td>Including Contour Paint and De-esser</td></tr>
+<tr><td>PNG</td><td>A compression slider for PNG renders</td></tr>
+</tbody></table></div>
+
+<h2 id="year">The 2026 timeline</h2>
+<ul class="check">
+<li><span><b>26.0 (Jan)</b> Premiere Pro renamed Adobe Premiere; Object Mask and built-in Adobe Stock · After Effects can animate variable fonts</span></li>
+<li><span><b>26.2 (Apr)</b> Premiere adds Content Credentials at export and a Color Mode public beta in the beta app · After Effects gets Object Matte</span></li>
+<li><span><b>26.3 (Jun)</b> Premiere adds 90+ modern effects, transitions and animations · After Effects gets Depth of Field in Advanced 3D</span></li>
+<li><span><b>26.5 (Sep)</b> Premiere gets the Generative Media Tool · After Effects redesigns Effect Controls and supports ACES 2.0</span></li>
+<li><span><b>27.0 (Nov)</b> The major release in the tables above</span></li>
+</ul>
+
+<h2 id="update">Should you update now?</h2>
+<ul class="mist">
+<li><b>You're close to a deadline</b>Finish in your current version. A project opened and saved in the new version won't open in the old one.</li>
+<li><b>You work in a team</b>Agree to update together, and update Premiere and After Effects as a pair so Dynamic Link keeps working.</li>
+<li><b>You rely on plug-ins</b>Check that the developer supports 27.0.</li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere release notes</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+<li><a href="https://community.adobe.com/announcements-727/important-notice-upcoming-system-requirement-changes-in-v27-0-1639157">Important Notice: Upcoming System Requirement Changes in v27.0</a></li>
+</ul>
+</template>
+<template id="t-en-shortcuts">
+<p class="crumb">Reference</p>
+<h1>Keyboard shortcuts</h1>
+<p class="lead">You don't need to learn them all. Start with the dozen or so single keys you'll use every day and add more over time. Many letters exist in both apps but do different things; try them in the demo.</p>
+<ul class="meta"><li class="ver">Premiere &amp; After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Letter shortcuts not working?</b> If a Korean, Chinese or Thai IME is active, switch it back to English input and try again.</p></div>
+<div class="demo" data-demo="shortcuts"></div>
+
+<h2 id="premiere">Premiere: everyday shortcuts</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Action</th><th>Windows</th><th>Mac</th></tr></thead>
+<tbody>
+<tr><td>Save</td><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td><kbd>Cmd</kbd>+<kbd>S</kbd></td></tr>
+<tr><td>Undo / Redo</td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td><kbd>Cmd</kbd>+<kbd>Z</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td></tr>
+<tr><td>Import</td><td><kbd>Ctrl</kbd>+<kbd>I</kbd></td><td><kbd>Cmd</kbd>+<kbd>I</kbd></td></tr>
+<tr><td>Export (open Export mode)</td><td><kbd>Ctrl</kbd>+<kbd>M</kbd></td><td><kbd>Cmd</kbd>+<kbd>M</kbd></td></tr>
+<tr><td>Cut at the playhead (Add Edit)</td><td><kbd>Ctrl</kbd>+<kbd>K</kbd></td><td><kbd>Cmd</kbd>+<kbd>K</kbd></td></tr>
+<tr><td>Ripple Delete</td><td><kbd>Shift</kbd>+<kbd>Delete</kbd></td><td><kbd>Shift</kbd>+<kbd>Delete</kbd></td></tr>
+<tr><td>Apply default video transition</td><td><kbd>Ctrl</kbd>+<kbd>D</kbd></td><td><kbd>Cmd</kbd>+<kbd>D</kbd></td></tr>
+<tr><td>New bin</td><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td><kbd>Cmd</kbd>+<kbd>B</kbd></td></tr>
+<tr><td>Zoom timeline in / out</td><td><kbd>=</kbd> / <kbd>-</kbd></td><td><kbd>=</kbd> / <kbd>-</kbd></td></tr>
+<tr><td>Previous / next edit point</td><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td><kbd>↑</kbd> / <kbd>↓</kbd></td></tr>
+<tr><td>Maximise panel</td><td><kbd>`</kbd></td><td><kbd>`</kbd></td></tr>
+</tbody></table></div>
+
+<h2 id="ae">After Effects: everyday shortcuts</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Action</th><th>Windows</th><th>Mac</th></tr></thead>
+<tbody>
+<tr><td>New composition</td><td><kbd>Ctrl</kbd>+<kbd>N</kbd></td><td><kbd>Cmd</kbd>+<kbd>N</kbd></td></tr>
+<tr><td>Composition Settings</td><td><kbd>Ctrl</kbd>+<kbd>K</kbd></td><td><kbd>Cmd</kbd>+<kbd>K</kbd></td></tr>
+<tr><td>New solid</td><td><kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td><kbd>Cmd</kbd>+<kbd>Y</kbd></td></tr>
+<tr><td>Duplicate layer</td><td><kbd>Ctrl</kbd>+<kbd>D</kbd></td><td><kbd>Cmd</kbd>+<kbd>D</kbd></td></tr>
+<tr><td>Precompose</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td><td><kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
+<tr><td>Add to Render Queue</td><td><kbd>Ctrl</kbd>+<kbd>M</kbd></td><td><kbd>Cmd</kbd>+<kbd>M</kbd></td></tr>
+<tr><td>Add Position keyframe</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td><td><kbd>Option</kbd>+<kbd>P</kbd></td></tr>
+<tr><td>Easy Ease</td><td><kbd>F9</kbd></td><td><kbd>F9</kbd></td></tr>
+<tr><td>Graph Editor</td><td><kbd>Shift</kbd>+<kbd>F3</kbd></td><td><kbd>Shift</kbd>+<kbd>F3</kbd></td></tr>
+<tr><td>Set work area start / end</td><td><kbd>B</kbd> / <kbd>N</kbd></td><td><kbd>B</kbd> / <kbd>N</kbd></td></tr>
+</tbody></table></div>
+<p class="note">On a Mac, some F-keys may need <kbd>fn</kbd> held down, depending on your keyboard settings.</p>
+
+<h2 id="custom">See and change shortcuts in the app</h2>
+<ol class="steps">
+<li><h3>Premiere</h3><p>Windows: <span class="ui">Edit › Keyboard Shortcuts</span> · Mac: <span class="ui">Premiere › Keyboard Shortcuts</span>. A keyboard map highlights keys that have commands, and you can search commands by name.</p></li>
+<li><h3>After Effects</h3><p>Choose <span class="ui">Edit › Keyboard Shortcuts</span> to search and reassign keys the same way.</p></li>
+<li><h3>Save your own set</h3><p>If you change shortcuts, save them as a new set rather than overwriting the default, so it's easy to go back.</p></li>
+</ol>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>The shortcut types a letter instead</b>A text field still has focus. Click in the timeline first, then press the key again.</li>
+<li><b>A correct shortcut does nothing</b>Many shortcuts only work when their panel is active. Look for the blue outline to see which panel has focus.</li>
+<li><b>Shortcuts from a tutorial don't match</b>The video may use an older version or a customised set. Check the Keyboard Shortcuts window on your own machine.</li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/mena_en/premiere-pro/using/default-keyboard-shortcuts.html">Default keyboard shortcuts in Premiere</a></li>
+<li><a href="https://helpx.adobe.com/my_ms/after-effects/desktop/get-started/keyboard-shortcuts/keyboard-shortcuts-reference.html">After Effects keyboard shortcuts reference</a></li>
+</ul>
+</template>
+<template id="t-en-glossary">
+<p class="crumb">Reference</p>
+<h1>Glossary</h1>
+<p class="lead">Common terms from Premiere and After Effects with short explanations. Search by term or by words in the definition, or filter by category.</p>
+<ul class="meta"><li class="ver">Premiere &amp; After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>All levels</li><li>Compiled from the other pages on this site</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Using the apps in another language?</b> Menu and panel names on this site are in English. If the apps are installed in Korean or Simplified Chinese, you'll see that language's translations instead.</p></div>
+<div class="demo" data-demo="glossary"></div>
+
+<h2 id="pairs">Pairs beginners often mix up</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Pair</th><th>The difference</th></tr></thead>
+<tbody>
+<tr><td>Sequence / Composition</td><td>The unit of work in Premiere / in After Effects</td></tr>
+<tr><td>Render / Export</td><td>Rendering processes frames for smooth playback or output; exporting makes the final file (After Effects uses "render" for both)</td></tr>
+<tr><td>Codec / Container</td><td>How it's compressed, such as H.264 / the file wrapper, such as .mp4</td></tr>
+<tr><td>Frame size / Resolution in After Effects</td><td>The comp's real size / preview quality in the Composition panel</td></tr>
+<tr><td>Ripple / Rolling edit</td><td>Change length and push later clips / move the cut between two clips, keeping total length</td></tr>
+<tr><td>Insert / Overwrite</td><td>Place and push existing material / place over it</td></tr>
+<tr><td>Clip marker / Sequence marker</td><td>Travels with the clip / stays on the sequence's time</td></tr>
+</tbody></table></div>
+
+<h2 id="more">Read more</h2>
+<ul class="check">
+<li><span><a href="#en-sequence">Sequences and Sequence Settings</a> for frame size, frame rate and aspect ratio</span></li>
+<li><span><a href="#en-timeline">Editing in the Timeline</a> for ripple, razor and linking</span></li>
+<li><span><a href="#en-ae-keyframes">Keyframes in After Effects</a> for interpolation and the Graph Editor</span></li>
+<li><span><a href="#en-export">Exporting video</a> for codecs, bitrate and presets</span></li>
+</ul>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/export-settings-reference-premiere-pro.html">Overview of export settings (Premiere)</a></li>
+<li><a href="https://helpx.adobe.com/en/after-effects/using/keyframe-interpolation.html">Keyframe interpolation (After Effects)</a></li>
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers (After Effects)</a></li>
+</ul>
+</template>
 
 <script>
 new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true});
@@ -2036,13 +3484,13 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const NAV=[
- {g:{th:'เริ่มที่นี่',en:'Start here'},items:[{id:'first-video',th:'ทำคลิปแรกตั้งแต่ต้นจนจบ',en:'Your first video, start to finish'},{id:'project-media',th:'จัดการไฟล์และโปรเจกต์',en:'Managing files and projects'},{th:'Premiere กับ After Effects ใช้ต่างกันยังไง',en:'Premiere vs After Effects'},{th:'สเปกเครื่องและการติดตั้ง',en:'System requirements and install'},{th:'รู้จักหน้าจอและพาเนล',en:'Tour of the workspace'}]},
+ {g:{th:'เริ่มที่นี่',en:'Start here'},items:[{id:'first-video',th:'ทำคลิปแรกตั้งแต่ต้นจนจบ',en:'Your first video, start to finish'},{id:'project-media',th:'จัดการไฟล์และโปรเจกต์',en:'Managing files and projects'},{id:'premiere-vs-ae',th:'Premiere กับ After Effects ใช้ต่างกันยังไง',en:'Premiere vs After Effects'},{id:'system-requirements',th:'สเปกเครื่องและการติดตั้ง',en:'System requirements and install'},{id:'workspace-tour',th:'รู้จักหน้าจอและพาเนล',en:'Tour of the workspace'}]},
  {g:{th:'พื้นฐาน Premiere',en:'Premiere basics'},items:[{id:'sequence',th:'Sequence และ Sequence Settings',en:'Sequences and Sequence Settings'},{id:'monitors',th:'Source Monitor กับ Program Monitor',en:'Source Monitor vs Program Monitor'},{id:'timeline',th:'ตัดต่อบน Timeline',en:'Editing in the Timeline'},{id:'markers',th:'Marker',en:'Markers'}]},
  {g:{th:'เอฟเฟกต์และกราฟิก',en:'Effects and graphics'},items:[{id:'effects-keyframes',th:'Effects และ Keyframe',en:'Effects and keyframes'},{id:'mogrt',th:'MOGRT (Motion Graphics Template)',en:'MOGRT (Motion Graphics templates)'},{id:'object-mask',th:'Object Mask',en:'Object Mask'}]},
- {g:{th:'สี เสียง และซับไตเติล',en:'Color, audio and captions'},items:[{id:'color-mode',th:'แต่งสีด้วย Color Mode',en:'Color grading with Color Mode'},{id:'captions',th:'ซับไตเติลภาษาเกาหลีและจีนตัวย่อ',en:'Korean and Simplified Chinese captions'},{th:'เสียงและเพลง',en:'Audio and music'}]},
- {g:{th:'ส่งออก',en:'Export'},items:[{id:'presets-resolution',th:'Preset และ Resolution ที่ใช้บ่อย',en:'Common presets and resolutions'},{th:'Export วิดีโอ',en:'Exporting video'}]},
- {g:{th:'After Effects',en:'After Effects'},items:[{th:'Composition และ Layer',en:'Compositions and layers'},{th:'Keyframe ใน After Effects',en:'Keyframes in After Effects'},{th:'ทำตัวหนังสือเคลื่อนไหว',en:'Animating text'},{th:'Render และส่งออก',en:'Rendering and export'}]},
- {g:{th:'อ้างอิง',en:'Reference'},items:[{th:'มีอะไรใหม่ในเวอร์ชัน 27.0',en:"What's new in 27.0"},{th:'คีย์ลัด',en:'Keyboard shortcuts'},{th:'อภิธานศัพท์',en:'Glossary'}]}
+ {g:{th:'สี เสียง และซับไตเติล',en:'Color, audio and captions'},items:[{id:'color-mode',th:'แต่งสีด้วย Color Mode',en:'Color grading with Color Mode'},{id:'captions',th:'ซับไตเติลภาษาเกาหลีและจีนตัวย่อ',en:'Korean and Simplified Chinese captions'},{id:'audio',th:'เสียงและเพลง',en:'Audio and music'}]},
+ {g:{th:'ส่งออก',en:'Export'},items:[{id:'presets-resolution',th:'Preset และ Resolution ที่ใช้บ่อย',en:'Common presets and resolutions'},{id:'export',th:'Export วิดีโอ',en:'Exporting video'}]},
+ {g:{th:'After Effects',en:'After Effects'},items:[{id:'ae-comp-layers',th:'Composition และ Layer',en:'Compositions and layers'},{id:'ae-keyframes',th:'Keyframe ใน After Effects',en:'Keyframes in After Effects'},{id:'ae-text',th:'ทำตัวหนังสือเคลื่อนไหว',en:'Animating text'},{id:'ae-render',th:'Render และส่งออก',en:'Rendering and export'}]},
+ {g:{th:'อ้างอิง',en:'Reference'},items:[{id:'whats-new',th:'มีอะไรใหม่ในเวอร์ชัน 27.0',en:"What's new in 27.0"},{id:'shortcuts',th:'คีย์ลัด',en:'Keyboard shortcuts'},{id:'glossary',th:'อภิธานศัพท์',en:'Glossary'}]}
 ];
 const ORDER=NAV.flatMap(g=>g.items.filter(i=>i.id));
 const PAGES=ORDER.map(i=>i.id);
@@ -2495,12 +3943,276 @@ D.captions=(root,L)=>{
  draw();
 };
 
+const capAfter=(root,t)=>{const c=document.createElement('p');c.className='cap';c.textContent=t;root.after(c)};
+
+D['premiere-vs-ae']=(root,L)=>{
+ const T={th:{h:'ทายดู: งานนี้ควรทำในโปรแกรมไหน',pr:'Premiere',ae:'After Effects',score:(a,b)=>`ถูก ${a} จาก ${b} ข้อ`,start:'เลือกคำตอบได้เลย มีทั้งหมด 8 ข้อ',again:'เล่นใหม่',ok:'ถูก',no:'ยังไม่ใช่',cap:'คำตอบเป็นแนวทางทั่วไป งานจริงหลายชิ้นใช้ทั้งสองโปรแกรมร่วมกัน',
+   Q:[['ตัดคลิปสัมภาษณ์ 20 นาทีให้เหลือ 3 นาที','pr','งานเรียงและตัดคลิปยาว ๆ คืองานหลักของ Premiere'],['ทำโลโก้บินเข้ามาแล้วแตกเป็นอนุภาค','ae','particle และ motion graphics ละเอียด ๆ ทำใน After Effects'],['ใส่ซับให้ vlog ทั้งเรื่อง','pr','Speech to Text และ captions อยู่ใน Premiere'],['ลบป้ายโฆษณาออกจากฉากที่กล้องเคลื่อน','ae','งาน compositing และ tracking ละเอียดทำใน After Effects'],['ปรับเสียงพูดให้ชัดและเพลงเบาลงตอนพูด','pr','Essential Sound และ Enhance Speech อยู่ใน Premiere'],['ทำ template แถบชื่อให้ทีมตัดต่อใช้ซ้ำ','ae','ออกแบบใน After Effects แล้ว export เป็น .mogrt ให้ใช้ใน Premiere'],['ตัดคลิป Reels 15 วินาทีจากฟุตเทจงานอีเวนต์','pr','ตัดต่อและ Auto Reframe เป็นงานของ Premiere'],['ทำตัวหนังสือเด้งทีละตัวอักษรแบบ kinetic typography','ae','text animator ทีละตัวอักษรเป็นจุดแข็งของ After Effects']]},
+  en:{h:'Quiz: which app is this job for?',pr:'Premiere',ae:'After Effects',score:(a,b)=>`${a} of ${b} right`,start:'Pick an answer for each one; there are 8',again:'Play again',ok:'Right',no:'Not quite',cap:'Answers are general guidance; many real projects use both apps together.',
+   Q:[['Cut a 20-minute interview down to 3 minutes','pr','Arranging and trimming long footage is Premiere\'s core job.'],['A logo flies in and bursts into particles','ae','Particles and detailed motion graphics belong in After Effects.'],['Caption a whole vlog','pr','Speech to Text and captions live in Premiere.'],['Remove a billboard from a moving shot','ae','Detailed compositing and tracking happen in After Effects.'],['Clean up dialogue and dip the music under it','pr','Essential Sound and Enhance Speech are in Premiere.'],['Build a reusable name-strap template for editors','ae','Design it in After Effects and export a .mogrt for Premiere.'],['Cut a 15-second Reel from event footage','pr','Editing and Auto Reframe are Premiere jobs.'],['Kinetic typography that pops letter by letter','ae','Per-character text animators are an After Effects strength.']]}}[L];
+ let ans={};
+ root.className='stage';
+ const draw=()=>{const n=Object.keys(ans).length,ok=Object.entries(ans).filter(([i,a])=>T.Q[i][1]===a).length;
+  root.innerHTML=`<h3>${T.h}</h3><ol class="quiz">${T.Q.map((q,i)=>{const a=ans[i];const st=a?(a===q[1]?'ok':'no'):'';return`<li class="${st}"><p>${q[0]}</p><div class="chips"><button type="button" class="chip" data-i="${i}" data-a="pr" aria-pressed="${a==='pr'}">${T.pr}</button><button type="button" class="chip" data-i="${i}" data-a="ae" aria-pressed="${a==='ae'}">${T.ae}</button></div>${a?`<p class="why"><b>${a===q[1]?T.ok:T.no}:</b> ${q[2]}</p>`:''}</li>`}).join('')}</ol><div class="chips"><p class="st" style="flex:1">${n?T.score(ok,n):T.start}</p><button type="button" class="btn rs">${T.again}</button></div>`;};
+ root.addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){ans[b.dataset.i]=b.dataset.a;draw();return}if(e.target.closest('.rs')){ans={};draw()}});
+ draw();capAfter(root,T.cap);
+};
+
+D['system-requirements']=(root,L)=>{
+ const T={th:{h:'เช็กเครื่องของคุณกับ Premiere และ After Effects 27.0',os:'ระบบปฏิบัติการ',ram:'RAM',gpu:'หน่วยความจำการ์ดจอ (VRAM)',work:'งานหลัก',hd:'HD',k4:'4K ขึ้นไป',res:{no:'ติดตั้ง 27.0 ไม่ได้',low:'ต่ำกว่าสเปกขั้นต่ำ',min:'ใช้ได้ (ขั้นต่ำ)',rec:'ตามสเปกแนะนำ'},why:'เหตุผล',cap:'สรุปจากหน้า Technical requirements ของ Adobe แบบย่อ ควรเช็กหน้าต้นฉบับก่อนซื้อเครื่อง',
+   OS:[['w11','Windows 11 v24H2 ขึ้นไป'],['w10','Windows 10 หรือ Windows 11 v23H2'],['mas','Mac ชิป Apple silicon, macOS 15 ขึ้นไป'],['mold','Mac ชิป Apple silicon, macOS 14'],['mi','Mac ชิป Intel']],
+   msg:{os:'ระบบปฏิบัติการไม่รองรับ 27.0',intel:'Mac ชิป Intel ใช้ได้ถึงเวอร์ชัน 26.x',ram:n=>`RAM ต่ำกว่าขั้นต่ำ ${n} GB`,ramrec:n=>`แนะนำ RAM ${n} GB สำหรับงานนี้`,gpu:'VRAM ต่ำกว่า 4 GB',gpurec:'แนะนำ VRAM 8 GB',ok:'ผ่านทุกข้อ'}},
+  en:{h:'Check your computer against Premiere and After Effects 27.0',os:'Operating system',ram:'RAM',gpu:'GPU memory (VRAM)',work:'Main work',hd:'HD',k4:'4K and up',res:{no:'Can\'t install 27.0',low:'Below minimum',min:'Runs (minimum)',rec:'Meets recommended'},why:'Why',cap:'A simplified summary of Adobe\'s technical requirements pages. Check the originals before buying hardware.',
+   OS:[['w11','Windows 11 v24H2 or later'],['w10','Windows 10 or Windows 11 v23H2'],['mas','Apple silicon Mac, macOS 15 or later'],['mold','Apple silicon Mac, macOS 14'],['mi','Intel Mac']],
+   msg:{os:'This OS isn\'t supported by 27.0',intel:'Intel Macs stay on version 26.x',ram:n=>`RAM is below the ${n} GB minimum`,ramrec:n=>`${n} GB RAM is recommended for this work`,gpu:'VRAM is below 4 GB',gpurec:'8 GB VRAM is recommended',ok:'Everything checks out'}}}[L];
+ let os='w11',ram=16,gpu=8,work='hd';
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="two"><div class="col">
+ <p class="mlabel">${T.os}</p><div class="chips oss">${T.OS.map(o=>`<button type="button" class="chip" data-o="${o[0]}">${o[1]}</button>`).join('')}</div>
+ <p class="mlabel">${T.ram}</p><div class="chips rams">${[8,16,32,64].map(n=>`<button type="button" class="chip" data-r="${n}">${n} GB</button>`).join('')}</div>
+ <div class="gpurow"><p class="mlabel">${T.gpu}</p><div class="chips gpus">${[2,4,8,12].map(n=>`<button type="button" class="chip" data-g="${n}">${n}${n===12?'+':''} GB</button>`).join('')}</div></div>
+ <p class="mlabel">${T.work}</p><div class="seg wk" style="max-width:280px"><button type="button" data-w="hd">${T.hd}</button><button type="button" data-w="4k">${T.k4}</button></div></div>
+ <div class="col res"></div></div>`;
+ const evalApp=app=>{const mac=os[0]==='m';if(os==='w10'||os==='mold')return['no',T.msg.os];if(os==='mi')return['no',T.msg.intel];
+  const min=app==='pr'?8:16,rec=work==='4k'?32:16;let lvl='rec',why=[];
+  if(ram<min)return['low',T.msg.ram(min)];
+  if(!mac&&gpu<4)return['low',T.msg.gpu];
+  if(ram<rec){lvl='min';why.push(T.msg.ramrec(rec))}
+  if(!mac&&gpu<8){lvl='min';why.push(T.msg.gpurec)}
+  return[lvl,why.join(' · ')||T.msg.ok]};
+ const draw=()=>{const mac=os[0]==='m';$('.gpurow',root).hidden=mac;
+  $('.res',root).innerHTML=[['pr','Premiere 27.0'],['ae','After Effects 27.0']].map(([k,n])=>{const[l,w]=evalApp(k);return`<div class="verdict v-${l}"><b>${n}</b><span>${T.res[l]}</span><small>${esc(w)}</small></div>`}).join('');
+  $$('.oss .chip',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.o===os)));$$('.rams .chip',root).forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.r===ram)));
+  $$('.gpus .chip',root).forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.g===gpu)));$$('.wk button',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.w===work)));};
+ root.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.o)os=b.dataset.o;else if(b.dataset.r)ram=+b.dataset.r;else if(b.dataset.g)gpu=+b.dataset.g;else if(b.dataset.w)work=b.dataset.w;else return;draw()});
+ draw();capAfter(root,T.cap);
+};
+
+D['workspace-tour']=(root,L)=>{
+ const T={th:{h:'คลิกแต่ละส่วนของหน้าจอเพื่อดูว่ามีไว้ทำอะไร',cap:'แผนผังอย่างง่ายของ workspace แบบ Editing ไม่ใช่ภาพหน้าจอจริง ตำแหน่งพาเนลย้ายได้ตามที่ตั้งไว้',
+   P:{hdr:['Header bar','แถบบนสุด มีแท็บสลับโหมด Import, Edit, Color และ Export, ชื่อโปรเจกต์, เมนู Workspaces และปุ่ม Quick Export',''],proj:['Project panel','ที่เก็บไฟล์ทั้งหมดที่ import เข้ามา และ sequence ที่สร้าง จัดเป็น bin (โฟลเดอร์) ได้','Shift+1'],src:['Source Monitor','ดูคลิปดิบทีละคลิป ตั้งจุด In/Out ก่อนวางลง timeline','Shift+2'],prg:['Program Monitor','แสดงผลงานใน sequence ที่เปิดอยู่','Shift+4'],tl:['Timeline','เรียงคลิปภาพและเสียงบน track ที่นี่คือที่ตัดต่อจริง','Shift+3'],tools:['Tools','เครื่องมือ Selection, Razor, Ripple Edit, Type, Pen และกลุ่มเครื่องมือ mask',''],meter:['Audio Meters','แสดงระดับเสียงขณะเล่น ใช้ดูว่าเสียงดังเกินจนแตกหรือเปล่า',''],side:['Effects / Properties','พาเนลด้านข้างที่สลับเป็น Effects, Effect Controls, Properties หรือ Essential Graphics ได้','Shift+7']}},
+  en:{h:'Click each part of the screen to see what it is for',cap:'A simplified map of the Editing workspace, not a screenshot. Panels can be rearranged.',
+   P:{hdr:['Header bar','The top bar: tabs for the Import, Edit, Color and Export modes, the project name, the Workspaces menu and the Quick Export button.',''],proj:['Project panel','Holds everything you import and the sequences you create, organised into bins (folders).','Shift+1'],src:['Source Monitor','Watch raw clips one at a time and set In/Out before placing them.','Shift+2'],prg:['Program Monitor','Shows the open sequence.','Shift+4'],tl:['Timeline','Picture and sound clips on tracks. This is where the editing happens.','Shift+3'],tools:['Tools','Selection, Razor, Ripple Edit, Type, Pen and the mask tool group.',''],meter:['Audio Meters','Shows audio levels during playback, so you can see if sound is clipping.',''],side:['Effects / Properties','A side area that switches between Effects, Effect Controls, Properties or Essential Graphics.','Shift+7']}}}[L];
+ const R={hdr:[0,0,100,8],src:[0,9,40,44],prg:[41,9,40,44],side:[82,9,18,44],proj:[0,54,28,46],tools:[29,54,4,46],tl:[34,54,60,46],meter:[95,54,5,46]};
+ let cur='tl';
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="two"><div class="wsmap" role="group">${Object.entries(R).map(([k,r])=>`<button type="button" class="wsp" data-k="${k}" aria-label="${T.P[k][0]}" style="left:${r[0]}%;top:${r[1]}%;width:${r[2]}%;height:${r[3]}%"><span>${k==='tools'?'⌖':k==='meter'?'▮▮':T.P[k][0]}</span></button>`).join('')}</div><div class="card"><h4 class="ct"></h4><p class="cd"></p><p class="ck"></p></div></div>`;
+ const draw=()=>{const p=T.P[cur];$('.ct',root).textContent=p[0];$('.cd',root).textContent=p[1];$('.ck',root).innerHTML=p[2]?`<kbd>${p[2]}</kbd>`:'';$$('.wsp',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===cur)))};
+ $('.wsmap',root).addEventListener('click',e=>{const b=e.target.closest('.wsp');if(b){cur=b.dataset.k;draw()}});
+ draw();capAfter(root,T.cap);
+};
+
+D.audio=(root,L)=>{
+ const T={th:{h:'ลองบาลานซ์เสียงพูดกับเพลง',mus:'ระดับเพลง',duck:'Ducking: ลดเพลงลงอัตโนมัติตอนมีเสียงพูด',amt:'ลดลง',t:'เวลา',v:'เสียงพูด',m:'เพลง',meter:'Audio Meter (เสียงรวม)',clip:'เสียงแตก! ระดับเกิน 0 dB',ok:'ระดับปลอดภัย',low:'เพลงกลบเสียงพูด ลองลดเพลงหรือเปิด Ducking',good:'เสียงพูดชัด เพลงอยู่ข้างหลัง',cap:'เดโมจำลองหลักการ ตัวเลขเป็นค่าประมาณ ใน Premiere ใช้ Essential Sound ตั้งประเภทเสียงและสร้าง keyframe ducking ให้'},
+  en:{h:'Try balancing dialogue and music',mus:'Music level',duck:'Ducking: lower the music automatically under dialogue',amt:'Reduce by',t:'Time',v:'Dialogue',m:'Music',meter:'Audio Meter (mix)',clip:'Clipping! The level goes over 0 dB',ok:'Safe level',low:'The music buries the dialogue. Lower it or turn on Ducking.',good:'Dialogue is clear with music underneath.',cap:'A simulation of the idea with approximate numbers. In Premiere, Essential Sound tags audio types and generates the ducking keyframes for you.'}}[L];
+ const V=[[1,5],[7,12],[14,18]];const END=20;
+ let mus=-6,duck=false,amt=12,t=3;
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="two"><div class="col"><div class="atl"><div class="arow"><span>${T.v}</span><div class="alane va">${V.map(([a,b])=>`<i style="left:${a/END*100}%;width:${(b-a)/END*100}%"></i>`).join('')}</div></div><div class="arow"><span>${T.m}</span><div class="alane ma"><svg viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><path class="mp" fill="rgba(79,154,70,.55)" stroke="#8fd16a" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div></div><div class="aph"></div></div>
+ <label class="rng"><span>${T.t}<code class="tv"></code></span><input type="range" class="ts" min="0" max="${END}" step="0.1" value="3"></label></div>
+ <div class="col"><label class="rng"><span>${T.mus}<code class="mv"></code></span><input type="range" class="ms" min="-30" max="6" step="1" value="-6"></label>
+ <label class="chk"><input type="checkbox" class="dk"> ${T.duck}</label><label class="rng"><span>${T.amt}<code class="av"></code></span><input type="range" class="as" min="3" max="24" step="1" value="12"></label>
+ <p class="mlabel">${T.meter}</p><div class="meterbar"><b></b><i></i></div><p class="st"></p></div></div>`;
+ const inV=tt=>V.some(([a,b])=>tt>=a&&tt<b);
+ const near=tt=>{let d=1e9;for(const[a,b]of V){if(tt>=a&&tt<b)return 0;d=Math.min(d,Math.abs(tt-a),Math.abs(tt-b))}return d};
+ const musAt=tt=>mus-(duck?amt*Math.max(0,1-near(tt)/0.6):0);
+ const sum=(a,b)=>10*Math.log10(10**(a/10)+10**(b/10));
+ const draw=()=>{let d='M0 40';for(let i=0;i<=200;i++){const tt=i/200*END;const lv=musAt(tt);const h=Math.max(0,Math.min(40,(lv+36)/42*40));d+=` L${i} ${(40-h).toFixed(1)}`}d+=' L200 40Z';$('.mp',root).setAttribute('d',d);
+  $('.aph',root).style.left=`calc(76px + (100% - 86px) * ${t/END})`;
+  const voice=inV(t)?-8:-60,m=musAt(t),mix=sum(voice,m);const pct=Math.max(0,Math.min(100,(mix+48)/54*100));
+  $('.meterbar b',root).style.width=(100-pct)+'%';$('.meterbar',root).classList.toggle('hot',mix>0);
+  $('.as',root).disabled=!duck;$('.tv',root).textContent=t.toFixed(1)+' s';$('.mv',root).textContent=(mus>0?'+':'')+mus+' dB';$('.av',root).textContent='−'+amt+' dB';
+  const msg=mix>0?T.clip:(inV(t)&&m>voice-6?T.low:(inV(t)?T.good:T.ok));$('.st',root).textContent=`${mix.toFixed(1)} dB · ${msg}`;};
+ $('.ts',root).oninput=e=>{t=+e.target.value;draw()};$('.ms',root).oninput=e=>{mus=+e.target.value;draw()};$('.dk',root).onchange=e=>{duck=e.target.checked;draw()};$('.as',root).oninput=e=>{amt=+e.target.value;draw()};
+ draw();capAfter(root,T.cap);
+};
+
+D.export=(root,L)=>{
+ const T={th:{h:'เลือกปลายทาง แล้วดูว่าควรตั้งค่า export อย่างไร',fmt:'Format',pre:'Preset',rng:'Range',note:'ข้อควรรู้',check:'เช็กก่อนกด Export',cap:'ค่าเป็นจุดเริ่มต้นสำหรับงานทั่วไป ปลายทางแต่ละที่อาจมีสเปกของตัวเอง',
+   D:[['yt','YouTube','H.264','Match Source – Adaptive High Bitrate','Entire Source','อัปโหลดด้วย frame rate เดียวกับที่ถ่าย'],['soc','Reels / TikTok / Shorts','H.264','Match Source – Adaptive High Bitrate','Entire Source','sequence ต้องเป็น 1080×1920 ตั้งแต่ต้น'],['rev','ส่งลูกค้าตรวจงาน','H.264','Match Source – Adaptive Medium Bitrate','Source In/Out','ไฟล์เล็ก ส่งง่าย เปิดได้ทุกเครื่อง'],['mas','ไฟล์ต้นฉบับเก็บไว้ (master)','QuickTime (Apple ProRes)','ProRes 422 HQ หรือ Match Source','Entire Source','คุณภาพสูง ไฟล์ใหญ่ ใช้ทำต่อหรือ export ซ้ำได้โดยไม่เสียคุณภาพ'],['aud','เสียงอย่างเดียว','Waveform Audio (WAV) หรือ MP3','Match Source','Entire Source','ปิด Video ไว้ เปิดแค่ Audio']],
+   C:['ชื่อไฟล์และที่เก็บไฟล์ถูกต้อง','Range ตรงกับที่ตั้งใจ (Entire Source หรือ In/Out)','Frame Size และ Frame Rate ตรงกับ sequence','Captions: ฝังลงภาพหรือส่งเป็นไฟล์แยก','ดูไฟล์ที่ได้ตั้งแต่ต้นจนจบก่อนส่ง']},
+  en:{h:'Pick a destination and see how to set up the export',fmt:'Format',pre:'Preset',rng:'Range',note:'Good to know',check:'Check before you click Export',cap:'Starting points for everyday jobs; each destination may have its own spec.',
+   D:[['yt','YouTube','H.264','Match Source – Adaptive High Bitrate','Entire Source','Upload at the frame rate you shot'],['soc','Reels / TikTok / Shorts','H.264','Match Source – Adaptive High Bitrate','Entire Source','The sequence must be 1080×1920 from the start'],['rev','Client review','H.264','Match Source – Adaptive Medium Bitrate','Source In/Out','Small, easy to send, plays anywhere'],['mas','Archive master','QuickTime (Apple ProRes)','ProRes 422 HQ or Match Source','Entire Source','High quality, large files; re-export later without losing quality'],['aud','Audio only','Waveform Audio (WAV) or MP3','Match Source','Entire Source','Turn Video off and leave only Audio on']],
+   C:['File name and location are right','Range is what you meant (Entire Source or In/Out)','Frame Size and Frame Rate match the sequence','Captions: burned in or a separate file','Watch the exported file start to finish before sending']}}[L];
+ let k='yt',checked=new Set();
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="chips dst">${T.D.map(d=>`<button type="button" class="chip" data-k="${d[0]}">${d[1]}</button>`).join('')}</div><div class="two"><dl class="kv stk ex"></dl><div class="col"><p class="mlabel">${T.check}</p><ul class="cklist">${T.C.map((c,i)=>`<li><label class="chk"><input type="checkbox" data-i="${i}"> ${c}</label></li>`).join('')}</ul><div class="bar"><b></b></div></div></div>`;
+ const draw=()=>{const d=T.D.find(x=>x[0]===k);$('.ex',root).innerHTML=`<dt>${T.fmt}</dt><dd>${d[2]}</dd><dt>${T.pre}</dt><dd>${d[3]}</dd><dt>${T.rng}</dt><dd>${d[4]}</dd><dt>${T.note}</dt><dd>${d[5]}</dd>`;
+  $$('.dst .chip',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===k)));$('.bar b',root).style.width=checked.size/T.C.length*100+'%'};
+ $('.dst',root).addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){k=b.dataset.k;draw()}});
+ $('.cklist',root).addEventListener('change',e=>{const i=+e.target.dataset.i;e.target.checked?checked.add(i):checked.delete(i);draw()});
+ draw();capAfter(root,T.cap);
+};
+
+D['ae-comp-layers']=(root,L)=>{
+ const T={th:{h:'ลำดับ layer: อันบนสุดบังอันล่าง ลองสลับลำดับและเปิดปิดดู',up:'ขึ้น',down:'ลง',eye:'เปิด/ปิด',cap:'After Effects วาดภาพจาก layer ล่างสุดขึ้นไปหาบนสุด layer ที่อยู่บนจึงบัง layer ที่อยู่ล่าง',
+   N:{txt:'Text: ชื่อเรื่อง',shp:'Shape: วงกลม',vid:'Footage: วิว',sol:'Solid: พื้นสีม่วง'}},
+  en:{h:'Layer order: the top layer covers the ones below. Reorder and toggle them',up:'Up',down:'Down',eye:'Show/hide',cap:'After Effects draws from the bottom layer up, so higher layers cover lower ones.',
+   N:{txt:'Text: title',shp:'Shape: circle',vid:'Footage: landscape',sol:'Solid: purple background'}}}[L];
+ let order=['txt','shp','vid','sol'],vis={txt:true,shp:true,vid:true,sol:true};
+ const ART={txt:'<text x="320" y="110" text-anchor="middle" font-family="Anuphan,sans-serif" font-weight="700" font-size="56" fill="#fff" stroke="#111" stroke-width="3" paint-order="stroke">TITLE</text>',shp:'<circle cx="430" cy="210" r="90" fill="#ff7a45"/>',vid:'<svg x="80" y="60" width="400" height="225" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice"><use href="#scene"/></svg>',sol:'<rect width="640" height="360" fill="#6b4fb5"/>'};
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="two even"><div class="mon"><svg class="comp" viewBox="0 0 640 360" aria-hidden="true"></svg></div><ol class="layers"></ol></div>`;
+ const draw=()=>{$('.comp',root).innerHTML='<rect width="640" height="360" fill="#000"/>'+[...order].reverse().filter(k=>vis[k]).map(k=>ART[k]).join('');
+  $('.layers',root).innerHTML=order.map((k,i)=>`<li class="${vis[k]?'':'off'}"><b>${i+1}</b><span>${T.N[k]}</span><button type="button" class="btn sm" data-a="eye" data-k="${k}" aria-pressed="${vis[k]}" aria-label="${T.eye}">${vis[k]?'●':'○'}</button><button type="button" class="btn sm" data-a="up" data-k="${k}" ${i===0?'disabled':''}>${T.up}</button><button type="button" class="btn sm" data-a="down" data-k="${k}" ${i===order.length-1?'disabled':''}>${T.down}</button></li>`).join('')};
+ $('.layers',root).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const k=b.dataset.k,i=order.indexOf(k);
+  if(b.dataset.a==='eye')vis[k]=!vis[k];else{const j=b.dataset.a==='up'?i-1:i+1;if(j<0||j>=order.length)return;[order[i],order[j]]=[order[j],order[i]]}draw()});
+ draw();capAfter(root,T.cap);
+};
+
+D['ae-keyframes']=(root,L)=>{
+ const T={th:{h:'ลอง Easy Ease และ Graph Editor: ดูกราฟค่ากับกราฟความเร็ว',lin:'Linear',ease:'Easy Ease (F9)',val:'Value Graph',spd:'Speed Graph',inf:'Influence',play:'เล่น',t:'เวลา',cap:'เดโมจำลองหลักการ ค่า Influence 33.33% คือค่าที่ Easy Ease ใช้เป็นค่าเริ่มต้น'},
+  en:{h:'Try Easy Ease and the Graph Editor: value graph vs speed graph',lin:'Linear',ease:'Easy Ease (F9)',val:'Value Graph',spd:'Speed Graph',inf:'Influence',play:'Play',t:'Time',cap:'A simulation of the idea. 33.33% influence is the Easy Ease default.'}}[L];
+ let ease=false,graph='val',inf=33.33,t=0,raf=0;const DUR=2;
+ const bez=(p,a)=>{const x1=a/100,x2=1-a/100;let lo=0,hi=1;for(let i=0;i<30;i++){const m=(lo+hi)/2;const x=3*(1-m)**2*m*x1+3*(1-m)*m*m*x2+m**3;if(x<p)lo=m;else hi=m}const s=(lo+hi)/2;return 3*(1-s)**2*s*0+3*(1-s)*s*s*1+s**3};
+ const f=p=>ease?bez(p,inf):p;
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="two"><div class="col"><div class="mon"><svg viewBox="0 0 640 360" aria-hidden="true"><rect width="640" height="360" fill="#151517"/><line x1="80" y1="180" x2="560" y2="180" stroke="#3a3a3f" stroke-dasharray="6 6"/><circle class="dot" cy="180" r="28" fill="#ff7a45"/></svg></div><div class="graph"><svg viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true"></svg></div></div>
+ <div class="col"><div class="seg ez"><button type="button" data-e="0">${T.lin}</button><button type="button" data-e="1">${T.ease}</button></div><div class="seg gr"><button type="button" data-g="val">${T.val}</button><button type="button" data-g="spd">${T.spd}</button></div>
+ <label class="rng"><span>${T.inf}<code class="iv"></code></span><input type="range" class="is" min="5" max="90" step="1" value="33"></label><label class="rng"><span>${T.t}<code class="tv"></code></span><input type="range" class="ts" min="0" max="2" step="0.01" value="0"></label><button type="button" class="btn pri pl">▶ ${T.play}</button></div></div>`;
+ const draw=()=>{const p=f(t/DUR);$('.dot',root).setAttribute('cx',80+p*480);
+  let d='';const N=80;for(let i=0;i<=N;i++){const q=i/N;let y;if(graph==='val')y=f(q);else{const h=0.002;y=(f(Math.min(1,q+h))-f(Math.max(0,q-h)))/(Math.min(1,q+h)-Math.max(0,q-h))/2.2}d+=(i?'L':'M')+(q*300).toFixed(1)+' '+(104-Math.min(1,y)*96).toFixed(1)}
+  $('.graph svg',root).innerHTML=`<path d="${d}" fill="none" stroke="#ff7a45" stroke-width="2.5" vector-effect="non-scaling-stroke"/><line x1="${t/DUR*300}" x2="${t/DUR*300}" y1="0" y2="110" stroke="#fff" stroke-opacity=".5" vector-effect="non-scaling-stroke"/>`;
+  $('.iv',root).textContent=ease?inf.toFixed(2)+'%':'—';$('.is',root).disabled=!ease;$('.tv',root).textContent=t.toFixed(2)+' s';$('.ts',root).value=t;
+  $$('.ez button',root).forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.e==='1')===ease)));$$('.gr button',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.g===graph)))};
+ $('.ez',root).addEventListener('click',e=>{const b=e.target.closest('button');if(b){ease=b.dataset.e==='1';draw()}});
+ $('.gr',root).addEventListener('click',e=>{const b=e.target.closest('button');if(b){graph=b.dataset.g;draw()}});
+ $('.is',root).oninput=e=>{inf=+e.target.value;draw()};$('.ts',root).oninput=e=>{cancelAnimationFrame(raf);t=+e.target.value;draw()};
+ $('.pl',root).onclick=()=>{cancelAnimationFrame(raf);if(reduce){t=DUR;draw();return}const t0=performance.now();const st=n=>{if(!root.isConnected)return;t=Math.min(DUR,(n-t0)/1000);draw();if(t<DUR)raf=requestAnimationFrame(st)};raf=requestAnimationFrame(st)};
+ draw();capAfter(root,T.cap);
+};
+
+D['ae-text']=(root,L)=>{
+ const T={th:{h:'ลอง Range Selector: เลื่อน Start แล้วดูตัวอักษรค่อย ๆ ปรากฏ',start:'Range Selector › Start',based:'Based On',ch:'Characters',wd:'Words',play:'เล่น',txt:'Text',cap:'เดโมจำลองหลักการ ใน After Effects ตัวอักษรที่อยู่ในช่วง Range Selector จะได้ค่าของ animator (ที่นี่คือ Opacity 0% และเลื่อนลง 30 px)'},
+  en:{h:'Try the Range Selector: move Start and watch the text appear',start:'Range Selector › Start',based:'Based On',ch:'Characters',wd:'Words',play:'Play',txt:'Text',cap:'A simulation of the idea. In After Effects, characters inside the Range Selector get the animator\'s values (here Opacity 0% and a 30 px drop).'}}[L];
+ const SAMPLE={th:'Make it move!',en:'Make it move!'}[L];
+ let st=40,by='ch',txt=SAMPLE,raf=0;
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="two"><div class="mon atx"><div class="line" aria-live="off"></div></div><div class="col"><label class="f">${T.txt}<input type="text" class="tt" maxlength="40"></label><label class="rng"><span>${T.start}<code class="sv"></code></span><input type="range" class="ss" min="0" max="100" step="1" value="40"></label><p class="mlabel">${T.based}</p><div class="seg bo"><button type="button" data-b="ch">${T.ch}</button><button type="button" data-b="wd">${T.wd}</button></div><button type="button" class="btn pri pl">▶ ${T.play}</button></div></div>`;
+ $('.tt',root).value=txt;
+ const draw=()=>{const units=by==='ch'?[...txt]:txt.split(/(\s+)/);const n=units.filter(u=>!/^\s+$/.test(u)).length||1;let k=0;
+  const line=$('.line',root);line.replaceChildren(...units.map(u=>{const s=document.createElement('span');s.textContent=u;if(/^\s+$/.test(u)){s.className='sp';return s}const pos=(k+0.5)/n*100;k++;const inRange=pos>=st;s.style.opacity=inRange?0:1;s.style.transform=inRange?'translateY(30px)':'none';return s}));
+  $('.sv',root).textContent=st+'%';$('.ss',root).value=st;$$('.bo button',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.b===by)))};
+ $('.ss',root).oninput=e=>{cancelAnimationFrame(raf);st=+e.target.value;draw()};$('.tt',root).oninput=e=>{txt=e.target.value||' ';draw()};
+ $('.bo',root).addEventListener('click',e=>{const b=e.target.closest('button');if(b){by=b.dataset.b;draw()}});
+ $('.pl',root).onclick=()=>{cancelAnimationFrame(raf);if(reduce){st=100;draw();return}st=0;const t0=performance.now();const s2=n=>{if(!root.isConnected)return;st=Math.min(100,Math.round((n-t0)/1500*100));draw();if(st<100)raf=requestAnimationFrame(s2)};raf=requestAnimationFrame(s2)};
+ draw();capAfter(root,T.cap);
+};
+
+D['ae-render']=(root,L)=>{
+ const T={th:{h:'อยากได้ไฟล์แบบไหน ดูว่าต้องตั้ง Render Queue อย่างไร',how:'วิธี',fmt:'Format / Output Module',ch:'Channels',note:'ข้อควรรู้',cap:'ชื่อตัวเลือกอ้างอิงจากคู่มือ After Effects ควรเช็กในโปรแกรมเวอร์ชันที่ใช้',
+   N:[['mp4','MP4 สำหรับเว็บหรือโซเชียล','Render Queue','H.264 (preset 5, 15 หรือ 40 Mbps)','RGB','preset ค่าเริ่มต้นคือ H.264 – Match Render Settings – 15 Mbps'],['alpha','วิดีโอพื้นหลังใส ไปวางทับใน Premiere','Render Queue','QuickTime, codec Apple ProRes 4444','RGB + Alpha','ไฟล์ MP4/H.264 เก็บความโปร่งใสไม่ได้'],['seq','ภาพนิ่งเรียงเฟรม (image sequence)','Render Queue','PNG Sequence','RGB หรือ RGB + Alpha','27.0 มีแถบปรับระดับการบีบอัด PNG ที่ยังคงไม่สูญเสียคุณภาพ'],['many','หลายไฟล์หลายสเปกพร้อมกัน','Add to Adobe Media Encoder Queue','เลือก preset ใน Media Encoder','ตาม preset','ปล่อยให้ Media Encoder render ระหว่างที่ทำงานต่อใน After Effects ได้'],['pr','ส่งต่อให้ Premiere โดยไม่ render','Dynamic Link','ไม่ต้อง render','—','ใน Premiere ใช้ Replace With After Effects Composition หรือ import composition โดยตรง แก้ใน AE แล้วอัปเดตเอง']]},
+  en:{h:'What file do you need? See how to set up the Render Queue',how:'Route',fmt:'Format / Output Module',ch:'Channels',note:'Good to know',cap:'Option names follow the After Effects documentation; check them in your version.',
+   N:[['mp4','MP4 for web or social','Render Queue','H.264 (5, 15 or 40 Mbps preset)','RGB','The default preset is H.264 – Match Render Settings – 15 Mbps'],['alpha','Transparent video to overlay in Premiere','Render Queue','QuickTime, Apple ProRes 4444 codec','RGB + Alpha','MP4/H.264 can\'t store transparency'],['seq','Image sequence','Render Queue','PNG Sequence','RGB or RGB + Alpha','27.0 adds a PNG compression slider that stays lossless'],['many','Several files and specs at once','Add to Adobe Media Encoder Queue','Pick presets in Media Encoder','Per preset','Media Encoder renders while you keep working in After Effects'],['pr','Hand to Premiere without rendering','Dynamic Link','No render needed','—','In Premiere use Replace With After Effects Composition or import the comp directly; changes in AE update automatically']]}}[L];
+ let k='mp4';
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="chips nd">${T.N.map(n=>`<button type="button" class="chip" data-k="${n[0]}">${n[1]}</button>`).join('')}</div><dl class="kv stk rq"></dl>`;
+ const draw=()=>{const n=T.N.find(x=>x[0]===k);$('.rq',root).innerHTML=`<dt>${T.how}</dt><dd>${n[2]}</dd><dt>${T.fmt}</dt><dd>${n[3]}</dd><dt>${T.ch}</dt><dd>${n[4]}</dd><dt>${T.note}</dt><dd>${n[5]}</dd>`;$$('.nd .chip',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===k)))};
+ $('.nd',root).addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){k=b.dataset.k;draw()}});
+ draw();capAfter(root,T.cap);
+};
+
+D['whats-new']=(root,L)=>{
+ const T={th:{h:'ไล่ดูการอัปเดตปี 2569 ทีละเวอร์ชัน',pr:'Premiere',ae:'After Effects',cap:'สรุปเฉพาะไฮไลต์จากหน้า What\'s new ของ Adobe ไม่ใช่รายการทั้งหมด',
+   R:{pr:[['26.0','ม.ค.',['เปลี่ยนชื่อเป็น Adobe Premiere (ไม่มีคำว่า Pro)','Object Mask: เลือกวัตถุด้วย AI แล้ว track','Adobe Stock อยู่ในโปรแกรม','รองรับ MKV (H.264/AAC) ดีขึ้น']],['26.2','เม.ย.',['เอฟเฟกต์และทรานซิชันชุดใหม่','ใส่ Content Credentials ตอน export','Color Mode เปิดให้ลองในแอป beta']],['26.3','มิ.ย.',['เอฟเฟกต์ ทรานซิชัน และแอนิเมชันใหม่กว่า 90 ตัว','สร้าง sequence จาก Firefly Boards','ตั้งได้ว่าจะให้สร้าง track อัตโนมัติไหม']],['26.5','ก.ย.',['Generative Media Tool','Object Mask ตรวจจับวัตถุได้มากขึ้น']],['27.0','พ.ย.',['Color Mode แทน Lumetri Color panel','AI Assistant panel','สร้างเพลง เสียงเอฟเฟกต์ และ soundscape','Generative Extend เติมเฟรมให้ทรานซิชัน','เอฟเฟกต์ใหม่ 8 ตัว','ต้องใช้ Windows 11 24H2 หรือ Mac Apple silicon']]],
+      ae:[['26.0','ม.ค.',['Substance 3D Materials','animate variable fonts ได้','เอฟเฟกต์เสียง Distortion, Compressor, Gate']],['26.2','เม.ย.',['Object Matte: เลือกวัตถุด้วย AI']],['26.3','มิ.ย.',['Depth of Field ใน Advanced 3D','วาง SVG/Illustrator เป็น shape layer','Mask Tracker เร็วขึ้นสูงสุด 5 เท่า','Curl Noise']],['26.5','ก.ย.',['Guides แบบใหม่','Effect Controls ออกแบบใหม่','รองรับ ACES 2.0']],['27.0','พ.ย.',['AI Assistant','Auto-Save กู้งานง่ายขึ้น','Adobe Stock panel','ข้อความ Illustrator แก้ต่อได้','เอฟเฟกต์ Contour Paint และ De-esser']]]}},
+  en:{h:'Step through the 2026 updates version by version',pr:'Premiere',ae:'After Effects',cap:'Highlights from Adobe\'s What\'s new pages, not complete lists.',
+   R:{pr:[['26.0','Jan',['Renamed Adobe Premiere (no "Pro")','Object Mask: AI selection and tracking','Adobe Stock built in','Better MKV (H.264/AAC) support']],['26.2','Apr',['New effects and transitions','Content Credentials at export','Color Mode public beta in the beta app']],['26.3','Jun',['90+ modern effects, transitions and animations','Sequences from Firefly Boards','Control automatic track creation']],['26.5','Sep',['Generative Media Tool','Object Mask detects more objects']],['27.0','Nov',['Color Mode replaces the Lumetri Color panel','AI Assistant panel','Generate music, sound effects and soundscapes','Generative Extend fills frames for transitions','Eight new effects','Requires Windows 11 24H2 or an Apple silicon Mac']]],
+      ae:[['26.0','Jan',['Substance 3D Materials','Animate variable fonts','Distortion, Compressor and Gate audio effects']],['26.2','Apr',['Object Matte: AI selection']],['26.3','Jun',['Depth of Field in Advanced 3D','Paste SVG/Illustrator as shape layers','Mask Tracker up to 5x faster','Curl Noise']],['26.5','Sep',['New guides','Redesigned Effect Controls','ACES 2.0 support']],['27.0','Nov',['AI Assistant','Better Auto-Save recovery','Adobe Stock panel','Editable Illustrator text','Contour Paint and De-esser effects']]]}}}[L];
+ let app='pr',sel=4;
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="seg ap" style="max-width:360px"><button type="button" data-a="pr">${T.pr}</button><button type="button" data-a="ae">${T.ae}</button></div><ol class="rel"></ol><div class="card"><h4 class="ct"></h4><ul class="cl2"></ul></div>`;
+ const draw=()=>{const R=T.R[app];$('.rel',root).innerHTML=R.map((r,i)=>`<li><button type="button" data-i="${i}" aria-pressed="${i===sel}"><b>${r[0]}</b><span>${r[1]}</span></button></li>`).join('');
+  const r=R[sel];$('.ct',root).textContent=`${T[app]} ${r[0]} · ${r[1]}`;$('.cl2',root).innerHTML=r[2].map(x=>`<li>${x}</li>`).join('');$$('.ap button',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.a===app)))};
+ $('.ap',root).addEventListener('click',e=>{const b=e.target.closest('button');if(b){app=b.dataset.a;sel=4;draw()}});
+ $('.rel',root).addEventListener('click',e=>{const b=e.target.closest('button');if(b){sel=+b.dataset.i;draw()}});
+ draw();capAfter(root,T.cap);
+};
+
+D.shortcuts=(root,L)=>{
+ const T={th:{h:'คลิกปุ่มบนคีย์บอร์ดเพื่อดูว่าทำอะไรใน Premiere และ After Effects',pr:'Premiere',ae:'After Effects',none:'ไม่มีคีย์ลัดเดี่ยวที่ใช้บ่อย',cap:'แสดงเฉพาะปุ่มเดี่ยวที่ใช้บ่อยตามชุดคีย์ลัดเริ่มต้น ถ้าเปลี่ยนชุดคีย์ลัดไว้ผลจะต่างจากนี้',
+   K:{V:['Selection tool','Selection tool'],C:['Razor tool','Camera tool'],B:['Ripple Edit tool','ตั้งจุดเริ่ม work area'],N:['Rolling Edit tool','ตั้งจุดจบ work area'],R:['Rate Stretch tool','แสดง Rotation ของ layer'],A:['Track Select Forward tool','แสดง Anchor Point'],P:['Pen tool','แสดง Position'],S:['เปิดปิด Snap','แสดง Scale'],T:['Type tool','แสดง Opacity'],Y:['Slip tool','Pan Behind (Anchor Point) tool'],U:['Slide tool','แสดง property ที่มี keyframe'],E:['ขยายจุดตัดที่เลือกมาถึง playhead','แสดงเอฟเฟกต์ของ layer'],G:['Audio Gain','Pen tool'],W:['Ripple Trim ส่วนหลัง playhead','Rotation tool'],Q:['Ripple Trim ส่วนหน้า playhead','Shape tools'],I:['ตั้งจุด In','ไปที่จุดเริ่ม layer'],O:['ตั้งจุด Out','ไปที่จุดจบ layer'],M:['เพิ่ม marker','แสดง Mask Path'],F:['Match Frame','แสดง Mask Feather'],J:['เล่นถอยหลัง','ไป keyframe หรือ marker ก่อนหน้า'],K:['หยุด','ไป keyframe หรือ marker ถัดไป'],L:['เล่นไปข้างหน้า','แสดง Audio Levels'],H:['Hand tool','Hand tool'],Z:['Zoom tool','Zoom tool'],Space:['เล่น / หยุด','เล่น preview / หยุด']}},
+  en:{h:'Click a key to see what it does in Premiere and After Effects',pr:'Premiere',ae:'After Effects',none:'No common single-key shortcut',cap:'Only common single keys from the default shortcut sets. Custom shortcut sets will differ.',
+   K:{V:['Selection tool','Selection tool'],C:['Razor tool','Camera tool'],B:['Ripple Edit tool','Set work area start'],N:['Rolling Edit tool','Set work area end'],R:['Rate Stretch tool','Reveal layer Rotation'],A:['Track Select Forward tool','Reveal Anchor Point'],P:['Pen tool','Reveal Position'],S:['Toggle snapping','Reveal Scale'],T:['Type tool','Reveal Opacity'],Y:['Slip tool','Pan Behind (Anchor Point) tool'],U:['Slide tool','Reveal keyframed properties'],E:['Extend selected edit to playhead','Reveal layer effects'],G:['Audio Gain','Pen tool'],W:['Ripple Trim next edit to playhead','Rotation tool'],Q:['Ripple Trim previous edit to playhead','Shape tools'],I:['Mark In','Go to layer In point'],O:['Mark Out','Go to layer Out point'],M:['Add marker','Reveal Mask Path'],F:['Match Frame','Reveal Mask Feather'],J:['Play backwards','Go to previous keyframe or marker'],K:['Stop','Go to next keyframe or marker'],L:['Play forwards','Reveal Audio Levels'],H:['Hand tool','Hand tool'],Z:['Zoom tool','Zoom tool'],Space:['Play / stop','Play preview / stop']}}}[L];
+ const ROWS=[['Q','W','E','R','T','Y','U','I','O','P'],['A','S','D','F','G','H','J','K','L'],['Z','X','C','V','B','N','M'],['Space']];
+ let cur='C';
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><div class="kb">${ROWS.map(r=>`<div class="kr">${r.map(k=>`<button type="button" class="key${T.K[k]?' has':''}${k==='Space'?' space':''}" data-k="${k}">${k}</button>`).join('')}</div>`).join('')}</div><div class="two even"><div class="card"><h4>${T.pr}</h4><p class="kp"></p></div><div class="card"><h4>${T.ae}</h4><p class="ka"></p></div></div>`;
+ const draw=()=>{const v=T.K[cur]||['—','—'];$('.kp',root).textContent=v[0]==='—'?T.none:v[0];$('.ka',root).textContent=v[1]==='—'?T.none:v[1];$$('.key',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===cur)))};
+ $('.kb',root).addEventListener('click',e=>{const b=e.target.closest('.key');if(b){cur=b.dataset.k;draw()}});
+ draw();capAfter(root,T.cap);
+};
+
+D.glossary=(root,L)=>{
+ const T={th:{h:'ค้นหาศัพท์',ph:'พิมพ์คำที่อยากรู้ เช่น codec, ripple',all:'ทั้งหมด',n:n=>`${n} คำ`,none:'ไม่พบคำนี้',C:{ed:'ตัดต่อ',vid:'วิดีโอและไฟล์',col:'สีและเสียง',ae:'After Effects'}},
+  en:{h:'Search the glossary',ph:'Type a term, e.g. codec, ripple',all:'All',n:n=>`${n} terms`,none:'No matching term',C:{ed:'Editing',vid:'Video and files',col:'Colour and audio',ae:'After Effects'}}}[L];
+ const G=[
+ ['Project','ed','ไฟล์งาน (.prproj) ที่เก็บการตัดต่อและลิงก์ไปยังไฟล์สื่อ ไม่ได้เก็บวิดีโอไว้ในตัว','The work file (.prproj) that stores your edit and links to media; it doesn\'t contain the video itself.'],
+ ['Bin','ed','โฟลเดอร์ใน Project panel สำหรับจัดกลุ่มคลิป','A folder in the Project panel for grouping clips.'],
+ ['Sequence','ed','ไทม์ไลน์ของงานหนึ่งชิ้น มีขนาดภาพและ frame rate ของตัวเอง','The timeline for one piece of work, with its own frame size and frame rate.'],
+ ['Track','ed','แถวบน timeline ที่วางคลิป เช่น V1 สำหรับภาพ A1 สำหรับเสียง','A row in the timeline that holds clips, such as V1 for video or A1 for audio.'],
+ ['Clip','ed','ชิ้นสื่อหนึ่งชิ้นใน project หรือบน timeline','One piece of media in the project or timeline.'],
+ ['Playhead','ed','เส้นที่บอกเวลาปัจจุบันบน timeline หรือในจอ','The line marking the current time in the timeline or a monitor.'],
+ ['In / Out point','ed','จุดเริ่มและจุดจบของช่วงที่เลือก','The start and end of a selected range.'],
+ ['Insert / Overwrite','ed','วางคลิปแบบดันของเดิมไปข้างหลัง / วางทับของเดิม','Place a clip pushing later material along / place it over existing material.'],
+ ['Ripple','ed','การแก้ไขที่ทำให้คลิปถัดไปเลื่อนตามเพื่อไม่ให้เกิดช่องว่าง','An edit that moves later clips so no gap is left.'],
+ ['Razor','ed','เครื่องมือตัดคลิปเป็นสองท่อน','The tool that cuts a clip in two.'],
+ ['Link / Unlink','ed','ผูกหรือแยกภาพกับเสียงของคลิปเดียวกัน','Tie or separate a clip\'s picture and sound.'],
+ ['J-cut / L-cut','ed','เสียงช็อตถัดไปเริ่มก่อนภาพ / เสียงช็อตเดิมยังต่อไปหลังตัดภาพ','The next shot\'s sound starts early / the current shot\'s sound carries over the cut.'],
+ ['Nest','ed','รวมหลายคลิปเป็น sequence ย่อยหนึ่งก้อนบน timeline','Group several clips into one sub-sequence on the timeline.'],
+ ['Marker','ed','หมุดบนเวลา ใช้จดโน้ตหรือแบ่งตอน','A pin on the timeline for notes or chapters.'],
+ ['Keyframe','ed','จุดที่บันทึกค่าของ property ณ เวลาหนึ่ง ใช้สร้างการเคลื่อนไหว','A point storing a property\'s value at a time, used to animate.'],
+ ['Interpolation','ed','วิธีที่โปรแกรมเติมค่าระหว่าง keyframe เช่น Linear, Bezier, Hold','How values are filled in between keyframes, such as Linear, Bezier or Hold.'],
+ ['Transition','ed','เอฟเฟกต์ที่ใช้ตรงรอยต่อระหว่างสองคลิป เช่น Cross Dissolve','An effect at the join between two clips, such as Cross Dissolve.'],
+ ['Adjustment layer','ed','layer ว่างที่ใส่เอฟเฟกต์ไว้ ให้มีผลกับทุกอย่างที่อยู่ข้างล่าง','An empty layer whose effects apply to everything beneath it.'],
+ ['MOGRT','ed','ไฟล์ Motion Graphics Template ที่แก้ได้เฉพาะช่องที่ผู้ออกแบบเปิดไว้','A Motion Graphics template file with designer-chosen editable fields.'],
+ ['Mask','ed','พื้นที่ที่เลือกไว้เพื่อให้เอฟเฟกต์มีผลแค่ในหรือนอกพื้นที่นั้น','A selected area that limits an effect to inside or outside it.'],
+ ['Frame rate (fps)','vid','จำนวนภาพต่อวินาที เช่น 24, 25, 30, 60','Images per second, such as 24, 25, 30 or 60.'],
+ ['Resolution / Frame size','vid','ขนาดภาพเป็นพิกเซล เช่น 1920×1080','Image size in pixels, such as 1920×1080.'],
+ ['Aspect ratio','vid','สัดส่วนกว้างต่อสูง เช่น 16:9, 9:16','Width-to-height proportion, such as 16:9 or 9:16.'],
+ ['Pixel aspect ratio','vid','รูปทรงของพิกเซลแต่ละจุด งานปัจจุบันใช้ Square Pixels (1.0)','The shape of each pixel; modern work uses Square Pixels (1.0).'],
+ ['Timecode','vid','เวลาแบบ ชั่วโมง:นาที:วินาที:เฟรม','Time written as hours:minutes:seconds:frames.'],
+ ['Codec','vid','วิธีบีบอัดภาพและเสียง เช่น H.264, HEVC, ProRes','How picture and sound are compressed, such as H.264, HEVC or ProRes.'],
+ ['Container','vid','ชนิดไฟล์ที่ห่อภาพและเสียงไว้ด้วยกัน เช่น .mp4, .mov','The file type wrapping picture and sound, such as .mp4 or .mov.'],
+ ['Bitrate','vid','ปริมาณข้อมูลต่อวินาที ยิ่งสูงยิ่งคมแต่ไฟล์ใหญ่','Data per second; higher is sharper but larger.'],
+ ['Proxy','vid','ไฟล์ความละเอียดต่ำสำหรับตัดต่อให้ลื่น แล้ว export จากไฟล์จริง','A low-resolution copy for smooth editing; export uses the originals.'],
+ ['Render','vid','การประมวลผลเอฟเฟกต์ให้เล่นลื่นในโปรแกรม หรือสร้างไฟล์ผลลัพธ์','Processing effects for smooth playback, or producing an output file.'],
+ ['Export','vid','การสร้างไฟล์วิดีโอสุดท้ายจาก sequence','Creating the final video file from a sequence.'],
+ ['Media Offline','vid','สถานะที่ Premiere หาไฟล์ต้นฉบับไม่เจอ','When Premiere can\'t find a clip\'s source file.'],
+ ['Media cache','vid','ไฟล์ช่วยเล่นที่โปรแกรมสร้างไว้ ลบได้ สร้างใหม่ได้','Helper files the apps create; safe to delete and rebuild.'],
+ ['Color Management','col','การตั้งค่าว่า sequence ทำงานใน color space ไหน เช่น Rec. 709','Which colour space a sequence works in, such as Rec. 709.'],
+ ['Rec. 709','col','มาตรฐานสีของวิดีโอ HD แบบ SDR ทั่วไป','The standard colour space for ordinary SDR HD video.'],
+ ['HDR','col','วิดีโอช่วงความสว่างกว้าง ต้องใช้จอและการตั้งค่าที่รองรับ','High dynamic range video; needs supporting displays and settings.'],
+ ['LUT','col','ตารางแปลงสีสำเร็จรูป ใช้เปลี่ยนลุคหรือแปลงฟุตเทจ Log','A ready-made colour transform for looks or converting Log footage.'],
+ ['Log footage','col','ฟุตเทจที่ถ่ายแบบเก็บช่วงแสงกว้าง ภาพดูซีดก่อนแต่งสี','Footage recorded flat to keep dynamic range; looks washed out until graded.'],
+ ['dB / Clipping','col','หน่วยระดับเสียง ถ้าเกิน 0 dB เสียงจะแตก (clipping)','The unit of audio level; above 0 dB the sound clips.'],
+ ['Ducking','col','การลดเสียงเพลงลงอัตโนมัติตอนมีเสียงพูด','Automatically lowering music under dialogue.'],
+ ['Composition','ae','งานหนึ่งชิ้นใน After Effects มีขนาด ความยาว และ layer ของตัวเอง','One piece of work in After Effects with its own size, duration and layers.'],
+ ['Precompose','ae','รวมหลาย layer เป็น composition ย่อย','Group several layers into a nested composition.'],
+ ['Solid','ae','layer สีพื้นเรียบ ใช้เป็นพื้นหลังหรือที่ใส่เอฟเฟกต์','A flat colour layer for backgrounds or effects.'],
+ ['Null Object','ae','layer ที่มองไม่เห็น ใช้เป็นตัวคุมการเคลื่อนไหวของ layer อื่น','An invisible layer used to drive other layers\' motion.'],
+ ['Track matte','ae','ใช้ความโปร่งใสหรือความสว่างของ layer หนึ่งเป็น mask ให้อีก layer','Using one layer\'s alpha or luminance as a mask for another.'],
+ ['Easy Ease','ae','ทำให้การเคลื่อนไหวค่อย ๆ เร่งและค่อย ๆ ช้าลงรอบ keyframe (F9)','Eases motion in and out around keyframes (F9).'],
+ ['Graph Editor','ae','มุมมองกราฟค่าและความเร็วของ keyframe สำหรับปรับจังหวะละเอียด','A value and speed graph view for fine-tuning keyframe timing.'],
+ ['Render Queue','ae','คิวสำหรับ render composition ออกเป็นไฟล์','The queue that renders compositions to files.'],
+ ['Dynamic Link','ae','การเชื่อม composition ของ After Effects เข้า Premiere โดยไม่ต้อง render','Linking After Effects compositions into Premiere without rendering.']];
+ let q='',cat='all';
+ root.className='stage';
+ root.innerHTML=`<h3>${T.h}</h3><label class="f"><span class="vh">${T.h}</span><input type="text" class="gq" placeholder="${T.ph}"></label><div class="chips gc"><button type="button" class="chip" data-c="all">${T.all}</button>${Object.keys(T.C).map(c=>`<button type="button" class="chip" data-c="${c}">${T.C[c]}</button>`).join('')}</div><p class="mlabel gn"></p><dl class="gl"></dl>`;
+ const draw=()=>{const s=q.trim().toLowerCase();const rows=G.filter(g=>(cat==='all'||g[1]===cat)&&(!s||g[0].toLowerCase().includes(s)||g[2].toLowerCase().includes(s)||g[3].toLowerCase().includes(s)));
+  $('.gl',root).innerHTML=rows.length?rows.map(g=>`<div><dt>${esc(g[0])}</dt><dd>${esc(L==='th'?g[2]:g[3])}</dd></div>`).join(''):`<div><dd>${T.none}</dd></div>`;
+  $('.gn',root).textContent=T.n(rows.length);$$('.gc .chip',root).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.c===cat)))};
+ $('.gq',root).oninput=e=>{q=e.target.value;draw()};
+ $('.gc',root).addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){cat=b.dataset.c;draw()}});
+ draw();
+};
+
 /* ---------- shell ---------- */
 const art=$('article'),side=$('.side'),toc=$('.toc'),q=$('#q'),navd=$('#navd');
 let curKey='';
 const renderNav=(lang,id)=>{const u=UI[lang];
  side.setAttribute('aria-label',u.navlabel);
- side.innerHTML=NAV.map(g=>`<p class="grp">${esc(g.g[lang])}</p><ul>${g.items.map(i=>i.id?`<li><a href="#${lang}-${i.id}"${i.id===id?' aria-current="page"':''}>${esc(i[lang])}</a></li>`:`<li><span>${esc(i[lang])}</span></li>`).join('')}</ul>`).join('')+`<p class="hint none" hidden>${u.none}</p><p class="hint">${u.soon}</p>`;
+ side.innerHTML=NAV.map(g=>`<p class="grp">${esc(g.g[lang])}</p><ul>${g.items.map(i=>i.id?`<li><a href="#${lang}-${i.id}"${i.id===id?' aria-current="page"':''}>${esc(i[lang])}</a></li>`:`<li><span>${esc(i[lang])}</span></li>`).join('')}</ul>`).join('')+`<p class="hint none" hidden>${u.none}</p>`;
  $('.brand b').textContent=u.brand;$('.brand small').textContent=u.tag;q.placeholder=u.search;$('#ql').textContent=u.search;$('summary',navd).textContent=u.menu;
  $$('.lang a').forEach(a=>{a.href=`#${a.dataset.l}-${id}`;if(a.dataset.l===lang)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
  q.value='';};

@@ -10,11 +10,13 @@ A beginner's guide to Adobe Premiere and After Effects in Thai and English, writ
 
 | Section | Page id |
 |---|---|
-| Start here | `first-video`, `project-media` |
+| Start here | `first-video`, `project-media`, `premiere-vs-ae`, `system-requirements`, `workspace-tour` |
 | Premiere basics | `sequence`, `monitors`, `timeline`, `markers` |
 | Effects and graphics | `effects-keyframes`, `mogrt`, `object-mask` |
-| Color, audio and captions | `color-mode`, `captions` |
-| Export | `presets-resolution` |
+| Color, audio and captions | `color-mode`, `captions`, `audio` |
+| Export | `presets-resolution`, `export` |
+| After Effects | `ae-comp-layers`, `ae-keyframes`, `ae-text`, `ae-render` |
+| Reference | `whats-new`, `shortcuts`, `glossary` |
 
 Each page has an interactive demo, a version badge, steps, common mistakes, notes for older versions, and links to the Adobe sources. Pages are addressed as `#th-<id>` or `#en-<id>`.
 
@@ -28,6 +30,7 @@ site/
   style.css              styles
   app.js                 navigation, routing, demos
   demos2.js              demos for first-video, project-media, timeline, captions
+  demos3.js              demos for the Start here, audio, export, After Effects and reference pages
   build.py               bundles everything into docs/index.html
 docs/
   index.html             built single-file site (served by GitHub Pages)
@@ -49,7 +52,7 @@ Settings › Pages › Build and deployment › Deploy from a branch › `main` 
 
 1. Write `site/content/th/<id>.html` and `site/content/en/<id>.html`, each with a `<div class="demo" data-demo="<id>"></div>` placeholder.
 2. Add the id to `NAV` in `site/app.js` and to `PAGES` in `site/build.py`.
-3. Add a demo function `D['<id>']` in `site/app.js` or `site/demos2.js`.
+3. Add a demo function `D['<id>']` in `site/app.js`, `site/demos2.js` or `site/demos3.js`.
 4. Run the build.
 
 ## Keeping it current

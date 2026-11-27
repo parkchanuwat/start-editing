@@ -1,0 +1,57 @@
+<p class="crumb">After Effects</p>
+<h1>Animating text</h1>
+<p class="lead">Text in After Effects can move as a whole layer, or character by character, word by word or line by line using <b>text animators</b>. The fastest way in is to apply an animation preset and then look at how it's built.</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Reverse-engineer a preset:</b> apply an animation preset to a text layer, then press <kbd>U</kbd> or <kbd>UU</kbd> to see only the properties it animates or changes.</p></div>
+<div class="demo" data-demo="ae-text"></div>
+
+<h2 id="create">Create a text layer</h2>
+<ol class="steps">
+<li><h3>Choose the Type tool</h3><p>Press <kbd>Ctrl</kbd>+<kbd>T</kbd> / <kbd>Cmd</kbd>+<kbd>T</kbd>. Click once in the Composition panel for single-line point text, or drag a box for paragraph text.</p></li>
+<li><h3>Set font and size</h3><p>Use the Character panel or the Properties panel. For Korean or Chinese, choose a font that contains those characters, or you'll see empty boxes.</p></li>
+</ol>
+
+<h2 id="preset">Method 1: an animation preset</h2>
+<ol class="steps">
+<li><h3>Open the Effects &amp; Presets panel</h3><p>Go to <span class="ui">Animation Presets › Text</span> for categories such as Animate In, Animate Out and Blurs.</p></li>
+<li><h3>Drag a preset onto the text layer</h3><p>It starts at the playhead. Press Spacebar to see it.</p>
+<p class="note">To preview presets before applying them, choose <span class="ui">Browse Presets</span> from the Effects &amp; Presets panel menu to open them in Adobe Bridge.</p></li>
+</ol>
+
+<h2 id="animator">Method 2: build it with a text animator</h2>
+<ol class="steps">
+<li><h3>Add an animator</h3><p>Expand the text layer in the Timeline, click <span class="ui">Animate</span> and choose a property such as Opacity or Position, or use <span class="ui">Animation › Animate Text</span>.</p></li>
+<li><h3>Set the characters' "target" value</h3><p>For example, set Opacity to 0%. Characters inside the Range Selector get this value.</p></li>
+<li><h3>Animate the Range Selector</h3><p>Expand <span class="ui">Range Selector 1</span>, turn on the stopwatch for <span class="ui">Start</span> at 0%, move forward in time and set Start to 100%. The characters appear one by one.</p></li>
+<li><h3>Choose the unit under Advanced</h3><p>In Range Selector › Advanced › <span class="ui">Based On</span>, choose whether it counts characters, words or lines.</p></li>
+</ol>
+
+<h2 id="ideas">Ideas to try</h2>
+<ul class="check">
+<li><span><b>Typewriter</b>: Opacity 0%, then animate Start from 0 to 100%.</span></li>
+<li><span><b>Rise in letter by letter</b>: Position Y +30 and Opacity 0% in the same animator.</span></li>
+<li><span><b>Jitter</b>: add a Wiggly Selector instead of a Range Selector.</span></li>
+<li><span><b>Changing weight</b>: use a variable font and add an animator for its Weight axis.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Animating the whole layer instead of each character</b>A layer's Transform moves the whole block. For per-character motion you need an animator.</li>
+<li><b>Mixing up Start and End</b>Characters between Start and End are the ones that get the animator's values. Watch the range bars in the Composition panel.</li>
+<li><b>Korean or Chinese shows as boxes</b>The font lacks those characters. Switch to a font that supports the language.</li>
+<li><b>Text motion looks choppy</b>Turn on motion blur for the text layer.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>Text animators and the Range Selector work the same way.</li>
+<li>Animating variable font axes arrived in 26.0.</li>
+<li>Editable text from Illustrator files arrived in 27.0.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/using/animating-text.html">Animating text</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/examples-resources-text-animation.html">Examples and resources for text animation</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/working-with-variable-font-axes.html">Working with Variable Font Axes</a></li>
+</ul>

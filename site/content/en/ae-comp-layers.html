@@ -1,0 +1,56 @@
+<p class="crumb">After Effects</p>
+<h1>Compositions and layers</h1>
+<p class="lead">In After Effects a piece of work is a <b>composition</b>, with its own frame size, frame rate and duration. Inside it are <b>layers</b> stacked like sheets of acetate: higher layers cover what's below.</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>The big difference from Premiere:</b> a Premiere track holds many clips in a row, but an After Effects layer has only one source. That's why a single piece often has dozens of layers.</p></div>
+<div class="demo" data-demo="ae-comp-layers"></div>
+
+<h2 id="comp">Creating a composition</h2>
+<ol class="steps">
+<li><h3>From footage (easiest)</h3><p>Drag a video from the Project panel onto the New Composition icon at the bottom of the panel. The comp takes that file's size and frame rate.</p></li>
+<li><h3>Or set it up yourself</h3><p>Choose <span class="ui">Composition › New Composition</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd> / <kbd>Cmd</kbd>+<kbd>N</kbd>), pick a Preset or type Width, Height, Frame Rate and Duration.</p></li>
+<li><h3>Change it later</h3><p><span class="ui">Composition › Composition Settings</span> (<kbd>Ctrl</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>K</kbd>) lets you change duration or size at any time.</p></li>
+</ol>
+
+<h2 id="types">Kinds of layer</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Layer</th><th>What it is</th><th>Create it with</th></tr></thead>
+<tbody>
+<tr><td>Footage</td><td>Imported video, stills or audio</td><td>Drag from the Project panel</td></tr>
+<tr><td>Text</td><td>Editable, animatable type</td><td><span class="ui">Layer › New › Text</span></td></tr>
+<tr><td>Shape</td><td>Vector shapes that stay sharp at any size</td><td>Shape tools or the Pen tool</td></tr>
+<tr><td>Solid</td><td>A flat colour, for backgrounds or effects</td><td><kbd>Ctrl</kbd>+<kbd>Y</kbd> / <kbd>Cmd</kbd>+<kbd>Y</kbd></td></tr>
+<tr><td>Adjustment</td><td>Its effects apply to every layer below</td><td><span class="ui">Layer › New › Adjustment Layer</span></td></tr>
+<tr><td>Null Object</td><td>An invisible layer that drives other layers' motion</td><td><span class="ui">Layer › New › Null Object</span></td></tr>
+<tr><td>Precomp</td><td>A composition used as a layer in another</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td></tr>
+</tbody></table></div>
+
+<h2 id="transform">Transform: five properties every layer has</h2>
+<p>Press a letter to reveal that property on the selected layer: <kbd>A</kbd> Anchor Point · <kbd>P</kbd> Position · <kbd>S</kbd> Scale · <kbd>R</kbd> Rotation · <kbd>T</kbd> Opacity. Hold <kbd>Shift</kbd> and press another to show several at once.</p>
+
+<h2 id="preview">Previewing</h2>
+<ul class="check">
+<li><span><b>Press Spacebar to preview.</b> The green bar on the timeline shows what's cached and will play smoothly.</span></li>
+<li><span><b>Lower the Composition panel's Resolution.</b> Half or Quarter makes previews faster while you work. It doesn't change the comp's frame size.</span></li>
+<li><span><b>Set a work area.</b> Press <kbd>B</kbd> and <kbd>N</kbd> to set the start and end of the range you preview.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>You added something but can't see it</b>It's probably under an opaque layer. Drag it higher in the Timeline.</li>
+<li><b>Mixing up Resolution and frame size</b>Resolution in the Composition panel is preview quality; the real size is in Composition Settings.</li>
+<li><b>The comp is shorter than you need</b>Change Duration in Composition Settings rather than dragging the end of a layer.</li>
+<li><b>Editing the wrong comp</b>Check the tab name above the Timeline before you change anything, especially with nested precomps.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>Creating compositions and layers works the same way.</li>
+<li>The Adobe Stock panel and AI Assistant arrived in 27.0.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+</ul>

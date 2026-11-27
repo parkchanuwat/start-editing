@@ -1,0 +1,53 @@
+<p class="crumb">After Effects</p>
+<h1>Rendering and export</h1>
+<p class="lead">After Effects turns compositions into files through the <b>Render Queue</b>. For an MP4, H.264 is built in. For transparent video or many files at once, there are routes for those too.</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>H.264 is the default.</b> On a fresh install, or after clearing Output Module preferences, After Effects uses <span class="ui">H.264 – Match Render Settings – 15 Mbps</span> as the default output module.</p></div>
+<div class="demo" data-demo="ae-render"></div>
+
+<h2 id="steps">Rendering an MP4</h2>
+<ol class="steps">
+<li><h3>Add the comp to the queue</h3><p>Select the composition and choose <span class="ui">File › Export › Add to Render Queue</span> (<kbd>Ctrl</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>M</kbd>). The Render Queue panel opens.</p></li>
+<li><h3>Check Render Settings</h3><p><span class="ui">Best Settings</span> is the usual choice. Also check Time Span: the whole composition, or only the work area?</p></li>
+<li><h3>Choose an Output Module</h3><p>Click the Output Module name and set Format to H.264. There are 5, 15 and 40 Mbps presets depending on resolution and the quality you want.</p></li>
+<li><h3>Name the file and pick a folder</h3><p>Click the file name next to <span class="ui">Output To</span> and choose where it goes.</p></li>
+<li><h3>Click Render</h3><p>Click Render on the right of the Render Queue panel, wait for the bar to finish, then open the file.</p></li>
+</ol>
+
+<h2 id="formats">Pick a format for the job</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>You need</th><th>Format</th><th>Channels</th></tr></thead>
+<tbody>
+<tr><td>A file for the web or social</td><td>H.264</td><td>RGB</td></tr>
+<tr><td>Transparent video to overlay in Premiere</td><td>QuickTime, Apple ProRes 4444 codec</td><td>RGB + Alpha</td></tr>
+<tr><td>An image sequence</td><td>PNG Sequence</td><td>RGB or RGB + Alpha</td></tr>
+<tr><td>A high-quality master</td><td>QuickTime, Apple ProRes 422 HQ codec</td><td>RGB</td></tr>
+</tbody></table></div>
+<p class="note">Set your own default output modules under <span class="ui">Edit › Templates › Output Module</span>.</p>
+
+<h2 id="ame">Hand off to Media Encoder or Premiere</h2>
+<ul class="check">
+<li><span><b>Adobe Media Encoder</b>: choose <span class="ui">File › Export › Add to Adobe Media Encoder Queue</span>. Good for several files and specs, and you can keep working in After Effects while it renders.</span></li>
+<li><span><b>Dynamic Link to Premiere</b>: import the composition into Premiere without rendering. Changes in After Effects update in Premiere. Versions must match.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>The file is shorter than expected</b>Time Span in Render Settings is set to the work area. Change it to the composition length or widen the work area.</li>
+<li><b>MP4 has a black background</b>H.264 can't store transparency. Use QuickTime ProRes 4444 with Channels set to RGB + Alpha.</li>
+<li><b>Can't find the file</b>Check Output To every time before you click Render.</li>
+<li><b>Rendering is very slow</b>Turn off layers you don't need and make sure Multi-Frame Rendering is on in Preferences.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>The Render Queue and built-in H.264 work the same way.</li>
+<li>27.0 adds a PNG compression slider (still lossless) and better Auto-Save recovery.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/desktop/render-and-export/export-h-264-from-the-after-effects/exporting-h264-from-the-after-effects-render-queue.html">Exporting H.264 from the After Effects Render Queue</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/dynamic-link-effects.html">Dynamic Link and After Effects</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/release-note.html">After Effects release notes</a></li>
+</ul>

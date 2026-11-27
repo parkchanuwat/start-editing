@@ -6,13 +6,13 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const NAV=[
- {g:{th:'เริ่มที่นี่',en:'Start here'},items:[{id:'first-video',th:'ทำคลิปแรกตั้งแต่ต้นจนจบ',en:'Your first video, start to finish'},{id:'project-media',th:'จัดการไฟล์และโปรเจกต์',en:'Managing files and projects'},{th:'Premiere กับ After Effects ใช้ต่างกันยังไง',en:'Premiere vs After Effects'},{th:'สเปกเครื่องและการติดตั้ง',en:'System requirements and install'},{th:'รู้จักหน้าจอและพาเนล',en:'Tour of the workspace'}]},
+ {g:{th:'เริ่มที่นี่',en:'Start here'},items:[{id:'first-video',th:'ทำคลิปแรกตั้งแต่ต้นจนจบ',en:'Your first video, start to finish'},{id:'project-media',th:'จัดการไฟล์และโปรเจกต์',en:'Managing files and projects'},{id:'premiere-vs-ae',th:'Premiere กับ After Effects ใช้ต่างกันยังไง',en:'Premiere vs After Effects'},{id:'system-requirements',th:'สเปกเครื่องและการติดตั้ง',en:'System requirements and install'},{id:'workspace-tour',th:'รู้จักหน้าจอและพาเนล',en:'Tour of the workspace'}]},
  {g:{th:'พื้นฐาน Premiere',en:'Premiere basics'},items:[{id:'sequence',th:'Sequence และ Sequence Settings',en:'Sequences and Sequence Settings'},{id:'monitors',th:'Source Monitor กับ Program Monitor',en:'Source Monitor vs Program Monitor'},{id:'timeline',th:'ตัดต่อบน Timeline',en:'Editing in the Timeline'},{id:'markers',th:'Marker',en:'Markers'}]},
  {g:{th:'เอฟเฟกต์และกราฟิก',en:'Effects and graphics'},items:[{id:'effects-keyframes',th:'Effects และ Keyframe',en:'Effects and keyframes'},{id:'mogrt',th:'MOGRT (Motion Graphics Template)',en:'MOGRT (Motion Graphics templates)'},{id:'object-mask',th:'Object Mask',en:'Object Mask'}]},
- {g:{th:'สี เสียง และซับไตเติล',en:'Color, audio and captions'},items:[{id:'color-mode',th:'แต่งสีด้วย Color Mode',en:'Color grading with Color Mode'},{id:'captions',th:'ซับไตเติลภาษาเกาหลีและจีนตัวย่อ',en:'Korean and Simplified Chinese captions'},{th:'เสียงและเพลง',en:'Audio and music'}]},
- {g:{th:'ส่งออก',en:'Export'},items:[{id:'presets-resolution',th:'Preset และ Resolution ที่ใช้บ่อย',en:'Common presets and resolutions'},{th:'Export วิดีโอ',en:'Exporting video'}]},
- {g:{th:'After Effects',en:'After Effects'},items:[{th:'Composition และ Layer',en:'Compositions and layers'},{th:'Keyframe ใน After Effects',en:'Keyframes in After Effects'},{th:'ทำตัวหนังสือเคลื่อนไหว',en:'Animating text'},{th:'Render และส่งออก',en:'Rendering and export'}]},
- {g:{th:'อ้างอิง',en:'Reference'},items:[{th:'มีอะไรใหม่ในเวอร์ชัน 27.0',en:"What's new in 27.0"},{th:'คีย์ลัด',en:'Keyboard shortcuts'},{th:'อภิธานศัพท์',en:'Glossary'}]}
+ {g:{th:'สี เสียง และซับไตเติล',en:'Color, audio and captions'},items:[{id:'color-mode',th:'แต่งสีด้วย Color Mode',en:'Color grading with Color Mode'},{id:'captions',th:'ซับไตเติลภาษาเกาหลีและจีนตัวย่อ',en:'Korean and Simplified Chinese captions'},{id:'audio',th:'เสียงและเพลง',en:'Audio and music'}]},
+ {g:{th:'ส่งออก',en:'Export'},items:[{id:'presets-resolution',th:'Preset และ Resolution ที่ใช้บ่อย',en:'Common presets and resolutions'},{id:'export',th:'Export วิดีโอ',en:'Exporting video'}]},
+ {g:{th:'After Effects',en:'After Effects'},items:[{id:'ae-comp-layers',th:'Composition และ Layer',en:'Compositions and layers'},{id:'ae-keyframes',th:'Keyframe ใน After Effects',en:'Keyframes in After Effects'},{id:'ae-text',th:'ทำตัวหนังสือเคลื่อนไหว',en:'Animating text'},{id:'ae-render',th:'Render และส่งออก',en:'Rendering and export'}]},
+ {g:{th:'อ้างอิง',en:'Reference'},items:[{id:'whats-new',th:'มีอะไรใหม่ในเวอร์ชัน 27.0',en:"What's new in 27.0"},{id:'shortcuts',th:'คีย์ลัด',en:'Keyboard shortcuts'},{id:'glossary',th:'อภิธานศัพท์',en:'Glossary'}]}
 ];
 const ORDER=NAV.flatMap(g=>g.items.filter(i=>i.id));
 const PAGES=ORDER.map(i=>i.id);
@@ -316,7 +316,7 @@ const art=$('article'),side=$('.side'),toc=$('.toc'),q=$('#q'),navd=$('#navd');
 let curKey='';
 const renderNav=(lang,id)=>{const u=UI[lang];
  side.setAttribute('aria-label',u.navlabel);
- side.innerHTML=NAV.map(g=>`<p class="grp">${esc(g.g[lang])}</p><ul>${g.items.map(i=>i.id?`<li><a href="#${lang}-${i.id}"${i.id===id?' aria-current="page"':''}>${esc(i[lang])}</a></li>`:`<li><span>${esc(i[lang])}</span></li>`).join('')}</ul>`).join('')+`<p class="hint none" hidden>${u.none}</p><p class="hint">${u.soon}</p>`;
+ side.innerHTML=NAV.map(g=>`<p class="grp">${esc(g.g[lang])}</p><ul>${g.items.map(i=>i.id?`<li><a href="#${lang}-${i.id}"${i.id===id?' aria-current="page"':''}>${esc(i[lang])}</a></li>`:`<li><span>${esc(i[lang])}</span></li>`).join('')}</ul>`).join('')+`<p class="hint none" hidden>${u.none}</p>`;
  $('.brand b').textContent=u.brand;$('.brand small').textContent=u.tag;q.placeholder=u.search;$('#ql').textContent=u.search;$('summary',navd).textContent=u.menu;
  $$('.lang a').forEach(a=>{a.href=`#${a.dataset.l}-${id}`;if(a.dataset.l===lang)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
  q.value='';};

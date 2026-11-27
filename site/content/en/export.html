@@ -1,0 +1,59 @@
+<p class="crumb">Premiere › Export</p>
+<h1>Exporting video</h1>
+<p class="lead">Exporting turns a sequence into a video file that plays anywhere. In Premiere, start by asking where the file is going, then pick the preset that suits that destination.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Always check Range.</b> If In/Out points are left on the sequence, Premiere may export only that part. Set Range to <span class="ui">Entire Source</span> when you want everything.</p></div>
+<div class="demo" data-demo="export"></div>
+
+<h2 id="ways">Three ways to export</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Way</th><th>Good for</th><th>Where</th></tr></thead>
+<tbody>
+<tr><td>Export mode</td><td>Everyday jobs, full control</td><td>The Export tab in the header bar, or <kbd>Ctrl</kbd>+<kbd>M</kbd> / <kbd>Cmd</kbd>+<kbd>M</kbd></td></tr>
+<tr><td>Quick Export</td><td>A fast file with a ready-made preset</td><td>Button at the top right of the header bar</td></tr>
+<tr><td>Send to Media Encoder</td><td>Several files or specs, or editing while it exports</td><td>Button at the bottom right of Export mode</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">Steps in Export mode</h2>
+<ol class="steps">
+<li><h3>Select the sequence and open Export mode</h3><p>Click in the timeline or select the sequence in the Project panel, then click the <span class="ui">Export</span> tab.</p></li>
+<li><h3>Choose a destination</h3><p>On the left, <span class="ui">Media File</span> makes an ordinary file, and some social destinations can upload for you.</p></li>
+<li><h3>Set the file name, location and preset</h3><p>Give the file a name and location you'll find again, then choose a Preset such as <span class="ui">Match Source – Adaptive High Bitrate</span>, which uses H.264 at the sequence's frame size and frame rate.</p></li>
+<li><h3>Check Range and Captions</h3><p>Range, under the preview, offers Entire Source, Source In/Out, Work Area and Custom. If you have captions, choose in <span class="ui">Captions</span> whether to leave them out, export a sidecar file or burn them into the picture.</p></li>
+<li><h3>Check the estimated size and export</h3><p>Estimated File Size is at the bottom right. If it's too big to send, try a Medium Bitrate preset. Click <span class="ui">Export</span> and wait for it to finish.</p></li>
+<li><h3>Watch the file you made</h3><p>Open the actual file and watch it through: picture, sound, captions, and no extra black at the end.</p></li>
+</ol>
+
+<h2 id="settings">Settings worth knowing</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Setting</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Format</td><td>The file type and codec, such as H.264 (MP4), HEVC or QuickTime (ProRes)</td></tr>
+<tr><td>Match Source</td><td>Automatically uses the source's frame size and frame rate</td></tr>
+<tr><td>Bitrate</td><td>Data per second; higher is sharper but bigger. VBR adapts to how complex the picture is; CBR stays constant.</td></tr>
+<tr><td>Use Maximum Render Quality</td><td>Helps quality when scaling down, but takes longer</td></tr>
+<tr><td>Content Credentials</td><td>Optionally embeds who created and edited the file</td></tr>
+</tbody></table></div>
+<p class="note">For frame sizes and presets per destination, see <a href="#en-presets-resolution">Common presets and resolutions</a>.</p>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Only part of the video exported</b>Range was set to Source In/Out by leftover In/Out points. Switch to Entire Source.</li>
+<li><b>Can't find the file</b>Check Location before you click Export, and put a date or version in the file name.</li>
+<li><b>Captions missing from the file</b>Open Captions and choose to burn them in or export a sidecar file. With None there are no captions.</li>
+<li><b>Black or frozen frames at the end</b>A clip or graphic runs past the end of the edit. Remove it or set Range precisely.</li>
+<li><b>File too big to send</b>Lower the bitrate with a Medium or Low preset rather than shrinking the frame below what the destination needs.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Export mode and Quick Export work the same way.</li>
+<li>The Content Credentials option at export arrived in 26.2.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/workflow-overview-exporting.html">Export workflow overview</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/export-settings-reference-premiere-pro.html">Overview of export settings</a></li>
+<li><a href="https://helpx.adobe.com/uk/premiere/desktop/render-and-export/export-files/quickly-export-a-video-file.html">Quickly export a video file</a></li>
+</ul>

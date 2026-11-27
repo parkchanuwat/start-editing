@@ -1,0 +1,57 @@
+<p class="crumb">After Effects</p>
+<h1>ทำตัวหนังสือเคลื่อนไหว</h1>
+<p class="lead">ตัวหนังสือใน After Effects ขยับได้ทั้ง layer หรือขยับทีละตัวอักษร ทีละคำ ทีละบรรทัด ด้วย <b>text animator</b> วิธีที่เร็วที่สุดคือเริ่มจาก animation preset แล้วค่อยแกะดูว่าข้างในตั้งค่าไว้อย่างไร</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>แกะสูตรจาก preset:</b> ใส่ animation preset ให้ text layer แล้วกด <kbd>U</kbd> หรือ <kbd>UU</kbd> จะเห็นเฉพาะค่าที่ preset นั้นขยับหรือแก้ไว้</p></div>
+<div class="demo" data-demo="ae-text"></div>
+
+<h2 id="create">สร้าง text layer</h2>
+<ol class="steps">
+<li><h3>เลือก Type tool</h3><p>กด <kbd>Ctrl</kbd>+<kbd>T</kbd> / <kbd>Cmd</kbd>+<kbd>T</kbd> คลิกหนึ่งครั้งใน Composition panel เพื่อพิมพ์แบบบรรทัดเดียว (point text) หรือลากเป็นกรอบเพื่อพิมพ์แบบย่อหน้า (paragraph text)</p></li>
+<li><h3>ตั้งฟอนต์และขนาด</h3><p>ใช้ Character panel หรือ Properties panel ถ้าพิมพ์ภาษาเกาหลีหรือจีน ต้องเลือกฟอนต์ที่มีตัวอักษรนั้น ไม่อย่างนั้นจะเห็นเป็นสี่เหลี่ยม</p></li>
+</ol>
+
+<h2 id="preset">วิธีที่ 1: ใช้ animation preset</h2>
+<ol class="steps">
+<li><h3>เปิด Effects &amp; Presets panel</h3><p>ไปที่ <span class="ui">Animation Presets › Text</span> จะเห็นหมวดเช่น Animate In, Animate Out, Blurs</p></li>
+<li><h3>ลาก preset ไปวางบน text layer</h3><p>preset จะเริ่มที่ตำแหน่ง playhead กด Spacebar เพื่อดูผล</p>
+<p class="note">ถ้าอยากเห็นตัวอย่างก่อนใช้ เลือก <span class="ui">Browse Presets</span> จากเมนูของ Effects &amp; Presets panel เพื่อเปิดใน Adobe Bridge</p></li>
+</ol>
+
+<h2 id="animator">วิธีที่ 2: ทำเองด้วย text animator</h2>
+<ol class="steps">
+<li><h3>เพิ่ม animator</h3><p>เปิด text layer ใน Timeline คลิก <span class="ui">Animate</span> แล้วเลือกค่าที่จะขยับ เช่น Opacity หรือ Position หรือใช้เมนู <span class="ui">Animation › Animate Text</span></p></li>
+<li><h3>ตั้งค่า "ปลายทาง" ของตัวอักษร</h3><p>เช่นตั้ง Opacity เป็น 0% ตัวอักษรที่อยู่ในช่วงของ Range Selector จะได้ค่านี้</p></li>
+<li><h3>animate ช่วงของ Range Selector</h3><p>เปิด <span class="ui">Range Selector 1</span> กด stopwatch ของ <span class="ui">Start</span> ที่ 0% แล้วเลื่อนเวลาไปข้างหน้าและตั้ง Start เป็น 100% ตัวอักษรจะค่อย ๆ ปรากฏทีละตัว</p></li>
+<li><h3>เลือกหน่วยใน Advanced</h3><p>ใน Range Selector › Advanced › <span class="ui">Based On</span> เลือกได้ว่าจะนับเป็นตัวอักษร คำ หรือบรรทัด</p></li>
+</ol>
+
+<h2 id="ideas">ไอเดียที่ทำได้ด้วย animator</h2>
+<ul class="check">
+<li><span><b>พิมพ์ดีด</b> Opacity 0% แล้ว animate Start จาก 0 ถึง 100%</span></li>
+<li><span><b>ลอยขึ้นทีละตัว</b> Position Y +30 และ Opacity 0% ด้วย Range Selector เดียวกัน</span></li>
+<li><span><b>ตัวสั่น</b> เพิ่ม Wiggly Selector แทน Range Selector</span></li>
+<li><span><b>น้ำหนักฟอนต์เปลี่ยน</b> ใช้ variable font แล้วเพิ่ม animator ของแกน Weight</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>animate ทั้ง layer แทนที่จะเป็นทีละตัว</b>ค่า Transform ของ layer ขยับทั้งก้อน ถ้าอยากให้ทีละตัวต้องใช้ animator</li>
+<li><b>Start กับ End สับสน</b>ตัวอักษรที่อยู่ระหว่าง Start และ End คือตัวที่ได้ค่าของ animator ลองดูแถบช่วงใน Composition panel ประกอบ</li>
+<li><b>ตัวอักษรเกาหลีหรือจีนเป็นสี่เหลี่ยม</b>ฟอนต์ไม่มีตัวอักษรนั้น เปลี่ยนเป็นฟอนต์ที่รองรับภาษานั้น</li>
+<li><b>ภาพตัวหนังสือดูกระตุก</b>เปิด motion blur ให้ text layer จะดูนุ่มขึ้น</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>text animator และ Range Selector ใช้แบบเดียวกัน</li>
+<li>การ animate แกนของ variable font มีตั้งแต่ 26.0</li>
+<li>ข้อความจาก Illustrator ที่แก้ต่อได้ใน After Effects เพิ่มเข้ามาใน 27.0</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/using/animating-text.html">Animating text</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/examples-resources-text-animation.html">Examples and resources for text animation</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/working-with-variable-font-axes.html">Working with Variable Font Axes</a></li>
+</ul>

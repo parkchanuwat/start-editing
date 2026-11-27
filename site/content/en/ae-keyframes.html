@@ -1,0 +1,69 @@
+<p class="crumb">After Effects</p>
+<h1>Keyframes in After Effects</h1>
+<p class="lead">A keyframe says "at this time, this property has this value", and After Effects fills in everything between. What makes motion look professional is the <b>timing</b> between keyframes, which you control with Easy Ease and the Graph Editor.</p>
+<ul class="meta"><li class="ver">After Effects 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Select keyframes and press <kbd>F9</kbd>.</b> Motion then eases out and slows down before it stops, instead of shooting off and halting dead. Compare the two in the demo.</p></div>
+<div class="demo" data-demo="ae-keyframes"></div>
+
+<h2 id="steps">Your first keyframes</h2>
+<ol class="steps">
+<li><h3>Reveal the property</h3><p>Select a layer and press <kbd>P</kbd> for Position (or <kbd>S</kbd> Scale, <kbd>R</kbd> Rotation, <kbd>T</kbd> Opacity).</p></li>
+<li><h3>Click the stopwatch</h3><p>Move the playhead to the start and click the stopwatch next to the property name. That's your first keyframe.</p>
+<p class="note">Shortcut to add a Position keyframe: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows) or <kbd>Option</kbd>+<kbd>P</kbd> (Mac).</p></li>
+<li><h3>Move in time and change the value</h3><p>Move the playhead forward, then drag the layer in the Composition panel or type a new value. After Effects adds the second keyframe for you.</p></li>
+<li><h3>Add Easy Ease</h3><p>Drag-select both keyframes and press <kbd>F9</kbd>. The keyframe icons change from diamonds to hourglass shapes.</p></li>
+<li><h3>Refine in the Graph Editor</h3><p>Press <kbd>Shift</kbd>+<kbd>F3</kbd> to open the Graph Editor. Drag a keyframe's handle further out to increase its influence, making the ease stronger.</p></li>
+</ol>
+
+<h2 id="graphs">Value graph vs speed graph</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Graph</th><th>Shows</th><th>Use it when</th></tr></thead>
+<tbody>
+<tr><td>Value Graph</td><td>The property's actual value over time (X red, Y green)</td><td>You want to see where a value goes, or build an overshoot</td></tr>
+<tr><td>Speed Graph</td><td>How fast the value changes</td><td>You want to shape speed, such as a hard start</td></tr>
+</tbody></table></div>
+<p>In the Composition panel, the motion path shows one dot per frame. Dots far apart mean fast; dots close together mean slow.</p>
+
+<h2 id="types">Interpolation types</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Type</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Linear</td><td>Constant speed with abrupt changes at keyframes; looks stiff</td></tr>
+<tr><td>Bezier / Easy Ease</td><td>Smooth acceleration and deceleration; Easy Ease uses 33.33% influence by default</td></tr>
+<tr><td>Auto Bezier</td><td>The default for motion paths, giving smooth curves</td></tr>
+<tr><td>Hold</td><td>Keeps the value until the next keyframe, then jumps; good for snappy changes</td></tr>
+</tbody></table></div>
+<p class="note">Change it by right-clicking a keyframe › <span class="ui">Keyframe Interpolation</span>.</p>
+
+<h2 id="keys">Handy shortcuts</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Key</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><kbd>J</kbd> / <kbd>K</kbd></td><td>Previous / next keyframe (or marker)</td></tr>
+<tr><td><kbd>U</kbd></td><td>Show only keyframed properties</td></tr>
+<tr><td><kbd>F9</kbd></td><td>Easy Ease</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>F9</kbd></td><td>Easy Ease In</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F9</kbd> / <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>F9</kbd></td><td>Easy Ease Out</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>F3</kbd></td><td>Toggle the Graph Editor</td></tr>
+<tr><td><kbd>Alt</kbd>+<kbd>←</kbd>/<kbd>→</kbd> / <kbd>Option</kbd>+<kbd>←</kbd>/<kbd>→</kbd></td><td>Nudge selected keyframes by one frame</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Changing a value changes the whole layer</b>The stopwatch isn't on, so there are no keyframes. Turn it on first, then change values.</li>
+<li><b>Motion too fast or too slow</b>Drag keyframes further apart to slow down, or closer together to speed up.</li>
+<li><b>Easy Ease feels sluggish</b>Lower the influence in the Graph Editor, or use Ease Out on the first keyframe and Ease In on the last only.</li>
+<li><b>Dragging handles in the Graph Editor does nothing useful</b>Check whether you're in the Speed Graph or Value Graph; handles behave differently in each.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>After Effects 25.x–26.x</summary><ul>
+<li>Keyframes, Easy Ease and the Graph Editor work the same in every version.</li>
+<li>The Effect Controls panel was redesigned in 26.5, so it may look different in earlier versions.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/en/after-effects/using/keyframe-interpolation.html">Keyframe interpolation</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/using/speed.html">Speed</a></li>
+</ul>

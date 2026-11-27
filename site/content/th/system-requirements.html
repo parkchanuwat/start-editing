@@ -1,0 +1,60 @@
+<p class="crumb">เริ่มที่นี่</p>
+<h1>สเปกเครื่องและการติดตั้ง</h1>
+<p class="lead">ก่อนติดตั้ง Premiere หรือ After Effects 27.0 ให้เช็กสามอย่าง คือระบบปฏิบัติการ RAM และการ์ดจอ เวอร์ชัน 27.0 ตัดการรองรับ Windows รุ่นเก่าและ Mac ชิป Intel ออกแล้ว</p>
+<ul class="meta"><li class="ver">Premiere และ After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Windows 11 เวอร์ชัน 23H2 ติดตั้ง 27.0 ไม่ได้</b> ต้องอัปเดตเป็น 24H2 ขึ้นไปก่อน ส่วน Mac ต้องเป็นชิป Apple silicon (M1 ขึ้นไป) และ macOS 15 ขึ้นไป</p></div>
+<div class="demo" data-demo="system-requirements"></div>
+
+<h2 id="specs">สเปกโดยสรุป</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>รายการ</th><th>Premiere 27.0</th><th>After Effects 27.0</th></tr></thead>
+<tbody>
+<tr><td>Windows</td><td>Windows 11 v24H2 ขึ้นไป</td><td>Windows 11 v24H2 ขึ้นไป</td></tr>
+<tr><td>Mac</td><td>Apple silicon (M1 ขึ้นไป), macOS 15 ขึ้นไป</td><td>Apple silicon (M1 ขึ้นไป), macOS 15 ขึ้นไป</td></tr>
+<tr><td>RAM</td><td>ขั้นต่ำ 8 GB, แนะนำ 16 GB สำหรับ HD และ 32 GB ขึ้นไปสำหรับ 4K</td><td>ขั้นต่ำ 16 GB, แนะนำ 32 GB ขึ้นไปสำหรับ 4K</td></tr>
+<tr><td>การ์ดจอ (Windows)</td><td>VRAM อย่างน้อย 4 GB ถ้าเป็น NVIDIA ต้องรุ่น Maxwell (2014) ขึ้นไป แนะนำ 8 GB</td><td>VRAM อย่างน้อย 4 GB</td></tr>
+<tr><td>จอ</td><td>1920×1080 ขึ้นไป</td><td>1920×1080 ขึ้นไป</td></tr>
+<tr><td>พื้นที่ดิสก์</td><td>ประมาณ 8 GB สำหรับติดตั้ง และควรมี SSD แยกสำหรับไฟล์งานและ cache</td><td>มีพื้นที่ว่างสำหรับติดตั้งและ disk cache บน SSD</td></tr>
+</tbody></table></div>
+<p class="note">ตัวเลขนี้สรุปจากหน้า Technical requirements ของ Adobe ณ วันที่อัปเดต รุ่น CPU ที่รองรับและรายละเอียดอื่นดูในหน้าต้นฉบับ</p>
+
+<h2 id="steps">ขั้นตอนติดตั้ง</h2>
+<ol class="steps">
+<li><h3>เช็กเวอร์ชันระบบปฏิบัติการ</h3><p>Windows: <span class="ui">Settings › System › About</span> ดูที่ Version ต้องเป็น 24H2 ขึ้นไป · Mac: เมนู Apple › <span class="ui">About This Mac</span> ดูชิปและเวอร์ชัน macOS</p></li>
+<li><h3>เช็ก VRAM ของการ์ดจอ (Windows)</h3><p>เปิด Task Manager › แท็บ <span class="ui">Performance</span> › เลือก GPU แล้วดู Dedicated GPU memory ถ้าต่ำกว่า 4 GB อาจเปิด Premiere ไม่ได้หรือใช้งานไม่ไหว</p></li>
+<li><h3>ติดตั้ง Creative Cloud desktop app</h3><p>ดาวน์โหลดจากเว็บ Adobe แล้วล็อกอินด้วย Adobe ID ต้องต่ออินเทอร์เน็ตเพื่อ activate</p></li>
+<li><h3>ตั้งภาษาก่อนกดติดตั้ง</h3><p>ใน Creative Cloud desktop app เปิด Preferences › <span class="ui">Apps</span> แล้วเลือก <span class="ui">Default install language</span> ทั้งสองโปรแกรมมีภาษา 한국어 และ 简体中文 ให้เลือก</p>
+<p class="note">ภาษาจะใช้กับโปรแกรมที่ติดตั้งหลังจากนี้ ถ้าอยากเปลี่ยนภาษาของโปรแกรมที่ติดตั้งไปแล้ว ต้องถอนการติดตั้งแล้วติดตั้งใหม่</p></li>
+<li><h3>ติดตั้ง Premiere และ After Effects เวอร์ชันเดียวกัน</h3><p>กด Install ทั้งสองตัวจากรายการ Apps ถ้าจะใช้ Dynamic Link ต้องเป็นเวอร์ชันเดียวกัน</p></li>
+</ol>
+
+<h2 id="buy">ถ้ากำลังจะซื้อเครื่องใหม่</h2>
+<ul class="check">
+<li><span><b>RAM 32 GB</b> ถ้าตั้งใจทำ 4K หรือใช้ After Effects เป็นประจำ</span></li>
+<li><span><b>การ์ดจอแยก VRAM 8 GB ขึ้นไป</b> บน Windows เพื่อเอฟเฟกต์และฟีเจอร์ AI ที่ใช้ GPU</span></li>
+<li><span><b>SSD สองลูก</b> ลูกหนึ่งสำหรับระบบและโปรแกรม อีกลูกสำหรับไฟล์งานและ cache</span></li>
+<li><span><b>Mac ต้องเป็น Apple silicon</b> และเลือก unified memory ให้พอตั้งแต่ตอนซื้อ เพราะเพิ่มทีหลังไม่ได้</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>Windows 11 23H2 กดอัปเดตไม่ได้</b>เวอร์ชัน 27.0 บล็อกการติดตั้งบน 23H2 อัปเดต Windows เป็น 24H2 ขึ้นไปก่อน</li>
+<li><b>Mac ชิป Intel ไม่เห็น 27.0</b>27.0 รองรับเฉพาะ Apple silicon Mac ชิป Intel ใช้ได้ถึงเวอร์ชัน 26.x</li>
+<li><b>ติดตั้งไปแล้วได้ภาษาที่ไม่ต้องการ</b>เปลี่ยน Default install language แล้วถอนติดตั้งและติดตั้งใหม่</li>
+<li><b>เก็บฟุตเทจบน HDD ภายนอกช้า ๆ</b>เล่นกระตุกได้แม้เครื่องแรง ย้ายไฟล์งานไปไว้บน SSD</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>เวอร์ชัน 26.x และ 25.x</summary><ul>
+<li>26.x ต้องใช้ Windows 11 v24H2 เหมือนกัน และยังรองรับ Mac ชิป Intel</li>
+<li>25.x ยังรองรับ Windows 10 v22H2</li>
+<li>Adobe แจ้งว่าตั้งแต่ 28.0 จะบล็อกการติดตั้งบนระบบที่ใช้พื้นฐาน Windows 10 ทั้งหมด รวมถึง Windows Server 2022</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/system-requirements.html">Adobe Premiere technical requirements</a></li>
+<li><a href="https://helpx.adobe.com/after-effects/system-requirements.html">After Effects system requirements</a></li>
+<li><a href="https://community.adobe.com/announcements-727/important-notice-upcoming-system-requirement-changes-in-v27-0-1639157">Important Notice: Upcoming System Requirement Changes in v27.0</a></li>
+<li><a href="https://helpx.adobe.com/creative-cloud/help/change-install-language.html">Change language for Creative Cloud apps</a></li>
+</ul>

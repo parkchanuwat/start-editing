@@ -1,0 +1,55 @@
+<p class="crumb">เริ่มที่นี่</p>
+<h1>Premiere กับ After Effects ใช้ต่างกันยังไง</h1>
+<p class="lead">Premiere ใช้ <b>ตัดต่อ</b> คือเรียงคลิปยาว ๆ ให้เป็นเรื่อง ใส่เสียง ซับ และสี ส่วน After Effects ใช้ <b>สร้างภาพเคลื่อนไหวและเอฟเฟกต์</b> ที่ละเอียดในช่วงสั้น ๆ งานส่วนใหญ่เริ่มใน Premiere แล้วค่อยส่งบางช็อตไปทำต่อใน After Effects</p>
+<ul class="meta"><li class="ver">Premiere และ After Effects 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>จำง่าย ๆ:</b> ถ้างานยาวเป็นนาทีและมีหลายคลิป ทำใน Premiere ถ้างานยาวไม่กี่วินาทีแต่ต้องขยับทุกอย่างอย่างละเอียด ทำใน After Effects</p></div>
+<div class="demo" data-demo="premiere-vs-ae"></div>
+
+<h2 id="compare">เทียบกันทีละเรื่อง</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>เรื่อง</th><th>Premiere</th><th>After Effects</th></tr></thead>
+<tbody>
+<tr><td>งานหลัก</td><td>ตัดต่อ เรียงเรื่อง เสียง ซับ แต่งสี</td><td>motion graphics, compositing, visual effects</td></tr>
+<tr><td>หน่วยของงาน</td><td>Sequence</td><td>Composition</td></tr>
+<tr><td>Timeline</td><td>track หนึ่งเส้นวางได้หลายคลิปต่อกัน</td><td>layer หนึ่งชั้นมีต้นฉบับได้แค่ชิ้นเดียว</td></tr>
+<tr><td>ความยาวที่เหมาะ</td><td>หลายนาทีถึงหลายชั่วโมง</td><td>ไม่กี่วินาทีถึงไม่กี่นาที</td></tr>
+<tr><td>ไฟล์โปรเจกต์</td><td><code>.prproj</code></td><td><code>.aep</code></td></tr>
+<tr><td>ส่งออก</td><td>Export mode หรือ Media Encoder</td><td>Render Queue หรือ Media Encoder</td></tr>
+</tbody></table></div>
+
+<h2 id="together">ใช้สองโปรแกรมร่วมกัน</h2>
+<ol class="steps">
+<li><h3>Dynamic Link: ส่งคลิปไปทำใน After Effects</h3><p>ใน Premiere คลิกขวาที่คลิปบน timeline แล้วเลือก <span class="ui">Replace With After Effects Composition</span> After Effects จะเปิดขึ้นพร้อม composition ใหม่ที่มีคลิปนั้นอยู่ แก้ใน After Effects แล้วกลับมาดูใน Premiere ได้เลยโดยไม่ต้อง render</p>
+<p class="note">ต้องใช้ Premiere กับ After Effects เวอร์ชันเดียวกัน ไม่อย่างนั้น Dynamic Link จะไม่ทำงาน</p></li>
+<li><h3>สร้าง composition เปล่าจาก Premiere</h3><p>เลือก <span class="ui">File › Adobe Dynamic Link › New After Effects Composition</span> composition ใหม่จะได้ขนาดภาพและ frame rate ตาม project ของ Premiere และยาว 30 วินาทีเป็นค่าเริ่มต้น</p></li>
+<li><h3>MOGRT: ออกแบบครั้งเดียวใช้ได้ทั้งทีม</h3><p>ออกแบบกราฟิกใน After Effects แล้ว export เป็น <code>.mogrt</code> คนตัดต่อเอาไปใช้ใน Premiere และแก้แค่ช่องที่เปิดไว้ เช่นชื่อและสี ดูเพิ่มที่หน้า <a href="#th-mogrt">MOGRT</a></p></li>
+<li><h3>Media Encoder: ให้เครื่องส่งออกไฟล์แทน</h3><p>ทั้งสองโปรแกรมส่งงานไปเข้าคิวใน Adobe Media Encoder ได้ จะได้ทำงานต่อระหว่างที่ไฟล์กำลัง export</p></li>
+</ol>
+
+<h2 id="which">งานแบบไหนใช้อะไร</h2>
+<ul class="check">
+<li><span><b>Vlog, สัมภาษณ์, คลิปงานอีเวนต์</b> เริ่มและจบใน Premiere ได้เลย ใช้ MOGRT สำเร็จรูปสำหรับชื่อคน</span></li>
+<li><span><b>Intro โลโก้, ไตเติลหนัง, infographic เคลื่อนไหว</b> ทำใน After Effects แล้ว render หรือส่งผ่าน Dynamic Link</span></li>
+<li><span><b>ลบวัตถุ, tracking ป้าย, แทนท้องฟ้า</b> งาน compositing ละเอียดทำใน After Effects ส่วนงานง่าย ๆ ลองใช้ <a href="#th-object-mask">Object Mask</a> ใน Premiere ก่อน</span></li>
+<li><span><b>ซับไตเติล, เสียง, แต่งสีทั้งเรื่อง</b> ทำใน Premiere เพราะต้องเห็นทั้งเรื่องต่อเนื่องกัน</span></li>
+</ul>
+
+<h2 id="mistakes">ข้อผิดพลาดที่มือใหม่เจอบ่อย</h2>
+<ul class="mist">
+<li><b>ตัดต่อทั้งเรื่องใน After Effects</b>After Effects ไม่ได้ออกแบบมาให้เรียงคลิปยาว ๆ จะ preview ช้าและแก้ลำบาก ตัดใน Premiere แล้วส่งเฉพาะช็อตที่ต้องทำเอฟเฟกต์ไป</li>
+<li><b>ทำแอนิเมชันซับซ้อนด้วย keyframe ใน Premiere</b>ทำได้ระดับหนึ่ง แต่ถ้ามีหลายชิ้นขยับพร้อมกัน After Effects มี Graph Editor และ text animator ที่คุมได้ละเอียดกว่า</li>
+<li><b>Dynamic Link ไม่ขึ้น</b>เช็กว่าทั้งสองโปรแกรมเป็นเวอร์ชันเดียวกัน เช่น 27.0 ทั้งคู่</li>
+<li><b>render จาก After Effects เป็น MP4 เพื่อวางทับใน Premiere</b>MP4 (H.264) เก็บพื้นหลังโปร่งใสไม่ได้ ถ้าต้องวางทับให้ใช้ Dynamic Link หรือ render เป็น ProRes 4444 แบบ RGB + Alpha</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere Pro 25.x และ Premiere 26.x</summary><ul>
+<li>ก่อนเวอร์ชัน 26.0 โปรแกรมชื่อ Adobe Premiere Pro หน้าที่และการใช้งานร่วมกับ After Effects เหมือนเดิม</li>
+<li>Dynamic Link และ MOGRT ใช้แบบเดียวกัน แต่ต้องให้เวอร์ชันของสองโปรแกรมตรงกันเสมอ</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/after-effects/using/dynamic-link-effects.html">Dynamic Link and After Effects</a></li>
+<li><a href="https://helpx.adobe.com/ca/after-effects/desktop/work-with-layers/create-layers/creating-layers.html">Creating layers (After Effects)</a></li>
+</ul>
