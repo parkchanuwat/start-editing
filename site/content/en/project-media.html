@@ -1,0 +1,68 @@
+<p class="crumb">Start here</p>
+<h1>Managing files and projects without Media Offline</h1>
+<p class="lead">A Premiere project file (.prproj) doesn't contain your video. It only remembers where each file lives and what it is called. Move or rename a file and the clip turns into a red Media Offline frame. Understanding that one fact prevents most problems.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>The one rule to remember:</b> keep your media in the same folder as the project file, or in a subfolder of it, and don't rename files or folders after importing.</p></div>
+<div class="demo" data-demo="project-media"></div>
+
+<h2 id="folders">A folder structure that works</h2>
+<pre class="note" style="background:var(--soft);padding:12px 14px;border-radius:10px;font:500 14px/1.6 'IBM Plex Mono',monospace;overflow-x:auto">MyVlog/
+  MyVlog.prproj
+  Footage/
+  Audio/
+  Graphics/
+  Exports/</pre>
+<ul class="check">
+<li><span>One job, one folder. Everything the job uses lives inside it, and you always move the whole folder.</span></li>
+<li><span>If you use an external drive, keep it connected while you work.</span></li>
+<li><span>For teams on Windows with network storage, map a drive letter and use the same letter on every computer.</span></li>
+</ul>
+
+<h2 id="relink">How Premiere finds moved files</h2>
+<ol class="steps">
+<li><h3>It checks old locations first</h3><p>A standard project remembers up to three locations per file (the current path plus two earlier ones). Move a file back and Premiere finds it.</p></li>
+<li><h3>It searches automatically, twice</h3><p>The first pass searches the folder containing the project file and all its subfolders. The second goes up one level and searches the whole parent folder, including neighbouring folders.</p></li>
+<li><h3>If it still can't find them, Link Media opens</h3><p>Point it at the files yourself, or right-click an offline clip in the Project panel and choose <span class="ui">Link Media</span> at any time.</p>
+<p class="note">For files whose extension changed, such as proxies or transcodes, untick File Extension under Match File Properties before searching.</p></li>
+</ol>
+<p>You always have to relink by hand when files or folders were renamed, the folder structure was reorganised, or a drive isn't connected.</p>
+
+<h2 id="move">Moving or handing over a project</h2>
+<ol class="steps">
+<li><h3>Use Project Manager</h3><p>Choose <span class="ui">File › Project Manager</span>, pick the sequences to take, and choose <span class="ui">Collect Files and Copy to New Location</span>. Premiere copies only the files actually used, together with the project file.</p></li>
+<li><h3>Don't forget the Masks folder</h3><p>If you used Object Mask, send the <code>&lt;Project Name&gt; Masks</code> folder that sits next to the project file as well.</p></li>
+<li><h3>Fonts and templates</h3><p>The other computer needs the fonts used in titles and MOGRTs, or the text switches to a different font.</p></li>
+</ol>
+
+<h2 id="autosave">Auto Save and recovering work</h2>
+<p>Set it under <span class="ui">Edit › Preferences › Auto Save</span> (Mac: <span class="ui">Premiere › Settings › Auto Save</span>): how often to save and how many versions to keep. Backups go in an Auto-Save folder next to the project file. If Premiere quits unexpectedly or the project file is damaged, open the latest file in that folder.</p>
+
+<h2 id="cache">What the media cache is, and whether you can delete it</h2>
+<p>When you import, Premiere creates helper files such as conformed audio and index files and keeps them in the media cache, which it shares with Media Encoder and After Effects. They can be deleted; the apps rebuild them when needed.</p>
+<ul class="check">
+<li><span>Settings are in <span class="ui">Edit › Preferences › Media Cache</span> (Mac: <span class="ui">Premiere › Settings › Media Cache</span>). You can move the cache to a fast drive with plenty of space.</span></li>
+<li><span>Have old cache files deleted automatically when the cache grows past a set size, so the disk doesn't fill up unnoticed.</span></li>
+<li><span>If sound or picture plays back strangely, clearing the cache and reopening the project often helps.</span></li>
+</ul>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Importing straight from a memory card</b>The clips go offline the moment you remove the card. Copy the files to the computer first.</li>
+<li><b>Reorganising folders mid-project</b>Files moved outside the project folder can't be found. Finish organising before you start.</li>
+<li><b>Deleting footage you think you don't need</b>Use Project Manager to separate what is used first, then delete.</li>
+<li><b>The drive fills up with cache</b>Set a maximum cache size and turn on automatic deletion of old files.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Link Media, Project Manager, Auto Save and Media Cache are in the same places.</li>
+<li>Team Projects remember unlimited earlier file locations, unlike standard projects, which remember three.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/organize-media/file-organization/relink-offline-media-automatically.html">Relink media in Premiere</a></li>
+<li><a href="https://helpx.adobe.com/ro/premiere-pro/how-to/relink-offline-media.html">Relink offline media</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/add-video-effects/work-with-masks/object-masking.html">Object masking in Premiere (mask data storage)</a></li>
+<li><a href="https://helpx.adobe.com/dk/media-encoder/desktop/encoding-and-exporting/media-cache-database.html">Managing the media cache database</a></li>
+</ul>

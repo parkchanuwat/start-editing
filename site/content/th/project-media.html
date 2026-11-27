@@ -1,0 +1,68 @@
+<p class="crumb">เริ่มที่นี่</p>
+<h1>จัดการไฟล์และโปรเจกต์ ไม่ให้เจอ Media Offline</h1>
+<p class="lead">ไฟล์โปรเจกต์ของ Premiere (.prproj) ไม่ได้เก็บวิดีโอไว้ในตัว มันจำแค่ว่าไฟล์อยู่ที่ไหนและชื่ออะไร ถ้าย้ายหรือเปลี่ยนชื่อไฟล์ คลิปจะกลายเป็นจอแดง Media Offline รู้หลักนี้ข้อเดียวก็กันปัญหาไปได้เกือบหมด</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>กฎข้อเดียวที่ควรจำ:</b> เก็บฟุตเทจไว้ในโฟลเดอร์เดียวกับไฟล์โปรเจกต์ หรือโฟลเดอร์ย่อยของมัน และอย่าเปลี่ยนชื่อไฟล์หรือโฟลเดอร์หลัง import</p></div>
+<div class="demo" data-demo="project-media"></div>
+
+<h2 id="folders">โครงสร้างโฟลเดอร์ที่แนะนำ</h2>
+<pre class="note" style="background:var(--soft);padding:12px 14px;border-radius:10px;font:500 14px/1.6 'IBM Plex Mono',monospace;overflow-x:auto">MyVlog/
+  MyVlog.prproj
+  Footage/
+  Audio/
+  Graphics/
+  Exports/</pre>
+<ul class="check">
+<li><span>หนึ่งงานหนึ่งโฟลเดอร์ ทุกอย่างที่ใช้ในงานอยู่ข้างใน ย้ายไปไหนก็ย้ายทั้งโฟลเดอร์</span></li>
+<li><span>ถ้าใช้ไดรฟ์ภายนอก ให้เสียบไว้ตลอดตอนทำงาน</span></li>
+<li><span>ทำงานในทีมบน Windows ที่เก็บไฟล์บนเครือข่าย ให้ map เป็นตัวอักษรไดรฟ์ และใช้ตัวอักษรเดียวกันทุกเครื่อง</span></li>
+</ul>
+
+<h2 id="relink">Premiere ตามหาไฟล์ที่ย้ายยังไง</h2>
+<ol class="steps">
+<li><h3>ดูที่อยู่เดิมก่อน</h3><p>Premiere จำที่อยู่ของแต่ละไฟล์ไว้สูงสุด 3 ตำแหน่งในโปรเจกต์ปกติ (ที่อยู่ปัจจุบันกับของเก่าอีกสองแห่ง) ถ้าย้ายกลับไปที่เดิมก็เจอเอง</p></li>
+<li><h3>ค้นอัตโนมัติ 2 รอบ</h3><p>รอบแรกค้นในโฟลเดอร์ที่มีไฟล์โปรเจกต์และโฟลเดอร์ย่อยทั้งหมด รอบสองขึ้นไปหนึ่งระดับแล้วค้นทั้งโฟลเดอร์แม่ รวมถึงโฟลเดอร์ข้าง ๆ</p></li>
+<li><h3>ถ้ายังไม่เจอ หน้าต่าง Link Media จะเปิดขึ้น</h3><p>ให้ชี้ไปที่ไฟล์เอง หรือคลิกขวาที่คลิป offline ใน Project panel แล้วเลือก <span class="ui">Link Media</span> เมื่อไรก็ได้</p>
+<p class="note">ไฟล์ที่ถูกแปลงนามสกุล เช่น ทำ proxy หรือ transcode มา ให้เอาติ๊ก File Extension ใต้ Match File Properties ออกก่อนค้น</p></li>
+</ol>
+<p>ที่ต้อง relink เองเสมอคือ ไฟล์หรือโฟลเดอร์ถูกเปลี่ยนชื่อ โครงสร้างโฟลเดอร์ถูกรื้อใหม่ หรือไดรฟ์ไม่ได้เสียบ</p>
+
+<h2 id="move">ย้ายหรือส่งโปรเจกต์ไปเครื่องอื่น</h2>
+<ol class="steps">
+<li><h3>ใช้ Project Manager</h3><p>ไปที่ <span class="ui">File › Project Manager</span> เลือก sequence ที่จะเอาไป แล้วเลือก <span class="ui">Collect Files and Copy to New Location</span> Premiere จะก๊อปเฉพาะไฟล์ที่ใช้จริงไปไว้ที่ใหม่พร้อมไฟล์โปรเจกต์</p></li>
+<li><h3>อย่าลืมโฟลเดอร์ Masks</h3><p>ถ้าใช้ Object Mask ให้ส่งโฟลเดอร์ <code>&lt;ชื่อโปรเจกต์&gt; Masks</code> ที่อยู่ข้างไฟล์โปรเจกต์ไปด้วย</p></li>
+<li><h3>ฟอนต์และ template</h3><p>เครื่องปลายทางต้องมีฟอนต์ที่ใช้ใน title และ MOGRT ด้วย ไม่อย่างนั้นตัวหนังสือจะเปลี่ยนเป็นฟอนต์อื่น</p></li>
+</ol>
+
+<h2 id="autosave">Auto Save และการกู้งาน</h2>
+<p>ตั้งที่ <span class="ui">Edit › Preferences › Auto Save</span> (Mac: <span class="ui">Premiere › Settings › Auto Save</span>) เลือกให้บันทึกอัตโนมัติทุกกี่นาที และเก็บไว้กี่เวอร์ชัน ไฟล์สำรองจะอยู่ในโฟลเดอร์ Auto-Save ข้างไฟล์โปรเจกต์ ถ้าโปรแกรมปิดเองหรือไฟล์โปรเจกต์เสีย ให้เปิดไฟล์ล่าสุดในโฟลเดอร์นี้</p>
+
+<h2 id="cache">Media cache คืออะไร ลบได้ไหม</h2>
+<p>ตอน import Premiere สร้างไฟล์ช่วยเล่น เช่น ไฟล์เสียงที่แปลงแล้วและไฟล์ index เก็บไว้ใน media cache ซึ่งใช้ร่วมกับ Media Encoder และ After Effects ไฟล์พวกนี้ลบได้ เมื่อต้องใช้โปรแกรมจะสร้างใหม่</p>
+<ul class="check">
+<li><span>ตั้งค่าที่ <span class="ui">Edit › Preferences › Media Cache</span> (Mac: <span class="ui">Premiere › Settings › Media Cache</span>) ย้ายที่เก็บไปไดรฟ์ที่เร็วและพื้นที่เหลือเยอะได้</span></li>
+<li><span>ตั้งให้ลบไฟล์เก่าอัตโนมัติเมื่อ cache ใหญ่เกินกำหนด ดิสก์จะไม่เต็มโดยไม่รู้ตัว</span></li>
+<li><span>ถ้าเสียงหรือภาพเล่นเพี้ยนแปลก ๆ การล้าง cache แล้วเปิดโปรเจกต์ใหม่มักช่วยได้</span></li>
+</ul>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>import จากการ์ดหน่วยความจำโดยตรง</b>ถอดการ์ดเมื่อไรคลิป offline ทันที ก๊อปไฟล์ลงเครื่องก่อน</li>
+<li><b>จัดโฟลเดอร์ใหม่ระหว่างทำงาน</b>ไฟล์ที่ย้ายออกนอกโฟลเดอร์โปรเจกต์จะหาไม่เจอ จัดให้เสร็จก่อนเริ่ม</li>
+<li><b>ลบฟุตเทจที่คิดว่าไม่ได้ใช้</b>ใช้ Project Manager แยกไฟล์ที่ใช้จริงออกมาก่อนค่อยลบ</li>
+<li><b>ไดรฟ์เต็มเพราะ cache</b>ตั้งขนาด cache สูงสุดและให้ลบไฟล์เก่าอัตโนมัติ</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Link Media, Project Manager, Auto Save และ Media Cache อยู่ที่เดิม</li>
+<li>งานแบบ Team Projects จำที่อยู่เก่าของไฟล์ได้ไม่จำกัด ต่างจากโปรเจกต์ปกติที่จำได้ 3 ตำแหน่ง</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/organize-media/file-organization/relink-offline-media-automatically.html">Relink media in Premiere</a></li>
+<li><a href="https://helpx.adobe.com/ro/premiere-pro/how-to/relink-offline-media.html">Relink offline media</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/add-video-effects/work-with-masks/object-masking.html">Object masking in Premiere (mask data storage)</a></li>
+<li><a href="https://helpx.adobe.com/dk/media-encoder/desktop/encoding-and-exporting/media-cache-database.html">Managing the media cache database</a></li>
+</ul>

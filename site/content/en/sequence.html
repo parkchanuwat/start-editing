@@ -1,0 +1,78 @@
+<p class="crumb">Premiere › Basics</p>
+<h1>What a sequence is, and which settings to use</h1>
+<p class="lead">A sequence is the timeline for one piece of work. It holds your clips, audio and effects, and it sets the frame size and frame rate of the whole edit. Match it to where the video is going from the start, and nothing stretches, stutters or fights you at export.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Not sure what to choose?</b> Drag your main clip onto the <span class="ui">New Item</span> icon at the bottom of the Project panel. Premiere creates a sequence whose frame size and frame rate match that clip.</p></div>
+<div class="demo" data-demo="sequence"></div>
+
+<h2 id="what">What a sequence is</h2>
+<ul class="check">
+<li><span>One project can hold many sequences, for example a full landscape cut for YouTube and a short vertical cut for Reels, both using the same footage.</span></li>
+<li><span>A sequence stores two things: <b>the edit</b> (clips on video and audio tracks, effects, graphics) and <b>its settings</b> (frame size, frame rate, audio format).</span></li>
+<li><span>The Editing Mode setting does not decide your final file. You choose the output format when you export.</span></li>
+</ul>
+
+<h2 id="create">Three ways to create a sequence</h2>
+<ol class="steps">
+<li><h3>From a clip (easiest)</h3>
+<p>Drag a clip from the Project panel onto the <span class="ui">New Item</span> icon, or right-click the clip and choose <span class="ui">New Sequence From Clip</span>.</p>
+<p class="note">Best when the destination matches how the camera recorded, for example 1920×1080 at 25p going to landscape YouTube.</p></li>
+<li><h3>From the menu, with your own settings</h3>
+<p>Choose <span class="ui">File › New › Sequence</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd> / <kbd>Cmd</kbd>+<kbd>N</kbd>). Pick the closest preset, or open the <span class="ui">Settings</span> tab, set Editing Mode to <span class="ui">Custom</span> and enter the values yourself.</p>
+<p class="note">Click <span class="ui">Save Preset</span> and give it a clear name such as "Reels 1080x1920 25p" so you can pick it next time.</p></li>
+<li><h3>Drop the first clip into an empty sequence</h3>
+<p>If the clip doesn't match the sequence, Premiere asks whether to change the sequence to match the clip or keep the existing settings. If you already set the sequence for its destination (vertical, say), keep the existing settings.</p></li>
+</ol>
+
+<h2 id="settings">The settings that matter</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Setting</th><th>What it is</th><th>What a beginner should pick</th></tr></thead>
+<tbody>
+<tr><td>Timebase</td><td>The sequence's unit of time, in other words its frame rate</td><td>Match your camera. Typically 24 for a film look, 25 for PAL regions and 29.97 for NTSC regions.</td></tr>
+<tr><td>Frame Size</td><td>Image size in pixels</td><td>Set it for the destination, such as 1920×1080 or 1080×1920. The maximum is 10,240×8,192.</td></tr>
+<tr><td>Pixel Aspect Ratio</td><td>The shape of each pixel</td><td><span class="ui">Square Pixels (1.0)</span>. A mismatch stretches or squashes the picture.</td></tr>
+<tr><td>Fields</td><td>Interlaced or progressive video</td><td><span class="ui">No Fields (Progressive Scan)</span> for today's cameras and phones.</td></tr>
+<tr><td>Working color space / Auto Tone Map Media</td><td>Colour management for the sequence</td><td>Leave the defaults. Auto Tone Map Media makes it easier to mix Log, iPhone HLG and other HDR footage in one sequence.</td></tr>
+<tr><td>Audio Sample Rate</td><td>Audio resolution</td><td>48000 Hz, the video standard.</td></tr>
+<tr><td>Video Previews</td><td>The format used for preview renders inside Premiere</td><td>Leave the default (many presets use Apple ProRes 422 LT).</td></tr>
+<tr><td>Maximum Bit Depth / Maximum Render Quality</td><td>Highest processing quality</td><td>Turn on only when needed; they cost RAM and render time.</td></tr>
+</tbody></table></div>
+
+<h2 id="jobs">Settings by type of job</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Job</th><th>Frame Size</th><th>Timebase</th><th>Why / what to know</th></tr></thead>
+<tbody>
+<tr><td>Landscape YouTube</td><td class="n">1920 × 1080<br>or 3840 × 2160</td><td>As recorded</td><td>YouTube recommends uploading at the frame rate you recorded, and 16:9 is its standard on computers.</td></tr>
+<tr><td>Shorts / Reels / TikTok</td><td class="n">1080 × 1920</td><td>As recorded</td><td>If you shot landscape, <span class="ui">Sequence › Auto Reframe Sequence</span> crops to follow the subject.</td></tr>
+<tr><td>Instagram feed</td><td class="n">1080 × 1350</td><td>As recorded</td><td>4:5 fills more of a phone screen than landscape. Check the platform's current specs before delivery.</td></tr>
+<tr><td>Events and indoor shoots</td><td class="n">1920 × 1080</td><td>Match the local power</td><td>In 50 Hz countries such as Thailand and China, shoot and edit at 25 or 50. In 60 Hz countries such as Korea, use 29.97/30 or 59.94/60. This reduces flicker from indoor lighting.</td></tr>
+<tr><td>TV delivery</td><td class="n">1920 × 1080</td><td>Per broadcaster spec</td><td>Thailand and China use 50 Hz systems (25/50); Korea uses a 60 Hz system (29.97/59.94). Always follow the broadcaster's delivery spec.</td></tr>
+<tr><td>Short film / festivals</td><td class="n">1920 × 1080<br>or 4096 × 2160</td><td>24 or 23.976</td><td>4096×2160 is cinema (DCI) 4K. Check the festival's spec first.</td></tr>
+</tbody></table></div>
+
+<h2 id="change">Changing settings later</h2>
+<p>Choose <span class="ui">Sequence › Sequence Settings</span>, or right-click the sequence in the Project panel and choose <span class="ui">Sequence Settings</span>. When you change the frame size, tick <span class="ui">Scale motion effects proportionally when changing frame size</span> so clip positions and sizes follow.</p>
+<p>Don't shrink the frame size to fix choppy playback. Lower the playback resolution in the Program Monitor instead.</p>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>4K clips look zoomed in on a 1080 sequence</b>Right-click the clip in the timeline and choose <span class="ui">Set to Frame Size</span>. It fits the frame and you can still punch in sharply, because the source is bigger.</li>
+<li><b>Sequence frame rate doesn't match the camera</b>You get stutter or repeated frames. Creating the sequence from your main clip avoids this.</li>
+<li><b>Editing vertical clips in a landscape sequence</b>You get black bars. Make a separate vertical sequence.</li>
+<li><b>Wrong Fields or Pixel Aspect Ratio</b>Combing lines or a stretched picture. Use No Fields and Square Pixels for ordinary footage.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>Almost everything here applies; the main menus haven't changed.</li>
+<li>Colour management options such as Auto Tone Map Media may be missing or in a different place in older versions.</li>
+<li>Intel-based Macs stop at 26.x, because Premiere 27.0 dropped Intel Mac support.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/edit-projects/change-clip-sequence/sequence-settings-reference.html">Sequence settings reference</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/edit-projects/change-clip-sequence/create-a-sequence.html">Create a sequence</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/change-sequence-settings.html">Change sequence settings</a></li>
+<li><a href="https://support.google.com/youtube/answer/1722171">YouTube recommended upload encoding settings</a></li>
+</ul>

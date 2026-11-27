@@ -1,0 +1,63 @@
+<p class="crumb">Premiere › Basics</p>
+<h1>Source Monitor vs Program Monitor</h1>
+<p class="lead">The Source Monitor is where you watch raw clips one at a time and choose the part you want. The Program Monitor shows the sequence you are building. Think of the left screen as your ingredients and the right screen as what the audience will see.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2 21 19H1Z" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linejoin="round"/><path d="M11 8v5" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="16" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Changed in 27.0:</b> Clip Match and the clip Comparison Mode in Edit-mode monitoring have been removed. Comparing shots for colour now happens in Color Mode.</p></div>
+<div class="demo" data-demo="monitors"></div>
+
+<h2 id="compare">Side by side</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Topic</th><th>Source Monitor</th><th>Program Monitor</th></tr></thead>
+<tbody>
+<tr><td>Shows</td><td>A single clip opened from the Project panel or the timeline</td><td>The active sequence in the Timeline panel</td></tr>
+<tr><td>In / Out points</td><td>Choose the part of the clip to use</td><td>Choose a range of the sequence to add or remove</td></tr>
+<tr><td>Markers</td><td>Clip markers, which travel with the clip</td><td>Sequence markers, which sit on the timeline</td></tr>
+<tr><td>Main buttons</td><td><span class="ui">Insert</span> and <span class="ui">Overwrite</span></td><td><span class="ui">Lift</span> and <span class="ui">Extract</span></td></tr>
+<tr><td>Use it to</td><td>Pick takes; take only picture or only sound</td><td>Review the edit, position or scale shots, place graphics</td></tr>
+</tbody></table></div>
+<p class="note">Both monitors have an <span class="ui">Export Frame</span> button for saving a still from the current frame.</p>
+
+<h2 id="steps">Steps: from Source to timeline</h2>
+<ol class="steps">
+<li><h3>Open a clip in the Source Monitor</h3><p>Double-click a clip in the Project panel. It opens in the Source Monitor without being added to the sequence.</p></li>
+<li><h3>Mark the part you want</h3><p>Play to the start, press <kbd>I</kbd> for an In point, play to the end and press <kbd>O</kbd> for an Out point. Everything between them is what gets placed.</p></li>
+<li><h3>Choose picture, sound or both</h3><p>To take only one, drag the <span class="ui">Drag video</span> or <span class="ui">Drag audio</span> icon under the monitor into the timeline.</p></li>
+<li><h3>Park the playhead in the timeline</h3><p>Move the playhead to where the clip should go, and check that the right tracks are targeted.</p></li>
+<li><h3>Press Insert or Overwrite</h3>
+<ul><li><span class="ui">Insert</span> <kbd>,</kbd> adds the clip at the playhead and pushes everything after it to the right. The sequence gets longer.</li>
+<li><span class="ui">Overwrite</span> <kbd>.</kbd> lays the clip over what is already there. The sequence doesn't grow if there was material under it.</li></ul></li>
+<li><h3>Review and trim in the Program Monitor</h3><p>Set In and Out in the Program Monitor, then press <span class="ui">Lift</span> <kbd>;</kbd> to remove the range and leave a gap, or <span class="ui">Extract</span> <kbd>'</kbd> to remove it and close the gap.</p></li>
+</ol>
+
+<h2 id="keys">Useful shortcuts</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Key</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><kbd>I</kbd> / <kbd>O</kbd></td><td>Set In / Out in the active monitor</td></tr>
+<tr><td><kbd>,</kbd></td><td>Insert from Source into the timeline</td></tr>
+<tr><td><kbd>.</kbd></td><td>Overwrite from Source into the timeline</td></tr>
+<tr><td><kbd>;</kbd> / <kbd>'</kbd></td><td>Lift / Extract the In–Out range in the sequence</td></tr>
+<tr><td><kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd></td><td>Play backwards / stop / play forwards; press again to go faster</td></tr>
+<tr><td><kbd>F</kbd></td><td>Match Frame: opens the source clip of the frame under the playhead in the Source Monitor</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Overwrite wiped out a clip</b>Overwrite really does replace what is there. Undo with <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Cmd</kbd>+<kbd>Z</kbd> and use Insert if you meant to add.</li>
+<li><b>Insert knocked audio out of sync</b>Tracks with Sync Lock turned off don't shift with the insert. Turn Sync Lock on for every track that should move together.</li>
+<li><b>The clip landed on the wrong track</b>Check source patching and track targeting on the left of the timeline.</li>
+<li><b>The Program Monitor looks soft, so the file seems broken</b>Its Resolution may be set to 1/2 or 1/4 for smoother playback. Your export is not affected.</li>
+<li><b>A marker went to the wrong place</b>Markers added in the Source Monitor stick to the clip. For a marker on the timeline, add it in the Program Monitor or the timeline.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 26.x and earlier</summary><ul>
+<li>The Program Monitor still has Comparison mode and Clip Match for comparing colour between shots. 27.0 moved that job to Color Mode.</li>
+<li>Insert, Overwrite, Lift and Extract buttons and shortcuts work the same.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/source-monitor-program-monitor.html">Overview of Source Monitor and Program Monitor</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/color-mode-basics.html">Color Mode in Premiere (Changes to Lumetri Color)</a></li>
+</ul>

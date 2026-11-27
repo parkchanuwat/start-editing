@@ -1,0 +1,95 @@
+<p class="crumb">Premiere › Color and audio</p>
+<h1>Color grading with Color Mode</h1>
+<p class="lead">Fix clips that look too dark, flat or tinted, using Premiere's new grading workspace: open Color Mode, pick a clip, then adjust one value at a time in order.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2 21 19H1Z" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linejoin="round"/><path d="M11 8v5" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="16" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Following a tutorial that uses the Lumetri Color panel?</b> Premiere 27.0 retires that panel. The Lumetri Color <i>effect</i> is still there and older projects graded with Lumetri open as before, but for new work use Color Mode as shown here.</p></div>
+<div class="demo" data-demo="color-mode"></div>
+
+<h2 id="before">Before you start</h2>
+<ul class="check">
+<li><span>Use <b>Premiere 27.0</b> or later. Check under About Premiere (Help menu on Windows, Premiere menu on Mac).</span></li>
+<li><span>Finish the edit first, so you don't grade clips that get cut later.</span></li>
+<li><span><b>Set the sequence's Color Management before grading.</b> The default is Direct Rec. 709 (SDR), which suits ordinary social and YouTube videos. Choose Rec. 2100 HLG or PQ only for HDR work. Changing it after grading changes how every clip looks.</span></li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+<ol class="steps">
+<li><h3>Open Color Mode</h3>
+<p>In Edit mode, open the sequence in the Timeline, then click the <span class="ui">Color</span> tab in the header bar at the top of the window. Premiere opens the grading workspace.</p>
+<p class="note">The Project Browser is still available in Color Mode, so you can switch sequences without going back to Edit mode.</p></li>
+<li><h3>Pick a clip in the Clip Grid</h3>
+<p>The <span class="ui">Clip Grid</span> shows every clip in the sequence as a thumbnail, in timeline order. Click the clip you want to fix. The one outlined in white is the <b>Current Clip</b>, and every adjustment goes to it.</p></li>
+<li><h3>Make sure you are changing one clip</h3>
+<p>At the top of the <span class="ui">Color Controls</span> panel, choose an operation:</p>
+<ul><li><span class="ui">Clip Operation</span> changes only the selected clip. It is chosen for you whenever you pick a new clip.</li>
+<li><span class="ui">Sequence Style</span> applies a look to the whole sequence. Beginners should leave it until the individual clips are done.</li></ul></li>
+<li><h3>Try Auto Color first</h3>
+<p>The <span class="ui">Auto Color</span> button sits at the bottom left of the <span class="ui">Adjust</span> controls and sets Exposure, Temperature and Tint for you. To fix just one thing, right-click or click and hold it, then choose <span class="ui">Auto Exposure</span> or <span class="ui">Auto White Balance</span>.</p>
+<p class="note">Auto Color works from the frame under the playhead, so park the playhead on a frame that represents the clip.</p></li>
+<li><h3>Adjust by clicking and dragging</h3>
+<p>Most controls change two values at once: drag up or down for the main value, left or right for the second one.</p>
+<ol><li>Click once inside a control to <b>latch</b> it. A HUD appears with a graph for that control.</li>
+<li>Drag, or use the arrow keys for fine steps.</li>
+<li>Click again, or press <kbd>Enter</kbd> / <kbd>Esc</kbd>, to accept and unlatch.</li></ol>
+<p>You can also press, drag and release without latching. Work through the <a href="#order">order Adobe recommends</a>.</p></li>
+<li><h3>Compare, then move to the next clip</h3>
+<p>Select several clips in the Clip Grid and turn on <span class="ui">Comparison View</span> in the <span class="ui">Color Monitor</span> for a split screen. Press <kbd>↓</kbd> for the next clip or <kbd>↑</kbd> for the previous one, until every clip that needs work is done.</p></li>
+</ol>
+
+<h2 id="controls">The basic Adjust controls</h2>
+<p>Start with the <span class="ui">Color &amp; Contrast</span> group, which works on the whole image. These five controls fix most beginner problems.</p>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Control</th><th>Main value (drag up/down)</th><th>Second value (drag left/right)</th><th>Fixes</th></tr></thead>
+<tbody>
+<tr><td>Contrast</td><td>Difference between the brightest and darkest pixels</td><td>Moves the contrast pivot point</td><td>Flat images with no depth</td></tr>
+<tr><td>Exposure</td><td>Overall brightness</td><td>Black: crush or lift the shadows</td><td>Too dark, too bright, washed out</td></tr>
+<tr><td>Temperature</td><td>Warmer or cooler</td><td>Tint: removes a green or magenta cast</td><td>Orange, blue or green casts</td></tr>
+<tr><td>Balance</td><td colspan="2">Remixes the red, green and blue channels to push colour in any direction</td><td>Use instead of Temperature when the cast is not orange or blue</td></tr>
+<tr><td>Saturation</td><td colspan="2">Raises or lowers the intensity of all colours at once</td><td>Dull or overly strong colour</td></tr>
+</tbody></table></div>
+<h3 id="order">The order Adobe suggests for beginners</h3>
+<ol class="order">
+<li><b>Contrast</b> and <b>Exposure</b>, adjusting Black as needed</li>
+<li><b>Temperature</b> or <b>Balance</b>, choose one</li>
+<li>Global <b>Saturation</b></li>
+<li><b>Zones</b>, if some tonal range still needs work. Shadows and Highlights are there by default.</li>
+<li><b>Saturation/Hue/Lum Shift</b> for one specific colour, such as the sky</li>
+<li><b>Texture</b> and <b>Sharpness</b></li>
+<li><b>Style</b>, for a stylised look</li>
+</ol>
+
+<h2 id="keys">Useful shortcuts</h2>
+<p class="note">Color Mode has its own shortcut set, so the same key can do different things in Edit mode and Color Mode.</p>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Key</th><th>What it does</th><th>When</th></tr></thead>
+<tbody>
+<tr><td><kbd>H</kbd> held</td><td>Hides the HUD until you let go</td><td>While adjusting, to see the whole image</td></tr>
+<tr><td><kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd></td><td>Fine adjustments</td><td>While a control is latched</td></tr>
+<tr><td><kbd>Enter</kbd> / <kbd>Esc</kbd></td><td>Accept and unlatch</td><td>When you are done adjusting</td></tr>
+<tr><td><kbd>↓</kbd> / <kbd>↑</kbd></td><td>Next / previous clip</td><td>After finishing the current clip</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Can't find the Lumetri Color panel</b>It is retired in 27.0. Use Color Mode, or for a quick fix without leaving Edit mode, use the Color section of the Properties panel.</li>
+<li><b>Changing Color Management after grading</b>Every clip shifts. Set it correctly before you start.</li>
+<li><b>Fixing one clip changes them all</b>You are in Sequence Style. Check the operation name at the top of Color Controls before dragging.</li>
+<li><b>Stacking the Lumetri Color effect on top of Color Mode</b>Adobe recommends Color Mode alone for new projects: mixing them limits your options, and Lumetri can clip out-of-range values that can't be recovered later.</li>
+<li><b>Pushing Zones or Hue Shift too far</b>The image starts to look fake. Use them sparingly and watch the HUD graph for clipping at the top or bottom.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 26.x and the 25.6.x LTS line</summary><ul>
+<li>These versions still have the Lumetri Color panel and no released Color Mode, so the steps on this page don't apply. See "Grading with Lumetri Color" instead.</li>
+<li>Color Mode was a public beta in the Premiere (beta) app from April 2026. Its screens may differ from 27.0.</li>
+<li>After updating to 27.0, projects graded with Lumetri still open, and their grades stay editable in Effect Controls.</li></ul></details>
+
+<h2 id="sources">Adobe sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/color-mode-basics.html">Color Mode in Premiere</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/color-mode-workflow.html">Color Mode workflow</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/default-adjust-operation.html">Default Adjust Operation</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/work-in-color-mode.html">Work in Color mode</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/whats-new.html">What's new in Adobe Premiere on desktop</a></li>
+</ul>

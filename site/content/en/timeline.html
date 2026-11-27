@@ -1,0 +1,61 @@
+<p class="crumb">Premiere › Basics</p>
+<h1>Editing in the Timeline</h1>
+<p class="lead">The Timeline holds your picture on video tracks (V1, V2 …) and your sound on audio tracks (A1, A2 …). You only need a handful of tools day to day: cutting, deleting, rippling, and separating picture from sound cover most edits.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>Good to know:</b> since 26.3, a Timeline preference controls whether Premiere adds tracks automatically when you edit clips into a sequence. If tracks keep multiplying, check that setting.</p></div>
+<div class="demo" data-demo="timeline"></div>
+
+<h2 id="tools">The tools you'll use most</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Tool</th><th>Key</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td>Selection</td><td><kbd>V</kbd></td><td>Select, drag and move clips. You'll be on this most of the time.</td></tr>
+<tr><td>Razor</td><td><kbd>C</kbd></td><td>Cuts a clip in two where you click. Hold <kbd>Shift</kbd> to cut every track at once.</td></tr>
+<tr><td>Ripple Edit</td><td><kbd>B</kbd></td><td>Drag a clip edge to shorten or lengthen it; later clips move with it, so no gap appears.</td></tr>
+<tr><td>Rolling Edit</td><td><kbd>N</kbd></td><td>Moves the cut point between two clips without changing the total length.</td></tr>
+<tr><td>Rate Stretch</td><td><kbd>R</kbd></td><td>Drag a clip edge to change its speed so it fits a length.</td></tr>
+<tr><td>Track Select Forward</td><td><kbd>A</kbd></td><td>Selects every clip to the right of where you click, for moving a whole block.</td></tr>
+</tbody></table></div>
+
+<h2 id="steps">The basics</h2>
+<ol class="steps">
+<li><h3>Cut a clip</h3><p>Click with the Razor where you want the cut, or park the playhead and press <kbd>Ctrl</kbd>+<kbd>K</kbd> / <kbd>Cmd</kbd>+<kbd>K</kbd> (Add Edit) to cut the targeted tracks at the playhead.</p></li>
+<li><h3>Delete, or ripple delete</h3><p>Select a clip and press <kbd>Delete</kbd> to leave a gap. To have the following clips slide over and close it, use <span class="ui">Edit › Ripple Delete</span> (<kbd>Shift</kbd>+<kbd>Delete</kbd> on Windows, <kbd>Shift</kbd>+<kbd>Forward Delete</kbd> on Mac), or right-click the gap and choose <span class="ui">Ripple Delete</span>.</p></li>
+<li><h3>Trim heads and tails fast</h3><p>Park the playhead, then press <kbd>Q</kbd> to remove the part of the clip before it, or <kbd>W</kbd> to remove the part after it. The rest closes up automatically.</p></li>
+<li><h3>Separate and rejoin picture and sound</h3><p>Camera clips have linked picture and sound. Select a clip and press <kbd>Ctrl</kbd>+<kbd>L</kbd> / <kbd>Cmd</kbd>+<kbd>L</kbd> to unlink or relink them. Hold <kbd>Alt</kbd> / <kbd>Option</kbd> while clicking to unlink just for that action.</p></li>
+<li><h3>Make J-cuts and L-cuts</h3><p>Let the next shot's sound start before its picture (J-cut), or let the current shot's sound carry on over the new picture (L-cut). Hold <kbd>Alt</kbd> / <kbd>Option</kbd> and drag only the audio edge. Edits feel much smoother.</p></li>
+<li><h3>Change speed</h3><p>Right-click a clip and choose <span class="ui">Speed/Duration</span> (<kbd>Ctrl</kbd>+<kbd>R</kbd> / <kbd>Cmd</kbd>+<kbd>R</kbd>), then enter a percentage. Tick Ripple Edit, Shifting Trailing Clips to avoid leaving a gap.</p></li>
+</ol>
+
+<h2 id="keys">Useful shortcuts</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Key</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><kbd>Space</kbd></td><td>Play / stop</td></tr>
+<tr><td><kbd>S</kbd></td><td>Toggle snapping to the playhead, markers and clip edges</td></tr>
+<tr><td><kbd>+</kbd> / <kbd>-</kbd></td><td>Zoom the timeline in and out</td></tr>
+<tr><td><kbd>\</kbd></td><td>Zoom to show the whole sequence</td></tr>
+<tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>Jump to the previous / next edit point</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Cmd</kbd>+<kbd>Z</kbd></td><td>Undo</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Tiny black gaps between clips</b>Left by plain Delete. Keep snapping on and ripple delete the gaps.</li>
+<li><b>Picture and sound out of sync</b>Caused by dragging one without the other while unlinked. Premiere shows red numbers on the clip with the offset; right-click them to pull it back into sync.</li>
+<li><b>The Razor cut only one track</b>The clips weren't linked. Hold <kbd>Shift</kbd> with the Razor to cut all tracks.</li>
+<li><b>Clips land on the wrong track</b>Check track targeting and source patching on the left of the timeline.</li>
+<li><b>Forgetting to switch back to Selection</b>You stay on the Razor and slice a clip by accident. Press <kbd>V</kbd> after every cut.</li>
+</ul>
+
+<h2 id="older">Using a version older than 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>The tools and shortcuts are the same.</li>
+<li>The Timeline preference for automatic track creation arrived in 26.3.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/mena_en/premiere-pro/using/default-keyboard-shortcuts.html">Default keyboard shortcuts in Premiere</a></li>
+<li><a href="https://helpx.adobe.com/sa_en/premiere/desktop/whats-new/release-notes.html">Adobe Premiere desktop release notes</a></li>
+</ul>

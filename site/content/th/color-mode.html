@@ -1,0 +1,95 @@
+<p class="crumb">Premiere › สีและเสียง</p>
+<h1>แต่งสีคลิปด้วย Color Mode</h1>
+<p class="lead">แก้ภาพมืด ภาพจาง หรือภาพอมสี ให้ดูเป็นธรรมชาติ ด้วยหน้าแต่งสีใหม่ของ Premiere: เปิด Color Mode เลือกคลิป แล้วปรับทีละค่าตามลำดับ</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2 21 19H1Z" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linejoin="round"/><path d="M11 8v5" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="16" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ดูคลิปสอนที่ใช้ Lumetri Color panel อยู่?</b> Premiere 27.0 เลิกใช้พาเนลนี้แล้ว แต่ Lumetri Color <i>effect</i> ยังมีอยู่ และโปรเจกต์เก่าที่แต่งด้วย Lumetri ยังเปิดได้ตามเดิม งานใหม่ให้ใช้ Color Mode ตามหน้านี้</p></div>
+<div class="demo" data-demo="color-mode"></div>
+
+<h2 id="before">ก่อนเริ่ม</h2>
+<ul class="check">
+<li><span>ใช้ <b>Premiere 27.0</b> ขึ้นไป เช็กเวอร์ชันได้ที่ About Premiere (Windows อยู่ในเมนู Help, Mac อยู่ในเมนู Premiere)</span></li>
+<li><span>ตัดต่อ sequence ให้เสร็จก่อน จะได้ไม่เสียเวลาแต่งสีคลิปที่ถูกตัดทิ้งทีหลัง</span></li>
+<li><span><b>ตั้ง Color Management ของ sequence ให้ถูกตั้งแต่แรก</b> ค่าเริ่มต้นคือ Direct Rec. 709 (SDR) ถ้าทำคลิปลงโซเชียลหรือ YouTube แบบทั่วไป ใช้ค่านี้ได้เลย งาน HDR ค่อยเลือก Rec. 2100 HLG หรือ PQ ถ้าไปเปลี่ยนหลังแต่งสีแล้ว สีของคลิปจะเปลี่ยนตาม</span></li>
+</ul>
+
+<h2 id="steps">ขั้นตอน</h2>
+<ol class="steps">
+<li><h3>เปิด Color Mode</h3>
+<p>ใน Edit mode เปิด sequence ที่จะแต่งสีใน Timeline แล้วคลิกแท็บ <span class="ui">Color</span> บนแถบด้านบนสุดของหน้าต่าง Premiere จะเปิด workspace สำหรับแต่งสีให้ทันที</p>
+<p class="note">ใน Color Mode ยังเปิด Project Browser ได้ อยากสลับไปแต่ง sequence อื่นก็ไม่ต้องกลับไป Edit mode</p></li>
+<li><h3>เลือกคลิปใน Clip Grid</h3>
+<p><span class="ui">Clip Grid</span> แสดงทุกคลิปใน sequence เป็นภาพย่อ เรียงตามลำดับใน timeline คลิกภาพย่อของคลิปที่จะแก้ คลิปที่มีกรอบสีขาวคือ <b>Current Clip</b> ทุกค่าที่ปรับจะลงที่คลิปนี้</p></li>
+<li><h3>เช็กว่ากำลังแก้คลิปเดียว</h3>
+<p>ด้านบนของพาเนล <span class="ui">Color Controls</span> มีให้เลือก operation</p>
+<ul><li><span class="ui">Clip Operation</span> แก้เฉพาะคลิปที่เลือก ถูกเลือกไว้ให้เองทุกครั้งที่คลิกคลิปใหม่</li>
+<li><span class="ui">Sequence Style</span> ใส่ลุคให้ทั้ง sequence มือใหม่ค่อยใช้ตอนท้าย หลังแก้รายคลิปเสร็จ</li></ul></li>
+<li><h3>ลองกด Auto Color ก่อน</h3>
+<p>ปุ่ม <span class="ui">Auto Color</span> อยู่มุมล่างซ้ายของคอนโทรล <span class="ui">Adjust</span> จะปรับ Exposure, Temperature และ Tint ให้อัตโนมัติ ถ้าอยากให้แก้อย่างเดียว คลิกขวาหรือคลิกค้างที่ปุ่ม แล้วเลือก <span class="ui">Auto Exposure</span> หรือ <span class="ui">Auto White Balance</span></p>
+<p class="note">Auto Color คำนวณจากเฟรมที่ playhead อยู่ ให้วาง playhead บนเฟรมที่เป็นตัวแทนของคลิปก่อนกด</p></li>
+<li><h3>ปรับเองด้วยการคลิกแล้วลาก</h3>
+<p>คอนโทรลส่วนใหญ่ปรับได้สองค่าพร้อมกัน ลากขึ้นลงคือค่าหลัก ลากซ้ายขวาคือค่ารอง</p>
+<ol><li>คลิกในคอนโทรล 1 ครั้งเพื่อ <b>ล็อก (latch)</b> จะมี HUD ขึ้นมาแสดงกราฟของค่านั้น</li>
+<li>ลากเมาส์ หรือกดปุ่มลูกศรเพื่อปรับทีละนิด</li>
+<li>คลิกอีกครั้ง หรือกด <kbd>Enter</kbd> / <kbd>Esc</kbd> เพื่อยืนยันและปลดล็อก</li></ol>
+<p>ถ้าไม่อยากล็อก ให้กดเมาส์ค้าง ลาก แล้วปล่อยก็ได้ ปรับตาม<a href="#order">ลำดับที่ Adobe แนะนำ</a></p></li>
+<li><h3>เทียบภาพ แล้วไปคลิปถัดไป</h3>
+<p>เลือกหลายคลิปใน Clip Grid แล้วเปิด <span class="ui">Comparison View</span> ใน <span class="ui">Color Monitor</span> จะเห็นภาพแบ่งครึ่งเทียบกัน เสร็จแล้วกด <kbd>↓</kbd> ไปคลิปถัดไป หรือ <kbd>↑</kbd> ย้อนกลับ ทำจนครบทุกคลิปที่ต้องแก้</p></li>
+</ol>
+
+<h2 id="controls">คอนโทรลพื้นฐานใน Adjust</h2>
+<p>เริ่มจากคอนโทรลกลุ่ม <span class="ui">Color &amp; Contrast</span> ซึ่งปรับทั้งภาพ ห้าตัวนี้แก้ปัญหาส่วนใหญ่ของมือใหม่ได้</p>
+<div class="tbl"><table class="stack">
+<thead><tr><th>คอนโทรล</th><th>ค่าหลัก (ลากขึ้นลง)</th><th>ค่ารอง (ลากซ้ายขวา)</th><th>ใช้แก้</th></tr></thead>
+<tbody>
+<tr><td>Contrast</td><td>ความต่างระหว่างส่วนสว่างสุดกับมืดสุด</td><td>เลื่อนจุด pivot ของคอนทราสต์ได้</td><td>ภาพแบน ไม่มีมิติ</td></tr>
+<tr><td>Exposure</td><td>ความสว่างโดยรวม</td><td>Black: กดส่วนมืดให้ดำขึ้น หรือยกให้จางลง</td><td>ภาพมืดหรือสว่างเกิน ภาพจาง</td></tr>
+<tr><td>Temperature</td><td>อุ่นขึ้นหรือเย็นลง</td><td>Tint: ลดอาการอมเขียวหรืออมม่วงแดง</td><td>ภาพอมส้ม อมฟ้า อมเขียว</td></tr>
+<tr><td>Balance</td><td colspan="2">ผสมช่องสีแดง เขียว น้ำเงินใหม่ ดันสีไปทิศไหนก็ได้</td><td>ใช้แทน Temperature เมื่อสีเพี้ยนไปทางอื่นที่ไม่ใช่ส้มหรือฟ้า</td></tr>
+<tr><td>Saturation</td><td colspan="2">เพิ่มหรือลดความสดของทุกสีพร้อมกัน</td><td>สีซีดหรือจัดเกิน</td></tr>
+</tbody></table></div>
+<h3 id="order">ลำดับที่ Adobe แนะนำสำหรับมือใหม่</h3>
+<ol class="order">
+<li><b>Contrast</b> และ <b>Exposure</b> ปรับ Black ตามต้องการ</li>
+<li><b>Temperature</b> หรือ <b>Balance</b> เลือกอย่างใดอย่างหนึ่ง</li>
+<li><b>Saturation</b> ทั้งภาพ</li>
+<li><b>Zones</b> ถ้ายังมีบางช่วงแสงต้องแก้ เริ่มต้นมีให้ 2 โซนคือ Shadows กับ Highlights</li>
+<li><b>Saturation/Hue/Lum Shift</b> แก้เฉพาะสีใดสีหนึ่ง เช่น สีท้องฟ้า</li>
+<li><b>Texture</b> และ <b>Sharpness</b> ปรับความคมของรายละเอียด</li>
+<li><b>Style</b> ถ้าต้องการลุคเฉพาะตัว</li>
+</ol>
+
+<h2 id="keys">คีย์ลัดที่ใช้บ่อย</h2>
+<p class="note">Color Mode มีชุดคีย์ลัดแยกจาก Edit mode ปุ่มเดียวกันอาจทำงานต่างกันในสองโหมด</p>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ปุ่ม</th><th>ทำอะไร</th><th>ใช้ตอนไหน</th></tr></thead>
+<tbody>
+<tr><td><kbd>H</kbd> กดค้าง</td><td>ซ่อน HUD ชั่วคราว ปล่อยแล้วกลับมา</td><td>ระหว่างปรับ อยากเห็นภาพเต็ม</td></tr>
+<tr><td><kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd></td><td>ปรับทีละนิด</td><td>ขณะคอนโทรลถูกล็อกอยู่</td></tr>
+<tr><td><kbd>Enter</kbd> / <kbd>Esc</kbd></td><td>ยืนยันค่าและปลดล็อก</td><td>ปรับเสร็จแล้ว</td></tr>
+<tr><td><kbd>↓</kbd> / <kbd>↑</kbd></td><td>ไปคลิปถัดไป / คลิปก่อนหน้า</td><td>แก้คลิปปัจจุบันเสร็จแล้ว</td></tr>
+</tbody></table></div>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>หา Lumetri Color panel ไม่เจอ</b>Premiere 27.0 เลิกใช้แล้ว ใช้ Color Mode แทน ถ้าแค่อยากแก้นิดหน่อยโดยไม่ออกจาก Edit mode ใช้ส่วน Color ใน Properties panel</li>
+<li><b>แต่งเสร็จแล้วค่อยไปเปลี่ยน Color Management</b>สีทุกคลิปจะเปลี่ยนตาม ตั้งให้ถูกก่อนเริ่มแต่ง</li>
+<li><b>ตั้งใจแก้คลิปเดียว แต่ทุกคลิปเปลี่ยน</b>เพราะกำลังอยู่ที่ Sequence Style ดูชื่อ operation ด้านบน Color Controls ก่อนลาก</li>
+<li><b>ใส่ Lumetri Color effect ซ้อนกับ Color Mode</b>Adobe แนะนำให้โปรเจกต์ใหม่ใช้ Color Mode อย่างเดียว เพราะใช้ร่วมกันจะจำกัดการแต่งสี และ Lumetri อาจตัดค่าที่เกินช่วงทิ้ง (clip) ซึ่งกู้คืนทีหลังไม่ได้</li>
+<li><b>ดัน Zones หรือ Hue Shift หนักเกิน</b>ภาพจะดูปลอม ใช้เท่าที่จำเป็น และดูกราฟใน HUD ว่าค่าชนขอบบนหรือล่างหรือยัง</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 26.x และสาย LTS 25.6.x</summary><ul>
+<li>เวอร์ชันเหล่านี้ยังมี Lumetri Color panel และไม่มี Color Mode ตัวจริง ขั้นตอนในหน้านี้จึงใช้ไม่ได้ ให้ดูหน้า "แต่งสีด้วย Lumetri Color" แทน</li>
+<li>Color Mode เคยเปิดให้ลองเป็น public beta ในแอป Premiere (beta) ตั้งแต่ เม.ย. 2569 หน้าจอในรุ่น beta อาจต่างจาก 27.0</li>
+<li>อัปเดตเป็น 27.0 แล้ว โปรเจกต์ที่แต่งด้วย Lumetri ยังเปิดได้ ค่าที่ทำไว้ยังอยู่ และปรับต่อได้ใน Effect Controls</li></ul></details>
+
+<h2 id="sources">ต้นฉบับจาก Adobe (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/color-mode-basics.html">Color Mode in Premiere</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/color-mode-workflow.html">Color Mode workflow</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/default-adjust-operation.html">Default Adjust Operation</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/correct-color/color-mode-fundamentals/work-in-color-mode.html">Work in Color mode</a></li>
+<li><a href="https://helpx.adobe.com/premiere-pro/using/whats-new.html">What's new in Adobe Premiere on desktop</a></li>
+</ul>

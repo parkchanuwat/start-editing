@@ -1,0 +1,64 @@
+<p class="crumb">Premiere › เอฟเฟกต์และกราฟิก</p>
+<h1>Object Mask: เลือกคนหรือวัตถุด้วยคลิกเดียว</h1>
+<p class="lead">Object Mask ใช้ AI หาคนหรือวัตถุในภาพให้อัตโนมัติ คลิกครั้งเดียวได้ mask แล้วสั่งให้ mask วิ่งตามวัตถุตลอดช็อต จากนั้นใส่เอฟเฟกต์เฉพาะในหรือนอก mask ได้ ไม่ต้องไปทำ rotoscope ใน After Effects</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>ใช้ครั้งแรกต้องรอแป๊บหนึ่ง</b> Premiere จะดาวน์โหลดโมเดล AI ก่อน ระหว่างนั้นยังใช้ Object Mask ไม่ได้ ดูความคืบหน้าได้ที่ Progress panel</p></div>
+<div class="demo" data-demo="object-mask"></div>
+
+<h2 id="why">เอาไปใช้ทำอะไรได้</h2>
+<ul class="check">
+<li><span><b>เบลอหน้าคน ทะเบียนรถ หรือโลโก้</b> ที่ไม่ได้รับอนุญาตให้เผยแพร่ ช่วยเรื่องความเป็นส่วนตัวของคนในภาพ</span></li>
+<li><span><b>เบลอหรือทำพื้นหลังเป็นขาวดำ</b> ให้คนในภาพเด่นขึ้น โดยใช้ Inverted</span></li>
+<li><span><b>ปรับแสงหรือสีเฉพาะคน</b> เช่น หน้ามืดเพราะย้อนแสง ทำให้สว่างขึ้นโดยฉากหลังไม่เปลี่ยน</span></li>
+<li><span><b>วางตัวหนังสือไว้หลังคน</b> ทำสำเนาคลิปไว้ track บน เปลี่ยน mask เป็น Opacity Mask แล้ววางตัวหนังสือไว้ระหว่างสอง track</span></li>
+</ul>
+
+<h2 id="steps">ขั้นตอน: เบลอพื้นหลังให้คนเด่น</h2>
+<ol class="steps">
+<li><h3>เลือก Object Mask Tool</h3><p>ในแถบเครื่องมือ (toolbar) กดค้างที่กลุ่มเครื่องมือ mask จะเห็น Object Mask อยู่รวมกับ Ellipse, Rectangle และ Pen</p></li>
+<li><h3>ชี้แล้วคลิกที่วัตถุ</h3><p>เลือกคลิปใน timeline แล้วชี้เมาส์ใน Program Monitor วัตถุที่ตรวจเจอจะมีไฮไลต์ขึ้น คลิกเพื่อเลือก</p>
+<p class="note">เริ่มจากเฟรมที่เห็นวัตถุชัดที่สุด mask จะออกมาแม่นกว่า</p></li>
+<li><h3>ถ้าไม่ไฮไลต์ ให้วาดคร่าว ๆ</h3><p>สลับเป็นโหมด Rectangle หรือ Lasso จากเมนูด้านล่างของ Program Monitor แล้ววาดล้อมวัตถุ ใช้ปุ่ม <span class="ui">+</span> และ <span class="ui">−</span> เพิ่มหรือลบส่วน กด <kbd>Alt</kbd> / <kbd>Option</kbd> ค้างเพื่อสลับชั่วคราว</p></li>
+<li><h3>Track ให้ mask วิ่งตาม</h3><p>ใน Effect Controls จะเห็น mask ใหม่อยู่ในส่วน Unassigned Masks ใช้ปุ่ม track ไปข้างหน้าและย้อนหลังเพื่อให้ mask ตามวัตถุทั้งคลิป เลือกคุณภาพได้สองแบบคือ <span class="ui">Faster</span> และ <span class="ui">Better</span></p></li>
+<li><h3>ใส่เอฟเฟกต์</h3><p>เปิด Effects panel ลาก <span class="ui">Gaussian Blur</span> ไปใส่คลิป mask จะไปผูกกับเอฟเฟกต์นั้นเอง เอฟเฟกต์จึงมีผลแค่ในพื้นที่ mask</p></li>
+<li><h3>กลับด้านและเกลี่ยขอบ</h3><p>ติ๊ก <span class="ui">Inverted</span> เพื่อให้เบลอเฉพาะนอก mask คือพื้นหลัง แล้วปรับ <span class="ui">Feather</span> ให้ขอบนุ่ม และ <span class="ui">Expansion</span> ขยายหรือหด mask</p></li>
+<li><h3>ยกเลิกการเลือก mask ก่อนดูผล</h3><p>ระหว่างที่ mask ยังถูกเลือก จะมีสีแดงทับในจอ คลิกที่อื่นใน Effect Controls ก่อนเล่นดูผลจริง</p></li>
+</ol>
+
+<h2 id="modes">ตั้งค่าที่ควรรู้</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>ค่า</th><th>ทำอะไร</th><th>ใช้เมื่อ</th></tr></thead>
+<tbody>
+<tr><td>Sharp / Smooth</td><td>Sharp ให้ขอบคมชัด Smooth ให้ขอบนุ่ม</td><td>ผม ขนสัตว์ ผ้าบาง หรือของกึ่งโปร่งใส ใช้ Smooth</td></tr>
+<tr><td>Sharpness</td><td>ปรับว่าขอบนุ่มของโหมด Smooth จะกินเข้ามาแค่ไหน เลือกปรับแบบ S-Curve หรือ Levels</td><td>ดึงเส้นผมที่หลุดกลับมา หรือตัดขอบพื้นหลังที่ติดมา</td></tr>
+<tr><td>Feather</td><td>ทำขอบ mask ให้นุ่ม</td><td>ให้เอฟเฟกต์กลืนกับภาพ</td></tr>
+<tr><td>Expansion</td><td>ค่าลบหด mask ค่าบวกขยาย</td><td>mask เล็กหรือใหญ่กว่าวัตถุเล็กน้อย</td></tr>
+<tr><td>Opacity</td><td>ความเข้มของ mask</td><td>ลดความแรงของเอฟเฟกต์</td></tr>
+<tr><td>Inverted</td><td>สลับให้เอฟเฟกต์มีผลนอก mask</td><td>เบลอหรือแต่งพื้นหลัง</td></tr>
+</tbody></table></div>
+
+<h2 id="storage">ไฟล์ mask เก็บที่ไหน</h2>
+<p>ข้อมูล mask ถูกเก็บในโฟลเดอร์ชื่อ <code>&lt;ชื่อโปรเจกต์&gt; Masks</code> ข้างไฟล์โปรเจกต์ ย้ายโปรเจกต์ไปเครื่องอื่นต้องย้ายโฟลเดอร์นี้ไปด้วย ถ้าหาไม่เจอ Object Mask จะขึ้นว่า offline ใน Effect Controls ให้กด <span class="ui">Locate</span> ชี้ไปที่โฟลเดอร์ mask อื่น ๆ ที่ไม่ใช่ Object Mask ไม่ได้รับผลกระทบ</p>
+<p class="note">Premiere ลบไฟล์ mask ที่ไม่ได้ใช้แล้วให้เองเมื่อปิดโปรเจกต์ ช่วยประหยัดพื้นที่ดิสก์</p>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>ส่งโปรเจกต์ให้คนอื่นแล้ว mask หาย</b>ลืมส่งโฟลเดอร์ Masks ไปด้วย</li>
+<li><b>เห็นภาพเป็นสีแดง เลยคิดว่าเอฟเฟกต์ผิด</b>คือ overlay ตอนที่ mask ถูกเลือกอยู่ ยกเลิกการเลือกก่อนดู</li>
+<li><b>mask ไม่ตามวัตถุ</b>ยังไม่ได้กด track หรือเริ่ม track จากเฟรมที่วัตถุถูกบัง ลองเริ่มจากเฟรมที่เห็นชัดแล้ว track ทั้งสองทาง</li>
+<li><b>mask ไปค้างอยู่ใน Unassigned Masks</b>ยังไม่ได้ใส่เอฟเฟกต์ให้ mask ลากเอฟเฟกต์ลงคลิป หรือใส่เอฟเฟกต์ไว้ก่อนแล้วค่อยสร้าง mask</li>
+<li><b>ขอบผมดูแข็งเป็นก้อน</b>เปลี่ยนเป็นโหมด Smooth แล้วปรับ Sharpness</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>ประวัติเวอร์ชันของ Object Mask</summary><ul>
+<li>Object Mask มาครั้งแรกใน Premiere 26.0 (ม.ค. 2569) เวอร์ชัน 25.x ไม่มีเครื่องมือนี้ ต้องวาด mask ด้วยมือแล้ว track เอง</li>
+<li>โหมด Smooth ออกมาทีหลังในช่วงต้นปี 2569 และ 26.5 ตรวจจับวัตถุได้มากขึ้น ขอบแม่นขึ้น</li>
+<li>Mac ชิป Intel และ Windows ที่ใช้ไดรเวอร์การ์ดจอ AMD รุ่นเก่า จะใช้โมเดลรุ่นก่อนหน้า และ Premiere 27.0 เลิกรองรับ Mac ชิป Intel แล้ว</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/add-video-effects/work-with-masks/object-masking.html">Object masking in Premiere</a></li>
+<li><a href="https://www.adobe.com/learn/premiere-pro/web/track-mask-blur-effect">Track a mask and blur a face (Adobe tutorial)</a></li>
+</ul>

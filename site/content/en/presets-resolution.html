@@ -1,0 +1,74 @@
+<p class="crumb">Premiere › Export</p>
+<h1>Common presets and resolutions</h1>
+<p class="lead">Resolution is the image size in pixels, frame rate is how many images play per second, and a preset is a saved set of values you can pick when creating a sequence or exporting. This page lists the values that suit everyday work, with the reasons behind them.</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>Updated 27 Nov 2026</li><li>Beginner</li><li>Based on Adobe Help Center and YouTube Help</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>A rule that works for most jobs:</b> set up the sequence for its destination, then export with a Match Source preset, which takes its values from the sequence automatically. Change only what you need to.</p></div>
+<div class="demo" data-demo="presets-resolution"></div>
+
+<h2 id="res">Resolutions you will meet</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Name</th><th>Size (pixels)</th><th>Ratio</th><th>Use it for</th></tr></thead>
+<tbody>
+<tr><td>HD / 720p</td><td class="n">1280 × 720</td><td>16:9</td><td>Light web video. YouTube recommends at least this for 16:9 video.</td></tr>
+<tr><td>Full HD / 1080p</td><td class="n">1920 × 1080</td><td>16:9</td><td>The everyday standard: YouTube, client delivery, TV playback</td></tr>
+<tr><td>QHD / 1440p</td><td class="n">2560 × 1440</td><td>16:9</td><td>YouTube when you want sharper than 1080p with smaller files than 4K</td></tr>
+<tr><td>UHD / 4K</td><td class="n">3840 × 2160</td><td>16:9</td><td>4K TVs and YouTube 4K; needs a capable computer</td></tr>
+<tr><td>DCI 4K</td><td class="n">4096 × 2160</td><td>≈1.9:1</td><td>The cinema 4K standard, different from TV's UHD</td></tr>
+<tr><td>Vertical 9:16</td><td class="n">1080 × 1920</td><td>9:16</td><td>YouTube Shorts, Instagram Reels, TikTok</td></tr>
+<tr><td>4:5</td><td class="n">1080 × 1350</td><td>4:5</td><td>Videos in the Instagram feed</td></tr>
+<tr><td>Square</td><td class="n">1080 × 1080</td><td>1:1</td><td>General social posts</td></tr>
+</tbody></table></div>
+<p class="note">Social platform specs change. Check the platform's help pages before an important delivery.</p>
+
+<h2 id="fps">Choosing a frame rate</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>Frame rate</th><th>Feel</th><th>Use it for</th></tr></thead>
+<tbody>
+<tr><td class="n">23.976 / 24</td><td>Cinematic</td><td>Short films, music videos, anything after a film look</td></tr>
+<tr><td class="n">25</td><td>Smooth, PAL-style TV</td><td>50 Hz countries such as Thailand and China; reduces indoor light flicker there, good for events and TV delivery</td></tr>
+<tr><td class="n">29.97 / 30</td><td>Smooth, NTSC-style TV</td><td>60 Hz countries such as Korea; many phones and cameras also default to it</td></tr>
+<tr><td class="n">50</td><td>Very smooth</td><td>Sport, or 2× slow motion in a 25 fps sequence</td></tr>
+<tr><td class="n">59.94 / 60</td><td>Very smooth</td><td>Gaming, or 2× slow motion in a 30 fps sequence</td></tr>
+</tbody></table></div>
+<p>YouTube recommends exporting at the frame rate you recorded. Avoid converting 25 to 30 or the reverse unless you must, because it causes stutter.</p>
+
+<h2 id="export">Exporting with a preset</h2>
+<ol class="steps">
+<li><h3>Open Export</h3><p>Select the sequence and click the <span class="ui">Export</span> tab in the header bar at the top of the window.</p></li>
+<li><h3>Choose Format and Preset</h3><p><span class="ui">H.264</span> works almost everywhere. For the preset, choose <span class="ui">Match Source – Adaptive High Bitrate</span>, which uses the sequence's frame size and frame rate.</p></li>
+<li><h3>Check the key values</h3><p>Confirm Frame Size and Frame Rate are what you expect. Leave Export Color Space at its Rec. 709 default for ordinary SDR work.</p></li>
+<li><h3>Adjust the bitrate if needed</h3><p>VBR 1 pass is quick; VBR 2 pass takes longer but is usually higher quality. Hardware Accelerated encoding is the default and speeds up exports.</p></li>
+<li><h3>Save your own preset</h3><p>Once your usual settings are in place, save them as a preset such as "Reels 1080x1920 25p" and pick it next time.</p></li>
+</ol>
+
+<h2 id="bitrate">YouTube's recommended bitrates (SDR video)</h2>
+<div class="tbl"><table>
+<thead><tr><th>Resolution</th><th>24, 25, 30 fps</th><th>48, 50, 60 fps</th></tr></thead>
+<tbody>
+<tr><td>1440p</td><td class="n">20 Mbps</td><td class="n">30 Mbps</td></tr>
+<tr><td>1080p</td><td class="n">10 Mbps</td><td class="n">15 Mbps</td></tr>
+<tr><td>720p</td><td class="n">6.5 Mbps</td><td class="n">9.5 Mbps</td></tr>
+</tbody></table></div>
+<p class="note">Values for 4K and HDR are on YouTube's page in the sources below. Export audio at the sample rate it was recorded at; a higher rate doesn't improve quality.</p>
+
+<h2 id="mistakes">Common beginner mistakes</h2>
+<ul class="mist">
+<li><b>Exporting larger than the sequence to make it sharper</b>A 1080p sequence exported as 4K isn't sharper, only bigger. When you must scale, turn on Use Maximum Render Quality to reduce jagged edges.</li>
+<li><b>Bitrate too low</b>Busy, fast-moving scenes break into blocks. Start from YouTube's table.</li>
+<li><b>Frame rate doesn't match the sequence</b>Stutter. Match Source avoids this.</li>
+<li><b>Delivering a vertical video as a landscape file</b>Black bars on both sides. Set up a vertical sequence from the start.</li>
+<li><b>4K editing is sluggish</b>Edit with proxies, then export from the original files.</li>
+</ul>
+
+<h2 id="older">Using an older version</h2>
+<details class="old"><summary>Tutorials that still show the Export Settings window</summary><ul>
+<li>Since version 22.0 (late 2021), exporting happens in the Export tab at the top. Older tutorials use the former Export Settings window; preset names and values are similar.</li></ul></details>
+
+<h2 id="sources">Sources</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere/desktop/render-and-export/export-files/overview-of-export-settings.html">Overview of export settings</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/edit-projects/change-clip-sequence/sequence-settings-reference.html">Sequence settings reference</a></li>
+<li><a href="https://support.google.com/youtube/answer/1722171">YouTube recommended upload encoding settings</a></li>
+<li><a href="https://support.google.com/youtube/answer/4603579">YouTube video and audio formatting specifications</a></li>
+</ul>

@@ -1,0 +1,68 @@
+<p class="crumb">Premiere › เอฟเฟกต์และกราฟิก</p>
+<h1>Effects และ Keyframe</h1>
+<p class="lead">Effect เปลี่ยนหน้าตาของคลิป เช่น เบลอ บิดภาพ หรือเปลี่ยนสี ส่วน keyframe บอกว่าค่าไหนต้องเปลี่ยนเมื่อไร ใช้สองอย่างนี้คู่กันก็ได้ภาพเคลื่อนไหว เช่น ตัวหนังสือเลื่อนเข้า หรือภาพค่อย ๆ ชัดขึ้น</p>
+<ul class="meta"><li class="ver">Premiere 27.0</li><li>อัปเดต 27 พ.ย. 2569</li><li>ระดับมือใหม่</li><li>อ้างอิง Adobe Help Center</li></ul>
+<div class="call" role="note"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M11 10v6" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="6.5" r="1.2" fill="var(--acc)"/></svg>
+<p><b>มีของใหม่ให้ลอง:</b> Premiere เพิ่มเอฟเฟกต์ ทรานซิชัน และแอนิเมชันแบบใหม่กว่า 90 ตัว ฟรีในโปรแกรม ทุกตัวใช้ GPU จึงเล่นดูได้ทันทีโดยไม่ต้อง render และมีปุ่ม <span class="ui">Surprise Me</span> สุ่มรูปแบบใหม่ให้ทุกครั้งที่กด</p></div>
+<div class="demo" data-demo="effects-keyframes"></div>
+
+<h2 id="panels">3 พาเนลที่ต้องรู้จัก</h2>
+<div class="tbl"><table class="stack">
+<thead><tr><th>พาเนล</th><th>มีไว้ทำอะไร</th><th>เปิดที่</th></tr></thead>
+<tbody>
+<tr><td>Effects</td><td>คลังเอฟเฟกต์และทรานซิชันทั้งหมด ค้นหาด้วยชื่อแล้วลากไปใส่คลิป</td><td><span class="ui">Window › Effects</span></td></tr>
+<tr><td>Effect Controls</td><td>ปรับค่าของเอฟเฟกต์ที่ใส่ในคลิปที่เลือก และสร้าง keyframe</td><td><span class="ui">Window › Effect Controls</span></td></tr>
+<tr><td>Properties</td><td>ค่าที่ใช้บ่อยของคลิปที่เลือก เช่น ตำแหน่ง ขนาด ความโปร่งใส ปรับเร็วโดยไม่ต้องเปิดหลายพาเนล</td><td><span class="ui">Window › Properties</span></td></tr>
+</tbody></table></div>
+<p class="note">ทุกคลิปมีเอฟเฟกต์พื้นฐานติดมาแล้ว ได้แก่ Motion (ตำแหน่ง ขนาด การหมุน), Opacity และ Time Remapping ไม่ต้องไปหาใน Effects panel</p>
+
+<h2 id="apply">ใส่เอฟเฟกต์</h2>
+<ol class="steps">
+<li><h3>หาเอฟเฟกต์</h3><p>เปิด Effects panel พิมพ์ชื่อในช่องค้นหา เช่น <span class="ui">Gaussian Blur</span></p></li>
+<li><h3>ใส่ลงคลิป</h3><p>ลากเอฟเฟกต์ไปวางบนคลิปใน timeline หรือเลือกคลิปก่อนแล้วดับเบิลคลิกที่เอฟเฟกต์</p></li>
+<li><h3>ปรับค่า</h3><p>เลือกคลิป แล้วปรับค่าใน Effect Controls คลิกไอคอน <span class="ui">fx</span> หน้าชื่อเอฟเฟกต์เพื่อเปิดปิดเทียบก่อนและหลัง</p></li>
+<li><h3>เก็บไว้ใช้ซ้ำ</h3><p>คลิกขวาที่ชื่อเอฟเฟกต์ใน Effect Controls เลือก <span class="ui">Save Preset</span> หรือก๊อปเอฟเฟกต์ทั้งหมดไปคลิปอื่นด้วย <span class="ui">Paste Attributes</span> (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> / <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>V</kbd>)</p></li>
+</ol>
+
+<h2 id="keyframes">สร้าง keyframe</h2>
+<p>keyframe อย่างน้อย 2 ตัวทำให้เกิดการเปลี่ยนแปลง ตัวแรกบอกค่าเริ่ม ตัวที่สองบอกค่าปลายทาง Premiere จะเติมค่าระหว่างกลางให้เอง</p>
+<ol class="steps">
+<li><h3>เลือกคลิปและเปิด Effect Controls</h3><p>กางเอฟเฟกต์ที่จะทำให้เคลื่อนไหว เช่น Motion › Position</p></li>
+<li><h3>วาง playhead ที่จุดเริ่ม แล้วกดนาฬิกา</h3><p>คลิกไอคอนนาฬิกา <span class="ui">Toggle Animation</span> หน้าชื่อค่านั้น จะได้ keyframe แรกตรง playhead</p></li>
+<li><h3>ย้าย playhead แล้วเปลี่ยนค่า</h3><p>เลื่อน playhead ไปจุดจบ แล้วเปลี่ยนตัวเลข keyframe ตัวที่สองจะถูกสร้างเอง หรือกดปุ่ม <span class="ui">Add/Remove Keyframe</span></p></li>
+<li><h3>ดูและแก้ keyframe บน timeline</h3><p>คลิกไอคอนประแจใน timeline เลือก <span class="ui">Show Video Keyframes</span> แล้วเลือกค่าที่จะแสดงจากเมนูเอฟเฟกต์ข้างชื่อคลิป</p></li>
+</ol>
+
+<h2 id="interp">Interpolation: ความเร็วระหว่าง keyframe</h2>
+<p>คลิกขวาที่ keyframe ใน Effect Controls หรือ timeline แล้วเลือก <span class="ui">Temporal Interpolation</span> ลองเทียบแต่ละแบบได้ในเดโมด้านบน</p>
+<div class="tbl"><table class="stack">
+<thead><tr><th>แบบ</th><th>ผลที่ได้</th><th>ใช้เมื่อ</th></tr></thead>
+<tbody>
+<tr><td>Linear</td><td>เปลี่ยนด้วยความเร็วคงที่ (ค่าเริ่มต้น)</td><td>งานกราฟิกที่ต้องการความเร็วสม่ำเสมอ</td></tr>
+<tr><td>Ease In / Ease Out</td><td>ค่อย ๆ ช้าลงตอนเข้า keyframe / ค่อย ๆ เร่งตอนออก</td><td>ทำให้การเคลื่อนไหวดูเป็นธรรมชาติ มือใหม่ใช้แบบนี้บ่อยที่สุด</td></tr>
+<tr><td>Bezier</td><td>ดึง handle ปรับโค้งความเร็วได้เอง</td><td>อยากคุมจังหวะละเอียด</td></tr>
+<tr><td>Auto Bezier / Continuous Bezier</td><td>โค้งเรียบผ่าน keyframe อัตโนมัติ / แบบที่ยังปรับ handle ได้</td><td>มี keyframe หลายตัวต่อเนื่องกัน</td></tr>
+<tr><td>Hold</td><td>ค่าค้างไว้แล้วกระโดดทันทีเมื่อถึง keyframe ถัดไป</td><td>เอฟเฟกต์กระตุก หรือเปลี่ยนแบบตัดฉับ</td></tr>
+</tbody></table></div>
+<p class="note">Ease In และ Ease Out เป็นโค้ง Bezier อยู่แล้ว จึงเห็นเมนูขึ้นว่า Bezier หลังเลือก ไม่ได้ตั้งผิด</p>
+
+<h2 id="mistakes">จุดที่มือใหม่พลาดบ่อย</h2>
+<ul class="mist">
+<li><b>กดนาฬิกาซ้ำแล้ว keyframe หายหมด</b>การปิด Toggle Animation จะลบ keyframe ทั้งหมดของค่านั้น ถ้าจะเพิ่ม keyframe ให้ใช้ปุ่ม Add/Remove Keyframe แทน</li>
+<li><b>เปลี่ยนค่าแต่ไม่ได้ keyframe ใหม่</b>playhead ยังอยู่ที่ keyframe เดิม ค่าเลยไปแก้ตัวเดิม ย้าย playhead ก่อนเปลี่ยนค่า</li>
+<li><b>สับสน Effects กับ Effect Controls</b>Effects คือคลังสำหรับเลือก Effect Controls คือที่ปรับค่า คนละพาเนลกัน</li>
+<li><b>ใส่เอฟเฟกต์หนักหลายตัวแล้วเล่นกระตุก</b>ลด Resolution ของ Program Monitor หรือ render ช่วงนั้นก่อน เอฟเฟกต์รุ่นใหม่ที่ใช้ GPU จะเล่นได้ลื่นกว่า</li>
+<li><b>ตัดคลิปแล้วแอนิเมชันเพี้ยน</b>keyframe ติดอยู่กับคลิป ถ้าตัดช่วงที่มี keyframe ออก ค่าในท่อนที่เหลือจะเปลี่ยนตาม ทำแอนิเมชันหลังตัดต่อเสร็จ</li>
+</ul>
+
+<h2 id="older">ถ้าใช้เวอร์ชันเก่ากว่า 27.0</h2>
+<details class="old"><summary>Premiere 25.x–26.x</summary><ul>
+<li>การสร้าง keyframe และ interpolation เหมือนเดิมทั้งหมด</li>
+<li>ชุดเอฟเฟกต์และทรานซิชันรุ่นใหม่ทยอยมาตั้งแต่รุ่น 26.x บางตัวแทนที่ตัวเก่า เช่น Gradient แทน Ramp และ Channel Blur ตัวใหม่แทนตัวเดิม ถ้าหาไม่เจอให้เช็กเวอร์ชัน</li></ul></details>
+
+<h2 id="sources">ต้นฉบับ (ภาษาอังกฤษ)</h2>
+<ul class="src">
+<li><a href="https://helpx.adobe.com/premiere-pro/using/adding-navigating-setting-keyframes.html">Add keyframes</a></li>
+<li><a href="https://helpx.adobe.com/premiere/desktop/add-video-effects/control-effects-and-transitions-using-keyframes/control-effect-changes-using-bezier-keyframe-interpolation.html">Control change using Bezier keyframe interpolation</a></li>
+<li><a href="https://helpx.adobe.com/ie/premiere/desktop/add-video-effects/types-of-effects/effects.html">Modern effects in Premiere</a></li>
+</ul>
